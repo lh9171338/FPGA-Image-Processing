@@ -1,0 +1,883 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date             : Fri Nov 30 20:16:21 2018
+| Host             : DESKTOP-7JLTO9Q running 64-bit major release  (build 9200)
+| Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
+| Design           : design_1_wrapper
+| Device           : xc7vx690tffg1761-3
+| Design State     : routed
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 3.597        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 3.195        |
+| Device Static (W)        | 0.401        |
+| Effective TJA (C/W)      | 1.1          |
+| Max Ambient (C)          | 95.9         |
+| Junction Temperature (C) | 29.1         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.174 |       14 |       --- |             --- |
+| Slice Logic              |     0.077 |    40972 |       --- |             --- |
+|   LUT as Logic           |     0.063 |    16301 |    433200 |            3.76 |
+|   Register               |     0.008 |    18406 |    866400 |            2.12 |
+|   CARRY4                 |     0.005 |     1530 |    108300 |            1.41 |
+|   LUT as Shift Register  |     0.001 |      232 |    174200 |            0.13 |
+|   LUT as Distributed RAM |    <0.001 |       52 |    174200 |            0.03 |
+|   F7/F8 Muxes            |    <0.001 |      365 |    433200 |            0.08 |
+|   Others                 |     0.000 |     1040 |       --- |             --- |
+| Signals                  |     0.136 |    37816 |       --- |             --- |
+| Block RAM                |     0.198 |      134 |      1470 |            9.12 |
+| MMCM                     |     0.108 |        1 |        20 |            5.00 |
+| PLL                      |     0.099 |        1 |        20 |            5.00 |
+| DSPs                     |     0.023 |       85 |      3600 |            2.36 |
+| I/O                      |     0.000 |        1 |       850 |            0.12 |
+| GTH                      |     2.210 |        8 |       --- |             --- |
+| Hard IPs                 |     0.169 |        1 |       --- |             --- |
+|   PCIE                   |     0.169 |        1 |       --- |             --- |
+| Static Power             |     0.401 |          |           |                 |
+| Total                    |     3.597 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     1.292 |       1.069 |      0.223 |
+| Vccaux    |       1.800 |     0.163 |       0.109 |      0.054 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.017 |       0.009 |      0.008 |
+| MGTAVcc   |       1.000 |     1.165 |       1.137 |      0.029 |
+| MGTAVtt   |       1.200 |     0.630 |       0.622 |      0.008 |
+| MGTVccaux |       1.800 |     0.021 |       0.021 |      0.000 |
+| MGTZVccl  |       1.075 |     0.000 |       0.000 |      0.000 |
+| MGTZAVcc  |       1.075 |     0.000 |       0.000 |      0.000 |
+| MGTZVcch  |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 1.1                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 2.2                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-----------------------------------+-----------------------------------------------------------------------------------------------------+-----------------+
+| Clock                             | Domain                                                                                              | Constraint (ns) |
++-----------------------------------+-----------------------------------------------------------------------------------------------------+-----------------+
+| SYS_CLK_IBUF_OUT                  | design_1_i/SYS_CLK/U0/IBUF_OUT[0]                                                                   |            10.0 |
+| SYS_CLK_IBUF_OUT                  | sys_clk_p[0]                                                                                        |            10.0 |
+| clk_125mhz_mux_x0y1               | design_1_i/RIFFA_AXIS/PCIE/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK_RXUSRCLK    |             4.0 |
+| clk_125mhz_x0y1                   | design_1_i/RIFFA_AXIS/PCIE/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/clk_125mhz      |             8.0 |
+| clk_250mhz_mux_x0y1               | design_1_i/RIFFA_AXIS/PCIE/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK_RXUSRCLK    |             4.0 |
+| clk_250mhz_x0y1                   | design_1_i/RIFFA_AXIS/PCIE/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/clk_250mhz      |             4.0 |
+| clk_out1_design_1_clk_wiz_0_1     | design_1_i/RIFFA_AXIS/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_1                                  |            20.0 |
+| clkfbout_design_1_clk_wiz_0_1     | design_1_i/RIFFA_AXIS/clk_wiz_0/inst/clkfbout_design_1_clk_wiz_0_1                                  |            20.0 |
+| design_1_i/SYS_CLK/U0/IBUF_OUT[0] | design_1_i/RIFFA_AXIS/PCIE/inst/gt_top_i/pipe_wrapper_i/gt_cpllpdrefclk                             |            10.0 |
+| mmcm_fb                           | design_1_i/RIFFA_AXIS/PCIE/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/mmcm_fb         |            10.0 |
+| txoutclk_x0y1                     | design_1_i/RIFFA_AXIS/PCIE/inst/gt_top_i/pipe_wrapper_i/pipe_lane[0].gt_wrapper_i/pipe_txoutclk_out |            10.0 |
+| userclk1                          | design_1_i/RIFFA_AXIS/PCIE/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/userclk1        |             4.0 |
++-----------------------------------+-----------------------------------------------------------------------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++----------------------------------------------------------------------------------+-----------+
+| Name                                                                             | Power (W) |
++----------------------------------------------------------------------------------+-----------+
+| design_1_wrapper                                                                 |     3.195 |
+|   design_1_i                                                                     |     3.195 |
+|     AP_CTRL                                                                      |    <0.001 |
+|       inst                                                                       |    <0.001 |
+|     ImageRotate                                                                  |     0.068 |
+|       inst                                                                       |     0.068 |
+|         AXIvideo2Mat_U0                                                          |    <0.001 |
+|         Array2D2Mat_U0                                                           |    <0.001 |
+|         Block_Mat_exit2628_p_U0                                                  |    <0.001 |
+|           grp_Mat2Array2D_fu_58                                                  |    <0.001 |
+|         Block_Mat_exit2633_p_U0                                                  |    <0.001 |
+|         Block_Mat_exit2636_p_U0                                                  |    <0.001 |
+|         Block_Mat_exit26_pro_U0                                                  |    <0.001 |
+|         Mat2AXIvideo_U0                                                          |    <0.001 |
+|         Rotate_U0                                                                |     0.053 |
+|           ImageRotate_fdiv_mb6_U54                                               |     0.007 |
+|             ImageRotate_ap_fdiv_5_no_dsp_32_u                                    |     0.007 |
+|               U0                                                                 |     0.007 |
+|                 i_synth                                                          |     0.007 |
+|                   DIV_OP.SPD.OP                                                  |     0.007 |
+|                     EXP                                                          |    <0.001 |
+|                       EXP_PRE_RND_DEL                                            |    <0.001 |
+|                         i_pipe                                                   |    <0.001 |
+|                       FLOW_DEC_DEL                                               |    <0.001 |
+|                         i_pipe                                                   |    <0.001 |
+|                       FLOW_UP_DEL                                                |    <0.001 |
+|                         i_pipe                                                   |    <0.001 |
+|                       SIGN_UP_DELAY                                              |    <0.001 |
+|                         i_pipe                                                   |    <0.001 |
+|                       STATE_UP_DELAY                                             |    <0.001 |
+|                         i_pipe                                                   |    <0.001 |
+|                     MANT_DIV                                                     |     0.007 |
+|                       Q_MANT_DEL                                                 |    <0.001 |
+|                         i_pipe                                                   |    <0.001 |
+|                       RT[0].ADDSUB                                               |    <0.001 |
+|                         ADDSUB                                                   |    <0.001 |
+|                       RT[10].ADDSUB                                              |    <0.001 |
+|                         ADDSUB                                                   |    <0.001 |
+|                       RT[11].ADDSUB                                              |    <0.001 |
+|                         ADDSUB                                                   |    <0.001 |
+|                       RT[12].ADDSUB                                              |    <0.001 |
+|                         ADDSUB                                                   |    <0.001 |
+|                       RT[13].ADDSUB                                              |    <0.001 |
+|                         ADDSUB                                                   |    <0.001 |
+|                           Q_DEL                                                  |    <0.001 |
+|                             i_pipe                                               |    <0.001 |
+|                       RT[13].MANT_DEL                                            |    <0.001 |
+|                         i_pipe                                                   |    <0.001 |
+|                       RT[14].ADDSUB                                              |    <0.001 |
+|                         ADDSUB                                                   |    <0.001 |
+|                       RT[15].ADDSUB                                              |    <0.001 |
+|                         ADDSUB                                                   |    <0.001 |
+|                       RT[16].ADDSUB                                              |    <0.001 |
+|                         ADDSUB                                                   |    <0.001 |
+|                       RT[17].ADDSUB                                              |    <0.001 |
+|                         ADDSUB                                                   |    <0.001 |
+|                       RT[18].ADDSUB                                              |    <0.001 |
+|                         ADDSUB                                                   |    <0.001 |
+|                       RT[19].ADDSUB                                              |    <0.001 |
+|                         ADDSUB                                                   |    <0.001 |
+|                       RT[1].ADDSUB                                               |    <0.001 |
+|                         ADDSUB                                                   |    <0.001 |
+|                       RT[20].ADDSUB                                              |    <0.001 |
+|                         ADDSUB                                                   |    <0.001 |
+|                           Q_DEL                                                  |    <0.001 |
+|                             i_pipe                                               |    <0.001 |
+|                       RT[20].MANT_DEL                                            |    <0.001 |
+|                         i_pipe                                                   |    <0.001 |
+|                       RT[20].Q_DEL                                               |    <0.001 |
+|                         i_pipe                                                   |    <0.001 |
+|                       RT[21].ADDSUB                                              |    <0.001 |
+|                         ADDSUB                                                   |    <0.001 |
+|                       RT[22].ADDSUB                                              |    <0.001 |
+|                         ADDSUB                                                   |    <0.001 |
+|                       RT[23].ADDSUB                                              |    <0.001 |
+|                         ADDSUB                                                   |    <0.001 |
+|                       RT[24].ADDSUB                                              |    <0.001 |
+|                         ADDSUB                                                   |    <0.001 |
+|                       RT[25].ADDSUB                                              |    <0.001 |
+|                         ADDSUB                                                   |    <0.001 |
+|                       RT[2].ADDSUB                                               |    <0.001 |
+|                         ADDSUB                                                   |    <0.001 |
+|                       RT[3].ADDSUB                                               |    <0.001 |
+|                         ADDSUB                                                   |    <0.001 |
+|                       RT[4].ADDSUB                                               |    <0.001 |
+|                         ADDSUB                                                   |    <0.001 |
+|                       RT[5].ADDSUB                                               |    <0.001 |
+|                         ADDSUB                                                   |    <0.001 |
+|                       RT[6].ADDSUB                                               |    <0.001 |
+|                         ADDSUB                                                   |    <0.001 |
+|                           Q_DEL                                                  |    <0.001 |
+|                             i_pipe                                               |    <0.001 |
+|                       RT[6].MANT_DEL                                             |    <0.001 |
+|                         i_pipe                                                   |    <0.001 |
+|                       RT[7].ADDSUB                                               |    <0.001 |
+|                         ADDSUB                                                   |    <0.001 |
+|                       RT[8].ADDSUB                                               |    <0.001 |
+|                         ADDSUB                                                   |    <0.001 |
+|                       RT[9].ADDSUB                                               |    <0.001 |
+|                         ADDSUB                                                   |    <0.001 |
+|                     OP                                                           |    <0.001 |
+|                     ROUND                                                        |    <0.001 |
+|                       EXP_ADD.ADD                                                |    <0.001 |
+|                       LOGIC.RND1                                                 |    <0.001 |
+|                       LOGIC.RND2                                                 |    <0.001 |
+|                       RND_BIT_GEN                                                |    <0.001 |
+|                         NORM_1_OR_0.STRUCT_REQ.GENERAL.RND1                      |    <0.001 |
+|           ImageRotate_fmul_lbW_U53                                               |     0.002 |
+|             ImageRotate_ap_fmul_0_max_dsp_32_u                                   |     0.002 |
+|               U0                                                                 |     0.002 |
+|                 i_synth                                                          |     0.002 |
+|                   MULT.OP                                                        |     0.002 |
+|                     EXP                                                          |    <0.001 |
+|                       COND_DET_A                                                 |    <0.001 |
+|                         MANT_CARRY.MANT_ALL_ZERO_DET                             |    <0.001 |
+|                           CARRY_ZERO_DET                                         |    <0.001 |
+|                       EXP_ADD.C_CHAIN                                            |    <0.001 |
+|                     MULT                                                         |     0.002 |
+|                       DSP48E1_SPD_SGL_VARIANT.FIX_MULT                           |     0.002 |
+|                         DSP1                                                     |    <0.001 |
+|                         DSP2                                                     |     0.001 |
+|                     R_AND_R                                                      |    <0.001 |
+|                       LAT_OPT.FULL.R_AND_R                                       |    <0.001 |
+|                         DSP48E1_SGL_EXP_IP.OLD_ADD.ADD                           |    <0.001 |
+|           ImageRotate_fpextncg_U55                                               |    <0.001 |
+|             ImageRotate_ap_fpext_0_no_dsp_32_u                                   |    <0.001 |
+|               U0                                                                 |    <0.001 |
+|                 i_synth                                                          |    <0.001 |
+|                   FLT_TO_FLT_OP.SPD.OP                                           |    <0.001 |
+|                     EXP                                                          |    <0.001 |
+|                       COND_DET                                                   |    <0.001 |
+|                         MANT_CARRY.MANT_ALL_ZERO_DET                             |    <0.001 |
+|                           CARRY_ZERO_DET                                         |    <0.001 |
+|           ImageRotate_fpextncg_U56                                               |    <0.001 |
+|             ImageRotate_ap_fpext_0_no_dsp_32_u                                   |    <0.001 |
+|               U0                                                                 |    <0.001 |
+|                 i_synth                                                          |    <0.001 |
+|                   FLT_TO_FLT_OP.SPD.OP                                           |    <0.001 |
+|                     EXP                                                          |    <0.001 |
+|                       COND_DET                                                   |    <0.001 |
+|                         MANT_CARRY.MANT_ALL_ZERO_DET                             |    <0.001 |
+|                           CARRY_ZERO_DET                                         |    <0.001 |
+|           grp_sin_or_cos_float_s_fu_342                                          |     0.009 |
+|             ImageRotate_mul_mjbC_U40                                             |    <0.001 |
+|               ImageRotate_mul_mjbC_DSP48_0_U                                     |    <0.001 |
+|             ImageRotate_mul_mkbM_U41                                             |    <0.001 |
+|               ImageRotate_mul_mkbM_DSP48_1_U                                     |    <0.001 |
+|             grp_scaled_fixed2ieee_fu_218                                         |     0.002 |
+|               c_U                                                                |     0.001 |
+|                 scaled_fixed2ieee_c_ram_U                                        |     0.001 |
+|                   ram_reg_0_1_0_0                                                |    <0.001 |
+|                   ram_reg_0_1_1_1                                                |    <0.001 |
+|                   ram_reg_0_1_2_2                                                |    <0.001 |
+|                   ram_reg_0_1_3_3                                                |    <0.001 |
+|                   ram_reg_0_1_4_4                                                |    <0.001 |
+|                   ram_reg_0_1_5_5                                                |    <0.001 |
+|                   ram_reg_0_1_6_6                                                |    <0.001 |
+|               out_bits_V_U                                                       |    <0.001 |
+|                 scaled_fixed2ieeecud_ram_U                                       |    <0.001 |
+|             ref_4oPi_table_100_V_U                                               |    <0.001 |
+|               sin_or_cos_float_dEe_rom_U                                         |    <0.001 |
+|             second_order_float_2_U                                               |    <0.001 |
+|               sin_or_cos_float_eOg_rom_U                                         |    <0.001 |
+|             second_order_float_3_U                                               |    <0.001 |
+|               sin_or_cos_float_fYi_rom_U                                         |    <0.001 |
+|             second_order_float_s_U                                               |    <0.001 |
+|               sin_or_cos_float_g8j_rom_U                                         |    <0.001 |
+|           grp_sin_or_cos_float_s_fu_357                                          |     0.009 |
+|             ImageRotate_mul_mjbC_U40                                             |    <0.001 |
+|               ImageRotate_mul_mjbC_DSP48_0_U                                     |    <0.001 |
+|             ImageRotate_mul_mkbM_U41                                             |    <0.001 |
+|               ImageRotate_mul_mkbM_DSP48_1_U                                     |    <0.001 |
+|             grp_scaled_fixed2ieee_fu_218                                         |     0.002 |
+|               c_U                                                                |     0.001 |
+|                 scaled_fixed2ieee_c_ram_U                                        |     0.001 |
+|                   ram_reg_0_1_0_0                                                |    <0.001 |
+|                   ram_reg_0_1_1_1                                                |    <0.001 |
+|                   ram_reg_0_1_2_2                                                |    <0.001 |
+|                   ram_reg_0_1_3_3                                                |    <0.001 |
+|                   ram_reg_0_1_4_4                                                |    <0.001 |
+|                   ram_reg_0_1_5_5                                                |    <0.001 |
+|                   ram_reg_0_1_6_6                                                |    <0.001 |
+|               out_bits_V_U                                                       |    <0.001 |
+|                 scaled_fixed2ieeecud_ram_U                                       |    <0.001 |
+|             ref_4oPi_table_100_V_U                                               |    <0.001 |
+|               sin_or_cos_float_dEe_rom_U                                         |    <0.001 |
+|             second_order_float_2_U                                               |    <0.001 |
+|               sin_or_cos_float_eOg_rom_U                                         |    <0.001 |
+|             second_order_float_3_U                                               |    <0.001 |
+|               sin_or_cos_float_fYi_rom_U                                         |    <0.001 |
+|             second_order_float_s_U                                               |    <0.001 |
+|               sin_or_cos_float_g8j_rom_U                                         |    <0.001 |
+|         arr0_cols_c_U                                                            |    <0.001 |
+|           U_fifo_w32_d2_A_ram                                                    |    <0.001 |
+|         arr0_rows_c_U                                                            |    <0.001 |
+|           U_fifo_w32_d2_A_ram                                                    |    <0.001 |
+|         arr0_val_U                                                               |     0.004 |
+|           gen_buffer[0].ImageRotate_arr0_ocq_memcore_U                           |     0.002 |
+|             ImageRotate_arr0_ocq_memcore_ram_U                                   |     0.002 |
+|           gen_buffer[1].ImageRotate_arr0_ocq_memcore_U                           |     0.002 |
+|             ImageRotate_arr0_ocq_memcore_ram_U                                   |     0.002 |
+|         arr1_cols_c50_U                                                          |    <0.001 |
+|           U_fifo_w17_d2_A_ram                                                    |    <0.001 |
+|         arr1_cols_c_U                                                            |    <0.001 |
+|           U_fifo_w17_d3_A_ram                                                    |    <0.001 |
+|         arr1_rows_c49_U                                                          |    <0.001 |
+|           U_fifo_w17_d3_A_ram                                                    |    <0.001 |
+|         arr1_rows_c_U                                                            |    <0.001 |
+|           U_fifo_w17_d2_A_ram                                                    |    <0.001 |
+|         arr1_val_U                                                               |     0.006 |
+|           gen_buffer[0].ImageRotate_arr1_pcA_memcore_U                           |     0.003 |
+|             ImageRotate_arr1_pcA_memcore_ram_U                                   |     0.003 |
+|           gen_buffer[1].ImageRotate_arr1_pcA_memcore_U                           |     0.003 |
+|             ImageRotate_arr1_pcA_memcore_ram_U                                   |     0.003 |
+|         mat0_cols_V_c48_U                                                        |    <0.001 |
+|           U_fifo_w32_d2_A_ram                                                    |    <0.001 |
+|         mat0_cols_V_c_U                                                          |    <0.001 |
+|           U_fifo_w32_d2_A_ram                                                    |    <0.001 |
+|         mat0_data_stream_0_s_U                                                   |    <0.001 |
+|           U_fifo_w8_d2_A_ram                                                     |    <0.001 |
+|         mat0_rows_V_c47_U                                                        |    <0.001 |
+|           U_fifo_w32_d2_A_ram                                                    |    <0.001 |
+|         mat0_rows_V_c_U                                                          |    <0.001 |
+|           U_fifo_w32_d2_A_ram                                                    |    <0.001 |
+|         mat1_cols_V_c_U                                                          |    <0.001 |
+|           U_fifo_w17_d2_A_ram                                                    |    <0.001 |
+|         mat1_data_stream_0_s_U                                                   |    <0.001 |
+|           U_fifo_w8_d2_A_ram                                                     |    <0.001 |
+|         mat1_rows_V_c_U                                                          |    <0.001 |
+|           U_fifo_w18_d2_A_ram                                                    |    <0.001 |
+|         param1_val_0_V_U                                                         |    <0.001 |
+|           U_fifo_w19_d2_A_ram                                                    |    <0.001 |
+|         param1_val_1_V_U                                                         |    <0.001 |
+|           U_fifo_w19_d2_A_ram                                                    |    <0.001 |
+|         start_for_Block_MqcK_U                                                   |    <0.001 |
+|         start_for_Block_MrcU_U                                                   |    <0.001 |
+|         start_for_Mat2AXIsc4_U                                                   |    <0.001 |
+|         tmp_145_loc_channel_U                                                    |    <0.001 |
+|           U_fifo_w2_d2_A_ram                                                     |    <0.001 |
+|         tmp_loc_channel_U                                                        |    <0.001 |
+|           U_fifo_w32_d2_A_ram                                                    |    <0.001 |
+|         val_assign20_loc_cha_U                                                   |    <0.001 |
+|           U_fifo_w17_d2_A_ram                                                    |    <0.001 |
+|     RIFFA_AXIS                                                                   |     3.127 |
+|       BRAM0                                                                      |     0.006 |
+|         U0                                                                       |     0.006 |
+|           inst_blk_mem_gen                                                       |     0.006 |
+|             gnbram.gnativebmg.native_blk_mem_gen                                 |     0.006 |
+|               valid.cstr                                                         |     0.006 |
+|                 has_mux_b.B                                                      |    <0.001 |
+|                 ramloop[0].ram.r                                                 |    <0.001 |
+|                   prim_noinit.ram                                                |    <0.001 |
+|                 ramloop[10].ram.r                                                |    <0.001 |
+|                   prim_noinit.ram                                                |    <0.001 |
+|                 ramloop[11].ram.r                                                |    <0.001 |
+|                   prim_noinit.ram                                                |    <0.001 |
+|                 ramloop[12].ram.r                                                |    <0.001 |
+|                   prim_noinit.ram                                                |    <0.001 |
+|                 ramloop[13].ram.r                                                |    <0.001 |
+|                   prim_noinit.ram                                                |    <0.001 |
+|                 ramloop[14].ram.r                                                |    <0.001 |
+|                   prim_noinit.ram                                                |    <0.001 |
+|                 ramloop[15].ram.r                                                |    <0.001 |
+|                   prim_noinit.ram                                                |    <0.001 |
+|                 ramloop[1].ram.r                                                 |    <0.001 |
+|                   prim_noinit.ram                                                |    <0.001 |
+|                 ramloop[2].ram.r                                                 |    <0.001 |
+|                   prim_noinit.ram                                                |    <0.001 |
+|                 ramloop[3].ram.r                                                 |    <0.001 |
+|                   prim_noinit.ram                                                |    <0.001 |
+|                 ramloop[4].ram.r                                                 |    <0.001 |
+|                   prim_noinit.ram                                                |    <0.001 |
+|                 ramloop[5].ram.r                                                 |    <0.001 |
+|                   prim_noinit.ram                                                |    <0.001 |
+|                 ramloop[6].ram.r                                                 |    <0.001 |
+|                   prim_noinit.ram                                                |    <0.001 |
+|                 ramloop[7].ram.r                                                 |    <0.001 |
+|                   prim_noinit.ram                                                |    <0.001 |
+|                 ramloop[8].ram.r                                                 |    <0.001 |
+|                   prim_noinit.ram                                                |    <0.001 |
+|                 ramloop[9].ram.r                                                 |    <0.001 |
+|                   prim_noinit.ram                                                |    <0.001 |
+|       BRAM1                                                                      |     0.003 |
+|         U0                                                                       |     0.003 |
+|           inst_blk_mem_gen                                                       |     0.003 |
+|             gnbram.gnativebmg.native_blk_mem_gen                                 |     0.003 |
+|               valid.cstr                                                         |     0.003 |
+|                 has_mux_b.B                                                      |    <0.001 |
+|                 ramloop[0].ram.r                                                 |    <0.001 |
+|                   prim_noinit.ram                                                |    <0.001 |
+|                 ramloop[10].ram.r                                                |    <0.001 |
+|                   prim_noinit.ram                                                |    <0.001 |
+|                 ramloop[11].ram.r                                                |    <0.001 |
+|                   prim_noinit.ram                                                |    <0.001 |
+|                 ramloop[12].ram.r                                                |    <0.001 |
+|                   prim_noinit.ram                                                |    <0.001 |
+|                 ramloop[13].ram.r                                                |    <0.001 |
+|                   prim_noinit.ram                                                |    <0.001 |
+|                 ramloop[14].ram.r                                                |    <0.001 |
+|                   prim_noinit.ram                                                |    <0.001 |
+|                 ramloop[15].ram.r                                                |    <0.001 |
+|                   prim_noinit.ram                                                |    <0.001 |
+|                 ramloop[1].ram.r                                                 |    <0.001 |
+|                   prim_noinit.ram                                                |    <0.001 |
+|                 ramloop[2].ram.r                                                 |    <0.001 |
+|                   prim_noinit.ram                                                |    <0.001 |
+|                 ramloop[3].ram.r                                                 |    <0.001 |
+|                   prim_noinit.ram                                                |    <0.001 |
+|                 ramloop[4].ram.r                                                 |    <0.001 |
+|                   prim_noinit.ram                                                |    <0.001 |
+|                 ramloop[5].ram.r                                                 |    <0.001 |
+|                   prim_noinit.ram                                                |    <0.001 |
+|                 ramloop[6].ram.r                                                 |    <0.001 |
+|                   prim_noinit.ram                                                |    <0.001 |
+|                 ramloop[7].ram.r                                                 |    <0.001 |
+|                   prim_noinit.ram                                                |    <0.001 |
+|                 ramloop[8].ram.r                                                 |    <0.001 |
+|                   prim_noinit.ram                                                |    <0.001 |
+|                 ramloop[9].ram.r                                                 |    <0.001 |
+|                   prim_noinit.ram                                                |    <0.001 |
+|       PCIE                                                                       |     2.626 |
+|         inst                                                                     |     2.626 |
+|           gt_top_i                                                               |     2.379 |
+|             pipe_wrapper_i                                                       |     2.379 |
+|               pipe_clock_int.pipe_clock_i                                        |     0.109 |
+|               pipe_lane[0].gt_wrapper_i                                          |     0.277 |
+|                 cpllPDInst                                                       |    <0.001 |
+|               pipe_lane[0].pipe_drp_i                                            |     0.001 |
+|               pipe_lane[0].pipe_eq.pipe_eq_i                                     |     0.003 |
+|                 rxeq_scan_i                                                      |    <0.001 |
+|               pipe_lane[0].pipe_quad.gt_common_enabled.gt_common_int.gt_common_i |     0.001 |
+|                 qpll_drp_i                                                       |    <0.001 |
+|                 qpll_wrapper_i                                                   |    <0.001 |
+|               pipe_lane[0].pipe_rate_i                                           |     0.001 |
+|               pipe_lane[0].pipe_sync_i                                           |    <0.001 |
+|               pipe_lane[0].pipe_user_i                                           |    <0.001 |
+|               pipe_lane[1].gt_wrapper_i                                          |     0.277 |
+|                 cpllPDInst                                                       |    <0.001 |
+|               pipe_lane[1].pipe_drp_i                                            |     0.001 |
+|               pipe_lane[1].pipe_eq.pipe_eq_i                                     |     0.003 |
+|                 rxeq_scan_i                                                      |    <0.001 |
+|               pipe_lane[1].pipe_rate_i                                           |     0.001 |
+|               pipe_lane[1].pipe_sync_i                                           |    <0.001 |
+|               pipe_lane[1].pipe_user_i                                           |    <0.001 |
+|               pipe_lane[2].gt_wrapper_i                                          |     0.277 |
+|                 cpllPDInst                                                       |    <0.001 |
+|               pipe_lane[2].pipe_drp_i                                            |     0.001 |
+|               pipe_lane[2].pipe_eq.pipe_eq_i                                     |     0.003 |
+|                 rxeq_scan_i                                                      |    <0.001 |
+|               pipe_lane[2].pipe_rate_i                                           |     0.001 |
+|               pipe_lane[2].pipe_sync_i                                           |    <0.001 |
+|               pipe_lane[2].pipe_user_i                                           |    <0.001 |
+|               pipe_lane[3].gt_wrapper_i                                          |     0.277 |
+|                 cpllPDInst                                                       |    <0.001 |
+|               pipe_lane[3].pipe_drp_i                                            |     0.001 |
+|               pipe_lane[3].pipe_eq.pipe_eq_i                                     |     0.003 |
+|                 rxeq_scan_i                                                      |    <0.001 |
+|               pipe_lane[3].pipe_rate_i                                           |    <0.001 |
+|               pipe_lane[3].pipe_sync_i                                           |    <0.001 |
+|               pipe_lane[3].pipe_user_i                                           |    <0.001 |
+|               pipe_lane[4].gt_wrapper_i                                          |     0.277 |
+|                 cpllPDInst                                                       |    <0.001 |
+|               pipe_lane[4].pipe_drp_i                                            |     0.001 |
+|               pipe_lane[4].pipe_eq.pipe_eq_i                                     |     0.003 |
+|                 rxeq_scan_i                                                      |    <0.001 |
+|               pipe_lane[4].pipe_quad.gt_common_enabled.gt_common_int.gt_common_i |     0.001 |
+|                 qpll_drp_i                                                       |    <0.001 |
+|                 qpll_wrapper_i                                                   |    <0.001 |
+|               pipe_lane[4].pipe_rate_i                                           |     0.001 |
+|               pipe_lane[4].pipe_sync_i                                           |    <0.001 |
+|               pipe_lane[4].pipe_user_i                                           |    <0.001 |
+|               pipe_lane[5].gt_wrapper_i                                          |     0.277 |
+|                 cpllPDInst                                                       |    <0.001 |
+|               pipe_lane[5].pipe_drp_i                                            |     0.001 |
+|               pipe_lane[5].pipe_eq.pipe_eq_i                                     |     0.003 |
+|                 rxeq_scan_i                                                      |    <0.001 |
+|               pipe_lane[5].pipe_rate_i                                           |     0.001 |
+|               pipe_lane[5].pipe_sync_i                                           |    <0.001 |
+|               pipe_lane[5].pipe_user_i                                           |    <0.001 |
+|               pipe_lane[6].gt_wrapper_i                                          |     0.277 |
+|                 cpllPDInst                                                       |    <0.001 |
+|               pipe_lane[6].pipe_drp_i                                            |     0.001 |
+|               pipe_lane[6].pipe_eq.pipe_eq_i                                     |     0.003 |
+|                 rxeq_scan_i                                                      |    <0.001 |
+|               pipe_lane[6].pipe_rate_i                                           |     0.001 |
+|               pipe_lane[6].pipe_sync_i                                           |    <0.001 |
+|               pipe_lane[6].pipe_user_i                                           |    <0.001 |
+|               pipe_lane[7].gt_wrapper_i                                          |     0.277 |
+|                 cpllPDInst                                                       |    <0.001 |
+|               pipe_lane[7].pipe_drp_i                                            |     0.001 |
+|               pipe_lane[7].pipe_eq.pipe_eq_i                                     |     0.003 |
+|                 rxeq_scan_i                                                      |    <0.001 |
+|               pipe_lane[7].pipe_rate_i                                           |     0.001 |
+|               pipe_lane[7].pipe_sync_i                                           |    <0.001 |
+|               pipe_lane[7].pipe_user_i                                           |    <0.001 |
+|               pipe_reset_i                                                       |     0.003 |
+|               qpll_reset.qpll_reset_i                                            |     0.001 |
+|           pcie_top_i                                                             |     0.248 |
+|             force_adapt_i                                                        |     0.003 |
+|             pcie_7vx_i                                                           |     0.231 |
+|               pcie_bram_7vx_i                                                    |     0.051 |
+|                 cpl_fifo                                                         |     0.011 |
+|                   genblk1.CPL_FIFO_16KB.U0                                       |     0.011 |
+|                 replay_buffer                                                    |     0.026 |
+|                   U0                                                             |     0.026 |
+|                 req_fifo                                                         |     0.013 |
+|                   U0                                                             |     0.013 |
+|             pcie_init_ctrl_7vx_i                                                 |    <0.001 |
+|             pcie_tlp_tph_tbl_7vx_i                                               |     0.012 |
+|       Riffa_Axis                                                                 |     0.002 |
+|         inst                                                                     |     0.002 |
+|           Axis2Riffa_inst                                                        |    <0.001 |
+|             mult_inst                                                            |    <0.001 |
+|               U0                                                                 |    <0.001 |
+|                 i_mult                                                           |    <0.001 |
+|                   gDSP.gDSP_only.iDSP                                            |    <0.001 |
+|           Riffa2Axis_inst                                                        |     0.001 |
+|       clk_wiz_0                                                                  |     0.100 |
+|         inst                                                                     |     0.100 |
+|       riffa_controller                                                           |     0.390 |
+|         inst                                                                     |     0.390 |
+|           engine_layer_inst                                                      |     0.161 |
+|             rx_engine_ultrascale_inst                                            |     0.010 |
+|               rxc_engine_inst                                                    |     0.009 |
+|                 data_shiftreg_inst                                               |     0.006 |
+|                 dw_enable                                                        |    <0.001 |
+|                 dw_pipeline                                                      |    <0.001 |
+|                   pipeline_inst                                                  |    <0.001 |
+|                 eop_shiftreg_inst                                                |    <0.001 |
+|                 meta_DW1_register                                                |    <0.001 |
+|                 meta_DW2_register                                                |    <0.001 |
+|                 metadata_DW0_register                                            |    <0.001 |
+|                 output_pipeline                                                  |     0.002 |
+|                   pipeline_inst                                                  |     0.002 |
+|                 start_flag_register                                              |    <0.001 |
+|               rxr_engine_inst                                                    |     0.002 |
+|                 addr_DW0_register                                                |    <0.001 |
+|                 data_shiftreg_inst                                               |    <0.001 |
+|                 eop_shiftreg_inst                                                |    <0.001 |
+|                 meta_DW1_register                                                |    <0.001 |
+|                 metadata_DW0_register                                            |    <0.001 |
+|                 output_pipeline                                                  |    <0.001 |
+|                   pipeline_inst                                                  |    <0.001 |
+|                 sop_shiftreg_inst                                                |    <0.001 |
+|             tx_engine_ultrascale_inst                                            |     0.151 |
+|               txc_engine_inst                                                    |     0.069 |
+|                 rst_shiftreg                                                     |    <0.001 |
+|                 txc_engine_inst                                                  |     0.060 |
+|                   tx_alignment_inst                                              |     0.016 |
+|                     compute_reg                                                  |     0.004 |
+|                       pipeline_inst                                              |     0.004 |
+|                     gen_data_input_regs[0].data_register_                        |    <0.001 |
+|                       pipeline_inst                                              |    <0.001 |
+|                     gen_data_input_regs[0].packet_valid_register                 |    <0.001 |
+|                       pipeline_inst                                              |    <0.001 |
+|                     gen_data_input_regs[1].data_register_                        |    <0.001 |
+|                       pipeline_inst                                              |    <0.001 |
+|                     gen_data_input_regs[1].packet_valid_register                 |    <0.001 |
+|                       pipeline_inst                                              |    <0.001 |
+|                     gen_data_input_regs[2].data_register_                        |    <0.001 |
+|                       pipeline_inst                                              |    <0.001 |
+|                     gen_data_input_regs[2].packet_valid_register                 |    <0.001 |
+|                       pipeline_inst                                              |    <0.001 |
+|                     gen_data_input_regs[3].data_register_                        |    <0.001 |
+|                       pipeline_inst                                              |    <0.001 |
+|                     gen_data_input_regs[3].packet_valid_register                 |    <0.001 |
+|                       pipeline_inst                                              |    <0.001 |
+|                     hdr_input_reg                                                |     0.003 |
+|                       pipeline_inst                                              |     0.003 |
+|                     output_register_inst                                         |     0.003 |
+|                       pipeline_inst                                              |     0.003 |
+|                     pktctr_inst                                                  |    <0.001 |
+|                     ready_reg                                                    |     0.002 |
+|                       pipeline_inst                                              |     0.002 |
+|                     rot_inst                                                     |    <0.001 |
+|                     satctr_inst                                                  |    <0.001 |
+|                     select_reg                                                   |    <0.001 |
+|                       pipeline_inst                                              |    <0.001 |
+|                   tx_data_pipeline_inst                                          |     0.023 |
+|                     tx_shift_inst                                                |    <0.001 |
+|                       input_register                                             |    <0.001 |
+|                         pipeline_inst                                            |    <0.001 |
+|                     txdf_inst                                                    |     0.023 |
+|                       gen_regs_fifos[0].fifo_inst_                               |     0.006 |
+|                         mem                                                      |     0.005 |
+|                       gen_regs_fifos[0].fifo_pipeline_inst_                      |    <0.001 |
+|                         pipeline_inst                                            |    <0.001 |
+|                       gen_regs_fifos[0].input_pipeline_inst_                     |    <0.001 |
+|                         pipeline_inst                                            |    <0.001 |
+|                       gen_regs_fifos[0].perfifo_ctr_inst                         |    <0.001 |
+|                       gen_regs_fifos[1].fifo_inst_                               |     0.004 |
+|                         mem                                                      |     0.004 |
+|                       gen_regs_fifos[1].fifo_pipeline_inst_                      |    <0.001 |
+|                         pipeline_inst                                            |    <0.001 |
+|                       gen_regs_fifos[1].perfifo_ctr_inst                         |    <0.001 |
+|                       gen_regs_fifos[2].fifo_inst_                               |     0.004 |
+|                         mem                                                      |     0.004 |
+|                       gen_regs_fifos[2].fifo_pipeline_inst_                      |    <0.001 |
+|                         pipeline_inst                                            |    <0.001 |
+|                       gen_regs_fifos[2].perfifo_ctr_inst                         |    <0.001 |
+|                       gen_regs_fifos[3].fifo_inst_                               |     0.004 |
+|                         mem                                                      |     0.004 |
+|                       gen_regs_fifos[3].fifo_pipeline_inst_                      |    <0.001 |
+|                         pipeline_inst                                            |    <0.001 |
+|                       gen_regs_fifos[3].perfifo_ctr_inst                         |    <0.001 |
+|                       packet_valid_reg                                           |    <0.001 |
+|                         pipeline_inst                                            |    <0.001 |
+|                   txhf_inst                                                      |     0.020 |
+|                     fifo_inst                                                    |     0.020 |
+|                       mem                                                        |     0.019 |
+|                     input_pipeline_inst                                          |    <0.001 |
+|                       pipeline_inst                                              |    <0.001 |
+|                     output_pipeline_inst                                         |    <0.001 |
+|                       pipeline_inst                                              |    <0.001 |
+|                 txc_formatter_inst                                               |    <0.001 |
+|                   input_inst                                                     |    <0.001 |
+|                     pipeline_inst                                                |    <0.001 |
+|                   output_inst                                                    |    <0.001 |
+|                     pipeline_inst                                                |    <0.001 |
+|                 txc_trans_inst                                                   |     0.008 |
+|                   input_inst                                                     |     0.003 |
+|                     pipeline_inst                                                |     0.003 |
+|                   output_inst                                                    |     0.005 |
+|                     pipeline_inst                                                |     0.005 |
+|                   rc                                                             |    <0.001 |
+|                     rst_counter                                                  |    <0.001 |
+|               txr_engine_inst                                                    |     0.082 |
+|                 rst_shiftreg                                                     |    <0.001 |
+|                 txr_engine_inst                                                  |     0.069 |
+|                   tx_alignment_inst                                              |     0.014 |
+|                     compute_reg                                                  |     0.003 |
+|                       pipeline_inst                                              |     0.003 |
+|                     gen_data_input_regs[0].data_register_                        |    <0.001 |
+|                       pipeline_inst                                              |    <0.001 |
+|                     gen_data_input_regs[0].packet_valid_register                 |    <0.001 |
+|                       pipeline_inst                                              |    <0.001 |
+|                     gen_data_input_regs[1].data_register_                        |    <0.001 |
+|                       pipeline_inst                                              |    <0.001 |
+|                     gen_data_input_regs[1].packet_valid_register                 |    <0.001 |
+|                       pipeline_inst                                              |    <0.001 |
+|                     gen_data_input_regs[2].data_register_                        |    <0.001 |
+|                       pipeline_inst                                              |    <0.001 |
+|                     gen_data_input_regs[2].packet_valid_register                 |    <0.001 |
+|                       pipeline_inst                                              |    <0.001 |
+|                     gen_data_input_regs[3].data_register_                        |    <0.001 |
+|                       pipeline_inst                                              |    <0.001 |
+|                     gen_data_input_regs[3].packet_valid_register                 |    <0.001 |
+|                       pipeline_inst                                              |    <0.001 |
+|                     hdr_input_reg                                                |     0.002 |
+|                       pipeline_inst                                              |     0.002 |
+|                     output_register_inst                                         |     0.003 |
+|                       pipeline_inst                                              |     0.003 |
+|                     pktctr_inst                                                  |    <0.001 |
+|                     ready_reg                                                    |     0.002 |
+|                       pipeline_inst                                              |     0.002 |
+|                     rot_inst                                                     |    <0.001 |
+|                     satctr_inst                                                  |    <0.001 |
+|                     select_reg                                                   |    <0.001 |
+|                       pipeline_inst                                              |    <0.001 |
+|                   tx_data_pipeline_inst                                          |     0.031 |
+|                     tx_shift_inst                                                |     0.003 |
+|                       input_register                                             |     0.003 |
+|                         pipeline_inst                                            |     0.003 |
+|                     txdf_inst                                                    |     0.028 |
+|                       gen_regs_fifos[0].fifo_inst_                               |     0.005 |
+|                         mem                                                      |     0.005 |
+|                       gen_regs_fifos[0].fifo_pipeline_inst_                      |    <0.001 |
+|                         pipeline_inst                                            |    <0.001 |
+|                       gen_regs_fifos[0].input_pipeline_inst_                     |    <0.001 |
+|                         pipeline_inst                                            |    <0.001 |
+|                       gen_regs_fifos[0].perfifo_ctr_inst                         |    <0.001 |
+|                       gen_regs_fifos[1].fifo_inst_                               |     0.005 |
+|                         mem                                                      |     0.005 |
+|                       gen_regs_fifos[1].fifo_pipeline_inst_                      |    <0.001 |
+|                         pipeline_inst                                            |    <0.001 |
+|                       gen_regs_fifos[1].input_pipeline_inst_                     |    <0.001 |
+|                         pipeline_inst                                            |    <0.001 |
+|                       gen_regs_fifos[1].perfifo_ctr_inst                         |    <0.001 |
+|                       gen_regs_fifos[2].fifo_inst_                               |     0.005 |
+|                         mem                                                      |     0.004 |
+|                       gen_regs_fifos[2].fifo_pipeline_inst_                      |    <0.001 |
+|                         pipeline_inst                                            |    <0.001 |
+|                       gen_regs_fifos[2].input_pipeline_inst_                     |    <0.001 |
+|                         pipeline_inst                                            |    <0.001 |
+|                       gen_regs_fifos[2].perfifo_ctr_inst                         |    <0.001 |
+|                       gen_regs_fifos[3].fifo_inst_                               |     0.006 |
+|                         mem                                                      |     0.005 |
+|                       gen_regs_fifos[3].fifo_pipeline_inst_                      |    <0.001 |
+|                         pipeline_inst                                            |    <0.001 |
+|                       gen_regs_fifos[3].input_pipeline_inst_                     |    <0.001 |
+|                         pipeline_inst                                            |    <0.001 |
+|                       gen_regs_fifos[3].perfifo_ctr_inst                         |    <0.001 |
+|                       packet_valid_reg                                           |    <0.001 |
+|                         pipeline_inst                                            |    <0.001 |
+|                   txhf_inst                                                      |     0.024 |
+|                     fifo_inst                                                    |     0.020 |
+|                       mem                                                        |     0.020 |
+|                     input_pipeline_inst                                          |     0.003 |
+|                       pipeline_inst                                              |     0.003 |
+|                     output_pipeline_inst                                         |    <0.001 |
+|                       pipeline_inst                                              |    <0.001 |
+|                 txr_formatter_inst                                               |     0.005 |
+|                   input_inst                                                     |     0.003 |
+|                     pipeline_inst                                                |     0.003 |
+|                   output_inst                                                    |     0.003 |
+|                     pipeline_inst                                                |     0.003 |
+|                 txr_trans_inst                                                   |     0.008 |
+|                   input_inst                                                     |     0.003 |
+|                     pipeline_inst                                                |     0.003 |
+|                   output_inst                                                    |     0.004 |
+|                     pipeline_inst                                                |     0.004 |
+|                   rc                                                             |    <0.001 |
+|                     rst_counter                                                  |    <0.001 |
+|           riffa_inst                                                             |     0.229 |
+|             channels[0].channel                                                  |     0.166 |
+|               channel                                                            |     0.163 |
+|                 rxPort                                                           |     0.087 |
+|                   gate                                                           |    <0.001 |
+|                     countSync                                                    |    <0.001 |
+|                       sigAtoB                                                    |    <0.001 |
+|                         metaFF                                                   |    <0.001 |
+|                         syncFF                                                   |    <0.001 |
+|                       sigBtoA                                                    |    <0.001 |
+|                         metaFF                                                   |    <0.001 |
+|                         syncFF                                                   |    <0.001 |
+|                     rxAckSig                                                     |    <0.001 |
+|                       metaFF                                                     |    <0.001 |
+|                       syncFF                                                     |    <0.001 |
+|                     rxSig                                                        |    <0.001 |
+|                       sigAtoB                                                    |    <0.001 |
+|                         metaFF                                                   |    <0.001 |
+|                         syncFF                                                   |    <0.001 |
+|                       sigBtoA                                                    |    <0.001 |
+|                         metaFF                                                   |    <0.001 |
+|                         syncFF                                                   |    <0.001 |
+|                   mainFifo                                                       |     0.008 |
+|                     fifo                                                         |     0.007 |
+|                       asyncCompare                                               |    <0.001 |
+|                       mem                                                        |     0.005 |
+|                       rdPtrEmpty                                                 |    <0.001 |
+|                       wrPtrFull                                                  |     0.002 |
+|                   mainFifoPacker                                                 |     0.011 |
+|                   reader                                                         |     0.023 |
+|                   requesterMux                                                   |     0.002 |
+|                   sgListReader                                                   |     0.003 |
+|                   sgRxFifo                                                       |     0.002 |
+|                     mem                                                          |    <0.001 |
+|                   sgRxFifoPacker                                                 |     0.009 |
+|                   sgRxReq                                                        |     0.009 |
+|                   sgTxFifo                                                       |     0.001 |
+|                     mem                                                          |    <0.001 |
+|                   sgTxFifoPacker                                                 |     0.009 |
+|                   sgTxReq                                                        |     0.009 |
+|                 txPort                                                           |     0.076 |
+|                   buffer                                                         |     0.041 |
+|                     fifo                                                         |     0.022 |
+|                       mem                                                        |     0.021 |
+|                   gate                                                           |     0.008 |
+|                     fifo                                                         |     0.007 |
+|                       asyncCompare                                               |    <0.001 |
+|                       mem                                                        |     0.006 |
+|                       rdPtrEmpty                                                 |    <0.001 |
+|                       wrPtrFull                                                  |    <0.001 |
+|                   monitor                                                        |     0.004 |
+|                   sgListReader                                                   |     0.003 |
+|                   writer                                                         |     0.021 |
+|             intr                                                                 |    <0.001 |
+|               intrCtlr                                                           |    <0.001 |
+|             rc_fc                                                                |    <0.001 |
+|             reg_inst                                                             |     0.003 |
+|               chnl_output_register                                               |    <0.001 |
+|                 pipeline_inst                                                    |    <0.001 |
+|               rxr_input_register                                                 |    <0.001 |
+|                 pipeline_inst                                                    |    <0.001 |
+|               txc_output_register                                                |     0.001 |
+|                 pipeline_inst                                                    |     0.001 |
+|             reorderQueue                                                         |     0.049 |
+|               data_input                                                         |     0.018 |
+|                 countRam                                                         |    <0.001 |
+|                   rRAM_reg_0_31_0_5                                              |    <0.001 |
+|                   rRAM_reg_0_31_6_7                                              |    <0.001 |
+|                 posRam                                                           |    <0.001 |
+|                   rRAM_reg_0_31_0_5                                              |    <0.001 |
+|                   rRAM_reg_0_31_12_17                                            |    <0.001 |
+|                   rRAM_reg_0_31_18_19                                            |    <0.001 |
+|                   rRAM_reg_0_31_6_11                                             |    <0.001 |
+|               data_output                                                        |     0.005 |
+|               mapRam                                                             |    <0.001 |
+|                 rRAM_reg_0_31_0_5                                                |    <0.001 |
+|               pktRam                                                             |    <0.001 |
+|                 rRAM_reg_0_31_0_5                                                |    <0.001 |
+|                 rRAM_reg_0_31_6_11                                               |    <0.001 |
+|               rams[0].ram                                                        |     0.005 |
+|               rams[1].ram                                                        |     0.005 |
+|               rams[2].ram                                                        |     0.005 |
+|               rams[3].ram                                                        |     0.009 |
+|             reset_extender_inst                                                  |    <0.001 |
+|               rst_counter                                                        |    <0.001 |
+|               rst_shiftreg                                                       |    <0.001 |
+|             tx_mux_inst                                                          |     0.010 |
+|               req_ack_fifo                                                       |    <0.001 |
+|                 mem                                                              |    <0.001 |
+|                   rMemory_reg_0_31_0_0                                           |    <0.001 |
+|               tx_mux_128_inst                                                    |     0.009 |
+|                 selRd                                                            |    <0.001 |
+|                 selWr                                                            |    <0.001 |
+|             txc_data_hold                                                        |    <0.001 |
+|               pipeline_inst                                                      |    <0.001 |
+|             txc_meta_hold                                                        |    <0.001 |
+|               pipeline_inst                                                      |    <0.001 |
+|     SYS_CLK                                                                      |     0.000 |
+|       U0                                                                         |     0.000 |
+|     inv                                                                          |     0.000 |
++----------------------------------------------------------------------------------+-----------+
+
+

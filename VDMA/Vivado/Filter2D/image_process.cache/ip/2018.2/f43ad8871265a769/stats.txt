@@ -1,0 +1,4 @@
+NumberHits:0
+Timestamp: Wed Aug 29 12:15:45 UTC 2018
+VLNV: xilinx.com:hls:image_core:1.0
+SynthRuntime: 114

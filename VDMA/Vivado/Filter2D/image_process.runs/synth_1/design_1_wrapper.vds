@@ -1,0 +1,524 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Oct  9 19:43:01 2018
+# Process ID: 15296
+# Current directory: F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1
+# Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+# Log file: F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/design_1_wrapper.vds
+# Journal file: F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/FPGA/project/Vivado/Filter2D/xilinx_com_hls_Filter2D_Core_1_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2018.2/data/ip'.
+add_files: Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 369.445 ; gain = 69.113
+Command: synth_design -top design_1_wrapper -part xc7vx690tffg1761-3
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 6512 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 482.465 ; gain = 106.121
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1' [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6157] synthesizing module 'design_1_blk_mem_gen_0_0' [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_blk_mem_gen_0_0' (1#1) [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_BRAM1_0' [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_BRAM1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_BRAM1_0' (2#1) [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_BRAM1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_bram_ctrl_0_0' [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_axi_bram_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_bram_ctrl_0_0' (3#1) [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_axi_bram_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_BRAM_TRCL1_0' [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_BRAM_TRCL1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_BRAM_TRCL1_0' (4#1) [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_BRAM_TRCL1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_Filter2D_Core_0_0' [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_Filter2D_Core_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_Filter2D_Core_0_0' (5#1) [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_Filter2D_Core_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'Filter2D_Core' of module 'design_1_Filter2D_Core_0_0' requires 38 connections, but only 35 given [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/synth/design_1.v:381]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_intc_0_0' [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_axi_intc_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_intc_0_0' (6#1) [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_axi_intc_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_uartlite_0_0' [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_axi_uartlite_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_uartlite_0_0' (7#1) [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_axi_uartlite_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'UART' of module 'design_1_axi_uartlite_0_0' requires 22 connections, but only 21 given [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/synth/design_1.v:439]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_vdma_0_0' [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_axi_vdma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_vdma_0_0' (8#1) [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_axi_vdma_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'VDMA' of module 'design_1_axi_vdma_0_0' requires 67 connections, but only 65 given [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/synth/design_1.v:461]
+INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_1_0' [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_1_0' (9#1) [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_mdm_1_0' [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_mdm_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_mdm_1_0' (10#1) [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_mdm_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_microblaze_0_0' [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_microblaze_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_microblaze_0_0' (11#1) [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_microblaze_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'microblaze_0' of module 'design_1_microblaze_0_0' requires 52 connections, but only 51 given [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/synth/design_1.v:546]
+INFO: [Synth 8-6157] synthesizing module 'design_1_microblaze_0_axi_periph_0' [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/synth/design_1.v:833]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_8RVYHO' [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/synth/design_1.v:2440]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (12#1) [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_auto_pc_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'auto_pc' of module 'design_1_auto_pc_0' requires 56 connections, but only 53 given [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/synth/design_1.v:2659]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_8RVYHO' (13#1) [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/synth/design_1.v:2440]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1UTB3Y5' [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/synth/design_1.v:2715]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_1' [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_1' (14#1) [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_auto_pc_1_stub.v:6]
+WARNING: [Synth 8-350] instance 'auto_pc' of module 'design_1_auto_pc_1' requires 56 connections, but only 54 given [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/synth/design_1.v:2938]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1UTB3Y5' (15#1) [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/synth/design_1.v:2715]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_7ANRHB' [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/synth/design_1.v:2995]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_7ANRHB' (16#1) [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/synth/design_1.v:2995]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1W07O72' [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/synth/design_1.v:3225]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1W07O72' (17#1) [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/synth/design_1.v:3225]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_5LX7BU' [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/synth/design_1.v:3455]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_2' [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_auto_pc_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_2' (18#1) [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_auto_pc_2_stub.v:6]
+WARNING: [Synth 8-350] instance 'auto_pc' of module 'design_1_auto_pc_2' requires 56 connections, but only 54 given [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/synth/design_1.v:3678]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_5LX7BU' (19#1) [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/synth/design_1.v:3455]
+INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_1XR4ZAZ' [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/synth/design_1.v:3735]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_3' [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_auto_pc_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_3' (20#1) [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_auto_pc_3_stub.v:6]
+WARNING: [Synth 8-350] instance 'auto_pc' of module 'design_1_auto_pc_3' requires 56 connections, but only 54 given [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/synth/design_1.v:3958]
+INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_1XR4ZAZ' (21#1) [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/synth/design_1.v:3735]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1RZP34U' [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/synth/design_1.v:4249]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_4' [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_auto_pc_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_4' (22#1) [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_auto_pc_4_stub.v:6]
+WARNING: [Synth 8-350] instance 'auto_pc' of module 'design_1_auto_pc_4' requires 56 connections, but only 54 given [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/synth/design_1.v:4472]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1RZP34U' (23#1) [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/synth/design_1.v:4249]
+INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_2REGHR' [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/synth/design_1.v:4529]
+INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_2REGHR' (24#1) [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/synth/design_1.v:4529]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (25#1) [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_xbar_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'xbar' of module 'design_1_xbar_0' requires 74 connections, but only 72 given [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/synth/design_1.v:2365]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_microblaze_0_axi_periph_0' (26#1) [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/synth/design_1.v:833]
+INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_1K0VQXK' [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/synth/design_1.v:4015]
+INFO: [Synth 8-6157] synthesizing module 'design_1_dlmb_bram_if_cntlr_0' [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_dlmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_dlmb_bram_if_cntlr_0' (27#1) [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_dlmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_dlmb_v10_0' [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_dlmb_v10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_dlmb_v10_0' (28#1) [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_dlmb_v10_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'dlmb_v10' of module 'design_1_dlmb_v10_0' requires 25 connections, but only 24 given [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/synth/design_1.v:4161]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ilmb_bram_if_cntlr_0' [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_ilmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ilmb_bram_if_cntlr_0' (29#1) [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_ilmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ilmb_v10_0' [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_ilmb_v10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ilmb_v10_0' (30#1) [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_ilmb_v10_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'ilmb_v10' of module 'design_1_ilmb_v10_0' requires 25 connections, but only 24 given [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/synth/design_1.v:4207]
+INFO: [Synth 8-6157] synthesizing module 'design_1_lmb_bram_0' [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_lmb_bram_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_lmb_bram_0' (31#1) [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_lmb_bram_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'lmb_bram' of module 'design_1_lmb_bram_0' requires 16 connections, but only 14 given [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/synth/design_1.v:4232]
+INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_1K0VQXK' (32#1) [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/synth/design_1.v:4015]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_clk_wiz_1_100M_0' [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_rst_clk_wiz_1_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_clk_wiz_1_100M_0' (33#1) [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_rst_clk_wiz_1_100M_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'rst_clk_wiz_1_100M' of module 'design_1_rst_clk_wiz_1_100M_0' requires 10 connections, but only 9 given [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/synth/design_1.v:816]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlconcat_0_0' [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_xlconcat_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconcat_0_0' (34#1) [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/.Xil/Vivado-15296-DESKTOP-7JLTO9Q/realtime/design_1_xlconcat_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (35#1) [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (36#1) [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+WARNING: [Synth 8-3331] design s01_couplers_imp_2REGHR has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design s01_couplers_imp_2REGHR has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design s01_couplers_imp_2REGHR has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design s01_couplers_imp_2REGHR has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design s00_couplers_imp_1RZP34U has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_1RZP34U has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m05_couplers_imp_1XR4ZAZ has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m05_couplers_imp_1XR4ZAZ has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m04_couplers_imp_5LX7BU has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m04_couplers_imp_5LX7BU has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m03_couplers_imp_1W07O72 has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m03_couplers_imp_1W07O72 has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m03_couplers_imp_1W07O72 has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m03_couplers_imp_1W07O72 has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m02_couplers_imp_7ANRHB has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m02_couplers_imp_7ANRHB has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m02_couplers_imp_7ANRHB has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m02_couplers_imp_7ANRHB has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m01_couplers_imp_1UTB3Y5 has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m01_couplers_imp_1UTB3Y5 has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_8RVYHO has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_8RVYHO has unconnected port M_ARESETN
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 538.699 ; gain = 162.355
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 538.699 ; gain = 162.355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 538.699 ; gain = 162.355
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7vx690tffg1761-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_0/design_1_microblaze_0_0/design_1_microblaze_0_0_in_context.xdc] for cell 'design_1_i/microblaze_0'
+Finished Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_0/design_1_microblaze_0_0/design_1_microblaze_0_0_in_context.xdc] for cell 'design_1_i/microblaze_0'
+Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0/design_1_mdm_1_0_in_context.xdc] for cell 'design_1_i/mdm_1'
+Finished Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0/design_1_mdm_1_0_in_context.xdc] for cell 'design_1_i/mdm_1'
+Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_in_context.xdc] for cell 'design_1_i/clk_wiz_1'
+Finished Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_in_context.xdc] for cell 'design_1_i/clk_wiz_1'
+Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'design_1_i/rst_clk_wiz_1_100M'
+Finished Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'design_1_i/rst_clk_wiz_1_100M'
+Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_0/design_1_axi_bram_ctrl_0_0/design_1_axi_bram_ctrl_0_0_in_context.xdc] for cell 'design_1_i/BRAM_TRCL1'
+Finished Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_0/design_1_axi_bram_ctrl_0_0/design_1_axi_bram_ctrl_0_0_in_context.xdc] for cell 'design_1_i/BRAM_TRCL1'
+Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_0/design_1_blk_mem_gen_0_0/design_1_blk_mem_gen_0_0_in_context.xdc] for cell 'design_1_i/BRAM1'
+Finished Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_0/design_1_blk_mem_gen_0_0/design_1_blk_mem_gen_0_0_in_context.xdc] for cell 'design_1_i/BRAM1'
+Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_BRAM1_0/design_1_BRAM1_0/design_1_BRAM1_0_in_context.xdc] for cell 'design_1_i/BRAM2'
+Finished Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_BRAM1_0/design_1_BRAM1_0/design_1_BRAM1_0_in_context.xdc] for cell 'design_1_i/BRAM2'
+Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_BRAM_TRCL1_0/design_1_BRAM_TRCL1_0/design_1_axi_bram_ctrl_0_0_in_context.xdc] for cell 'design_1_i/BRAM_TRCL2'
+Finished Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_BRAM_TRCL1_0/design_1_BRAM_TRCL1_0/design_1_axi_bram_ctrl_0_0_in_context.xdc] for cell 'design_1_i/BRAM_TRCL2'
+Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_dlmb_v10_0/design_1_dlmb_v10_0/design_1_dlmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_v10'
+Finished Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_dlmb_v10_0/design_1_dlmb_v10_0/design_1_dlmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_v10'
+Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0/design_1_dlmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_v10'
+Finished Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0/design_1_dlmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_v10'
+Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Finished Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Finished Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_lmb_bram_0/design_1_lmb_bram_0/design_1_lmb_bram_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/lmb_bram'
+Finished Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_lmb_bram_0/design_1_lmb_bram_0/design_1_lmb_bram_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/lmb_bram'
+Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0_in_context.xdc] for cell 'design_1_i/UART'
+Finished Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0_in_context.xdc] for cell 'design_1_i/UART'
+Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/xbar'
+Finished Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/xbar'
+Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_axi_intc_0_0/design_1_axi_intc_0_0/design_1_axi_intc_0_0_in_context.xdc] for cell 'design_1_i/INTC'
+Finished Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_axi_intc_0_0/design_1_axi_intc_0_0/design_1_axi_intc_0_0_in_context.xdc] for cell 'design_1_i/INTC'
+Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/design_1_xlconcat_0_0/design_1_xlconcat_0_0_in_context.xdc] for cell 'design_1_i/xlconcat_0'
+Finished Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/design_1_xlconcat_0_0/design_1_xlconcat_0_0_in_context.xdc] for cell 'design_1_i/xlconcat_0'
+Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0_in_context.xdc] for cell 'design_1_i/VDMA'
+Finished Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0_in_context.xdc] for cell 'design_1_i/VDMA'
+Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_Filter2D_Core_0_0/design_1_Filter2D_Core_0_0/design_1_Filter2D_Core_0_0_in_context.xdc] for cell 'design_1_i/Filter2D_Core'
+Finished Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_Filter2D_Core_0_0/design_1_Filter2D_Core_0_0/design_1_Filter2D_Core_0_0_in_context.xdc] for cell 'design_1_i/Filter2D_Core'
+Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_3/design_1_auto_pc_3/design_1_auto_pc_3_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m05_couplers/auto_pc'
+Finished Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_3/design_1_auto_pc_3/design_1_auto_pc_3_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m05_couplers/auto_pc'
+Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_2/design_1_auto_pc_2/design_1_auto_pc_3_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m04_couplers/auto_pc'
+Finished Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_2/design_1_auto_pc_2/design_1_auto_pc_3_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m04_couplers/auto_pc'
+Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1/design_1_auto_pc_3_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m01_couplers/auto_pc'
+Finished Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1/design_1_auto_pc_3_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m01_couplers/auto_pc'
+Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_3_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m00_couplers/auto_pc'
+Finished Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_3_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m00_couplers/auto_pc'
+Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_4/design_1_auto_pc_4/design_1_auto_pc_4_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/s00_couplers/auto_pc'
+Finished Parsing XDC File [f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_4/design_1_auto_pc_4/design_1_auto_pc_4_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/s00_couplers/auto_pc'
+Parsing XDC File [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/constrs_1/new/xdc.xdc]
+Finished Parsing XDC File [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/constrs_1/new/xdc.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [F:/FPGA/project/Vivado/Filter2D/image_process.srcs/constrs_1/new/xdc.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1075.051 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1075.051 ; gain = 698.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx690tffg1761-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1075.051 ; gain = 698.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk_n. (constraint file  f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_n. (constraint file  f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for clk_p. (constraint file  f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_p. (constraint file  f:/FPGA/project/Vivado/Filter2D/image_process.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_in_context.xdc, line 6).
+Applied set_property DONT_TOUCH = true for design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/microblaze_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/mdm_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/clk_wiz_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/rst_clk_wiz_1_100M. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/BRAM_TRCL1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/BRAM1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/microblaze_0_axi_periph. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/BRAM2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/BRAM_TRCL2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/microblaze_0_local_memory/dlmb_v10. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/microblaze_0_local_memory/ilmb_v10. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/microblaze_0_local_memory/dlmb_bram_if_cntlr. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/microblaze_0_local_memory/lmb_bram. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/UART. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/microblaze_0_axi_periph/xbar. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/INTC. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/xlconcat_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/VDMA. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/Filter2D_Core. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/microblaze_0_axi_periph/m05_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/microblaze_0_axi_periph/m04_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/microblaze_0_axi_periph/m01_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/microblaze_0_axi_periph/m00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/microblaze_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 1075.051 ; gain = 698.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 1075.051 ; gain = 698.707
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 3600 (col length:200)
+BRAMs: 2940 (col length: RAMB18 200 RAMB36 100)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M00_ACLK
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M00_ARESETN
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M01_ACLK
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M01_ARESETN
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M02_ACLK
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M02_ARESETN
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M03_ACLK
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M03_ARESETN
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M04_ACLK
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M04_ARESETN
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M05_ACLK
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port M05_ARESETN
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port S01_ACLK
+WARNING: [Synth 8-3331] design design_1_microblaze_0_axi_periph_0 has unconnected port S01_ARESETN
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 1075.051 ; gain = 698.707
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/mdm_1/Dbg_Clk_0' to pin 'design_1_i/mdm_1/bbstub_Dbg_Clk_0/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/mdm_1/Dbg_Update_0' to pin 'design_1_i/mdm_1/bbstub_Dbg_Update_0/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/clk_wiz_1/clk_out1' to pin 'design_1_i/clk_wiz_1/bbstub_clk_out1/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/BRAM_TRCL1/bram_clk_a' to pin 'design_1_i/BRAM_TRCL1/bbstub_bram_clk_a/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/BRAM_TRCL2/bram_clk_a' to pin 'design_1_i/BRAM_TRCL2/bbstub_bram_clk_a/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/microblaze_0_local_memory/dlmb_bram_if_cntlr/BRAM_Clk_A' to pin 'design_1_i/microblaze_0_local_memory/dlmb_bram_if_cntlr/bbstub_BRAM_Clk_A/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr/BRAM_Clk_A' to pin 'design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr/bbstub_BRAM_Clk_A/O'
+INFO: [Synth 8-5819] Moved 7 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 1075.051 ; gain = 698.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 1075.051 ; gain = 698.707
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 1075.051 ; gain = 698.707
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 1075.051 ; gain = 698.707
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 1075.051 ; gain = 698.707
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 1075.051 ; gain = 698.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 1075.051 ; gain = 698.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 1075.051 ; gain = 698.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 1075.051 ; gain = 698.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+------------------------------+----------+
+|      |BlackBox name                 |Instances |
++------+------------------------------+----------+
+|1     |design_1_xbar_0               |         1|
+|2     |design_1_auto_pc_0            |         1|
+|3     |design_1_auto_pc_1            |         1|
+|4     |design_1_auto_pc_2            |         1|
+|5     |design_1_auto_pc_3            |         1|
+|6     |design_1_auto_pc_4            |         1|
+|7     |design_1_blk_mem_gen_0_0      |         1|
+|8     |design_1_BRAM1_0              |         1|
+|9     |design_1_axi_bram_ctrl_0_0    |         1|
+|10    |design_1_BRAM_TRCL1_0         |         1|
+|11    |design_1_Filter2D_Core_0_0    |         1|
+|12    |design_1_axi_intc_0_0         |         1|
+|13    |design_1_axi_uartlite_0_0     |         1|
+|14    |design_1_axi_vdma_0_0         |         1|
+|15    |design_1_clk_wiz_1_0          |         1|
+|16    |design_1_mdm_1_0              |         1|
+|17    |design_1_microblaze_0_0       |         1|
+|18    |design_1_rst_clk_wiz_1_100M_0 |         1|
+|19    |design_1_xlconcat_0_0         |         1|
+|20    |design_1_dlmb_bram_if_cntlr_0 |         1|
+|21    |design_1_dlmb_v10_0           |         1|
+|22    |design_1_ilmb_bram_if_cntlr_0 |         1|
+|23    |design_1_ilmb_v10_0           |         1|
+|24    |design_1_lmb_bram_0           |         1|
++------+------------------------------+----------+
+
+Report Cell Usage: 
++------+------------------------------+------+
+|      |Cell                          |Count |
++------+------------------------------+------+
+|1     |design_1_BRAM1_0              |     1|
+|2     |design_1_BRAM_TRCL1_0         |     1|
+|3     |design_1_Filter2D_Core_0_0    |     1|
+|4     |design_1_auto_pc_0            |     1|
+|5     |design_1_auto_pc_1            |     1|
+|6     |design_1_auto_pc_2            |     1|
+|7     |design_1_auto_pc_3            |     1|
+|8     |design_1_auto_pc_4            |     1|
+|9     |design_1_axi_bram_ctrl_0_0    |     1|
+|10    |design_1_axi_intc_0_0         |     1|
+|11    |design_1_axi_uartlite_0_0     |     1|
+|12    |design_1_axi_vdma_0_0         |     1|
+|13    |design_1_blk_mem_gen_0_0      |     1|
+|14    |design_1_clk_wiz_1_0          |     1|
+|15    |design_1_dlmb_bram_if_cntlr_0 |     1|
+|16    |design_1_dlmb_v10_0           |     1|
+|17    |design_1_ilmb_bram_if_cntlr_0 |     1|
+|18    |design_1_ilmb_v10_0           |     1|
+|19    |design_1_lmb_bram_0           |     1|
+|20    |design_1_mdm_1_0              |     1|
+|21    |design_1_microblaze_0_0       |     1|
+|22    |design_1_rst_clk_wiz_1_100M_0 |     1|
+|23    |design_1_xbar_0               |     1|
+|24    |design_1_xlconcat_0_0         |     1|
+|25    |IBUF                          |     2|
+|26    |OBUF                          |     1|
++------+------------------------------+------+
+
+Report Instance Areas: 
++------+------------------------------+--------------------------------------+------+
+|      |Instance                      |Module                                |Cells |
++------+------------------------------+--------------------------------------+------+
+|1     |top                           |                                      |  3254|
+|2     |  design_1_i                  |design_1                              |  3251|
+|3     |    microblaze_0_axi_periph   |design_1_microblaze_0_axi_periph_0    |  1889|
+|4     |      m00_couplers            |m00_couplers_imp_8RVYHO               |   153|
+|5     |      m01_couplers            |m01_couplers_imp_1UTB3Y5              |   153|
+|6     |      m04_couplers            |m04_couplers_imp_5LX7BU               |   153|
+|7     |      m05_couplers            |m05_couplers_imp_1XR4ZAZ              |   153|
+|8     |      s00_couplers            |s00_couplers_imp_1RZP34U              |   205|
+|9     |    microblaze_0_local_memory |microblaze_0_local_memory_imp_1K0VQXK |   496|
++------+------------------------------+--------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 1075.051 ; gain = 698.707
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 14 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 1075.051 ; gain = 162.355
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:38 . Memory (MB): peak = 1075.051 ; gain = 698.707
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+95 Infos, 50 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 1100.277 ; gain = 730.832
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'F:/FPGA/project/Vivado/Filter2D/image_process.runs/synth_1/design_1_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.541 . Memory (MB): peak = 1100.566 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Oct  9 19:43:57 2018...

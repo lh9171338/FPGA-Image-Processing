@@ -1,0 +1,1438 @@
+
+*** Running vivado
+    with args -log design_1_image_core_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_image_core_0_0.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source design_1_image_core_0_0.tcl -notrace
+Command: synth_design -top design_1_image_core_0_0 -part xc7vx690tffg1761-3 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 1428 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 449.379 ; gain = 100.938
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_image_core_0_0' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ip/design_1_image_core_0_0/synth/design_1_image_core_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'image_core_top' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_top.v:9]
+	Parameter RESET_ACTIVE_LOW bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'image_core' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core.v:12]
+	Parameter ap_const_lv24_0 bound to: 24'b000000000000000000000000 
+	Parameter ap_const_lv3_0 bound to: 3'b000 
+INFO: [Synth 8-6157] synthesizing module 'Block_Mat_exit45_pro' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Block_Mat_exit45_pro.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 1'b1 
+	Parameter ap_const_lv32_0 bound to: 0 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Block_Mat_exit45_pro.v:75]
+INFO: [Synth 8-6155] done synthesizing module 'Block_Mat_exit45_pro' (1#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Block_Mat_exit45_pro.v:10]
+INFO: [Synth 8-6157] synthesizing module 'AXIvideo2Mat' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/AXIvideo2Mat.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 8'b00000001 
+	Parameter ap_ST_fsm_state2 bound to: 8'b00000010 
+	Parameter ap_ST_fsm_state3 bound to: 8'b00000100 
+	Parameter ap_ST_fsm_state4 bound to: 8'b00001000 
+	Parameter ap_ST_fsm_pp1_stage0 bound to: 8'b00010000 
+	Parameter ap_ST_fsm_state7 bound to: 8'b00100000 
+	Parameter ap_ST_fsm_state8 bound to: 8'b01000000 
+	Parameter ap_ST_fsm_state9 bound to: 8'b10000000 
+	Parameter ap_const_lv32_0 bound to: 0 - type: integer 
+	Parameter ap_const_lv32_1 bound to: 1 - type: integer 
+	Parameter ap_const_lv32_4 bound to: 4 - type: integer 
+	Parameter ap_const_lv32_6 bound to: 6 - type: integer 
+	Parameter ap_const_lv32_3 bound to: 3 - type: integer 
+	Parameter ap_const_lv32_7 bound to: 7 - type: integer 
+	Parameter ap_const_lv32_2 bound to: 2 - type: integer 
+	Parameter ap_const_lv10_0 bound to: 10'b0000000000 
+	Parameter ap_const_lv32_5 bound to: 5 - type: integer 
+	Parameter ap_const_lv10_1 bound to: 10'b0000000001 
+	Parameter ap_const_lv32_8 bound to: 8 - type: integer 
+	Parameter ap_const_lv32_F bound to: 15 - type: integer 
+	Parameter ap_const_lv32_10 bound to: 16 - type: integer 
+	Parameter ap_const_lv32_17 bound to: 23 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/AXIvideo2Mat.v:155]
+INFO: [Synth 8-6155] done synthesizing module 'AXIvideo2Mat' (2#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/AXIvideo2Mat.v:10]
+INFO: [Synth 8-6157] synthesizing module 'Sobel' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Sobel.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 2'b01 
+	Parameter ap_ST_fsm_state2 bound to: 2'b10 
+	Parameter ap_const_lv32_0 bound to: 0 - type: integer 
+	Parameter ap_const_lv32_1 bound to: 1 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Sobel.v:94]
+INFO: [Synth 8-6157] synthesizing module 'Filter2D' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 5'b00001 
+	Parameter ap_ST_fsm_state2 bound to: 5'b00010 
+	Parameter ap_ST_fsm_state3 bound to: 5'b00100 
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 5'b01000 
+	Parameter ap_ST_fsm_state7 bound to: 5'b10000 
+	Parameter ap_const_lv32_0 bound to: 0 - type: integer 
+	Parameter ap_const_lv32_3 bound to: 3 - type: integer 
+	Parameter ap_const_lv32_1 bound to: 1 - type: integer 
+	Parameter ap_const_lv32_2 bound to: 2 - type: integer 
+	Parameter ap_const_lv2_0 bound to: 2'b00 
+	Parameter ap_const_lv10_0 bound to: 10'b0000000000 
+	Parameter ap_const_lv32_4 bound to: 4 - type: integer 
+	Parameter ap_const_lv2_1 bound to: 2'b01 
+	Parameter ap_const_lv2_2 bound to: 2'b10 
+	Parameter ap_const_lv10_2 bound to: 10'b0000000010 
+	Parameter ap_const_lv11_2 bound to: 11'b00000000010 
+	Parameter ap_const_lv2_3 bound to: 2'b11 
+	Parameter ap_const_lv11_7FE bound to: 11'b11111111110 
+	Parameter ap_const_lv10_1 bound to: 10'b0000000001 
+	Parameter ap_const_lv32_9 bound to: 9 - type: integer 
+	Parameter ap_const_lv9_0 bound to: 9'b000000000 
+	Parameter ap_const_lv10_3FF bound to: 10'b1111111111 
+	Parameter ap_const_lv10_3FE bound to: 10'b1111111110 
+	Parameter ap_const_lv10_3FD bound to: 10'b1111111101 
+	Parameter ap_const_lv11_7FF bound to: 11'b11111111111 
+	Parameter ap_const_lv32_A bound to: 10 - type: integer 
+	Parameter ap_const_lv11_1 bound to: 11'b00000000001 
+	Parameter ap_const_lv8_0 bound to: 8'b00000000 
+	Parameter ap_const_lv8_1 bound to: 8'b00000001 
+	Parameter ap_const_lv32_8 bound to: 8 - type: integer 
+	Parameter ap_const_lv3_0 bound to: 3'b000 
+	Parameter ap_const_lv8_FF bound to: 8'b11111111 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:109]
+INFO: [Synth 8-6157] synthesizing module 'Filter2D_k_buf_0_bkb' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D_k_buf_0_bkb.v:54]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 800 - type: integer 
+	Parameter AddressWidth bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Filter2D_k_buf_0_bkb_ram' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D_k_buf_0_bkb.v:9]
+	Parameter DWIDTH bound to: 8 - type: integer 
+	Parameter AWIDTH bound to: 10 - type: integer 
+	Parameter MEM_SIZE bound to: 800 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D_k_buf_0_bkb.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'Filter2D_k_buf_0_bkb_ram' (3#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D_k_buf_0_bkb.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'Filter2D_k_buf_0_bkb' (4#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D_k_buf_0_bkb.v:54]
+INFO: [Synth 8-6157] synthesizing module 'image_core_mux_32kbM' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_mux_32kbM.v:11]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 8 - type: integer 
+	Parameter din3_WIDTH bound to: 8 - type: integer 
+	Parameter din4_WIDTH bound to: 2 - type: integer 
+	Parameter dout_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'image_core_mux_32kbM' (5#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_mux_32kbM.v:11]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:1625]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:1627]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:1629]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:1631]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:1633]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:1635]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:1637]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:1639]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:1641]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:1755]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:1757]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:1759]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:1761]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:1763]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:1765]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:1769]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:1797]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:1799]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:1801]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:1803]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:1805]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:1807]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:1809]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:1811]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:1813]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:1815]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:1929]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:1933]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:1951]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:1959]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:2031]
+INFO: [Synth 8-6155] done synthesizing module 'Filter2D' (6#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'Sobel' (7#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Sobel.v:10]
+INFO: [Synth 8-6157] synthesizing module 'Mat2AXIvideo' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Mat2AXIvideo.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 4'b0001 
+	Parameter ap_ST_fsm_state2 bound to: 4'b0010 
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 4'b0100 
+	Parameter ap_ST_fsm_state5 bound to: 4'b1000 
+	Parameter ap_const_lv32_0 bound to: 0 - type: integer 
+	Parameter ap_const_lv32_2 bound to: 2 - type: integer 
+	Parameter ap_const_lv32_1 bound to: 1 - type: integer 
+	Parameter ap_const_lv10_0 bound to: 10'b0000000000 
+	Parameter ap_const_lv32_3 bound to: 3 - type: integer 
+	Parameter ap_const_lv3_7 bound to: 3'b111 
+	Parameter ap_const_lv3_0 bound to: 3'b000 
+	Parameter ap_const_lv11_7FF bound to: 11'b11111111111 
+	Parameter ap_const_lv10_1 bound to: 10'b0000000001 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Mat2AXIvideo.v:124]
+INFO: [Synth 8-6155] done synthesizing module 'Mat2AXIvideo' (8#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Mat2AXIvideo.v:10]
+INFO: [Synth 8-6157] synthesizing module 'image_core_img_0_lbW' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_0_lbW.v:45]
+	Parameter MEM_STYLE bound to: auto - type: string 
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'image_core_img_0_lbW_shiftReg' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_0_lbW.v:11]
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'image_core_img_0_lbW_shiftReg' (9#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_0_lbW.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'image_core_img_0_lbW' (10#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_0_lbW.v:45]
+INFO: [Synth 8-6157] synthesizing module 'image_core_img_0_mb6' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_0_mb6.v:45]
+	Parameter MEM_STYLE bound to: auto - type: string 
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'image_core_img_0_mb6_shiftReg' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_0_mb6.v:11]
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'image_core_img_0_mb6_shiftReg' (11#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_0_mb6.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'image_core_img_0_mb6' (12#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_0_mb6.v:45]
+INFO: [Synth 8-6157] synthesizing module 'image_core_img_1_ncg' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_1_ncg.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'image_core_img_1_ncg_shiftReg' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_1_ncg.v:11]
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'image_core_img_1_ncg_shiftReg' (13#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_1_ncg.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'image_core_img_1_ncg' (14#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_1_ncg.v:45]
+INFO: [Synth 8-6157] synthesizing module 'image_core_img_1_ocq' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_1_ocq.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'image_core_img_1_ocq_shiftReg' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_1_ocq.v:11]
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'image_core_img_1_ocq_shiftReg' (15#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_1_ocq.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'image_core_img_1_ocq' (16#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_1_ocq.v:45]
+INFO: [Synth 8-6157] synthesizing module 'image_core_img_0_pcA' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_0_pcA.v:45]
+	Parameter MEM_STYLE bound to: auto - type: string 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'image_core_img_0_pcA_shiftReg' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_0_pcA.v:11]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'image_core_img_0_pcA_shiftReg' (17#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_0_pcA.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'image_core_img_0_pcA' (18#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_0_pcA.v:45]
+INFO: [Synth 8-6157] synthesizing module 'image_core_img_0_qcK' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_0_qcK.v:45]
+	Parameter MEM_STYLE bound to: auto - type: string 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'image_core_img_0_qcK_shiftReg' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_0_qcK.v:11]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'image_core_img_0_qcK_shiftReg' (19#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_0_qcK.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'image_core_img_0_qcK' (20#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_0_qcK.v:45]
+INFO: [Synth 8-6157] synthesizing module 'image_core_img_0_rcU' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_0_rcU.v:45]
+	Parameter MEM_STYLE bound to: auto - type: string 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'image_core_img_0_rcU_shiftReg' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_0_rcU.v:11]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'image_core_img_0_rcU_shiftReg' (21#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_0_rcU.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'image_core_img_0_rcU' (22#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_0_rcU.v:45]
+INFO: [Synth 8-6157] synthesizing module 'image_core_img_0_sc4' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_0_sc4.v:45]
+	Parameter MEM_STYLE bound to: auto - type: string 
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'image_core_img_0_sc4_shiftReg' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_0_sc4.v:11]
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'image_core_img_0_sc4_shiftReg' (23#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_0_sc4.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'image_core_img_0_sc4' (24#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_0_sc4.v:45]
+INFO: [Synth 8-6157] synthesizing module 'image_core_img_0_tde' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_0_tde.v:45]
+	Parameter MEM_STYLE bound to: auto - type: string 
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'image_core_img_0_tde_shiftReg' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_0_tde.v:11]
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'image_core_img_0_tde_shiftReg' (25#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_0_tde.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'image_core_img_0_tde' (26#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_0_tde.v:45]
+INFO: [Synth 8-6157] synthesizing module 'image_core_img_1_udo' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_1_udo.v:45]
+	Parameter MEM_STYLE bound to: auto - type: string 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'image_core_img_1_udo_shiftReg' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_1_udo.v:11]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'image_core_img_1_udo_shiftReg' (27#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_1_udo.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'image_core_img_1_udo' (28#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_1_udo.v:45]
+INFO: [Synth 8-6157] synthesizing module 'image_core_img_1_vdy' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_1_vdy.v:45]
+	Parameter MEM_STYLE bound to: auto - type: string 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'image_core_img_1_vdy_shiftReg' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_1_vdy.v:11]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'image_core_img_1_vdy_shiftReg' (29#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_1_vdy.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'image_core_img_1_vdy' (30#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_1_vdy.v:45]
+INFO: [Synth 8-6157] synthesizing module 'image_core_img_1_wdI' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_1_wdI.v:45]
+	Parameter MEM_STYLE bound to: auto - type: string 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'image_core_img_1_wdI_shiftReg' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_1_wdI.v:11]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'image_core_img_1_wdI_shiftReg' (31#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_1_wdI.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'image_core_img_1_wdI' (32#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_img_1_wdI.v:45]
+INFO: [Synth 8-6157] synthesizing module 'start_for_Mat2AXIxdS' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/start_for_Mat2AXIxdS.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'start_for_Mat2AXIxdS_shiftReg' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/start_for_Mat2AXIxdS.v:11]
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'start_for_Mat2AXIxdS_shiftReg' (33#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/start_for_Mat2AXIxdS.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'start_for_Mat2AXIxdS' (34#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/start_for_Mat2AXIxdS.v:45]
+INFO: [Synth 8-6157] synthesizing module 'start_for_Sobel_U0' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/start_for_Sobel_U0.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'start_for_Sobel_U0_shiftReg' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/start_for_Sobel_U0.v:11]
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'start_for_Sobel_U0_shiftReg' (35#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/start_for_Sobel_U0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'start_for_Sobel_U0' (36#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/start_for_Sobel_U0.v:45]
+INFO: [Synth 8-6155] done synthesizing module 'image_core' (37#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core.v:12]
+INFO: [Synth 8-6157] synthesizing module 'image_core_INPUT_STREAM_if' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_INPUT_STREAM_if.v:11]
+INFO: [Synth 8-6157] synthesizing module 'image_core_INPUT_STREAM_reg_slice' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_INPUT_STREAM_if.v:300]
+	Parameter N bound to: 34 - type: integer 
+	Parameter ZERO bound to: 2'b10 
+	Parameter ONE bound to: 2'b11 
+	Parameter TWO bound to: 2'b01 
+INFO: [Synth 8-6155] done synthesizing module 'image_core_INPUT_STREAM_reg_slice' (38#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_INPUT_STREAM_if.v:300]
+INFO: [Synth 8-6157] synthesizing module 'image_core_INPUT_STREAM_fifo' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_INPUT_STREAM_if.v:225]
+	Parameter DATA_BITS bound to: 24 - type: integer 
+	Parameter DEPTH_BITS bound to: 4 - type: integer 
+	Parameter DEPTH bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'image_core_INPUT_STREAM_fifo' (39#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_INPUT_STREAM_if.v:225]
+INFO: [Synth 8-6157] synthesizing module 'image_core_INPUT_STREAM_fifo__parameterized0' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_INPUT_STREAM_if.v:225]
+	Parameter DATA_BITS bound to: 3 - type: integer 
+	Parameter DEPTH_BITS bound to: 4 - type: integer 
+	Parameter DEPTH bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'image_core_INPUT_STREAM_fifo__parameterized0' (39#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_INPUT_STREAM_if.v:225]
+INFO: [Synth 8-6157] synthesizing module 'image_core_INPUT_STREAM_fifo__parameterized1' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_INPUT_STREAM_if.v:225]
+	Parameter DATA_BITS bound to: 1 - type: integer 
+	Parameter DEPTH_BITS bound to: 4 - type: integer 
+	Parameter DEPTH bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'image_core_INPUT_STREAM_fifo__parameterized1' (39#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_INPUT_STREAM_if.v:225]
+INFO: [Synth 8-6155] done synthesizing module 'image_core_INPUT_STREAM_if' (40#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_INPUT_STREAM_if.v:11]
+INFO: [Synth 8-6157] synthesizing module 'image_core_OUTPUT_STREAM_if' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_OUTPUT_STREAM_if.v:11]
+INFO: [Synth 8-6157] synthesizing module 'image_core_OUTPUT_STREAM_reg_slice' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_OUTPUT_STREAM_if.v:300]
+	Parameter N bound to: 34 - type: integer 
+	Parameter ZERO bound to: 2'b10 
+	Parameter ONE bound to: 2'b11 
+	Parameter TWO bound to: 2'b01 
+INFO: [Synth 8-6155] done synthesizing module 'image_core_OUTPUT_STREAM_reg_slice' (41#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_OUTPUT_STREAM_if.v:300]
+INFO: [Synth 8-6157] synthesizing module 'image_core_OUTPUT_STREAM_fifo' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_OUTPUT_STREAM_if.v:225]
+	Parameter DATA_BITS bound to: 24 - type: integer 
+	Parameter DEPTH_BITS bound to: 4 - type: integer 
+	Parameter DEPTH bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'image_core_OUTPUT_STREAM_fifo' (42#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_OUTPUT_STREAM_if.v:225]
+INFO: [Synth 8-6157] synthesizing module 'image_core_OUTPUT_STREAM_fifo__parameterized0' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_OUTPUT_STREAM_if.v:225]
+	Parameter DATA_BITS bound to: 3 - type: integer 
+	Parameter DEPTH_BITS bound to: 4 - type: integer 
+	Parameter DEPTH bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'image_core_OUTPUT_STREAM_fifo__parameterized0' (42#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_OUTPUT_STREAM_if.v:225]
+INFO: [Synth 8-6157] synthesizing module 'image_core_OUTPUT_STREAM_fifo__parameterized1' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_OUTPUT_STREAM_if.v:225]
+	Parameter DATA_BITS bound to: 1 - type: integer 
+	Parameter DEPTH_BITS bound to: 4 - type: integer 
+	Parameter DEPTH bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'image_core_OUTPUT_STREAM_fifo__parameterized1' (42#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_OUTPUT_STREAM_if.v:225]
+INFO: [Synth 8-6155] done synthesizing module 'image_core_OUTPUT_STREAM_if' (43#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_OUTPUT_STREAM_if.v:11]
+INFO: [Synth 8-6157] synthesizing module 'image_core_ap_rst_if' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_ap_rst_if.v:10]
+	Parameter RESET_ACTIVE_LOW bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'image_core_ap_rst_if' (44#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_ap_rst_if.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'image_core_top' (45#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_top.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_image_core_0_0' (46#1) [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ip/design_1_image_core_0_0/synth/design_1_image_core_0_0.v:58]
+WARNING: [Synth 8-3331] design Mat2AXIvideo has unconnected port img_rows_V_dout[11]
+WARNING: [Synth 8-3331] design Mat2AXIvideo has unconnected port img_cols_V_dout[11]
+WARNING: [Synth 8-3331] design Filter2D_k_buf_0_bkb has unconnected port reset
+WARNING: [Synth 8-3331] design Filter2D has unconnected port p_src_rows_V_read[11]
+WARNING: [Synth 8-3331] design Filter2D has unconnected port p_src_cols_V_read[11]
+WARNING: [Synth 8-3331] design AXIvideo2Mat has unconnected port AXI_video_strm_V_keep_V_dout[2]
+WARNING: [Synth 8-3331] design AXIvideo2Mat has unconnected port AXI_video_strm_V_keep_V_dout[1]
+WARNING: [Synth 8-3331] design AXIvideo2Mat has unconnected port AXI_video_strm_V_keep_V_dout[0]
+WARNING: [Synth 8-3331] design AXIvideo2Mat has unconnected port AXI_video_strm_V_strb_V_dout[2]
+WARNING: [Synth 8-3331] design AXIvideo2Mat has unconnected port AXI_video_strm_V_strb_V_dout[1]
+WARNING: [Synth 8-3331] design AXIvideo2Mat has unconnected port AXI_video_strm_V_strb_V_dout[0]
+WARNING: [Synth 8-3331] design AXIvideo2Mat has unconnected port AXI_video_strm_V_id_V_dout[0]
+WARNING: [Synth 8-3331] design AXIvideo2Mat has unconnected port AXI_video_strm_V_dest_V_dout[0]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port rows[31]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port rows[30]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port rows[29]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port rows[28]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port rows[27]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port rows[26]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port rows[25]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port rows[24]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port rows[23]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port rows[22]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port rows[21]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port rows[20]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port rows[19]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port rows[18]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port rows[17]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port rows[16]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port rows[15]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port rows[14]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port rows[13]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port rows[12]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port cols[31]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port cols[30]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port cols[29]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port cols[28]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port cols[27]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port cols[26]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port cols[25]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port cols[24]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port cols[23]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port cols[22]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port cols[21]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port cols[20]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port cols[19]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port cols[18]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port cols[17]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port cols[16]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port cols[15]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port cols[14]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port cols[13]
+WARNING: [Synth 8-3331] design Block_Mat_exit45_pro has unconnected port cols[12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 518.523 ; gain = 170.082
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 518.523 ; gain = 170.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 518.523 ; gain = 170.082
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7vx690tffg1761-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ip/design_1_image_core_0_0/constraints/image_core_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ip/design_1_image_core_0_0/constraints/image_core_ooc.xdc] for cell 'inst'
+Parsing XDC File [F:/FPGA/project/image_process/image_process.runs/design_1_image_core_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [F:/FPGA/project/image_process/image_process.runs/design_1_image_core_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.053 . Memory (MB): peak = 1081.070 ; gain = 2.090
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 1081.070 ; gain = 732.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx690tffg1761-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 1081.070 ; gain = 732.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  F:/FPGA/project/image_process/image_process.runs/design_1_image_core_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 1081.070 ; gain = 732.629
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4471] merging register 'k_buf_0_val_4_addr_reg_2673_reg[9:0]' into 'k_buf_0_val_3_addr_reg_2654_reg[9:0]' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:520]
+INFO: [Synth 8-4471] merging register 'k_buf_0_val_5_addr_reg_2679_reg[9:0]' into 'k_buf_0_val_3_addr_reg_2654_reg[9:0]' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:536]
+INFO: [Synth 8-4471] merging register 'k_buf_1_val_3_addr_reg_2689_reg[9:0]' into 'k_buf_0_val_3_addr_reg_2654_reg[9:0]' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:552]
+INFO: [Synth 8-4471] merging register 'k_buf_1_val_4_addr_reg_2695_reg[9:0]' into 'k_buf_0_val_3_addr_reg_2654_reg[9:0]' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:568]
+INFO: [Synth 8-4471] merging register 'k_buf_1_val_5_addr_reg_2701_reg[9:0]' into 'k_buf_0_val_3_addr_reg_2654_reg[9:0]' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:584]
+INFO: [Synth 8-4471] merging register 'k_buf_2_val_3_addr_reg_2707_reg[9:0]' into 'k_buf_0_val_3_addr_reg_2654_reg[9:0]' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:600]
+INFO: [Synth 8-4471] merging register 'k_buf_2_val_4_addr_reg_2713_reg[9:0]' into 'k_buf_0_val_3_addr_reg_2654_reg[9:0]' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:616]
+INFO: [Synth 8-4471] merging register 'k_buf_2_val_5_addr_reg_2719_reg[9:0]' into 'k_buf_0_val_3_addr_reg_2654_reg[9:0]' [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:632]
+WARNING: [Synth 8-6014] Unused sequential element k_buf_0_val_4_addr_reg_2673_reg was removed.  [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:520]
+WARNING: [Synth 8-6014] Unused sequential element k_buf_0_val_5_addr_reg_2679_reg was removed.  [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:536]
+WARNING: [Synth 8-6014] Unused sequential element k_buf_1_val_3_addr_reg_2689_reg was removed.  [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:552]
+WARNING: [Synth 8-6014] Unused sequential element k_buf_1_val_4_addr_reg_2695_reg was removed.  [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:568]
+WARNING: [Synth 8-6014] Unused sequential element k_buf_1_val_5_addr_reg_2701_reg was removed.  [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:584]
+WARNING: [Synth 8-6014] Unused sequential element k_buf_2_val_3_addr_reg_2707_reg was removed.  [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:600]
+WARNING: [Synth 8-6014] Unused sequential element k_buf_2_val_4_addr_reg_2713_reg was removed.  [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:616]
+WARNING: [Synth 8-6014] Unused sequential element k_buf_2_val_5_addr_reg_2719_reg was removed.  [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/Filter2D.v:632]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "tmp_7_fu_557_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "tmp_102_0_1_fu_694_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_13_fu_688_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_full_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_full_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_full_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_full_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'image_core_INPUT_STREAM_reg_slice'
+INFO: [Synth 8-5544] ROM "next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_INPUT_STREAM_if.v:276]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_INPUT_STREAM_if.v:276]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_INPUT_STREAM_if.v:276]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'image_core_OUTPUT_STREAM_reg_slice'
+INFO: [Synth 8-5544] ROM "next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_OUTPUT_STREAM_if.v:276]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_OUTPUT_STREAM_if.v:276]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [f:/FPGA/project/image_process/image_process.srcs/sources_1/bd/design_1/ipshared/ead0/hdl/verilog/image_core_OUTPUT_STREAM_if.v:276]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'image_core_INPUT_STREAM_reg_slice'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'image_core_OUTPUT_STREAM_reg_slice'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 1081.070 ; gain = 732.629
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 5     
+	   4 Input     11 Bit       Adders := 3     
+	   2 Input     10 Bit       Adders := 14    
+	   3 Input     10 Bit       Adders := 1     
+	   3 Input      9 Bit       Adders := 3     
+	   6 Input      8 Bit       Adders := 3     
+	   2 Input      4 Bit       Adders := 14    
+	   2 Input      3 Bit       Adders := 4     
+	   2 Input      2 Bit       Adders := 15    
+	   3 Input      2 Bit       Adders := 9     
++---XORs : 
+	   2 Input      2 Bit         XORs := 2     
+	   2 Input      1 Bit         XORs := 6     
++---Registers : 
+	               34 Bit    Registers := 4     
+	               24 Bit    Registers := 4     
+	               12 Bit    Registers := 10    
+	               11 Bit    Registers := 7     
+	               10 Bit    Registers := 14    
+	                8 Bit    Registers := 61    
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 15    
+	                3 Bit    Registers := 7     
+	                2 Bit    Registers := 23    
+	                1 Bit    Registers := 101   
++---RAMs : 
+	               6K Bit         RAMs := 9     
++---Muxes : 
+	   2 Input     34 Bit        Muxes := 2     
+	   2 Input     24 Bit        Muxes := 7     
+	   2 Input     12 Bit        Muxes := 4     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   3 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 69    
+	   3 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   3 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 32    
+	   4 Input      2 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 6     
+	   5 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 138   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Block_Mat_exit45_pro 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module AXIvideo2Mat 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
++---Registers : 
+	               24 Bit    Registers := 4     
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 3     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 14    
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 7     
+	   3 Input      8 Bit        Muxes := 1     
+	   3 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 18    
+Module Filter2D_k_buf_0_bkb_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---RAMs : 
+	               6K Bit         RAMs := 1     
+Module image_core_mux_32kbM 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+Module Filter2D 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 4     
+	   4 Input     11 Bit       Adders := 3     
+	   2 Input     10 Bit       Adders := 10    
+	   3 Input     10 Bit       Adders := 1     
+	   3 Input      9 Bit       Adders := 3     
+	   6 Input      8 Bit       Adders := 3     
+	   2 Input      2 Bit       Adders := 5     
+	   3 Input      2 Bit       Adders := 9     
++---XORs : 
+	   2 Input      2 Bit         XORs := 2     
+	   2 Input      1 Bit         XORs := 6     
++---Registers : 
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 8     
+	                8 Bit    Registers := 39    
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 10    
+	                1 Bit    Registers := 17    
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 27    
+	   3 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 6     
+Module Sobel 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module Mat2AXIvideo 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 2     
++---Registers : 
+	               11 Bit    Registers := 3     
+	               10 Bit    Registers := 3     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module image_core_img_0_lbW_shiftReg 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module image_core_img_0_lbW 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 4     
+Module image_core_img_0_mb6_shiftReg 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module image_core_img_0_mb6 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 4     
+Module image_core_img_1_ncg 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module image_core_img_1_ocq 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module image_core_img_0_pcA_shiftReg 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+Module image_core_img_0_pcA 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 4     
+Module image_core_img_0_qcK_shiftReg 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+Module image_core_img_0_qcK 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 4     
+Module image_core_img_0_rcU_shiftReg 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+Module image_core_img_0_rcU 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 4     
+Module image_core_img_0_sc4_shiftReg 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module image_core_img_0_sc4 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 4     
+Module image_core_img_0_tde_shiftReg 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module image_core_img_0_tde 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 4     
+Module image_core_img_1_udo_shiftReg 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+Module image_core_img_1_udo 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 4     
+Module image_core_img_1_vdy_shiftReg 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+Module image_core_img_1_vdy 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 4     
+Module image_core_img_1_wdI_shiftReg 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+Module image_core_img_1_wdI 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 4     
+Module start_for_Mat2AXIxdS 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module start_for_Sobel_U0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module image_core 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module image_core_INPUT_STREAM_reg_slice 
+Detailed RTL Component Info : 
++---Registers : 
+	               34 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     34 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 10    
+	   3 Input      2 Bit        Muxes := 3     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module image_core_INPUT_STREAM_fifo 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module image_core_INPUT_STREAM_fifo__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module image_core_INPUT_STREAM_fifo__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module image_core_OUTPUT_STREAM_reg_slice 
+Detailed RTL Component Info : 
++---Registers : 
+	               34 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     34 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 10    
+	   3 Input      2 Bit        Muxes := 3     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module image_core_OUTPUT_STREAM_fifo 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module image_core_OUTPUT_STREAM_fifo__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module image_core_OUTPUT_STREAM_fifo__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 3600 (col length:200)
+BRAMs: 2940 (col length: RAMB18 200 RAMB36 100)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "tmp_13_fu_688_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_102_0_1_fu_694_p2" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3331] design Filter2D has unconnected port p_src_rows_V_read[11]
+WARNING: [Synth 8-3331] design Filter2D has unconnected port p_src_cols_V_read[11]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port rows[31]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port rows[30]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port rows[29]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port rows[28]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port rows[27]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port rows[26]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port rows[25]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port rows[24]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port rows[23]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port rows[22]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port rows[21]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port rows[20]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port rows[19]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port rows[18]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port rows[17]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port rows[16]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port rows[15]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port rows[14]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port rows[13]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port rows[12]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port cols[31]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port cols[30]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port cols[29]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port cols[28]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port cols[27]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port cols[26]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port cols[25]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port cols[24]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port cols[23]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port cols[22]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port cols[21]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port cols[20]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port cols[19]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port cols[18]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port cols[17]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port cols[16]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port cols[15]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port cols[14]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port cols[13]
+WARNING: [Synth 8-3331] design image_core_top has unconnected port cols[12]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_57_2_cast_reg_2549_reg[0] )
+INFO: [Synth 8-3886] merging instance 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_15_reg_2273_reg[0]' (FDE) to 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_18_reg_2279_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_128_0_cast_reg_2530_reg[0] )
+INFO: [Synth 8-3886] merging instance 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_3_reg_2535_reg[0]' (FDE) to 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_128_0_1_cast_reg_2542_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_128_0_1_cast_reg_2542_reg[0] )
+INFO: [Synth 8-3886] merging instance 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_8_reg_2266_reg[0]' (FDE) to 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_reg_2257_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_8_reg_2266_reg[1]' (FDE) to 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_reg_2257_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_8_reg_2266_reg[2]' (FDE) to 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_reg_2257_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_8_reg_2266_reg[3]' (FDE) to 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_reg_2257_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_8_reg_2266_reg[4]' (FDE) to 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_reg_2257_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_8_reg_2266_reg[5]' (FDE) to 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_reg_2257_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_8_reg_2266_reg[6]' (FDE) to 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_reg_2257_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_8_reg_2266_reg[7]' (FDE) to 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_reg_2257_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_8_reg_2266_reg[8]' (FDE) to 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_reg_2257_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_8_reg_2266_reg[9]' (FDE) to 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_reg_2257_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_15_reg_2273_reg[8]' (FDE) to 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_18_reg_2279_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_15_reg_2273_reg[7]' (FDE) to 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_18_reg_2279_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_15_reg_2273_reg[6]' (FDE) to 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_18_reg_2279_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_15_reg_2273_reg[5]' (FDE) to 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_18_reg_2279_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_15_reg_2273_reg[4]' (FDE) to 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_18_reg_2279_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_15_reg_2273_reg[3]' (FDE) to 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_18_reg_2279_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_15_reg_2273_reg[2]' (FDE) to 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_18_reg_2279_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_15_reg_2273_reg[1]' (FDE) to 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_18_reg_2279_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_15_reg_2273_reg[9]' (FDE) to 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_18_reg_2279_reg[9]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\image_core_U/Block_Mat_exit45_pro_U0/ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\image_core_U/Block_Mat_exit45_pro_U0/ap_done_reg_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\image_core_U/Sobel_U0/ap_done_reg_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\image_core_U/Mat2AXIvideo_U0/ap_done_reg_reg )
+INFO: [Synth 8-3886] merging instance 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/isneg_reg_2725_reg[0]' (FDE) to 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_40_reg_2736_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/isneg_1_reg_2741_reg[0]' (FDE) to 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_55_reg_2752_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/isneg_2_reg_2757_reg[0]' (FDE) to 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_68_reg_2768_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\image_core_U/AXIvideo2Mat_U0/ap_done_reg_reg )
+WARNING: [Synth 8-3332] Sequential element (image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_57_2_cast_reg_2549_reg[11]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_57_2_cast_reg_2549_reg[0]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_57_2_cast_reg_2549_reg[10]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_128_0_cast_reg_2530_reg[11]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_128_0_cast_reg_2530_reg[0]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_128_0_cast_reg_2530_reg[10]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_128_0_cast_reg_2530_reg[9]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_128_0_cast_reg_2530_reg[8]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_128_0_cast_reg_2530_reg[7]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_128_0_cast_reg_2530_reg[6]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_128_0_cast_reg_2530_reg[5]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_128_0_cast_reg_2530_reg[4]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_128_0_cast_reg_2530_reg[3]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_128_0_cast_reg_2530_reg[2]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_U/Sobel_U0/grp_Filter2D_fu_44/tmp_128_0_1_cast_reg_2542_reg[0]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_U/Block_Mat_exit45_pro_U0/ap_done_reg_reg) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_U/Block_Mat_exit45_pro_U0/ap_CS_fsm_reg[0]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_U/AXIvideo2Mat_U0/ap_done_reg_reg) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_U/img_0_cols_V_channel_U/U_image_core_img_0_mb6_ram/SRL_SIG_reg[0][11]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_U/img_0_cols_V_channel_U/U_image_core_img_0_mb6_ram/SRL_SIG_reg[1][11]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_U/img_0_rows_V_channel_U/U_image_core_img_0_lbW_ram/SRL_SIG_reg[0][11]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_U/img_0_rows_V_channel_U/U_image_core_img_0_lbW_ram/SRL_SIG_reg[1][11]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_U/Sobel_U0/ap_done_reg_reg) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_U/img_0_rows_V_channel_1_U/U_image_core_img_0_sc4_ram/SRL_SIG_reg[0][11]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_U/img_0_rows_V_channel_1_U/U_image_core_img_0_sc4_ram/SRL_SIG_reg[1][11]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_U/Sobel_U0/p_src_rows_V_read_reg_64_reg[11]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_U/img_0_cols_V_channel_1_U/U_image_core_img_0_tde_ram/SRL_SIG_reg[0][11]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_U/img_0_cols_V_channel_1_U/U_image_core_img_0_tde_ram/SRL_SIG_reg[1][11]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_U/Sobel_U0/p_src_cols_V_read_reg_69_reg[11]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_U/Mat2AXIvideo_U0/ap_done_reg_reg) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_INPUT_STREAM_if_U/rs/data_p2_reg[33]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_INPUT_STREAM_if_U/rs/data_p2_reg[32]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_INPUT_STREAM_if_U/rs/data_p2_reg[29]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_INPUT_STREAM_if_U/rs/data_p2_reg[28]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_INPUT_STREAM_if_U/rs/data_p2_reg[27]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_INPUT_STREAM_if_U/rs/data_p2_reg[26]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_INPUT_STREAM_if_U/rs/data_p2_reg[25]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_INPUT_STREAM_if_U/rs/data_p2_reg[24]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_INPUT_STREAM_if_U/rs/data_p1_reg[33]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_INPUT_STREAM_if_U/rs/data_p1_reg[32]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_INPUT_STREAM_if_U/rs/data_p1_reg[29]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_INPUT_STREAM_if_U/rs/data_p1_reg[28]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_INPUT_STREAM_if_U/rs/data_p1_reg[27]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_INPUT_STREAM_if_U/rs/data_p1_reg[26]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_INPUT_STREAM_if_U/rs/data_p1_reg[25]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_INPUT_STREAM_if_U/rs/data_p1_reg[24]) is unused and will be removed from module image_core_top.
+INFO: [Synth 8-3886] merging instance 'inst/image_core_OUTPUT_STREAM_if_U/rs/data_p2_reg[33]' (FDE) to 'inst/image_core_OUTPUT_STREAM_if_U/rs/data_p2_reg[27]'
+INFO: [Synth 8-3886] merging instance 'inst/image_core_OUTPUT_STREAM_if_U/rs/data_p2_reg[32]' (FDE) to 'inst/image_core_OUTPUT_STREAM_if_U/rs/data_p2_reg[27]'
+INFO: [Synth 8-3886] merging instance 'inst/image_core_OUTPUT_STREAM_if_U/rs/data_p2_reg[27]' (FDE) to 'inst/image_core_OUTPUT_STREAM_if_U/rs/data_p2_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/image_core_OUTPUT_STREAM_if_U/rs/data_p2_reg[28]' (FDE) to 'inst/image_core_OUTPUT_STREAM_if_U/rs/data_p2_reg[29]'
+INFO: [Synth 8-3886] merging instance 'inst/image_core_OUTPUT_STREAM_if_U/rs/data_p1_reg[33]' (FDE) to 'inst/image_core_OUTPUT_STREAM_if_U/rs/data_p1_reg[27]'
+INFO: [Synth 8-3886] merging instance 'inst/image_core_OUTPUT_STREAM_if_U/rs/data_p1_reg[32]' (FDE) to 'inst/image_core_OUTPUT_STREAM_if_U/rs/data_p1_reg[27]'
+INFO: [Synth 8-3886] merging instance 'inst/image_core_OUTPUT_STREAM_if_U/rs/data_p1_reg[27]' (FDE) to 'inst/image_core_OUTPUT_STREAM_if_U/rs/data_p1_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/image_core_OUTPUT_STREAM_if_U/rs/data_p1_reg[28]' (FDE) to 'inst/image_core_OUTPUT_STREAM_if_U/rs/data_p1_reg[29]'
+INFO: [Synth 8-3886] merging instance 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/row_assign_9_1_0_t_reg_2622_reg[0]' (FDE) to 'inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/row_assign_9_0_2_t_reg_2615_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\image_core_OUTPUT_STREAM_if_U/rs/data_p2_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\image_core_OUTPUT_STREAM_if_U/rs/data_p1_reg[29] )
+WARNING: [Synth 8-3332] Sequential element (image_core_OUTPUT_STREAM_if_U/rs/data_p2_reg[29]) is unused and will be removed from module image_core_top.
+WARNING: [Synth 8-3332] Sequential element (image_core_OUTPUT_STREAM_if_U/rs/data_p1_reg[29]) is unused and will be removed from module image_core_top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 1081.070 ; gain = 732.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping  Report (see note below)
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name               | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Filter2D_k_buf_0_bkb_ram: | ram_reg    | 1 K x 8(READ_FIRST)    | W |   | 1 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|Filter2D_k_buf_0_bkb_ram: | ram_reg    | 1 K x 8(READ_FIRST)    | W |   | 1 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|Filter2D_k_buf_0_bkb_ram: | ram_reg    | 1 K x 8(READ_FIRST)    | W |   | 1 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|Filter2D_k_buf_0_bkb_ram: | ram_reg    | 1 K x 8(READ_FIRST)    | W |   | 1 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|Filter2D_k_buf_0_bkb_ram: | ram_reg    | 1 K x 8(READ_FIRST)    | W |   | 1 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|Filter2D_k_buf_0_bkb_ram: | ram_reg    | 1 K x 8(READ_FIRST)    | W |   | 1 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|Filter2D_k_buf_0_bkb_ram: | ram_reg    | 1 K x 8(READ_FIRST)    | W |   | 1 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|Filter2D_k_buf_0_bkb_ram: | ram_reg    | 1 K x 8(READ_FIRST)    | W |   | 1 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|Filter2D_k_buf_0_bkb_ram: | ram_reg    | 1 K x 8(READ_FIRST)    | W |   | 1 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The tale above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/i_/image_core_U/Sobel_U0/grp_Filter2D_fu_44/k_buf_0_val_3_U/Filter2D_k_buf_0_bkb_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/i___0/image_core_U/Sobel_U0/grp_Filter2D_fu_44/k_buf_0_val_4_U/Filter2D_k_buf_0_bkb_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/i___1/image_core_U/Sobel_U0/grp_Filter2D_fu_44/k_buf_0_val_5_U/Filter2D_k_buf_0_bkb_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/i___2/image_core_U/Sobel_U0/grp_Filter2D_fu_44/k_buf_1_val_3_U/Filter2D_k_buf_0_bkb_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/i___3/image_core_U/Sobel_U0/grp_Filter2D_fu_44/k_buf_1_val_4_U/Filter2D_k_buf_0_bkb_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/i___4/image_core_U/Sobel_U0/grp_Filter2D_fu_44/k_buf_1_val_5_U/Filter2D_k_buf_0_bkb_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/i___5/image_core_U/Sobel_U0/grp_Filter2D_fu_44/k_buf_2_val_3_U/Filter2D_k_buf_0_bkb_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/i___6/image_core_U/Sobel_U0/grp_Filter2D_fu_44/k_buf_2_val_4_U/Filter2D_k_buf_0_bkb_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/i___7/image_core_U/Sobel_U0/grp_Filter2D_fu_44/k_buf_2_val_5_U/Filter2D_k_buf_0_bkb_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:00:50 . Memory (MB): peak = 1081.070 ; gain = 732.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:00:57 . Memory (MB): peak = 1148.609 ; gain = 800.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name               | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Filter2D_k_buf_0_bkb_ram: | ram_reg    | 1 K x 8(READ_FIRST)    | W |   | 1 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|Filter2D_k_buf_0_bkb_ram: | ram_reg    | 1 K x 8(READ_FIRST)    | W |   | 1 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|Filter2D_k_buf_0_bkb_ram: | ram_reg    | 1 K x 8(READ_FIRST)    | W |   | 1 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|Filter2D_k_buf_0_bkb_ram: | ram_reg    | 1 K x 8(READ_FIRST)    | W |   | 1 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|Filter2D_k_buf_0_bkb_ram: | ram_reg    | 1 K x 8(READ_FIRST)    | W |   | 1 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|Filter2D_k_buf_0_bkb_ram: | ram_reg    | 1 K x 8(READ_FIRST)    | W |   | 1 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|Filter2D_k_buf_0_bkb_ram: | ram_reg    | 1 K x 8(READ_FIRST)    | W |   | 1 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|Filter2D_k_buf_0_bkb_ram: | ram_reg    | 1 K x 8(READ_FIRST)    | W |   | 1 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|Filter2D_k_buf_0_bkb_ram: | ram_reg    | 1 K x 8(READ_FIRST)    | W |   | 1 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/k_buf_0_val_3_U/Filter2D_k_buf_0_bkb_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/k_buf_0_val_4_U/Filter2D_k_buf_0_bkb_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/k_buf_0_val_5_U/Filter2D_k_buf_0_bkb_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/k_buf_1_val_3_U/Filter2D_k_buf_0_bkb_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/k_buf_1_val_4_U/Filter2D_k_buf_0_bkb_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/k_buf_1_val_5_U/Filter2D_k_buf_0_bkb_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/k_buf_2_val_3_U/Filter2D_k_buf_0_bkb_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/k_buf_2_val_4_U/Filter2D_k_buf_0_bkb_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/image_core_U/Sobel_U0/grp_Filter2D_fu_44/k_buf_2_val_5_U/Filter2D_k_buf_0_bkb_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:52 ; elapsed = 00:00:58 . Memory (MB): peak = 1149.617 ; gain = 801.176
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:53 ; elapsed = 00:01:00 . Memory (MB): peak = 1149.617 ; gain = 801.176
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:53 ; elapsed = 00:01:00 . Memory (MB): peak = 1149.617 ; gain = 801.176
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:54 ; elapsed = 00:01:00 . Memory (MB): peak = 1149.617 ; gain = 801.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:54 ; elapsed = 00:01:00 . Memory (MB): peak = 1149.617 ; gain = 801.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:54 ; elapsed = 00:01:00 . Memory (MB): peak = 1149.617 ; gain = 801.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:54 ; elapsed = 00:01:00 . Memory (MB): peak = 1149.617 ; gain = 801.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Dynamic Shift Register Report:
++------------+------------------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name               | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+------------------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | SRL_SIG_reg[3]         | 12     | 12         | 12     | 0       | 0      | 0      | 0      | 
+|dsrl__1     | SRL_SIG_reg[3]         | 12     | 12         | 12     | 0       | 0      | 0      | 0      | 
+|dsrl__2     | SRL_SIG_reg[3]         | 1      | 1          | 1      | 0       | 0      | 0      | 0      | 
+|dsrl__3     | SRL_SIG_reg[2]         | 1      | 1          | 1      | 0       | 0      | 0      | 0      | 
+|dsrl__4     | gen_sr[15].mem_reg[15] | 24     | 24         | 24     | 0       | 0      | 0      | 0      | 
+|dsrl__5     | gen_sr[15].mem_reg[15] | 3      | 3          | 3      | 0       | 0      | 0      | 0      | 
+|dsrl__6     | gen_sr[15].mem_reg[15] | 1      | 1          | 1      | 0       | 0      | 0      | 0      | 
+|dsrl__7     | gen_sr[15].mem_reg[15] | 24     | 24         | 24     | 0       | 0      | 0      | 0      | 
+|dsrl__8     | gen_sr[15].mem_reg[15] | 3      | 3          | 3      | 0       | 0      | 0      | 0      | 
+|dsrl__9     | gen_sr[15].mem_reg[15] | 1      | 1          | 1      | 0       | 0      | 0      | 0      | 
++------------+------------------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |    63|
+|2     |LUT1     |    34|
+|3     |LUT2     |   139|
+|4     |LUT3     |   171|
+|5     |LUT4     |   424|
+|6     |LUT5     |   161|
+|7     |LUT6     |   443|
+|8     |RAMB18E1 |     9|
+|9     |SRL16E   |    77|
+|10    |FDCE     |    14|
+|11    |FDPE     |    70|
+|12    |FDRE     |  1019|
+|13    |FDSE     |    62|
++------+---------+------+
+
+Report Instance Areas: 
++------+---------------------------------------+-------------------------------------------------+------+
+|      |Instance                               |Module                                           |Cells |
++------+---------------------------------------+-------------------------------------------------+------+
+|1     |top                                    |                                                 |  2686|
+|2     |  inst                                 |image_core_top                                   |  2686|
+|3     |    image_core_INPUT_STREAM_if_U       |image_core_INPUT_STREAM_if                       |   230|
+|4     |      input_V_data_V_fifo              |image_core_INPUT_STREAM_fifo                     |    39|
+|5     |      input_V_dest_V_fifo              |image_core_INPUT_STREAM_fifo__parameterized1     |    17|
+|6     |      input_V_id_V_fifo                |image_core_INPUT_STREAM_fifo__parameterized1_20  |    16|
+|7     |      input_V_keep_V_fifo              |image_core_INPUT_STREAM_fifo__parameterized0     |    15|
+|8     |      input_V_last_V_fifo              |image_core_INPUT_STREAM_fifo__parameterized1_21  |    16|
+|9     |      input_V_strb_V_fifo              |image_core_INPUT_STREAM_fifo__parameterized0_22  |    16|
+|10    |      input_V_user_V_fifo              |image_core_INPUT_STREAM_fifo__parameterized1_23  |    18|
+|11    |      rs                               |image_core_INPUT_STREAM_reg_slice                |    93|
+|12    |    image_core_OUTPUT_STREAM_if_U      |image_core_OUTPUT_STREAM_if                      |   237|
+|13    |      output_V_data_V_fifo             |image_core_OUTPUT_STREAM_fifo                    |    39|
+|14    |      output_V_dest_V_fifo             |image_core_OUTPUT_STREAM_fifo__parameterized1    |    18|
+|15    |      output_V_id_V_fifo               |image_core_OUTPUT_STREAM_fifo__parameterized1_16 |    15|
+|16    |      output_V_keep_V_fifo             |image_core_OUTPUT_STREAM_fifo__parameterized0    |    18|
+|17    |      output_V_last_V_fifo             |image_core_OUTPUT_STREAM_fifo__parameterized1_17 |    16|
+|18    |      output_V_strb_V_fifo             |image_core_OUTPUT_STREAM_fifo__parameterized0_18 |    16|
+|19    |      output_V_user_V_fifo             |image_core_OUTPUT_STREAM_fifo__parameterized1_19 |    17|
+|20    |      rs                               |image_core_OUTPUT_STREAM_reg_slice               |    98|
+|21    |    image_core_U                       |image_core                                       |  2219|
+|22    |      AXIvideo2Mat_U0                  |AXIvideo2Mat                                     |   335|
+|23    |      Block_Mat_exit45_pro_U0          |Block_Mat_exit45_pro                             |     1|
+|24    |      Mat2AXIvideo_U0                  |Mat2AXIvideo                                     |   133|
+|25    |      Sobel_U0                         |Sobel                                            |  1225|
+|26    |        grp_Filter2D_fu_44             |Filter2D                                         |  1199|
+|27    |          k_buf_0_val_3_U              |Filter2D_k_buf_0_bkb                             |     9|
+|28    |            Filter2D_k_buf_0_bkb_ram_U |Filter2D_k_buf_0_bkb_ram_15                      |     9|
+|29    |          k_buf_0_val_4_U              |Filter2D_k_buf_0_bkb_0                           |    25|
+|30    |            Filter2D_k_buf_0_bkb_ram_U |Filter2D_k_buf_0_bkb_ram_14                      |    25|
+|31    |          k_buf_0_val_5_U              |Filter2D_k_buf_0_bkb_1                           |    90|
+|32    |            Filter2D_k_buf_0_bkb_ram_U |Filter2D_k_buf_0_bkb_ram_13                      |    90|
+|33    |          k_buf_1_val_3_U              |Filter2D_k_buf_0_bkb_2                           |     9|
+|34    |            Filter2D_k_buf_0_bkb_ram_U |Filter2D_k_buf_0_bkb_ram_12                      |     9|
+|35    |          k_buf_1_val_4_U              |Filter2D_k_buf_0_bkb_3                           |    25|
+|36    |            Filter2D_k_buf_0_bkb_ram_U |Filter2D_k_buf_0_bkb_ram_11                      |    25|
+|37    |          k_buf_1_val_5_U              |Filter2D_k_buf_0_bkb_4                           |    90|
+|38    |            Filter2D_k_buf_0_bkb_ram_U |Filter2D_k_buf_0_bkb_ram_10                      |    90|
+|39    |          k_buf_2_val_3_U              |Filter2D_k_buf_0_bkb_5                           |     9|
+|40    |            Filter2D_k_buf_0_bkb_ram_U |Filter2D_k_buf_0_bkb_ram_9                       |     9|
+|41    |          k_buf_2_val_4_U              |Filter2D_k_buf_0_bkb_6                           |    33|
+|42    |            Filter2D_k_buf_0_bkb_ram_U |Filter2D_k_buf_0_bkb_ram_8                       |    33|
+|43    |          k_buf_2_val_5_U              |Filter2D_k_buf_0_bkb_7                           |   124|
+|44    |            Filter2D_k_buf_0_bkb_ram_U |Filter2D_k_buf_0_bkb_ram                         |   124|
+|45    |      img_0_cols_V_channel_1_U         |image_core_img_0_tde                             |    45|
+|46    |        U_image_core_img_0_tde_ram     |image_core_img_0_tde_shiftReg                    |    34|
+|47    |      img_0_cols_V_channel_U           |image_core_img_0_mb6                             |    44|
+|48    |        U_image_core_img_0_mb6_ram     |image_core_img_0_mb6_shiftReg                    |    34|
+|49    |      img_0_data_stream_0_U            |image_core_img_0_pcA                             |    50|
+|50    |        U_image_core_img_0_pcA_ram     |image_core_img_0_pcA_shiftReg                    |    41|
+|51    |      img_0_data_stream_1_U            |image_core_img_0_qcK                             |    50|
+|52    |        U_image_core_img_0_qcK_ram     |image_core_img_0_qcK_shiftReg                    |    41|
+|53    |      img_0_data_stream_2_U            |image_core_img_0_rcU                             |    50|
+|54    |        U_image_core_img_0_rcU_ram     |image_core_img_0_rcU_shiftReg                    |    41|
+|55    |      img_0_rows_V_channel_1_U         |image_core_img_0_sc4                             |    44|
+|56    |        U_image_core_img_0_sc4_ram     |image_core_img_0_sc4_shiftReg                    |    34|
+|57    |      img_0_rows_V_channel_U           |image_core_img_0_lbW                             |    48|
+|58    |        U_image_core_img_0_lbW_ram     |image_core_img_0_lbW_shiftReg                    |    34|
+|59    |      img_1_cols_V_channel_U           |image_core_img_1_ocq                             |    37|
+|60    |        U_image_core_img_1_ocq_ram     |image_core_img_1_ocq_shiftReg                    |    24|
+|61    |      img_1_data_stream_0_U            |image_core_img_1_udo                             |    33|
+|62    |        U_image_core_img_1_udo_ram     |image_core_img_1_udo_shiftReg                    |    24|
+|63    |      img_1_data_stream_1_U            |image_core_img_1_vdy                             |    33|
+|64    |        U_image_core_img_1_vdy_ram     |image_core_img_1_vdy_shiftReg                    |    24|
+|65    |      img_1_data_stream_2_U            |image_core_img_1_wdI                             |    33|
+|66    |        U_image_core_img_1_wdI_ram     |image_core_img_1_wdI_shiftReg                    |    24|
+|67    |      img_1_rows_V_channel_U           |image_core_img_1_ncg                             |    29|
+|68    |        U_image_core_img_1_ncg_ram     |image_core_img_1_ncg_shiftReg                    |    14|
+|69    |      start_for_Mat2AXIxdS_U           |start_for_Mat2AXIxdS                             |    14|
+|70    |      start_for_Sobel_U0_U             |start_for_Sobel_U0                               |    14|
++------+---------------------------------------+-------------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:54 ; elapsed = 00:01:00 . Memory (MB): peak = 1149.617 ; gain = 801.176
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 98 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:38 . Memory (MB): peak = 1149.617 ; gain = 238.629
+Synthesis Optimization Complete : Time (s): cpu = 00:00:54 ; elapsed = 00:01:00 . Memory (MB): peak = 1149.617 ; gain = 801.176
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 72 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+230 Infos, 182 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:59 ; elapsed = 00:01:06 . Memory (MB): peak = 1149.617 ; gain = 812.648
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'F:/FPGA/project/image_process/image_process.runs/design_1_image_core_0_0_synth_1/design_1_image_core_0_0.dcp' has been generated.

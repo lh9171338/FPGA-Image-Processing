@@ -1,0 +1,3324 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Nov 30 20:07:04 2018" VIVADOVERSION="2018.2">
+
+  <SYSTEMINFO ARCH="virtex7" DEVICE="7vx690t" NAME="design_1" PACKAGE="ffg1761" SPEEDGRADE="-3"/>
+
+  <EXTERNALPORTS>
+    <PORT CLKFREQUENCY="100000000" DIR="I" LEFT="0" NAME="sys_clk_p" RIGHT="0" SIGIS="clk" SIGNAME="External_Ports_sys_clk_p">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SYS_CLK" PORT="IBUF_DS_P"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" LEFT="0" NAME="sys_clk_n" RIGHT="0" SIGIS="clk" SIGNAME="External_Ports_sys_clk_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SYS_CLK" PORT="IBUF_DS_N"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="0" NAME="sys_rst_n" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_sys_rst_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ImageRotate" PORT="ap_rst_n"/>
+        <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="rst_n"/>
+        <CONNECTION INSTANCE="AP_CTRL" PORT="rst_n"/>
+        <CONNECTION INSTANCE="inv" PORT="Op1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="7" NAME="pcie_mgt_rxn" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="7" NAME="pcie_mgt_rxp" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" LEFT="7" NAME="pcie_mgt_txn" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" LEFT="7" NAME="pcie_mgt_txp" RIGHT="0" SIGIS="undef"/>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES>
+    <BUSINTERFACE BUSNAME="RIFFA_AXIS_PCIE_pcie_7x_mgt" NAME="pcie_mgt" TYPE="INITIATOR">
+      <PORTMAPS>
+        <PORTMAP LOGICAL="rxn" PHYSICAL="pcie_mgt_rxn"/>
+        <PORTMAP LOGICAL="rxp" PHYSICAL="pcie_mgt_rxp"/>
+        <PORTMAP LOGICAL="txn" PHYSICAL="pcie_mgt_txn"/>
+        <PORTMAP LOGICAL="txp" PHYSICAL="pcie_mgt_txp"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+  </EXTERNALINTERFACES>
+
+  <MODULES>
+    <MODULE FULLNAME="/AP_CTRL" HWVERSION="1.0" INSTANCE="AP_CTRL" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Ap_Controller" VLNV="xilinx.com:user:Ap_Controller:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_Ap_Controller_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="50000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="RIFFA_AXIS_clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" SIGIS="rst" SIGNAME="External_Ports_sys_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sys_rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="start" SIGIS="undef" SIGNAME="RIFFA_AXIS_Riffa_Axis_ap_start1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="ap_start1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ap_ready" SIGIS="undef" SIGNAME="ImageRotate_ap_ready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ImageRotate" PORT="ap_ready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ap_start" SIGIS="undef" SIGNAME="AP_CTRL_ap_start">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ImageRotate" PORT="ap_start"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="AP_CTRL" TYPE="INITIATOR" VLNV="xilinx.com:interface:acc_handshake:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="ap_ready" PHYSICAL="ap_ready"/>
+            <PORTMAP LOGICAL="ap_start" PHYSICAL="ap_start"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE FULLNAME="/ImageRotate" HWVERSION="1.0" INSTANCE="ImageRotate" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ImageRotate" VLNV="xilinx.com:hls:ImageRotate:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_ImageRotate_0_0"/>
+        <PARAMETER NAME="clk_period" VALUE="10"/>
+        <PARAMETER NAME="machine" VALUE="64"/>
+        <PARAMETER NAME="combinational" VALUE="0"/>
+        <PARAMETER NAME="latency" VALUE="undef"/>
+        <PARAMETER NAME="II" VALUE="x"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="50000000" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="RIFFA_AXIS_clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ap_rst_n" SIGIS="rst" SIGNAME="External_Ports_sys_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sys_rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ap_done" SIGIS="undef"/>
+        <PORT DIR="I" NAME="ap_start" SIGIS="undef" SIGNAME="AP_CTRL_ap_start">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="AP_CTRL" PORT="ap_start"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ap_ready" SIGIS="undef" SIGNAME="ImageRotate_ap_ready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="AP_CTRL" PORT="ap_ready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ap_idle" SIGIS="undef"/>
+        <PORT DIR="I" NAME="S_AXIS_TVALID" SIGIS="undef" SIGNAME="ImageRotate_S_AXIS_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="M_AXIS_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S_AXIS_TREADY" SIGIS="undef" SIGNAME="ImageRotate_S_AXIS_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="M_AXIS_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="S_AXIS_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="ImageRotate_S_AXIS_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="M_AXIS_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="S_AXIS_TKEEP" RIGHT="0" SIGIS="undef" SIGNAME="ImageRotate_S_AXIS_TKEEP">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="M_AXIS_TKEEP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="S_AXIS_TSTRB" RIGHT="0" SIGIS="undef" SIGNAME="ImageRotate_S_AXIS_TSTRB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="M_AXIS_TSTRB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="S_AXIS_TUSER" RIGHT="0" SIGIS="undef" SIGNAME="ImageRotate_S_AXIS_TUSER">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="M_AXIS_TUSER"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="S_AXIS_TLAST" RIGHT="0" SIGIS="undef" SIGNAME="ImageRotate_S_AXIS_TLAST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="M_AXIS_TLAST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="S_AXIS_TID" RIGHT="0" SIGIS="undef" SIGNAME="ImageRotate_S_AXIS_TID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="M_AXIS_TID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="S_AXIS_TDEST" RIGHT="0" SIGIS="undef" SIGNAME="ImageRotate_S_AXIS_TDEST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="M_AXIS_TDEST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M_AXIS_TVALID" SIGIS="undef" SIGNAME="ImageRotate_M_AXIS_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="S_AXIS_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M_AXIS_TREADY" SIGIS="undef" SIGNAME="ImageRotate_M_AXIS_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="S_AXIS_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="M_AXIS_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="ImageRotate_M_AXIS_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="S_AXIS_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="M_AXIS_TKEEP" RIGHT="0" SIGIS="undef" SIGNAME="ImageRotate_M_AXIS_TKEEP">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="S_AXIS_TKEEP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="M_AXIS_TSTRB" RIGHT="0" SIGIS="undef" SIGNAME="ImageRotate_M_AXIS_TSTRB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="S_AXIS_TSTRB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="M_AXIS_TUSER" RIGHT="0" SIGIS="undef" SIGNAME="ImageRotate_M_AXIS_TUSER">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="S_AXIS_TUSER"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="M_AXIS_TLAST" RIGHT="0" SIGIS="undef" SIGNAME="ImageRotate_M_AXIS_TLAST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="S_AXIS_TLAST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="M_AXIS_TID" RIGHT="0" SIGIS="undef" SIGNAME="ImageRotate_M_AXIS_TID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="S_AXIS_TID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="M_AXIS_TDEST" RIGHT="0" SIGIS="undef" SIGNAME="ImageRotate_M_AXIS_TDEST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="S_AXIS_TDEST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="rows0" RIGHT="0" SIGIS="data" SIGNAME="RIFFA_AXIS_Riffa_Axis_rows1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="rows1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="cols0" RIGHT="0" SIGIS="data" SIGNAME="RIFFA_AXIS_Riffa_Axis_cols1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="cols1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="rows1" RIGHT="0" SIGIS="data" SIGNAME="ImageRotate_rows1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="rows0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="cols1" RIGHT="0" SIGIS="data" SIGNAME="ImageRotate_cols1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="cols0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="ap_ctrl" TYPE="TARGET" VLNV="xilinx.com:interface:acc_handshake:1.0">
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {done {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} start {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} ready {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} idle {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="done" PHYSICAL="ap_done"/>
+            <PORTMAP LOGICAL="start" PHYSICAL="ap_start"/>
+            <PORTMAP LOGICAL="ready" PHYSICAL="ap_ready"/>
+            <PORTMAP LOGICAL="idle" PHYSICAL="ap_idle"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="RIFFA_AXIS_Riffa_Axis_M_AXIS" NAME="S_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="1"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_pcie3_7x_0_0_user_clk"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="S_AXIS_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="S_AXIS_TREADY"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="S_AXIS_TDATA"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="S_AXIS_TKEEP"/>
+            <PORTMAP LOGICAL="TSTRB" PHYSICAL="S_AXIS_TSTRB"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="S_AXIS_TUSER"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="S_AXIS_TLAST"/>
+            <PORTMAP LOGICAL="TID" PHYSICAL="S_AXIS_TID"/>
+            <PORTMAP LOGICAL="TDEST" PHYSICAL="S_AXIS_TDEST"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="ImageRotate_M_AXIS" NAME="M_AXIS" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="1"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TDATA_WIDTH 8 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TUSER_WIDTH 1}"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_pcie3_7x_0_0_user_clk"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="M_AXIS_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="M_AXIS_TREADY"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="M_AXIS_TDATA"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="M_AXIS_TKEEP"/>
+            <PORTMAP LOGICAL="TSTRB" PHYSICAL="M_AXIS_TSTRB"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="M_AXIS_TUSER"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="M_AXIS_TLAST"/>
+            <PORTMAP LOGICAL="TID" PHYSICAL="M_AXIS_TID"/>
+            <PORTMAP LOGICAL="TDEST" PHYSICAL="M_AXIS_TDEST"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE FULLNAME="/RIFFA_AXIS/BRAM0" HWVERSION="8.4" INSTANCE="RIFFA_AXIS_BRAM0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="MEMORY" MODTYPE="blk_mem_gen" VLNV="xilinx.com:ip:blk_mem_gen:8.4">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=blk_mem_gen;v=v8_4;d=pg058-blk-mem-gen.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_FAMILY" VALUE="virtex7"/>
+        <PARAMETER NAME="C_XDEVICEFAMILY" VALUE="virtex7"/>
+        <PARAMETER NAME="C_ELABORATION_DIR" VALUE="./"/>
+        <PARAMETER NAME="C_INTERFACE_TYPE" VALUE="0"/>
+        <PARAMETER NAME="C_AXI_TYPE" VALUE="1"/>
+        <PARAMETER NAME="C_AXI_SLAVE_TYPE" VALUE="0"/>
+        <PARAMETER NAME="C_USE_BRAM_BLOCK" VALUE="0"/>
+        <PARAMETER NAME="C_ENABLE_32BIT_ADDRESS" VALUE="0"/>
+        <PARAMETER NAME="C_CTRL_ECC_ALGO" VALUE="NONE"/>
+        <PARAMETER NAME="C_HAS_AXI_ID" VALUE="0"/>
+        <PARAMETER NAME="C_AXI_ID_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="C_MEM_TYPE" VALUE="1"/>
+        <PARAMETER NAME="C_BYTE_SIZE" VALUE="9"/>
+        <PARAMETER NAME="C_ALGORITHM" VALUE="1"/>
+        <PARAMETER NAME="C_PRIM_TYPE" VALUE="1"/>
+        <PARAMETER NAME="C_LOAD_INIT_FILE" VALUE="0"/>
+        <PARAMETER NAME="C_INIT_FILE_NAME" VALUE="no_coe_file_loaded"/>
+        <PARAMETER NAME="C_INIT_FILE" VALUE="NONE"/>
+        <PARAMETER NAME="C_USE_DEFAULT_DATA" VALUE="0"/>
+        <PARAMETER NAME="C_DEFAULT_DATA" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_RSTA" VALUE="0"/>
+        <PARAMETER NAME="C_RST_PRIORITY_A" VALUE="CE"/>
+        <PARAMETER NAME="C_RSTRAM_A" VALUE="0"/>
+        <PARAMETER NAME="C_INITA_VAL" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_ENA" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_REGCEA" VALUE="0"/>
+        <PARAMETER NAME="C_USE_BYTE_WEA" VALUE="0"/>
+        <PARAMETER NAME="C_WEA_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_WRITE_MODE_A" VALUE="WRITE_FIRST"/>
+        <PARAMETER NAME="C_WRITE_WIDTH_A" VALUE="8"/>
+        <PARAMETER NAME="C_READ_WIDTH_A" VALUE="8"/>
+        <PARAMETER NAME="C_WRITE_DEPTH_A" VALUE="65536"/>
+        <PARAMETER NAME="C_READ_DEPTH_A" VALUE="65536"/>
+        <PARAMETER NAME="C_ADDRA_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="C_HAS_RSTB" VALUE="0"/>
+        <PARAMETER NAME="C_RST_PRIORITY_B" VALUE="CE"/>
+        <PARAMETER NAME="C_RSTRAM_B" VALUE="0"/>
+        <PARAMETER NAME="C_INITB_VAL" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_ENB" VALUE="1"/>
+        <PARAMETER NAME="C_HAS_REGCEB" VALUE="0"/>
+        <PARAMETER NAME="C_USE_BYTE_WEB" VALUE="0"/>
+        <PARAMETER NAME="C_WEB_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_WRITE_MODE_B" VALUE="WRITE_FIRST"/>
+        <PARAMETER NAME="C_WRITE_WIDTH_B" VALUE="128"/>
+        <PARAMETER NAME="C_READ_WIDTH_B" VALUE="128"/>
+        <PARAMETER NAME="C_WRITE_DEPTH_B" VALUE="4096"/>
+        <PARAMETER NAME="C_READ_DEPTH_B" VALUE="4096"/>
+        <PARAMETER NAME="C_ADDRB_WIDTH" VALUE="12"/>
+        <PARAMETER NAME="C_HAS_MEM_OUTPUT_REGS_A" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_MEM_OUTPUT_REGS_B" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_MUX_OUTPUT_REGS_A" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_MUX_OUTPUT_REGS_B" VALUE="0"/>
+        <PARAMETER NAME="C_MUX_PIPELINE_STAGES" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_SOFTECC_INPUT_REGS_A" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_SOFTECC_OUTPUT_REGS_B" VALUE="0"/>
+        <PARAMETER NAME="C_USE_SOFTECC" VALUE="0"/>
+        <PARAMETER NAME="C_USE_ECC" VALUE="0"/>
+        <PARAMETER NAME="C_EN_ECC_PIPE" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_INJECTERR" VALUE="0"/>
+        <PARAMETER NAME="C_SIM_COLLISION_CHECK" VALUE="ALL"/>
+        <PARAMETER NAME="C_COMMON_CLK" VALUE="0"/>
+        <PARAMETER NAME="C_DISABLE_WARN_BHV_COLL" VALUE="0"/>
+        <PARAMETER NAME="C_EN_SLEEP_PIN" VALUE="0"/>
+        <PARAMETER NAME="C_USE_URAM" VALUE="0"/>
+        <PARAMETER NAME="C_EN_RDADDRA_CHG" VALUE="0"/>
+        <PARAMETER NAME="C_EN_RDADDRB_CHG" VALUE="0"/>
+        <PARAMETER NAME="C_EN_DEEPSLEEP_PIN" VALUE="0"/>
+        <PARAMETER NAME="C_EN_SHUTDOWN_PIN" VALUE="0"/>
+        <PARAMETER NAME="C_EN_SAFETY_CKT" VALUE="0"/>
+        <PARAMETER NAME="C_DISABLE_WARN_BHV_RANGE" VALUE="0"/>
+        <PARAMETER NAME="C_COUNT_36K_BRAM" VALUE="16"/>
+        <PARAMETER NAME="C_COUNT_18K_BRAM" VALUE="0"/>
+        <PARAMETER NAME="C_EST_POWER_SUMMARY" VALUE="Estimated Power for IP     :     38.674404 mW"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_blk_mem_gen_0_0"/>
+        <PARAMETER NAME="Interface_Type" VALUE="Native"/>
+        <PARAMETER NAME="AXI_Type" VALUE="AXI4_Full"/>
+        <PARAMETER NAME="AXI_Slave_Type" VALUE="Memory_Slave"/>
+        <PARAMETER NAME="Use_AXI_ID" VALUE="false"/>
+        <PARAMETER NAME="AXI_ID_Width" VALUE="4"/>
+        <PARAMETER NAME="Memory_Type" VALUE="Simple_Dual_Port_RAM"/>
+        <PARAMETER NAME="PRIM_type_to_Implement" VALUE="BRAM"/>
+        <PARAMETER NAME="Enable_32bit_Address" VALUE="false"/>
+        <PARAMETER NAME="ecctype" VALUE="No_ECC"/>
+        <PARAMETER NAME="ECC" VALUE="false"/>
+        <PARAMETER NAME="softecc" VALUE="false"/>
+        <PARAMETER NAME="EN_SLEEP_PIN" VALUE="false"/>
+        <PARAMETER NAME="EN_DEEPSLEEP_PIN" VALUE="false"/>
+        <PARAMETER NAME="EN_SHUTDOWN_PIN" VALUE="false"/>
+        <PARAMETER NAME="EN_ECC_PIPE" VALUE="false"/>
+        <PARAMETER NAME="RD_ADDR_CHNG_A" VALUE="false"/>
+        <PARAMETER NAME="RD_ADDR_CHNG_B" VALUE="false"/>
+        <PARAMETER NAME="Use_Error_Injection_Pins" VALUE="false"/>
+        <PARAMETER NAME="Error_Injection_Type" VALUE="Single_Bit_Error_Injection"/>
+        <PARAMETER NAME="Use_Byte_Write_Enable" VALUE="false"/>
+        <PARAMETER NAME="Byte_Size" VALUE="9"/>
+        <PARAMETER NAME="Algorithm" VALUE="Minimum_Area"/>
+        <PARAMETER NAME="Primitive" VALUE="8kx2"/>
+        <PARAMETER NAME="Assume_Synchronous_Clk" VALUE="false"/>
+        <PARAMETER NAME="Write_Width_A" VALUE="8"/>
+        <PARAMETER NAME="Write_Depth_A" VALUE="65536"/>
+        <PARAMETER NAME="Read_Width_A" VALUE="8"/>
+        <PARAMETER NAME="Operating_Mode_A" VALUE="WRITE_FIRST"/>
+        <PARAMETER NAME="Enable_A" VALUE="Always_Enabled"/>
+        <PARAMETER NAME="Write_Width_B" VALUE="128"/>
+        <PARAMETER NAME="Read_Width_B" VALUE="128"/>
+        <PARAMETER NAME="Operating_Mode_B" VALUE="WRITE_FIRST"/>
+        <PARAMETER NAME="Enable_B" VALUE="Use_ENB_Pin"/>
+        <PARAMETER NAME="Register_PortA_Output_of_Memory_Primitives" VALUE="false"/>
+        <PARAMETER NAME="Register_PortA_Output_of_Memory_Core" VALUE="false"/>
+        <PARAMETER NAME="Use_REGCEA_Pin" VALUE="false"/>
+        <PARAMETER NAME="Register_PortB_Output_of_Memory_Primitives" VALUE="false"/>
+        <PARAMETER NAME="Register_PortB_Output_of_Memory_Core" VALUE="false"/>
+        <PARAMETER NAME="Use_REGCEB_Pin" VALUE="false"/>
+        <PARAMETER NAME="register_porta_input_of_softecc" VALUE="false"/>
+        <PARAMETER NAME="register_portb_output_of_softecc" VALUE="false"/>
+        <PARAMETER NAME="Pipeline_Stages" VALUE="0"/>
+        <PARAMETER NAME="Load_Init_File" VALUE="false"/>
+        <PARAMETER NAME="Coe_File" VALUE="no_coe_file_loaded"/>
+        <PARAMETER NAME="Fill_Remaining_Memory_Locations" VALUE="false"/>
+        <PARAMETER NAME="Remaining_Memory_Locations" VALUE="0"/>
+        <PARAMETER NAME="Use_RSTA_Pin" VALUE="false"/>
+        <PARAMETER NAME="Reset_Memory_Latch_A" VALUE="false"/>
+        <PARAMETER NAME="Reset_Priority_A" VALUE="CE"/>
+        <PARAMETER NAME="Output_Reset_Value_A" VALUE="0"/>
+        <PARAMETER NAME="Use_RSTB_Pin" VALUE="false"/>
+        <PARAMETER NAME="Reset_Memory_Latch_B" VALUE="false"/>
+        <PARAMETER NAME="Reset_Priority_B" VALUE="CE"/>
+        <PARAMETER NAME="Output_Reset_Value_B" VALUE="0"/>
+        <PARAMETER NAME="Reset_Type" VALUE="SYNC"/>
+        <PARAMETER NAME="Additional_Inputs_for_Power_Estimation" VALUE="false"/>
+        <PARAMETER NAME="Port_A_Clock" VALUE="100"/>
+        <PARAMETER NAME="Port_A_Write_Rate" VALUE="50"/>
+        <PARAMETER NAME="Port_B_Clock" VALUE="100"/>
+        <PARAMETER NAME="Port_B_Write_Rate" VALUE="0"/>
+        <PARAMETER NAME="Port_A_Enable_Rate" VALUE="100"/>
+        <PARAMETER NAME="Port_B_Enable_Rate" VALUE="100"/>
+        <PARAMETER NAME="Collision_Warnings" VALUE="ALL"/>
+        <PARAMETER NAME="Disable_Collision_Warnings" VALUE="false"/>
+        <PARAMETER NAME="Disable_Out_of_Range_Warnings" VALUE="false"/>
+        <PARAMETER NAME="use_bram_block" VALUE="Stand_Alone"/>
+        <PARAMETER NAME="MEM_FILE" VALUE="NONE"/>
+        <PARAMETER NAME="CTRL_ECC_ALGO" VALUE="NONE"/>
+        <PARAMETER NAME="EN_SAFETY_CKT" VALUE="false"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clka" SIGIS="clk" SIGNAME="RIFFA_AXIS_BRAM0_clka">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="BRAM0_CLKA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="wea" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_BRAM0_wea">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="BRAM0_WEA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="addra" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_BRAM0_addra">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="BRAM0_ADDRA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="dina" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_BRAM0_dina">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="BRAM0_DINA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="clkb" SIGIS="clk" SIGNAME="RIFFA_AXIS_BRAM0_clkb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="BRAM0_CLKB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="enb" SIGIS="undef" SIGNAME="RIFFA_AXIS_BRAM0_enb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="BRAM0_ENB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="addrb" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_BRAM0_addrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="BRAM0_ADDRB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="127" NAME="doutb" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_BRAM0_doutb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="BRAM0_DOUTB"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="RIFFA_AXIS_Riffa_Axis_BRAM0_PORTA" NAME="BRAM_PORTA" TYPE="TARGET" VLNV="xilinx.com:interface:bram:1.0">
+          <PARAMETER NAME="MEM_SIZE" VALUE="8192"/>
+          <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
+          <PARAMETER NAME="MASTER_TYPE" VALUE="OTHER"/>
+          <PARAMETER NAME="READ_WRITE_MODE" VALUE="WRITE_ONLY"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="ADDR" PHYSICAL="addra"/>
+            <PORTMAP LOGICAL="CLK" PHYSICAL="clka"/>
+            <PORTMAP LOGICAL="DIN" PHYSICAL="dina"/>
+            <PORTMAP LOGICAL="WE" PHYSICAL="wea"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="RIFFA_AXIS_Riffa_Axis_BRAM0_PORTB" NAME="BRAM_PORTB" TYPE="TARGET" VLNV="xilinx.com:interface:bram:1.0">
+          <PARAMETER NAME="MEM_SIZE" VALUE="8192"/>
+          <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
+          <PARAMETER NAME="MASTER_TYPE" VALUE="OTHER"/>
+          <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_ONLY"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="ADDR" PHYSICAL="addrb"/>
+            <PORTMAP LOGICAL="CLK" PHYSICAL="clkb"/>
+            <PORTMAP LOGICAL="DOUT" PHYSICAL="doutb"/>
+            <PORTMAP LOGICAL="EN" PHYSICAL="enb"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE FULLNAME="/RIFFA_AXIS/BRAM1" HWVERSION="8.4" INSTANCE="RIFFA_AXIS_BRAM1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="MEMORY" MODTYPE="blk_mem_gen" VLNV="xilinx.com:ip:blk_mem_gen:8.4">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=blk_mem_gen;v=v8_4;d=pg058-blk-mem-gen.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_FAMILY" VALUE="virtex7"/>
+        <PARAMETER NAME="C_XDEVICEFAMILY" VALUE="virtex7"/>
+        <PARAMETER NAME="C_ELABORATION_DIR" VALUE="./"/>
+        <PARAMETER NAME="C_INTERFACE_TYPE" VALUE="0"/>
+        <PARAMETER NAME="C_AXI_TYPE" VALUE="1"/>
+        <PARAMETER NAME="C_AXI_SLAVE_TYPE" VALUE="0"/>
+        <PARAMETER NAME="C_USE_BRAM_BLOCK" VALUE="0"/>
+        <PARAMETER NAME="C_ENABLE_32BIT_ADDRESS" VALUE="0"/>
+        <PARAMETER NAME="C_CTRL_ECC_ALGO" VALUE="NONE"/>
+        <PARAMETER NAME="C_HAS_AXI_ID" VALUE="0"/>
+        <PARAMETER NAME="C_AXI_ID_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="C_MEM_TYPE" VALUE="1"/>
+        <PARAMETER NAME="C_BYTE_SIZE" VALUE="9"/>
+        <PARAMETER NAME="C_ALGORITHM" VALUE="1"/>
+        <PARAMETER NAME="C_PRIM_TYPE" VALUE="1"/>
+        <PARAMETER NAME="C_LOAD_INIT_FILE" VALUE="0"/>
+        <PARAMETER NAME="C_INIT_FILE_NAME" VALUE="no_coe_file_loaded"/>
+        <PARAMETER NAME="C_INIT_FILE" VALUE="NONE"/>
+        <PARAMETER NAME="C_USE_DEFAULT_DATA" VALUE="0"/>
+        <PARAMETER NAME="C_DEFAULT_DATA" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_RSTA" VALUE="0"/>
+        <PARAMETER NAME="C_RST_PRIORITY_A" VALUE="CE"/>
+        <PARAMETER NAME="C_RSTRAM_A" VALUE="0"/>
+        <PARAMETER NAME="C_INITA_VAL" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_ENA" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_REGCEA" VALUE="0"/>
+        <PARAMETER NAME="C_USE_BYTE_WEA" VALUE="0"/>
+        <PARAMETER NAME="C_WEA_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_WRITE_MODE_A" VALUE="NO_CHANGE"/>
+        <PARAMETER NAME="C_WRITE_WIDTH_A" VALUE="128"/>
+        <PARAMETER NAME="C_READ_WIDTH_A" VALUE="128"/>
+        <PARAMETER NAME="C_WRITE_DEPTH_A" VALUE="4096"/>
+        <PARAMETER NAME="C_READ_DEPTH_A" VALUE="4096"/>
+        <PARAMETER NAME="C_ADDRA_WIDTH" VALUE="12"/>
+        <PARAMETER NAME="C_HAS_RSTB" VALUE="0"/>
+        <PARAMETER NAME="C_RST_PRIORITY_B" VALUE="CE"/>
+        <PARAMETER NAME="C_RSTRAM_B" VALUE="0"/>
+        <PARAMETER NAME="C_INITB_VAL" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_ENB" VALUE="1"/>
+        <PARAMETER NAME="C_HAS_REGCEB" VALUE="0"/>
+        <PARAMETER NAME="C_USE_BYTE_WEB" VALUE="0"/>
+        <PARAMETER NAME="C_WEB_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_WRITE_MODE_B" VALUE="WRITE_FIRST"/>
+        <PARAMETER NAME="C_WRITE_WIDTH_B" VALUE="8"/>
+        <PARAMETER NAME="C_READ_WIDTH_B" VALUE="8"/>
+        <PARAMETER NAME="C_WRITE_DEPTH_B" VALUE="65536"/>
+        <PARAMETER NAME="C_READ_DEPTH_B" VALUE="65536"/>
+        <PARAMETER NAME="C_ADDRB_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="C_HAS_MEM_OUTPUT_REGS_A" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_MEM_OUTPUT_REGS_B" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_MUX_OUTPUT_REGS_A" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_MUX_OUTPUT_REGS_B" VALUE="0"/>
+        <PARAMETER NAME="C_MUX_PIPELINE_STAGES" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_SOFTECC_INPUT_REGS_A" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_SOFTECC_OUTPUT_REGS_B" VALUE="0"/>
+        <PARAMETER NAME="C_USE_SOFTECC" VALUE="0"/>
+        <PARAMETER NAME="C_USE_ECC" VALUE="0"/>
+        <PARAMETER NAME="C_EN_ECC_PIPE" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_INJECTERR" VALUE="0"/>
+        <PARAMETER NAME="C_SIM_COLLISION_CHECK" VALUE="ALL"/>
+        <PARAMETER NAME="C_COMMON_CLK" VALUE="0"/>
+        <PARAMETER NAME="C_DISABLE_WARN_BHV_COLL" VALUE="0"/>
+        <PARAMETER NAME="C_EN_SLEEP_PIN" VALUE="0"/>
+        <PARAMETER NAME="C_USE_URAM" VALUE="0"/>
+        <PARAMETER NAME="C_EN_RDADDRA_CHG" VALUE="0"/>
+        <PARAMETER NAME="C_EN_RDADDRB_CHG" VALUE="0"/>
+        <PARAMETER NAME="C_EN_DEEPSLEEP_PIN" VALUE="0"/>
+        <PARAMETER NAME="C_EN_SHUTDOWN_PIN" VALUE="0"/>
+        <PARAMETER NAME="C_EN_SAFETY_CKT" VALUE="0"/>
+        <PARAMETER NAME="C_DISABLE_WARN_BHV_RANGE" VALUE="0"/>
+        <PARAMETER NAME="C_COUNT_36K_BRAM" VALUE="16"/>
+        <PARAMETER NAME="C_COUNT_18K_BRAM" VALUE="0"/>
+        <PARAMETER NAME="C_EST_POWER_SUMMARY" VALUE="Estimated Power for IP     :     17.554202 mW"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_BRAM0_0"/>
+        <PARAMETER NAME="Interface_Type" VALUE="Native"/>
+        <PARAMETER NAME="AXI_Type" VALUE="AXI4_Full"/>
+        <PARAMETER NAME="AXI_Slave_Type" VALUE="Memory_Slave"/>
+        <PARAMETER NAME="Use_AXI_ID" VALUE="false"/>
+        <PARAMETER NAME="AXI_ID_Width" VALUE="4"/>
+        <PARAMETER NAME="Memory_Type" VALUE="Simple_Dual_Port_RAM"/>
+        <PARAMETER NAME="PRIM_type_to_Implement" VALUE="BRAM"/>
+        <PARAMETER NAME="Enable_32bit_Address" VALUE="false"/>
+        <PARAMETER NAME="ecctype" VALUE="No_ECC"/>
+        <PARAMETER NAME="ECC" VALUE="false"/>
+        <PARAMETER NAME="softecc" VALUE="false"/>
+        <PARAMETER NAME="EN_SLEEP_PIN" VALUE="false"/>
+        <PARAMETER NAME="EN_DEEPSLEEP_PIN" VALUE="false"/>
+        <PARAMETER NAME="EN_SHUTDOWN_PIN" VALUE="false"/>
+        <PARAMETER NAME="EN_ECC_PIPE" VALUE="false"/>
+        <PARAMETER NAME="RD_ADDR_CHNG_A" VALUE="false"/>
+        <PARAMETER NAME="RD_ADDR_CHNG_B" VALUE="false"/>
+        <PARAMETER NAME="Use_Error_Injection_Pins" VALUE="false"/>
+        <PARAMETER NAME="Error_Injection_Type" VALUE="Single_Bit_Error_Injection"/>
+        <PARAMETER NAME="Use_Byte_Write_Enable" VALUE="false"/>
+        <PARAMETER NAME="Byte_Size" VALUE="9"/>
+        <PARAMETER NAME="Algorithm" VALUE="Minimum_Area"/>
+        <PARAMETER NAME="Primitive" VALUE="8kx2"/>
+        <PARAMETER NAME="Assume_Synchronous_Clk" VALUE="false"/>
+        <PARAMETER NAME="Write_Width_A" VALUE="128"/>
+        <PARAMETER NAME="Write_Depth_A" VALUE="4096"/>
+        <PARAMETER NAME="Read_Width_A" VALUE="128"/>
+        <PARAMETER NAME="Operating_Mode_A" VALUE="NO_CHANGE"/>
+        <PARAMETER NAME="Enable_A" VALUE="Always_Enabled"/>
+        <PARAMETER NAME="Write_Width_B" VALUE="8"/>
+        <PARAMETER NAME="Read_Width_B" VALUE="8"/>
+        <PARAMETER NAME="Operating_Mode_B" VALUE="WRITE_FIRST"/>
+        <PARAMETER NAME="Enable_B" VALUE="Use_ENB_Pin"/>
+        <PARAMETER NAME="Register_PortA_Output_of_Memory_Primitives" VALUE="false"/>
+        <PARAMETER NAME="Register_PortA_Output_of_Memory_Core" VALUE="false"/>
+        <PARAMETER NAME="Use_REGCEA_Pin" VALUE="false"/>
+        <PARAMETER NAME="Register_PortB_Output_of_Memory_Primitives" VALUE="false"/>
+        <PARAMETER NAME="Register_PortB_Output_of_Memory_Core" VALUE="false"/>
+        <PARAMETER NAME="Use_REGCEB_Pin" VALUE="false"/>
+        <PARAMETER NAME="register_porta_input_of_softecc" VALUE="false"/>
+        <PARAMETER NAME="register_portb_output_of_softecc" VALUE="false"/>
+        <PARAMETER NAME="Pipeline_Stages" VALUE="0"/>
+        <PARAMETER NAME="Load_Init_File" VALUE="false"/>
+        <PARAMETER NAME="Coe_File" VALUE="no_coe_file_loaded"/>
+        <PARAMETER NAME="Fill_Remaining_Memory_Locations" VALUE="false"/>
+        <PARAMETER NAME="Remaining_Memory_Locations" VALUE="0"/>
+        <PARAMETER NAME="Use_RSTA_Pin" VALUE="false"/>
+        <PARAMETER NAME="Reset_Memory_Latch_A" VALUE="false"/>
+        <PARAMETER NAME="Reset_Priority_A" VALUE="CE"/>
+        <PARAMETER NAME="Output_Reset_Value_A" VALUE="0"/>
+        <PARAMETER NAME="Use_RSTB_Pin" VALUE="false"/>
+        <PARAMETER NAME="Reset_Memory_Latch_B" VALUE="false"/>
+        <PARAMETER NAME="Reset_Priority_B" VALUE="CE"/>
+        <PARAMETER NAME="Output_Reset_Value_B" VALUE="0"/>
+        <PARAMETER NAME="Reset_Type" VALUE="SYNC"/>
+        <PARAMETER NAME="Additional_Inputs_for_Power_Estimation" VALUE="false"/>
+        <PARAMETER NAME="Port_A_Clock" VALUE="100"/>
+        <PARAMETER NAME="Port_A_Write_Rate" VALUE="50"/>
+        <PARAMETER NAME="Port_B_Clock" VALUE="100"/>
+        <PARAMETER NAME="Port_B_Write_Rate" VALUE="0"/>
+        <PARAMETER NAME="Port_A_Enable_Rate" VALUE="100"/>
+        <PARAMETER NAME="Port_B_Enable_Rate" VALUE="100"/>
+        <PARAMETER NAME="Collision_Warnings" VALUE="ALL"/>
+        <PARAMETER NAME="Disable_Collision_Warnings" VALUE="false"/>
+        <PARAMETER NAME="Disable_Out_of_Range_Warnings" VALUE="false"/>
+        <PARAMETER NAME="use_bram_block" VALUE="Stand_Alone"/>
+        <PARAMETER NAME="MEM_FILE" VALUE="NONE"/>
+        <PARAMETER NAME="CTRL_ECC_ALGO" VALUE="NONE"/>
+        <PARAMETER NAME="EN_SAFETY_CKT" VALUE="false"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clka" SIGIS="clk" SIGNAME="RIFFA_AXIS_BRAM1_clka">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="BRAM1_CLKA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="wea" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_BRAM1_wea">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="BRAM1_WEA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="addra" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_BRAM1_addra">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="BRAM1_ADDRA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="127" NAME="dina" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_BRAM1_dina">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="BRAM1_DINA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="clkb" SIGIS="clk" SIGNAME="RIFFA_AXIS_BRAM1_clkb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="BRAM1_CLKB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="enb" SIGIS="undef" SIGNAME="RIFFA_AXIS_BRAM1_enb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="BRAM1_ENB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="addrb" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_BRAM1_addrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="BRAM1_ADDRB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="doutb" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_BRAM1_doutb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="BRAM1_DOUTB"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="RIFFA_AXIS_Riffa_Axis_BRAM1_PORTA" NAME="BRAM_PORTA" TYPE="TARGET" VLNV="xilinx.com:interface:bram:1.0">
+          <PARAMETER NAME="MEM_SIZE" VALUE="8192"/>
+          <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
+          <PARAMETER NAME="MASTER_TYPE" VALUE="OTHER"/>
+          <PARAMETER NAME="READ_WRITE_MODE" VALUE="WRITE_ONLY"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="ADDR" PHYSICAL="addra"/>
+            <PORTMAP LOGICAL="CLK" PHYSICAL="clka"/>
+            <PORTMAP LOGICAL="DIN" PHYSICAL="dina"/>
+            <PORTMAP LOGICAL="WE" PHYSICAL="wea"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="RIFFA_AXIS_Riffa_Axis_BRAM1_PORTB" NAME="BRAM_PORTB" TYPE="TARGET" VLNV="xilinx.com:interface:bram:1.0">
+          <PARAMETER NAME="MEM_SIZE" VALUE="8192"/>
+          <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
+          <PARAMETER NAME="MASTER_TYPE" VALUE="OTHER"/>
+          <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_ONLY"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="ADDR" PHYSICAL="addrb"/>
+            <PORTMAP LOGICAL="CLK" PHYSICAL="clkb"/>
+            <PORTMAP LOGICAL="DOUT" PHYSICAL="doutb"/>
+            <PORTMAP LOGICAL="EN" PHYSICAL="enb"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE FULLNAME="/RIFFA_AXIS/PCIE" HWVERSION="4.3" INSTANCE="RIFFA_AXIS_PCIE" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="pcie3_7x" VLNV="xilinx.com:ip:pcie3_7x:4.3">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=pcie3_7x;v=v4_3;d=pg023_v7_pcie_gen3.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="PL_LINK_CAP_MAX_LINK_SPEED" VALUE="2"/>
+        <PARAMETER NAME="PL_LINK_CAP_MAX_LINK_WIDTH" VALUE="8"/>
+        <PARAMETER NAME="USER_CLK2_FREQ" VALUE="4"/>
+        <PARAMETER NAME="PF0_LINK_CAP_ASPM_SUPPORT" VALUE="0"/>
+        <PARAMETER NAME="C_DATA_WIDTH" VALUE="128"/>
+        <PARAMETER NAME="REF_CLK_FREQ" VALUE="0"/>
+        <PARAMETER NAME="PCIE_LINK_SPEED" VALUE="3"/>
+        <PARAMETER NAME="KEEP_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="ARI_CAP_ENABLE" VALUE="FALSE"/>
+        <PARAMETER NAME="PF0_ARI_CAP_NEXT_FUNC" VALUE="0x00"/>
+        <PARAMETER NAME="AXISTEN_IF_CC_ALIGNMENT_MODE" VALUE="FALSE"/>
+        <PARAMETER NAME="AXISTEN_IF_CQ_ALIGNMENT_MODE" VALUE="FALSE"/>
+        <PARAMETER NAME="AXISTEN_IF_RC_ALIGNMENT_MODE" VALUE="FALSE"/>
+        <PARAMETER NAME="AXISTEN_IF_RC_STRADDLE" VALUE="FALSE"/>
+        <PARAMETER NAME="AXISTEN_IF_RQ_ALIGNMENT_MODE" VALUE="FALSE"/>
+        <PARAMETER NAME="PF0_AER_CAP_ECRC_CHECK_CAPABLE" VALUE="FALSE"/>
+        <PARAMETER NAME="PF0_AER_CAP_ECRC_GEN_CAPABLE" VALUE="FALSE"/>
+        <PARAMETER NAME="PF0_AER_CAP_NEXTPTR" VALUE="0x000"/>
+        <PARAMETER NAME="PF0_ARI_CAP_NEXTPTR" VALUE="0x000"/>
+        <PARAMETER NAME="VF0_ARI_CAP_NEXTPTR" VALUE="0x000"/>
+        <PARAMETER NAME="VF1_ARI_CAP_NEXTPTR" VALUE="0x000"/>
+        <PARAMETER NAME="VF2_ARI_CAP_NEXTPTR" VALUE="0x000"/>
+        <PARAMETER NAME="VF3_ARI_CAP_NEXTPTR" VALUE="0x000"/>
+        <PARAMETER NAME="VF4_ARI_CAP_NEXTPTR" VALUE="0x000"/>
+        <PARAMETER NAME="VF5_ARI_CAP_NEXTPTR" VALUE="0x000"/>
+        <PARAMETER NAME="PF0_BAR0_APERTURE_SIZE" VALUE="0b00011"/>
+        <PARAMETER NAME="PF0_BAR0_CONTROL" VALUE="0b100"/>
+        <PARAMETER NAME="PF0_BAR1_APERTURE_SIZE" VALUE="0b00000"/>
+        <PARAMETER NAME="PF0_BAR1_CONTROL" VALUE="0b000"/>
+        <PARAMETER NAME="PF0_BAR2_APERTURE_SIZE" VALUE="0b00000"/>
+        <PARAMETER NAME="PF0_BAR2_CONTROL" VALUE="0b000"/>
+        <PARAMETER NAME="PF0_BAR3_APERTURE_SIZE" VALUE="0b00000"/>
+        <PARAMETER NAME="PF0_BAR3_CONTROL" VALUE="0b000"/>
+        <PARAMETER NAME="PF0_BAR4_APERTURE_SIZE" VALUE="0b00000"/>
+        <PARAMETER NAME="PF0_BAR4_CONTROL" VALUE="0b000"/>
+        <PARAMETER NAME="PF0_BAR5_APERTURE_SIZE" VALUE="0b00000"/>
+        <PARAMETER NAME="PF0_BAR5_CONTROL" VALUE="0b000"/>
+        <PARAMETER NAME="PF0_CAPABILITY_POINTER" VALUE="0x80"/>
+        <PARAMETER NAME="PF0_CLASS_CODE" VALUE="0x058000"/>
+        <PARAMETER NAME="PF0_VENDOR_ID" VALUE="0x10EE"/>
+        <PARAMETER NAME="PF0_DEVICE_ID" VALUE="0x7028"/>
+        <PARAMETER NAME="PF0_DEV_CAP2_128B_CAS_ATOMIC_COMPLETER_SUPPORT" VALUE="FALSE"/>
+        <PARAMETER NAME="PF0_DEV_CAP2_32B_ATOMIC_COMPLETER_SUPPORT" VALUE="FALSE"/>
+        <PARAMETER NAME="PF0_DEV_CAP2_64B_ATOMIC_COMPLETER_SUPPORT" VALUE="FALSE"/>
+        <PARAMETER NAME="PF0_DEV_CAP2_LTR_SUPPORT" VALUE="FALSE"/>
+        <PARAMETER NAME="PF0_DEV_CAP2_OBFF_SUPPORT" VALUE="00"/>
+        <PARAMETER NAME="PF0_DEV_CAP2_TPH_COMPLETER_SUPPORT" VALUE="FALSE"/>
+        <PARAMETER NAME="PF0_DEV_CAP_EXT_TAG_SUPPORTED" VALUE="TRUE"/>
+        <PARAMETER NAME="PF0_DEV_CAP_FUNCTION_LEVEL_RESET_CAPABLE" VALUE="FALSE"/>
+        <PARAMETER NAME="PF0_DEV_CAP_MAX_PAYLOAD_SIZE" VALUE="0b001"/>
+        <PARAMETER NAME="PF0_DPA_CAP_NEXTPTR" VALUE="0x000"/>
+        <PARAMETER NAME="PF0_DPA_CAP_SUB_STATE_POWER_ALLOCATION0" VALUE="0x00"/>
+        <PARAMETER NAME="PF0_DPA_CAP_SUB_STATE_POWER_ALLOCATION1" VALUE="0x00"/>
+        <PARAMETER NAME="PF0_DPA_CAP_SUB_STATE_POWER_ALLOCATION2" VALUE="0x00"/>
+        <PARAMETER NAME="PF0_DPA_CAP_SUB_STATE_POWER_ALLOCATION3" VALUE="0x00"/>
+        <PARAMETER NAME="PF0_DPA_CAP_SUB_STATE_POWER_ALLOCATION4" VALUE="0x00"/>
+        <PARAMETER NAME="PF0_DPA_CAP_SUB_STATE_POWER_ALLOCATION5" VALUE="0x00"/>
+        <PARAMETER NAME="PF0_DPA_CAP_SUB_STATE_POWER_ALLOCATION6" VALUE="0x00"/>
+        <PARAMETER NAME="PF0_DPA_CAP_SUB_STATE_POWER_ALLOCATION7" VALUE="0x00"/>
+        <PARAMETER NAME="PF1_DPA_CAP_SUB_STATE_POWER_ALLOCATION0" VALUE="0x00"/>
+        <PARAMETER NAME="PF1_DPA_CAP_SUB_STATE_POWER_ALLOCATION1" VALUE="0x00"/>
+        <PARAMETER NAME="PF1_DPA_CAP_SUB_STATE_POWER_ALLOCATION2" VALUE="0x00"/>
+        <PARAMETER NAME="PF1_DPA_CAP_SUB_STATE_POWER_ALLOCATION3" VALUE="0x00"/>
+        <PARAMETER NAME="PF1_DPA_CAP_SUB_STATE_POWER_ALLOCATION4" VALUE="0x00"/>
+        <PARAMETER NAME="PF1_DPA_CAP_SUB_STATE_POWER_ALLOCATION5" VALUE="0x00"/>
+        <PARAMETER NAME="PF1_DPA_CAP_SUB_STATE_POWER_ALLOCATION6" VALUE="0x00"/>
+        <PARAMETER NAME="PF1_DPA_CAP_SUB_STATE_POWER_ALLOCATION7" VALUE="0x00"/>
+        <PARAMETER NAME="PF0_DSN_CAP_NEXTPTR" VALUE="0x000"/>
+        <PARAMETER NAME="PF0_EXPANSION_ROM_APERTURE_SIZE" VALUE="0b00000"/>
+        <PARAMETER NAME="PF0_EXPANSION_ROM_ENABLE" VALUE="FALSE"/>
+        <PARAMETER NAME="PF0_INTERRUPT_PIN" VALUE="0x0"/>
+        <PARAMETER NAME="PF0_LINK_STATUS_SLOT_CLOCK_CONFIG" VALUE="TRUE"/>
+        <PARAMETER NAME="PF0_LTR_CAP_NEXTPTR" VALUE="0x000"/>
+        <PARAMETER NAME="PF0_MSIX_CAP_NEXTPTR" VALUE="0x00"/>
+        <PARAMETER NAME="PF0_MSIX_CAP_PBA_BIR" VALUE="0"/>
+        <PARAMETER NAME="PF0_MSIX_CAP_PBA_OFFSET" VALUE="0x00000000"/>
+        <PARAMETER NAME="PF0_MSIX_CAP_TABLE_BIR" VALUE="0"/>
+        <PARAMETER NAME="PF0_MSIX_CAP_TABLE_OFFSET" VALUE="0x00000000"/>
+        <PARAMETER NAME="PF0_MSIX_CAP_TABLE_SIZE" VALUE="0x000"/>
+        <PARAMETER NAME="PF0_MSI_CAP_MULTIMSGCAP" VALUE="0"/>
+        <PARAMETER NAME="PF0_MSI_CAP_NEXTPTR" VALUE="0xC0"/>
+        <PARAMETER NAME="PF0_PB_CAP_NEXTPTR" VALUE="0x000"/>
+        <PARAMETER NAME="PF0_PM_CAP_NEXTPTR" VALUE="0x90"/>
+        <PARAMETER NAME="PF0_PM_CAP_PMESUPPORT_D0" VALUE="FALSE"/>
+        <PARAMETER NAME="PF0_PM_CAP_PMESUPPORT_D1" VALUE="FALSE"/>
+        <PARAMETER NAME="PF0_PM_CAP_PMESUPPORT_D3HOT" VALUE="FALSE"/>
+        <PARAMETER NAME="PF0_PM_CAP_SUPP_D1_STATE" VALUE="FALSE"/>
+        <PARAMETER NAME="PF0_RBAR_CAP_ENABLE" VALUE="FALSE"/>
+        <PARAMETER NAME="PF0_RBAR_CAP_NEXTPTR" VALUE="0x000"/>
+        <PARAMETER NAME="PF0_RBAR_CAP_SIZE0" VALUE="0x00000"/>
+        <PARAMETER NAME="PF0_RBAR_CAP_SIZE1" VALUE="0x00000"/>
+        <PARAMETER NAME="PF0_RBAR_CAP_SIZE2" VALUE="0x00000"/>
+        <PARAMETER NAME="PF1_RBAR_CAP_SIZE0" VALUE="0x00000"/>
+        <PARAMETER NAME="PF1_RBAR_CAP_SIZE1" VALUE="0x00000"/>
+        <PARAMETER NAME="PF1_RBAR_CAP_SIZE2" VALUE="0x00000"/>
+        <PARAMETER NAME="PF0_REVISION_ID" VALUE="0x00"/>
+        <PARAMETER NAME="PF0_SRIOV_BAR0_APERTURE_SIZE" VALUE="0b00000"/>
+        <PARAMETER NAME="PF0_SRIOV_BAR0_CONTROL" VALUE="0b000"/>
+        <PARAMETER NAME="PF0_SRIOV_BAR1_APERTURE_SIZE" VALUE="0b00000"/>
+        <PARAMETER NAME="PF0_SRIOV_BAR1_CONTROL" VALUE="0b000"/>
+        <PARAMETER NAME="PF0_SRIOV_BAR2_APERTURE_SIZE" VALUE="0b00000"/>
+        <PARAMETER NAME="PF0_SRIOV_BAR2_CONTROL" VALUE="0b000"/>
+        <PARAMETER NAME="PF0_SRIOV_BAR3_APERTURE_SIZE" VALUE="0b00000"/>
+        <PARAMETER NAME="PF0_SRIOV_BAR3_CONTROL" VALUE="0b000"/>
+        <PARAMETER NAME="PF0_SRIOV_BAR4_APERTURE_SIZE" VALUE="0b00000"/>
+        <PARAMETER NAME="PF0_SRIOV_BAR4_CONTROL" VALUE="0b000"/>
+        <PARAMETER NAME="PF0_SRIOV_BAR5_APERTURE_SIZE" VALUE="0b00000"/>
+        <PARAMETER NAME="PF0_SRIOV_BAR5_CONTROL" VALUE="0b000"/>
+        <PARAMETER NAME="PF0_SRIOV_CAP_INITIAL_VF" VALUE="0x0000"/>
+        <PARAMETER NAME="PF0_SRIOV_CAP_NEXTPTR" VALUE="0x000"/>
+        <PARAMETER NAME="PF0_SRIOV_CAP_TOTAL_VF" VALUE="0x0000"/>
+        <PARAMETER NAME="PF0_SRIOV_CAP_VER" VALUE="0x0"/>
+        <PARAMETER NAME="PF0_SRIOV_FIRST_VF_OFFSET" VALUE="0x0000"/>
+        <PARAMETER NAME="PF0_SRIOV_FUNC_DEP_LINK" VALUE="0x0000"/>
+        <PARAMETER NAME="PF0_SRIOV_SUPPORTED_PAGE_SIZE" VALUE="0x00000553"/>
+        <PARAMETER NAME="PF0_SRIOV_VF_DEVICE_ID" VALUE="0x0000"/>
+        <PARAMETER NAME="PF0_SUBSYSTEM_VENDOR_ID" VALUE="0x10EE"/>
+        <PARAMETER NAME="PF0_SUBSYSTEM_ID" VALUE="0x0007"/>
+        <PARAMETER NAME="PF0_TPHR_CAP_ENABLE" VALUE="FALSE"/>
+        <PARAMETER NAME="PF0_TPHR_CAP_NEXTPTR" VALUE="0x000"/>
+        <PARAMETER NAME="VF0_TPHR_CAP_NEXTPTR" VALUE="0x000"/>
+        <PARAMETER NAME="VF1_TPHR_CAP_NEXTPTR" VALUE="0x000"/>
+        <PARAMETER NAME="VF2_TPHR_CAP_NEXTPTR" VALUE="0x000"/>
+        <PARAMETER NAME="VF3_TPHR_CAP_NEXTPTR" VALUE="0x000"/>
+        <PARAMETER NAME="VF4_TPHR_CAP_NEXTPTR" VALUE="0x000"/>
+        <PARAMETER NAME="VF5_TPHR_CAP_NEXTPTR" VALUE="0x000"/>
+        <PARAMETER NAME="PF0_TPHR_CAP_ST_MODE_SEL" VALUE="0x0"/>
+        <PARAMETER NAME="PF0_TPHR_CAP_ST_TABLE_LOC" VALUE="0x0"/>
+        <PARAMETER NAME="PF0_TPHR_CAP_ST_TABLE_SIZE" VALUE="0x000"/>
+        <PARAMETER NAME="PF0_TPHR_CAP_VER" VALUE="0x1"/>
+        <PARAMETER NAME="PF1_TPHR_CAP_ST_MODE_SEL" VALUE="0x0"/>
+        <PARAMETER NAME="PF1_TPHR_CAP_ST_TABLE_LOC" VALUE="0x0"/>
+        <PARAMETER NAME="PF1_TPHR_CAP_ST_TABLE_SIZE" VALUE="0x000"/>
+        <PARAMETER NAME="PF1_TPHR_CAP_VER" VALUE="0x1"/>
+        <PARAMETER NAME="VF0_TPHR_CAP_ST_MODE_SEL" VALUE="0x0"/>
+        <PARAMETER NAME="VF0_TPHR_CAP_ST_TABLE_LOC" VALUE="0x0"/>
+        <PARAMETER NAME="VF0_TPHR_CAP_ST_TABLE_SIZE" VALUE="0x000"/>
+        <PARAMETER NAME="VF0_TPHR_CAP_VER" VALUE="0x1"/>
+        <PARAMETER NAME="VF1_TPHR_CAP_ST_MODE_SEL" VALUE="0x0"/>
+        <PARAMETER NAME="VF1_TPHR_CAP_ST_TABLE_LOC" VALUE="0x0"/>
+        <PARAMETER NAME="VF1_TPHR_CAP_ST_TABLE_SIZE" VALUE="0x000"/>
+        <PARAMETER NAME="VF1_TPHR_CAP_VER" VALUE="0x1"/>
+        <PARAMETER NAME="VF2_TPHR_CAP_ST_MODE_SEL" VALUE="0x0"/>
+        <PARAMETER NAME="VF2_TPHR_CAP_ST_TABLE_LOC" VALUE="0x0"/>
+        <PARAMETER NAME="VF2_TPHR_CAP_ST_TABLE_SIZE" VALUE="0x000"/>
+        <PARAMETER NAME="VF2_TPHR_CAP_VER" VALUE="0x1"/>
+        <PARAMETER NAME="VF3_TPHR_CAP_ST_MODE_SEL" VALUE="0x0"/>
+        <PARAMETER NAME="VF3_TPHR_CAP_ST_TABLE_LOC" VALUE="0x0"/>
+        <PARAMETER NAME="VF3_TPHR_CAP_ST_TABLE_SIZE" VALUE="0x000"/>
+        <PARAMETER NAME="VF3_TPHR_CAP_VER" VALUE="0x1"/>
+        <PARAMETER NAME="VF4_TPHR_CAP_ST_MODE_SEL" VALUE="0x0"/>
+        <PARAMETER NAME="VF4_TPHR_CAP_ST_TABLE_LOC" VALUE="0x0"/>
+        <PARAMETER NAME="VF4_TPHR_CAP_ST_TABLE_SIZE" VALUE="0x000"/>
+        <PARAMETER NAME="VF4_TPHR_CAP_VER" VALUE="0x1"/>
+        <PARAMETER NAME="VF5_TPHR_CAP_ST_MODE_SEL" VALUE="0x0"/>
+        <PARAMETER NAME="VF5_TPHR_CAP_ST_TABLE_LOC" VALUE="0x0"/>
+        <PARAMETER NAME="VF5_TPHR_CAP_ST_TABLE_SIZE" VALUE="0x000"/>
+        <PARAMETER NAME="VF5_TPHR_CAP_VER" VALUE="0x1"/>
+        <PARAMETER NAME="PF0_TPHR_CAP_DEV_SPECIFIC_MODE" VALUE="TRUE"/>
+        <PARAMETER NAME="PF0_TPHR_CAP_INT_VEC_MODE" VALUE="FALSE"/>
+        <PARAMETER NAME="PF1_TPHR_CAP_DEV_SPECIFIC_MODE" VALUE="TRUE"/>
+        <PARAMETER NAME="PF1_TPHR_CAP_INT_VEC_MODE" VALUE="FALSE"/>
+        <PARAMETER NAME="VF0_TPHR_CAP_DEV_SPECIFIC_MODE" VALUE="TRUE"/>
+        <PARAMETER NAME="VF0_TPHR_CAP_INT_VEC_MODE" VALUE="FALSE"/>
+        <PARAMETER NAME="VF1_TPHR_CAP_DEV_SPECIFIC_MODE" VALUE="TRUE"/>
+        <PARAMETER NAME="VF1_TPHR_CAP_INT_VEC_MODE" VALUE="FALSE"/>
+        <PARAMETER NAME="VF2_TPHR_CAP_DEV_SPECIFIC_MODE" VALUE="TRUE"/>
+        <PARAMETER NAME="VF2_TPHR_CAP_INT_VEC_MODE" VALUE="FALSE"/>
+        <PARAMETER NAME="VF3_TPHR_CAP_DEV_SPECIFIC_MODE" VALUE="TRUE"/>
+        <PARAMETER NAME="VF3_TPHR_CAP_INT_VEC_MODE" VALUE="FALSE"/>
+        <PARAMETER NAME="VF4_TPHR_CAP_DEV_SPECIFIC_MODE" VALUE="TRUE"/>
+        <PARAMETER NAME="VF4_TPHR_CAP_INT_VEC_MODE" VALUE="FALSE"/>
+        <PARAMETER NAME="VF5_TPHR_CAP_DEV_SPECIFIC_MODE" VALUE="TRUE"/>
+        <PARAMETER NAME="VF5_TPHR_CAP_INT_VEC_MODE" VALUE="FALSE"/>
+        <PARAMETER NAME="PF0_VC_CAP_NEXTPTR" VALUE="0x000"/>
+        <PARAMETER NAME="SPARE_WORD1" VALUE="0x00000000"/>
+        <PARAMETER NAME="PF1_AER_CAP_ECRC_CHECK_CAPABLE" VALUE="FALSE"/>
+        <PARAMETER NAME="PF1_AER_CAP_ECRC_GEN_CAPABLE" VALUE="FALSE"/>
+        <PARAMETER NAME="PF1_AER_CAP_NEXTPTR" VALUE="0x000"/>
+        <PARAMETER NAME="PF1_ARI_CAP_NEXTPTR" VALUE="0x000"/>
+        <PARAMETER NAME="PF1_BAR0_APERTURE_SIZE" VALUE="0b00000"/>
+        <PARAMETER NAME="PF1_BAR0_CONTROL" VALUE="0b000"/>
+        <PARAMETER NAME="PF1_BAR1_APERTURE_SIZE" VALUE="0b00000"/>
+        <PARAMETER NAME="PF1_BAR1_CONTROL" VALUE="0b000"/>
+        <PARAMETER NAME="PF1_BAR2_APERTURE_SIZE" VALUE="0b00000"/>
+        <PARAMETER NAME="PF1_BAR2_CONTROL" VALUE="0b000"/>
+        <PARAMETER NAME="PF1_BAR3_APERTURE_SIZE" VALUE="0b00000"/>
+        <PARAMETER NAME="PF1_BAR3_CONTROL" VALUE="0b000"/>
+        <PARAMETER NAME="PF1_BAR4_APERTURE_SIZE" VALUE="0b00000"/>
+        <PARAMETER NAME="PF1_BAR4_CONTROL" VALUE="0b000"/>
+        <PARAMETER NAME="PF1_BAR5_APERTURE_SIZE" VALUE="0b00000"/>
+        <PARAMETER NAME="PF1_BAR5_CONTROL" VALUE="0b000"/>
+        <PARAMETER NAME="PF1_CAPABILITY_POINTER" VALUE="0x80"/>
+        <PARAMETER NAME="PF1_CLASS_CODE" VALUE="0x058000"/>
+        <PARAMETER NAME="PF1_DEVICE_ID" VALUE="0x7011"/>
+        <PARAMETER NAME="PF1_DEV_CAP_MAX_PAYLOAD_SIZE" VALUE="0b010"/>
+        <PARAMETER NAME="PF1_DPA_CAP_NEXTPTR" VALUE="0x000"/>
+        <PARAMETER NAME="PF1_DSN_CAP_NEXTPTR" VALUE="0x000"/>
+        <PARAMETER NAME="PF1_EXPANSION_ROM_APERTURE_SIZE" VALUE="0b00000"/>
+        <PARAMETER NAME="PF1_EXPANSION_ROM_ENABLE" VALUE="FALSE"/>
+        <PARAMETER NAME="PF1_INTERRUPT_PIN" VALUE="0x0"/>
+        <PARAMETER NAME="PF1_MSIX_CAP_NEXTPTR" VALUE="0x00"/>
+        <PARAMETER NAME="PF1_MSIX_CAP_PBA_BIR" VALUE="0"/>
+        <PARAMETER NAME="PF1_MSIX_CAP_PBA_OFFSET" VALUE="0x00000000"/>
+        <PARAMETER NAME="PF1_MSIX_CAP_TABLE_BIR" VALUE="0"/>
+        <PARAMETER NAME="PF1_MSIX_CAP_TABLE_OFFSET" VALUE="0x00000000"/>
+        <PARAMETER NAME="PF1_MSIX_CAP_TABLE_SIZE" VALUE="0x000"/>
+        <PARAMETER NAME="PF1_MSI_CAP_MULTIMSGCAP" VALUE="0"/>
+        <PARAMETER NAME="PF1_MSI_CAP_NEXTPTR" VALUE="0x00"/>
+        <PARAMETER NAME="PF1_PB_CAP_NEXTPTR" VALUE="0x000"/>
+        <PARAMETER NAME="PF1_PM_CAP_NEXTPTR" VALUE="0x00"/>
+        <PARAMETER NAME="PF1_RBAR_CAP_ENABLE" VALUE="FALSE"/>
+        <PARAMETER NAME="PF1_RBAR_CAP_NEXTPTR" VALUE="0x000"/>
+        <PARAMETER NAME="PF1_REVISION_ID" VALUE="0x00"/>
+        <PARAMETER NAME="PF1_SRIOV_BAR0_APERTURE_SIZE" VALUE="0b00000"/>
+        <PARAMETER NAME="PF1_SRIOV_BAR0_CONTROL" VALUE="0b000"/>
+        <PARAMETER NAME="PF1_SRIOV_BAR1_APERTURE_SIZE" VALUE="0b00000"/>
+        <PARAMETER NAME="PF1_SRIOV_BAR1_CONTROL" VALUE="0b000"/>
+        <PARAMETER NAME="PF1_SRIOV_BAR2_APERTURE_SIZE" VALUE="0b00000"/>
+        <PARAMETER NAME="PF1_SRIOV_BAR2_CONTROL" VALUE="0b000"/>
+        <PARAMETER NAME="PF1_SRIOV_BAR3_APERTURE_SIZE" VALUE="0b00000"/>
+        <PARAMETER NAME="PF1_SRIOV_BAR3_CONTROL" VALUE="0b000"/>
+        <PARAMETER NAME="PF1_SRIOV_BAR4_APERTURE_SIZE" VALUE="0b00000"/>
+        <PARAMETER NAME="PF1_SRIOV_BAR4_CONTROL" VALUE="0b000"/>
+        <PARAMETER NAME="PF1_SRIOV_BAR5_APERTURE_SIZE" VALUE="0b00000"/>
+        <PARAMETER NAME="PF1_SRIOV_BAR5_CONTROL" VALUE="0b000"/>
+        <PARAMETER NAME="PF1_SRIOV_CAP_INITIAL_VF" VALUE="0x0000"/>
+        <PARAMETER NAME="PF1_SRIOV_CAP_NEXTPTR" VALUE="0x000"/>
+        <PARAMETER NAME="PF1_SRIOV_CAP_TOTAL_VF" VALUE="0x0000"/>
+        <PARAMETER NAME="PF1_SRIOV_CAP_VER" VALUE="0x0"/>
+        <PARAMETER NAME="PF1_SRIOV_FIRST_VF_OFFSET" VALUE="0x0000"/>
+        <PARAMETER NAME="PF1_SRIOV_FUNC_DEP_LINK" VALUE="0x0001"/>
+        <PARAMETER NAME="PF1_SRIOV_SUPPORTED_PAGE_SIZE" VALUE="0x00000553"/>
+        <PARAMETER NAME="PF1_SRIOV_VF_DEVICE_ID" VALUE="0x0000"/>
+        <PARAMETER NAME="PF1_SUBSYSTEM_ID" VALUE="0x0007"/>
+        <PARAMETER NAME="PF1_TPHR_CAP_ENABLE" VALUE="FALSE"/>
+        <PARAMETER NAME="PF1_TPHR_CAP_NEXTPTR" VALUE="0x000"/>
+        <PARAMETER NAME="PL_UPSTREAM_FACING" VALUE="TRUE"/>
+        <PARAMETER NAME="SRIOV_CAP_ENABLE" VALUE="FALSE"/>
+        <PARAMETER NAME="TL_CREDITS_CD" VALUE="0x000"/>
+        <PARAMETER NAME="TL_CREDITS_CH" VALUE="0x00000000"/>
+        <PARAMETER NAME="TL_CREDITS_NPD" VALUE="0x028"/>
+        <PARAMETER NAME="TL_CREDITS_NPH" VALUE="0x20"/>
+        <PARAMETER NAME="TL_CREDITS_PD" VALUE="0x198"/>
+        <PARAMETER NAME="TL_CREDITS_PH" VALUE="0x20"/>
+        <PARAMETER NAME="TL_EXTENDED_CFG_EXTEND_INTERFACE_ENABLE" VALUE="FALSE"/>
+        <PARAMETER NAME="TL_LEGACY_MODE_ENABLE" VALUE="FALSE"/>
+        <PARAMETER NAME="TL_PF_ENABLE_REG" VALUE="FALSE"/>
+        <PARAMETER NAME="VF0_CAPABILITY_POINTER" VALUE="0x80"/>
+        <PARAMETER NAME="VF0_MSIX_CAP_PBA_BIR" VALUE="0"/>
+        <PARAMETER NAME="VF0_MSIX_CAP_PBA_OFFSET" VALUE="0x00000000"/>
+        <PARAMETER NAME="VF0_MSIX_CAP_TABLE_BIR" VALUE="0"/>
+        <PARAMETER NAME="VF0_MSIX_CAP_TABLE_OFFSET" VALUE="0x00000000"/>
+        <PARAMETER NAME="VF0_MSIX_CAP_TABLE_SIZE" VALUE="0x000"/>
+        <PARAMETER NAME="VF0_MSI_CAP_MULTIMSGCAP" VALUE="0"/>
+        <PARAMETER NAME="VF0_PM_CAP_NEXTPTR" VALUE="&quot;00000000&quot;"/>
+        <PARAMETER NAME="VF1_MSIX_CAP_PBA_BIR" VALUE="0"/>
+        <PARAMETER NAME="VF1_MSIX_CAP_PBA_OFFSET" VALUE="0x00000000"/>
+        <PARAMETER NAME="VF1_MSIX_CAP_TABLE_BIR" VALUE="0"/>
+        <PARAMETER NAME="VF1_MSIX_CAP_TABLE_OFFSET" VALUE="0x00000000"/>
+        <PARAMETER NAME="VF1_MSIX_CAP_TABLE_SIZE" VALUE="0x000"/>
+        <PARAMETER NAME="VF1_MSI_CAP_MULTIMSGCAP" VALUE="0"/>
+        <PARAMETER NAME="VF1_PM_CAP_NEXTPTR" VALUE="&quot;00000000&quot;"/>
+        <PARAMETER NAME="VF2_MSIX_CAP_PBA_BIR" VALUE="0"/>
+        <PARAMETER NAME="VF2_MSIX_CAP_PBA_OFFSET" VALUE="0x00000000"/>
+        <PARAMETER NAME="VF2_MSIX_CAP_TABLE_BIR" VALUE="0"/>
+        <PARAMETER NAME="VF2_MSIX_CAP_TABLE_OFFSET" VALUE="0x00000000"/>
+        <PARAMETER NAME="VF2_MSIX_CAP_TABLE_SIZE" VALUE="0x000"/>
+        <PARAMETER NAME="VF2_MSI_CAP_MULTIMSGCAP" VALUE="0"/>
+        <PARAMETER NAME="VF2_PM_CAP_NEXTPTR" VALUE="&quot;00000000&quot;"/>
+        <PARAMETER NAME="VF3_MSIX_CAP_PBA_BIR" VALUE="0"/>
+        <PARAMETER NAME="VF3_MSIX_CAP_PBA_OFFSET" VALUE="0x00000000"/>
+        <PARAMETER NAME="VF3_MSIX_CAP_TABLE_BIR" VALUE="0"/>
+        <PARAMETER NAME="VF3_MSIX_CAP_TABLE_OFFSET" VALUE="0x00000000"/>
+        <PARAMETER NAME="VF3_MSIX_CAP_TABLE_SIZE" VALUE="0x000"/>
+        <PARAMETER NAME="VF3_MSI_CAP_MULTIMSGCAP" VALUE="0"/>
+        <PARAMETER NAME="VF3_PM_CAP_NEXTPTR" VALUE="&quot;00000000&quot;"/>
+        <PARAMETER NAME="VF4_MSIX_CAP_PBA_BIR" VALUE="0"/>
+        <PARAMETER NAME="VF4_MSIX_CAP_PBA_OFFSET" VALUE="0x00000000"/>
+        <PARAMETER NAME="VF4_MSIX_CAP_TABLE_BIR" VALUE="0"/>
+        <PARAMETER NAME="VF4_MSIX_CAP_TABLE_OFFSET" VALUE="0x00000000"/>
+        <PARAMETER NAME="VF4_MSIX_CAP_TABLE_SIZE" VALUE="0x000"/>
+        <PARAMETER NAME="VF4_MSI_CAP_MULTIMSGCAP" VALUE="0"/>
+        <PARAMETER NAME="VF4_PM_CAP_NEXTPTR" VALUE="&quot;00000000&quot;"/>
+        <PARAMETER NAME="VF5_MSIX_CAP_PBA_BIR" VALUE="0"/>
+        <PARAMETER NAME="VF5_MSIX_CAP_PBA_OFFSET" VALUE="0x00000000"/>
+        <PARAMETER NAME="VF5_MSIX_CAP_TABLE_BIR" VALUE="0"/>
+        <PARAMETER NAME="VF5_MSIX_CAP_TABLE_OFFSET" VALUE="0x00000000"/>
+        <PARAMETER NAME="VF5_MSIX_CAP_TABLE_SIZE" VALUE="0x000"/>
+        <PARAMETER NAME="VF5_MSI_CAP_MULTIMSGCAP" VALUE="0"/>
+        <PARAMETER NAME="VF5_PM_CAP_NEXTPTR" VALUE="&quot;00000000&quot;"/>
+        <PARAMETER NAME="COMPLETION_SPACE" VALUE="16KB"/>
+        <PARAMETER NAME="gen_x0y0_ucf" VALUE="0"/>
+        <PARAMETER NAME="gen_x0y3_ucf" VALUE="0"/>
+        <PARAMETER NAME="gen_x0y2_ucf" VALUE="0"/>
+        <PARAMETER NAME="gen_x0y1_ucf" VALUE="1"/>
+        <PARAMETER NAME="silicon_revision" VALUE="Production"/>
+        <PARAMETER NAME="xlnx_ref_board" VALUE="0"/>
+        <PARAMETER NAME="pcie_blk_locn" VALUE="1"/>
+        <PARAMETER NAME="SHARED_LOGIC_IN_CORE" VALUE="FALSE"/>
+        <PARAMETER NAME="PIPE_SIM" VALUE="FALSE"/>
+        <PARAMETER NAME="MSI_EN" VALUE="TRUE"/>
+        <PARAMETER NAME="MSIX_EN" VALUE="FALSE"/>
+        <PARAMETER NAME="PCIE_EXT_CLK" VALUE="FALSE"/>
+        <PARAMETER NAME="PCIE_EXT_GT_COMMON" VALUE="FALSE"/>
+        <PARAMETER NAME="EXT_CH_GT_DRP" VALUE="FALSE"/>
+        <PARAMETER NAME="CFG_STATUS_IF" VALUE="TRUE"/>
+        <PARAMETER NAME="TX_FC_IF" VALUE="FALSE"/>
+        <PARAMETER NAME="CFG_EXT_IF" VALUE="TRUE"/>
+        <PARAMETER NAME="CFG_FC_IF" VALUE="TRUE"/>
+        <PARAMETER NAME="PER_FUNC_STATUS_IF" VALUE="FALSE"/>
+        <PARAMETER NAME="CFG_MGMT_IF" VALUE="FALSE"/>
+        <PARAMETER NAME="RCV_MSG_IF" VALUE="FALSE"/>
+        <PARAMETER NAME="CFG_TX_MSG_IF" VALUE="FALSE"/>
+        <PARAMETER NAME="CFG_CTL_IF" VALUE="FALSE"/>
+        <PARAMETER NAME="PCIE_DRP" VALUE="FALSE"/>
+        <PARAMETER NAME="TRANSCEIVER_CTRL_STATUS_PORTS" VALUE="FALSE"/>
+        <PARAMETER NAME="AXISTEN_IF_ENABLE_CLIENT_TAG" VALUE="TRUE"/>
+        <PARAMETER NAME="PCIE_USE_MODE" VALUE="2.1"/>
+        <PARAMETER NAME="PCIE_FAST_CONFIG" VALUE="NONE"/>
+        <PARAMETER NAME="EXT_STARTUP_PRIMITIVE" VALUE="FALSE"/>
+        <PARAMETER NAME="EXT_PIPE_INTERFACE" VALUE="FALSE"/>
+        <PARAMETER NAME="AXISTEN_IF_ENABLE_MSG_ROUTE" VALUE="0x00000"/>
+        <PARAMETER NAME="AXISTEN_IF_ENABLE_RX_MSG_INTFC" VALUE="FALSE"/>
+        <PARAMETER NAME="POWER_DOWN" VALUE="FALSE"/>
+        <PARAMETER NAME="DEV_PORT_TYPE" VALUE="00"/>
+        <PARAMETER NAME="ENABLE_JTAG_DBG" VALUE="FALSE"/>
+        <PARAMETER NAME="MULT_PF_DES" VALUE="TRUE"/>
+        <PARAMETER NAME="WIN10_INTEROP" VALUE="FALSE"/>
+        <PARAMETER NAME="device_port_type" VALUE="PCI_Express_Endpoint_device"/>
+        <PARAMETER NAME="axisten_if_enable_client_tag" VALUE="false"/>
+        <PARAMETER NAME="tl_pf0_enable_reg" VALUE="true"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_pcie3_7x_0_0"/>
+        <PARAMETER NAME="PF0_Use_Class_Code_Lookup_Assistant" VALUE="false"/>
+        <PARAMETER NAME="PF1_Use_Class_Code_Lookup_Assistant" VALUE="false"/>
+        <PARAMETER NAME="pf1_sriov_bar5_scale" VALUE="Kilobytes"/>
+        <PARAMETER NAME="pf0_class_code_sub" VALUE="80"/>
+        <PARAMETER NAME="pf1_sriov_bar4_type" VALUE="N/A"/>
+        <PARAMETER NAME="pf0_vc_cap_enabled" VALUE="false"/>
+        <PARAMETER NAME="pf1_sriov_bar5_type" VALUE="N/A"/>
+        <PARAMETER NAME="pf1_sriov_bar0_enabled" VALUE="true"/>
+        <PARAMETER NAME="pf0_sriov_bar5_enabled" VALUE="false"/>
+        <PARAMETER NAME="pf0_sriov_bar1_64bit" VALUE="false"/>
+        <PARAMETER NAME="pf1_class_code_base" VALUE="05"/>
+        <PARAMETER NAME="pf1_sriov_bar3_prefetchable" VALUE="false"/>
+        <PARAMETER NAME="pf0_pb_enabled" VALUE="false"/>
+        <PARAMETER NAME="pf1_sriov_bar0_64bit" VALUE="false"/>
+        <PARAMETER NAME="pf1_bar3_type" VALUE="N/A"/>
+        <PARAMETER NAME="pf1_bar2_enabled" VALUE="false"/>
+        <PARAMETER NAME="pf1_bar2_type" VALUE="N/A"/>
+        <PARAMETER NAME="pf1_bar2_64bit" VALUE="false"/>
+        <PARAMETER NAME="pf1_bar2_prefetchable" VALUE="false"/>
+        <PARAMETER NAME="pf1_bar2_scale" VALUE="Kilobytes"/>
+        <PARAMETER NAME="pf1_bar2_size" VALUE="2"/>
+        <PARAMETER NAME="pf0_class_code_interface" VALUE="00"/>
+        <PARAMETER NAME="pf0_sriov_bar1_scale" VALUE="Kilobytes"/>
+        <PARAMETER NAME="pf1_bar4_type" VALUE="N/A"/>
+        <PARAMETER NAME="pf0_base_class_menu" VALUE="Memory_controller"/>
+        <PARAMETER NAME="pf0_sub_class_interface_menu" VALUE="Other_memory_controller"/>
+        <PARAMETER NAME="pf1_sriov_bar0_scale" VALUE="Kilobytes"/>
+        <PARAMETER NAME="pf1_expansion_rom_enabled" VALUE="false"/>
+        <PARAMETER NAME="pf0_sriov_bar0_enabled" VALUE="true"/>
+        <PARAMETER NAME="pf1_sriov_bar0_prefetchable" VALUE="false"/>
+        <PARAMETER NAME="pf1_bar5_type" VALUE="N/A"/>
+        <PARAMETER NAME="pf0_sriov_bar5_prefetchable" VALUE="false"/>
+        <PARAMETER NAME="pf1_sriov_bar1_enabled" VALUE="false"/>
+        <PARAMETER NAME="pf1_class_code_interface" VALUE="00"/>
+        <PARAMETER NAME="pf0_sriov_bar2_64bit" VALUE="false"/>
+        <PARAMETER NAME="pf1_msix_enabled" VALUE="false"/>
+        <PARAMETER NAME="pf1_bar5_prefetchable" VALUE="false"/>
+        <PARAMETER NAME="pf0_rbar_enabled" VALUE="false"/>
+        <PARAMETER NAME="pf1_pb_enabled" VALUE="false"/>
+        <PARAMETER NAME="pf1_sriov_bar1_64bit" VALUE="false"/>
+        <PARAMETER NAME="pf1_bar3_64bit" VALUE="false"/>
+        <PARAMETER NAME="pf0_sriov_bar2_prefetchable" VALUE="false"/>
+        <PARAMETER NAME="pf1_bar3_enabled" VALUE="false"/>
+        <PARAMETER NAME="pf0_sriov_bar2_scale" VALUE="Kilobytes"/>
+        <PARAMETER NAME="pf1_sriov_bar1_scale" VALUE="Kilobytes"/>
+        <PARAMETER NAME="pf1_bar3_scale" VALUE="Kilobytes"/>
+        <PARAMETER NAME="pf0_sriov_bar1_enabled" VALUE="false"/>
+        <PARAMETER NAME="alignment_mode" VALUE="DWORD_Aligned"/>
+        <PARAMETER NAME="pf1_sriov_bar4_prefetchable" VALUE="false"/>
+        <PARAMETER NAME="silicon_rev" VALUE="Production"/>
+        <PARAMETER NAME="pf1_sriov_bar2_enabled" VALUE="false"/>
+        <PARAMETER NAME="pf0_sriov_bar3_64bit" VALUE="false"/>
+        <PARAMETER NAME="pf0_sriov_bar0_size" VALUE="2"/>
+        <PARAMETER NAME="pf1_sriov_bar2_64bit" VALUE="false"/>
+        <PARAMETER NAME="pf1_bar4_64bit" VALUE="false"/>
+        <PARAMETER NAME="pf0_sriov_bar1_size" VALUE="2"/>
+        <PARAMETER NAME="pf0_bar0_enabled" VALUE="true"/>
+        <PARAMETER NAME="pf0_bar0_type" VALUE="Memory"/>
+        <PARAMETER NAME="pf0_bar0_64bit" VALUE="false"/>
+        <PARAMETER NAME="pf0_bar0_prefetchable" VALUE="false"/>
+        <PARAMETER NAME="pf0_bar0_scale" VALUE="Kilobytes"/>
+        <PARAMETER NAME="pf0_bar0_size" VALUE="1"/>
+        <PARAMETER NAME="pf0_bar1_enabled" VALUE="false"/>
+        <PARAMETER NAME="pf0_bar1_type" VALUE="N/A"/>
+        <PARAMETER NAME="pf0_bar1_64bit" VALUE="false"/>
+        <PARAMETER NAME="pf0_bar1_prefetchable" VALUE="false"/>
+        <PARAMETER NAME="pf0_bar1_scale" VALUE="Kilobytes"/>
+        <PARAMETER NAME="pf0_bar1_size" VALUE="2"/>
+        <PARAMETER NAME="pf0_bar2_enabled" VALUE="false"/>
+        <PARAMETER NAME="pf0_bar2_type" VALUE="N/A"/>
+        <PARAMETER NAME="pf0_bar2_64bit" VALUE="false"/>
+        <PARAMETER NAME="pf0_bar2_prefetchable" VALUE="false"/>
+        <PARAMETER NAME="pf0_bar2_scale" VALUE="Kilobytes"/>
+        <PARAMETER NAME="pf0_bar2_size" VALUE="2"/>
+        <PARAMETER NAME="pf0_bar3_enabled" VALUE="false"/>
+        <PARAMETER NAME="pf0_bar3_type" VALUE="N/A"/>
+        <PARAMETER NAME="pf0_bar3_64bit" VALUE="false"/>
+        <PARAMETER NAME="pf0_bar3_prefetchable" VALUE="false"/>
+        <PARAMETER NAME="pf0_bar3_scale" VALUE="Kilobytes"/>
+        <PARAMETER NAME="pf0_bar3_size" VALUE="2"/>
+        <PARAMETER NAME="pf0_bar4_enabled" VALUE="false"/>
+        <PARAMETER NAME="pf0_bar4_type" VALUE="N/A"/>
+        <PARAMETER NAME="pf0_bar4_64bit" VALUE="false"/>
+        <PARAMETER NAME="pf0_bar4_prefetchable" VALUE="false"/>
+        <PARAMETER NAME="pf0_bar4_scale" VALUE="Kilobytes"/>
+        <PARAMETER NAME="pf0_bar4_size" VALUE="2"/>
+        <PARAMETER NAME="pf0_bar5_enabled" VALUE="false"/>
+        <PARAMETER NAME="pf0_bar5_type" VALUE="N/A"/>
+        <PARAMETER NAME="pf0_bar5_prefetchable" VALUE="false"/>
+        <PARAMETER NAME="pf0_bar5_scale" VALUE="Kilobytes"/>
+        <PARAMETER NAME="pf0_bar5_size" VALUE="2"/>
+        <PARAMETER NAME="pf0_sriov_bar3_scale" VALUE="Kilobytes"/>
+        <PARAMETER NAME="pf1_bar4_enabled" VALUE="false"/>
+        <PARAMETER NAME="pf1_sriov_bar1_prefetchable" VALUE="false"/>
+        <PARAMETER NAME="pf0_sriov_bar2_size" VALUE="2"/>
+        <PARAMETER NAME="pf1_sriov_bar2_scale" VALUE="Kilobytes"/>
+        <PARAMETER NAME="pf1_bar4_scale" VALUE="Kilobytes"/>
+        <PARAMETER NAME="pf0_sriov_bar3_size" VALUE="2"/>
+        <PARAMETER NAME="pf0_sriov_bar2_enabled" VALUE="false"/>
+        <PARAMETER NAME="pf0_dev_cap_max_payload" VALUE="256_bytes"/>
+        <PARAMETER NAME="gen_x0y0" VALUE="false"/>
+        <PARAMETER NAME="pf0_sriov_bar4_size" VALUE="2"/>
+        <PARAMETER NAME="gen_x0y1" VALUE="true"/>
+        <PARAMETER NAME="gen_x0y2" VALUE="false"/>
+        <PARAMETER NAME="gen_x0y3" VALUE="false"/>
+        <PARAMETER NAME="pf1_expansion_rom_scale" VALUE="Kilobytes"/>
+        <PARAMETER NAME="pf1_expansion_rom_size" VALUE="2"/>
+        <PARAMETER NAME="pf1_rbar_enabled" VALUE="false"/>
+        <PARAMETER NAME="pf1_tphr_enable" VALUE="false"/>
+        <PARAMETER NAME="pf1_sriov_bar3_enabled" VALUE="false"/>
+        <PARAMETER NAME="pf0_sriov_bar4_64bit" VALUE="false"/>
+        <PARAMETER NAME="pf0_sriov_bar5_size" VALUE="2"/>
+        <PARAMETER NAME="pf0_sriov_bar3_prefetchable" VALUE="false"/>
+        <PARAMETER NAME="pf1_sriov_bar3_64bit" VALUE="false"/>
+        <PARAMETER NAME="pf0_expansion_rom_enabled" VALUE="false"/>
+        <PARAMETER NAME="pf0_sriov_bar4_scale" VALUE="Kilobytes"/>
+        <PARAMETER NAME="pf1_base_class_menu" VALUE="Memory_controller"/>
+        <PARAMETER NAME="pf1_sub_class_interface_menu" VALUE="Other_memory_controller"/>
+        <PARAMETER NAME="pf0_sriov_bar0_type" VALUE="Memory"/>
+        <PARAMETER NAME="pf1_bar5_enabled" VALUE="false"/>
+        <PARAMETER NAME="pf1_bar3_prefetchable" VALUE="false"/>
+        <PARAMETER NAME="pf1_sriov_bar0_size" VALUE="2"/>
+        <PARAMETER NAME="pf1_sriov_bar3_scale" VALUE="Kilobytes"/>
+        <PARAMETER NAME="pf1_bar5_scale" VALUE="Kilobytes"/>
+        <PARAMETER NAME="pf1_class_code_sub" VALUE="80"/>
+        <PARAMETER NAME="extended_tag_field" VALUE="true"/>
+        <PARAMETER NAME="pf0_sriov_bar1_type" VALUE="N/A"/>
+        <PARAMETER NAME="pf0_sriov_bar0_prefetchable" VALUE="false"/>
+        <PARAMETER NAME="pf0_expansion_rom_scale" VALUE="Kilobytes"/>
+        <PARAMETER NAME="pf0_expansion_rom_size" VALUE="2"/>
+        <PARAMETER NAME="pf1_sriov_bar1_size" VALUE="2"/>
+        <PARAMETER NAME="pf1_ari_enabled" VALUE="false"/>
+        <PARAMETER NAME="pf0_sriov_bar3_enabled" VALUE="false"/>
+        <PARAMETER NAME="pf1_sriov_bar5_prefetchable" VALUE="false"/>
+        <PARAMETER NAME="pf0_sriov_bar2_type" VALUE="N/A"/>
+        <PARAMETER NAME="vendor_id" VALUE="10EE"/>
+        <PARAMETER NAME="pf0_tphr_enable" VALUE="false"/>
+        <PARAMETER NAME="pf1_sriov_bar2_size" VALUE="2"/>
+        <PARAMETER NAME="pf0_sriov_bar3_type" VALUE="N/A"/>
+        <PARAMETER NAME="pf1_sriov_bar3_size" VALUE="2"/>
+        <PARAMETER NAME="pf1_bar0_enabled" VALUE="false"/>
+        <PARAMETER NAME="pf1_bar0_type" VALUE="N/A"/>
+        <PARAMETER NAME="pf1_bar0_64bit" VALUE="false"/>
+        <PARAMETER NAME="pf1_bar0_prefetchable" VALUE="false"/>
+        <PARAMETER NAME="pf1_bar0_scale" VALUE="Kilobytes"/>
+        <PARAMETER NAME="pf1_bar0_size" VALUE="2"/>
+        <PARAMETER NAME="pf1_bar1_enabled" VALUE="false"/>
+        <PARAMETER NAME="pf1_bar1_type" VALUE="N/A"/>
+        <PARAMETER NAME="pf1_bar1_64bit" VALUE="false"/>
+        <PARAMETER NAME="pf1_bar1_prefetchable" VALUE="false"/>
+        <PARAMETER NAME="pf1_bar1_scale" VALUE="Kilobytes"/>
+        <PARAMETER NAME="pf1_bar1_size" VALUE="2"/>
+        <PARAMETER NAME="pf1_sriov_bar4_enabled" VALUE="false"/>
+        <PARAMETER NAME="pf1_aer_enabled" VALUE="true"/>
+        <PARAMETER NAME="pf1_dsn_enabled" VALUE="false"/>
+        <PARAMETER NAME="pf0_sriov_bar4_type" VALUE="N/A"/>
+        <PARAMETER NAME="pf1_sriov_bar4_64bit" VALUE="false"/>
+        <PARAMETER NAME="pf1_sriov_bar2_prefetchable" VALUE="false"/>
+        <PARAMETER NAME="pf0_sriov_cap_ver" VALUE="0"/>
+        <PARAMETER NAME="pf1_sriov_bar4_size" VALUE="2"/>
+        <PARAMETER NAME="pf1_msi_enabled" VALUE="true"/>
+        <PARAMETER NAME="pf0_sriov_bar5_scale" VALUE="Kilobytes"/>
+        <PARAMETER NAME="pf1_dpa_enabled" VALUE="false"/>
+        <PARAMETER NAME="pf0_sriov_bar5_type" VALUE="N/A"/>
+        <PARAMETER NAME="ext_pcie_cfg_space_enabled" VALUE="false"/>
+        <PARAMETER NAME="pf1_sriov_bar4_scale" VALUE="Kilobytes"/>
+        <PARAMETER NAME="pf1_sriov_bar5_size" VALUE="2"/>
+        <PARAMETER NAME="pf0_ari_enabled" VALUE="false"/>
+        <PARAMETER NAME="perf_level" VALUE="Extreme"/>
+        <PARAMETER NAME="pf0_class_code_base" VALUE="05"/>
+        <PARAMETER NAME="axisten_if_width" VALUE="128_bit"/>
+        <PARAMETER NAME="pf0_sriov_bar4_enabled" VALUE="false"/>
+        <PARAMETER NAME="pf1_sriov_bar0_type" VALUE="Memory"/>
+        <PARAMETER NAME="pf1_bar3_size" VALUE="2"/>
+        <PARAMETER NAME="pf0_sriov_bar4_prefetchable" VALUE="false"/>
+        <PARAMETER NAME="pf0_aer_enabled" VALUE="true"/>
+        <PARAMETER NAME="pf0_dsn_enabled" VALUE="false"/>
+        <PARAMETER NAME="pf1_sriov_bar1_type" VALUE="N/A"/>
+        <PARAMETER NAME="pf0_sriov_bar0_64bit" VALUE="false"/>
+        <PARAMETER NAME="pf1_bar4_size" VALUE="2"/>
+        <PARAMETER NAME="pf0_msi_enabled" VALUE="true"/>
+        <PARAMETER NAME="pf1_sriov_bar5_enabled" VALUE="false"/>
+        <PARAMETER NAME="pf0_dpa_enabled" VALUE="false"/>
+        <PARAMETER NAME="pf1_sriov_bar2_type" VALUE="N/A"/>
+        <PARAMETER NAME="pf0_msix_enabled" VALUE="false"/>
+        <PARAMETER NAME="pf1_bar5_size" VALUE="2"/>
+        <PARAMETER NAME="pf1_bar4_prefetchable" VALUE="false"/>
+        <PARAMETER NAME="pf0_sriov_bar0_scale" VALUE="Kilobytes"/>
+        <PARAMETER NAME="pf1_dev_cap_max_payload" VALUE="512_bytes"/>
+        <PARAMETER NAME="pf0_sriov_bar1_prefetchable" VALUE="false"/>
+        <PARAMETER NAME="pf1_sriov_bar3_type" VALUE="N/A"/>
+        <PARAMETER NAME="pf0_ltr_enabled" VALUE="false"/>
+        <PARAMETER NAME="mode_selection" VALUE="Advanced"/>
+        <PARAMETER NAME="pipe_sim" VALUE="false"/>
+        <PARAMETER NAME="shared_logic_in_core" VALUE="false"/>
+        <PARAMETER NAME="en_ext_clk" VALUE="false"/>
+        <PARAMETER NAME="en_ext_gt_common" VALUE="false"/>
+        <PARAMETER NAME="en_ext_ch_gt_drp" VALUE="false"/>
+        <PARAMETER NAME="en_transceiver_status_ports" VALUE="false"/>
+        <PARAMETER NAME="tx_fc_if" VALUE="false"/>
+        <PARAMETER NAME="cfg_fc_if" VALUE="true"/>
+        <PARAMETER NAME="cfg_ext_if" VALUE="true"/>
+        <PARAMETER NAME="cfg_status_if" VALUE="true"/>
+        <PARAMETER NAME="per_func_status_if" VALUE="false"/>
+        <PARAMETER NAME="cfg_mgmt_if" VALUE="false"/>
+        <PARAMETER NAME="rcv_msg_if" VALUE="false"/>
+        <PARAMETER NAME="cfg_tx_msg_if" VALUE="false"/>
+        <PARAMETER NAME="cfg_ctl_if" VALUE="false"/>
+        <PARAMETER NAME="en_pcie_drp" VALUE="false"/>
+        <PARAMETER NAME="en_ext_pipe_interface" VALUE="false"/>
+        <PARAMETER NAME="en_msi_per_vec_masking" VALUE="false"/>
+        <PARAMETER NAME="en_ext_startup" VALUE="false"/>
+        <PARAMETER NAME="tandem_mode" VALUE="None"/>
+        <PARAMETER NAME="axisten_freq" VALUE="250"/>
+        <PARAMETER NAME="aspm_support" VALUE="No_ASPM"/>
+        <PARAMETER NAME="USE_BOARD_FLOW" VALUE="false"/>
+        <PARAMETER NAME="RESET_BOARD_INTERFACE" VALUE="Custom"/>
+        <PARAMETER NAME="SRIOV_CAP_ENABLE_EXT" VALUE="false"/>
+        <PARAMETER NAME="axisten_if_enable_msg_route" VALUE="2FFFF"/>
+        <PARAMETER NAME="axisten_if_enable_rx_msg_intfc" VALUE="false"/>
+        <PARAMETER NAME="pipe_mode_sim" VALUE="None"/>
+        <PARAMETER NAME="en_powerdown" VALUE="false"/>
+        <PARAMETER NAME="performance" VALUE="false"/>
+        <PARAMETER NAME="cc_cq_alignment" VALUE="None"/>
+        <PARAMETER NAME="rc_rq_alignment" VALUE="None"/>
+        <PARAMETER NAME="enable_jtag_dbg" VALUE="false"/>
+        <PARAMETER NAME="mult_pf_des" VALUE="true"/>
+        <PARAMETER NAME="win10_interop" VALUE="false"/>
+        <PARAMETER NAME="axisten_if_enable_msg_route_override" VALUE="false"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="7" NAME="pci_exp_txn" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="pci_exp_txp" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="7" NAME="pci_exp_rxn" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="7" NAME="pci_exp_rxp" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="mmcm_lock" SIGIS="undef"/>
+        <PORT CLKFREQUENCY="250000000" DIR="O" NAME="user_clk" SIGIS="clk" SIGNAME="RIFFA_AXIS_PCIE_user_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_clk_wiz_0" PORT="clk_in1"/>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="USER_CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="user_reset" SIGIS="rst" SIGNAME="RIFFA_AXIS_PCIE_user_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="USER_RESET"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="user_lnk_up" SIGIS="undef"/>
+        <PORT DIR="O" NAME="user_app_rdy" SIGIS="undef"/>
+        <PORT DIR="I" NAME="s_axis_rq_tlast" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_s_axis_rq_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="M_AXIS_RQ_TLAST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="127" NAME="s_axis_rq_tdata" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_s_axis_rq_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="M_AXIS_RQ_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="59" NAME="s_axis_rq_tuser" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_s_axis_rq_tuser">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="M_AXIS_RQ_TUSER"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="s_axis_rq_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_s_axis_rq_tkeep">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="M_AXIS_RQ_TKEEP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="s_axis_rq_tready" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_s_axis_rq_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="M_AXIS_RQ_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axis_rq_tvalid" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_s_axis_rq_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="M_AXIS_RQ_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="127" NAME="m_axis_rc_tdata" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_m_axis_rc_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="S_AXIS_RC_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="74" NAME="m_axis_rc_tuser" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_m_axis_rc_tuser">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="S_AXIS_RC_TUSER"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axis_rc_tlast" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_m_axis_rc_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="S_AXIS_RC_TLAST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="m_axis_rc_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_m_axis_rc_tkeep">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="S_AXIS_RC_TKEEP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axis_rc_tvalid" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_m_axis_rc_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="S_AXIS_RC_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axis_rc_tready" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_m_axis_rc_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="S_AXIS_RC_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="127" NAME="m_axis_cq_tdata" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_m_axis_cq_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="S_AXIS_CQ_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="84" NAME="m_axis_cq_tuser" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_m_axis_cq_tuser">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="S_AXIS_CQ_TUSER"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axis_cq_tlast" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_m_axis_cq_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="S_AXIS_CQ_TLAST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="m_axis_cq_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_m_axis_cq_tkeep">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="S_AXIS_CQ_TKEEP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axis_cq_tvalid" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_m_axis_cq_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="S_AXIS_CQ_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axis_cq_tready" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_m_axis_cq_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="S_AXIS_CQ_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="127" NAME="s_axis_cc_tdata" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_s_axis_cc_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="M_AXIS_CC_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="32" NAME="s_axis_cc_tuser" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_s_axis_cc_tuser">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="M_AXIS_CC_TUSER"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axis_cc_tlast" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_s_axis_cc_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="M_AXIS_CC_TLAST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="s_axis_cc_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_s_axis_cc_tkeep">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="M_AXIS_CC_TKEEP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axis_cc_tvalid" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_s_axis_cc_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="M_AXIS_CC_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="s_axis_cc_tready" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_s_axis_cc_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="M_AXIS_CC_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="pcie_rq_seq_num" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="pcie_rq_seq_num_vld" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="5" NAME="pcie_rq_tag" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="pcie_rq_tag_vld" SIGIS="undef"/>
+        <PORT DIR="I" NAME="pcie_cq_np_req" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_pcie_cq_np_req">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="PCIE_CQ_NP_REQ"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="5" NAME="pcie_cq_np_req_count" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="cfg_phy_link_down" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="1" NAME="cfg_phy_link_status" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="3" NAME="cfg_negotiated_width" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_negotiated_width">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CFG_NEGOTIATED_WIDTH"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="cfg_current_speed" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_current_speed">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CFG_CURRENT_SPEED"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="cfg_max_payload" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_max_payload">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CFG_MAX_PAYLOAD"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="cfg_max_read_req" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_max_read_req">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CFG_MAX_READ_REQ"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="cfg_function_status" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_function_status">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CFG_FUNCTION_STATUS"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="5" NAME="cfg_function_power_state" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="cfg_vf_status" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="17" NAME="cfg_vf_power_state" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="1" NAME="cfg_link_power_state" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="cfg_err_cor_out" SIGIS="undef"/>
+        <PORT DIR="O" NAME="cfg_err_nonfatal_out" SIGIS="undef"/>
+        <PORT DIR="O" NAME="cfg_err_fatal_out" SIGIS="undef"/>
+        <PORT DIR="O" NAME="cfg_ltr_enable" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="5" NAME="cfg_ltssm_state" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="1" NAME="cfg_rcb_status" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_rcb_status">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CFG_RCB_STATUS"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="cfg_dpa_substate_change" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="1" NAME="cfg_obff_enable" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="cfg_pl_status_change" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="1" NAME="cfg_tph_requester_enable" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="5" NAME="cfg_tph_st_mode" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="5" NAME="cfg_vf_tph_requester_enable" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="17" NAME="cfg_vf_tph_st_mode" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="cfg_fc_ph" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="cfg_fc_pd" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="cfg_fc_nph" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="cfg_fc_npd" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="cfg_fc_cplh" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_fc_cplh">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CFG_FC_CPLH"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="cfg_fc_cpld" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_fc_cpld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CFG_FC_CPLD"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="cfg_fc_sel" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_fc_sel">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CFG_FC_SEL"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="cfg_interrupt_int" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_interrupt_int">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CFG_INTERRUPT_INT"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="cfg_interrupt_pending" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_interrupt_pending">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CFG_INTERRUPT_PENDING"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="cfg_interrupt_sent" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="1" NAME="cfg_interrupt_msi_enable" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_interrupt_msi_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CFG_INTERRUPT_MSI_ENABLE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="5" NAME="cfg_interrupt_msi_vf_enable" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="5" NAME="cfg_interrupt_msi_mmenable" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="cfg_interrupt_msi_mask_update" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_interrupt_msi_mask_update">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CFG_INTERRUPT_MSI_MASK_UPDATE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="cfg_interrupt_msi_data" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_interrupt_msi_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CFG_INTERRUPT_MSI_DATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="cfg_interrupt_msi_select" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_interrupt_msi_select">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CFG_INTERRUPT_MSI_SELECT"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="cfg_interrupt_msi_int" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_interrupt_msi_int">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CFG_INTERRUPT_MSI_INT"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="cfg_interrupt_msi_pending_status" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_interrupt_msi_pending_status">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CFG_INTERRUPT_MSI_PENDING_STATUS"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="cfg_interrupt_msi_sent" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_interrupt_msi_sent">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CFG_INTERRUPT_MSI_SENT"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="cfg_interrupt_msi_fail" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_interrupt_msi_fail">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CFG_INTERRUPT_MSI_FAIL"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="cfg_interrupt_msi_attr" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_interrupt_msi_attr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CFG_INTERRUPT_MSI_ATTR"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="cfg_interrupt_msi_tph_present" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_interrupt_msi_tph_present">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CFG_INTERRUPT_MSI_TPH_PRESENT"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="cfg_interrupt_msi_tph_type" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_interrupt_msi_tph_type">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CFG_INTERRUPT_MSI_TPH_TYPE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="8" NAME="cfg_interrupt_msi_tph_st_tag" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_interrupt_msi_tph_st_tag">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CFG_INTERRUPT_MSI_TPH_ST_TAG"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="cfg_interrupt_msi_function_number" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_interrupt_msi_function_number">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CFG_INTERRUPT_MSI_FUNCTION_NUMBER"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="sys_clk" SIGIS="clk" SIGNAME="SYS_CLK_IBUF_OUT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SYS_CLK" PORT="IBUF_OUT"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sys_reset" SIGIS="rst" SIGNAME="inv_Res">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="inv" PORT="Res"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="RIFFA_AXIS_PCIE_m_axis_cq" NAME="m_axis_cq" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="16"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="85"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="250000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_pcie3_7x_0_0_user_clk"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="m_axis_cq_tdata"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="m_axis_cq_tkeep"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="m_axis_cq_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="m_axis_cq_tready"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="m_axis_cq_tuser"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="m_axis_cq_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="RIFFA_AXIS_riffa_controller_M_AXIS_CC" NAME="s_axis_cc" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="16"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="33"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="250000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_pcie3_7x_0_0_user_clk"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_cc_tdata"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="s_axis_cc_tkeep"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="s_axis_cc_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="s_axis_cc_tready"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="s_axis_cc_tuser"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s_axis_cc_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="RIFFA_AXIS_riffa_controller_M_AXIS_RQ" NAME="s_axis_rq" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="16"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="60"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="250000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_pcie3_7x_0_0_user_clk"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_rq_tdata"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="s_axis_rq_tkeep"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="s_axis_rq_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="s_axis_rq_tready"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="s_axis_rq_tuser"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s_axis_rq_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="RIFFA_AXIS_PCIE_m_axis_rc" NAME="m_axis_rc" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="16"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="75"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="250000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_pcie3_7x_0_0_user_clk"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="m_axis_rc_tdata"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="m_axis_rc_tkeep"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="m_axis_rc_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="m_axis_rc_tready"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="m_axis_rc_tuser"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="m_axis_rc_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="RIFFA_AXIS_PCIE_pcie_7x_mgt" NAME="pcie_7x_mgt" TYPE="INITIATOR" VLNV="xilinx.com:interface:pcie_7x_mgt:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="rxn" PHYSICAL="pci_exp_rxn"/>
+            <PORTMAP LOGICAL="rxp" PHYSICAL="pci_exp_rxp"/>
+            <PORTMAP LOGICAL="txn" PHYSICAL="pci_exp_txn"/>
+            <PORTMAP LOGICAL="txp" PHYSICAL="pci_exp_txp"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="RIFFA_AXIS_PCIE_pcie3_cfg_status" NAME="pcie3_cfg_status" TYPE="INITIATOR" VLNV="xilinx.com:interface:pcie3_cfg_status:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="cq_np_req" PHYSICAL="pcie_cq_np_req"/>
+            <PORTMAP LOGICAL="cq_np_req_count" PHYSICAL="pcie_cq_np_req_count"/>
+            <PORTMAP LOGICAL="current_speed" PHYSICAL="cfg_current_speed"/>
+            <PORTMAP LOGICAL="dpa_substate_change" PHYSICAL="cfg_dpa_substate_change"/>
+            <PORTMAP LOGICAL="err_cor_out" PHYSICAL="cfg_err_cor_out"/>
+            <PORTMAP LOGICAL="err_fatal_out" PHYSICAL="cfg_err_fatal_out"/>
+            <PORTMAP LOGICAL="err_nonfatal_out" PHYSICAL="cfg_err_nonfatal_out"/>
+            <PORTMAP LOGICAL="function_power_state" PHYSICAL="cfg_function_power_state"/>
+            <PORTMAP LOGICAL="function_status" PHYSICAL="cfg_function_status"/>
+            <PORTMAP LOGICAL="link_power_state" PHYSICAL="cfg_link_power_state"/>
+            <PORTMAP LOGICAL="ltr_enable" PHYSICAL="cfg_ltr_enable"/>
+            <PORTMAP LOGICAL="ltssm_state" PHYSICAL="cfg_ltssm_state"/>
+            <PORTMAP LOGICAL="max_payload" PHYSICAL="cfg_max_payload"/>
+            <PORTMAP LOGICAL="max_read_req" PHYSICAL="cfg_max_read_req"/>
+            <PORTMAP LOGICAL="negotiated_width" PHYSICAL="cfg_negotiated_width"/>
+            <PORTMAP LOGICAL="obff_enable" PHYSICAL="cfg_obff_enable"/>
+            <PORTMAP LOGICAL="phy_link_down" PHYSICAL="cfg_phy_link_down"/>
+            <PORTMAP LOGICAL="phy_link_status" PHYSICAL="cfg_phy_link_status"/>
+            <PORTMAP LOGICAL="pl_status_change" PHYSICAL="cfg_pl_status_change"/>
+            <PORTMAP LOGICAL="rcb_status" PHYSICAL="cfg_rcb_status"/>
+            <PORTMAP LOGICAL="rq_seq_num" PHYSICAL="pcie_rq_seq_num"/>
+            <PORTMAP LOGICAL="rq_seq_num_vld" PHYSICAL="pcie_rq_seq_num_vld"/>
+            <PORTMAP LOGICAL="rq_tag" PHYSICAL="pcie_rq_tag"/>
+            <PORTMAP LOGICAL="rq_tag_vld" PHYSICAL="pcie_rq_tag_vld"/>
+            <PORTMAP LOGICAL="tph_requester_enable" PHYSICAL="cfg_tph_requester_enable"/>
+            <PORTMAP LOGICAL="tph_st_mode" PHYSICAL="cfg_tph_st_mode"/>
+            <PORTMAP LOGICAL="vf_power_state" PHYSICAL="cfg_vf_power_state"/>
+            <PORTMAP LOGICAL="vf_status" PHYSICAL="cfg_vf_status"/>
+            <PORTMAP LOGICAL="vf_tph_requester_enable" PHYSICAL="cfg_vf_tph_requester_enable"/>
+            <PORTMAP LOGICAL="vf_tph_st_mode" PHYSICAL="cfg_vf_tph_st_mode"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="RIFFA_AXIS_PCIE_pcie_cfg_fc" NAME="pcie_cfg_fc" TYPE="INITIATOR" VLNV="xilinx.com:interface:pcie_cfg_fc:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="CPLD" PHYSICAL="cfg_fc_cpld"/>
+            <PORTMAP LOGICAL="CPLH" PHYSICAL="cfg_fc_cplh"/>
+            <PORTMAP LOGICAL="NPD" PHYSICAL="cfg_fc_npd"/>
+            <PORTMAP LOGICAL="NPH" PHYSICAL="cfg_fc_nph"/>
+            <PORTMAP LOGICAL="PD" PHYSICAL="cfg_fc_pd"/>
+            <PORTMAP LOGICAL="PH" PHYSICAL="cfg_fc_ph"/>
+            <PORTMAP LOGICAL="SEL" PHYSICAL="cfg_fc_sel"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="RIFFA_AXIS_riffa_controller_PCIE3_CFG_MSI" NAME="pcie3_cfg_msi" TYPE="TARGET" VLNV="xilinx.com:interface:pcie3_cfg_msi:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="attr" PHYSICAL="cfg_interrupt_msi_attr"/>
+            <PORTMAP LOGICAL="data" PHYSICAL="cfg_interrupt_msi_data"/>
+            <PORTMAP LOGICAL="enable" PHYSICAL="cfg_interrupt_msi_enable"/>
+            <PORTMAP LOGICAL="fail" PHYSICAL="cfg_interrupt_msi_fail"/>
+            <PORTMAP LOGICAL="function_number" PHYSICAL="cfg_interrupt_msi_function_number"/>
+            <PORTMAP LOGICAL="int_vector" PHYSICAL="cfg_interrupt_msi_int"/>
+            <PORTMAP LOGICAL="mask_update" PHYSICAL="cfg_interrupt_msi_mask_update"/>
+            <PORTMAP LOGICAL="mmenable" PHYSICAL="cfg_interrupt_msi_mmenable"/>
+            <PORTMAP LOGICAL="pending_status" PHYSICAL="cfg_interrupt_msi_pending_status"/>
+            <PORTMAP LOGICAL="select" PHYSICAL="cfg_interrupt_msi_select"/>
+            <PORTMAP LOGICAL="sent" PHYSICAL="cfg_interrupt_msi_sent"/>
+            <PORTMAP LOGICAL="tph_present" PHYSICAL="cfg_interrupt_msi_tph_present"/>
+            <PORTMAP LOGICAL="tph_st_tag" PHYSICAL="cfg_interrupt_msi_tph_st_tag"/>
+            <PORTMAP LOGICAL="tph_type" PHYSICAL="cfg_interrupt_msi_tph_type"/>
+            <PORTMAP LOGICAL="vf_enable" PHYSICAL="cfg_interrupt_msi_vf_enable"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="RIFFA_AXIS_riffa_controller_PCIE3_CFG_INTERRUPT" NAME="pcie3_cfg_interrupt" TYPE="TARGET" VLNV="xilinx.com:interface:pcie3_cfg_interrupt:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="INTx_VECTOR" PHYSICAL="cfg_interrupt_int"/>
+            <PORTMAP LOGICAL="PENDING" PHYSICAL="cfg_interrupt_pending"/>
+            <PORTMAP LOGICAL="SENT" PHYSICAL="cfg_interrupt_sent"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE FULLNAME="/RIFFA_AXIS/Riffa_Axis" HWVERSION="1.0" INSTANCE="RIFFA_AXIS_Riffa_Axis" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Riffa_Axis" VLNV="xilinx.com:user:Riffa_Axis:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="PCIE_DATA_WIDTH" VALUE="128"/>
+        <PARAMETER NAME="AXIS_DATA_WIDTH" VALUE="8"/>
+        <PARAMETER NAME="PCIE_ADDR_WIDTH" VALUE="12"/>
+        <PARAMETER NAME="AXIS_ADDR_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="AP_CTRL_IN" VALUE="false"/>
+        <PARAMETER NAME="AP_CTRL_OUT" VALUE="true"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_Riffa_Axis_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="50000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="RIFFA_AXIS_clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" SIGIS="rst" SIGNAME="External_Ports_sys_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sys_rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="rows0" RIGHT="0" SIGIS="undef" SIGNAME="ImageRotate_rows1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ImageRotate" PORT="rows1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="cols0" RIGHT="0" SIGIS="undef" SIGNAME="ImageRotate_cols1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ImageRotate" PORT="cols1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="rows1" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_Riffa_Axis_rows1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ImageRotate" PORT="rows0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="cols1" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_Riffa_Axis_cols1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ImageRotate" PORT="cols0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ap_start1" SIGIS="undef" SIGNAME="RIFFA_AXIS_Riffa_Axis_ap_start1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="AP_CTRL" PORT="start"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="CHNL_TX" SIGIS="undef" SIGNAME="RIFFA_AXIS_Riffa_Axis_CHNL_TX">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CHNL_RX"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="CHNL_TX_ACK" SIGIS="undef" SIGNAME="RIFFA_AXIS_riffa_controller_CHNL_RX_ACK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CHNL_RX_ACK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="CHNL_TX_LAST" SIGIS="undef" SIGNAME="RIFFA_AXIS_Riffa_Axis_CHNL_TX_LAST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CHNL_RX_LAST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="CHNL_TX_LEN" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_Riffa_Axis_CHNL_TX_LEN">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CHNL_RX_LEN"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="30" NAME="CHNL_TX_OFF" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_Riffa_Axis_CHNL_TX_OFF">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CHNL_RX_OFF"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="127" NAME="CHNL_TX_DATA" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_Riffa_Axis_CHNL_TX_DATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CHNL_RX_DATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="CHNL_TX_DATA_VALID" SIGIS="undef" SIGNAME="RIFFA_AXIS_Riffa_Axis_CHNL_TX_DATA_VALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CHNL_RX_DATA_VALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="CHNL_TX_DATA_READY" SIGIS="undef" SIGNAME="RIFFA_AXIS_riffa_controller_CHNL_RX_DATA_REN">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CHNL_RX_DATA_REN"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="CHNL_RX" SIGIS="undef" SIGNAME="RIFFA_AXIS_riffa_controller_CHNL_TX">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CHNL_TX"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="CHNL_RX_ACK" SIGIS="undef" SIGNAME="RIFFA_AXIS_Riffa_Axis_CHNL_RX_ACK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CHNL_TX_ACK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="CHNL_RX_LAST" SIGIS="undef" SIGNAME="RIFFA_AXIS_riffa_controller_CHNL_TX_LAST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CHNL_TX_LAST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="CHNL_RX_LEN" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_riffa_controller_CHNL_TX_LEN">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CHNL_TX_LEN"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="30" NAME="CHNL_RX_OFF" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_riffa_controller_CHNL_TX_OFF">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CHNL_TX_OFF"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="127" NAME="CHNL_RX_DATA" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_riffa_controller_CHNL_TX_DATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CHNL_TX_DATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="CHNL_RX_DATA_VALID" SIGIS="undef" SIGNAME="RIFFA_AXIS_riffa_controller_CHNL_TX_DATA_VALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CHNL_TX_DATA_VALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="CHNL_RX_DATA_READY" SIGIS="undef" SIGNAME="RIFFA_AXIS_Riffa_Axis_CHNL_RX_DATA_READY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CHNL_TX_DATA_REN"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="S_AXIS_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="ImageRotate_M_AXIS_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ImageRotate" PORT="M_AXIS_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S_AXIS_TVALID" SIGIS="undef" SIGNAME="ImageRotate_M_AXIS_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ImageRotate" PORT="M_AXIS_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S_AXIS_TREADY" SIGIS="undef" SIGNAME="ImageRotate_M_AXIS_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ImageRotate" PORT="M_AXIS_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="S_AXIS_TKEEP" RIGHT="0" SIGIS="undef" SIGNAME="ImageRotate_M_AXIS_TKEEP">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ImageRotate" PORT="M_AXIS_TKEEP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="S_AXIS_TSTRB" RIGHT="0" SIGIS="undef" SIGNAME="ImageRotate_M_AXIS_TSTRB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ImageRotate" PORT="M_AXIS_TSTRB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S_AXIS_TUSER" SIGIS="undef" SIGNAME="ImageRotate_M_AXIS_TUSER">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ImageRotate" PORT="M_AXIS_TUSER"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S_AXIS_TLAST" SIGIS="undef" SIGNAME="ImageRotate_M_AXIS_TLAST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ImageRotate" PORT="M_AXIS_TLAST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S_AXIS_TID" SIGIS="undef" SIGNAME="ImageRotate_M_AXIS_TID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ImageRotate" PORT="M_AXIS_TID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S_AXIS_TDEST" SIGIS="undef" SIGNAME="ImageRotate_M_AXIS_TDEST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ImageRotate" PORT="M_AXIS_TDEST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="M_AXIS_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="ImageRotate_S_AXIS_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ImageRotate" PORT="S_AXIS_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M_AXIS_TVALID" SIGIS="undef" SIGNAME="ImageRotate_S_AXIS_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ImageRotate" PORT="S_AXIS_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M_AXIS_TREADY" SIGIS="undef" SIGNAME="ImageRotate_S_AXIS_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ImageRotate" PORT="S_AXIS_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="M_AXIS_TKEEP" RIGHT="0" SIGIS="undef" SIGNAME="ImageRotate_S_AXIS_TKEEP">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ImageRotate" PORT="S_AXIS_TKEEP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="M_AXIS_TSTRB" RIGHT="0" SIGIS="undef" SIGNAME="ImageRotate_S_AXIS_TSTRB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ImageRotate" PORT="S_AXIS_TSTRB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M_AXIS_TUSER" SIGIS="undef" SIGNAME="ImageRotate_S_AXIS_TUSER">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ImageRotate" PORT="S_AXIS_TUSER"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M_AXIS_TLAST" SIGIS="undef" SIGNAME="ImageRotate_S_AXIS_TLAST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ImageRotate" PORT="S_AXIS_TLAST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M_AXIS_TID" SIGIS="undef" SIGNAME="ImageRotate_S_AXIS_TID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ImageRotate" PORT="S_AXIS_TID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M_AXIS_TDEST" SIGIS="undef" SIGNAME="ImageRotate_S_AXIS_TDEST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ImageRotate" PORT="S_AXIS_TDEST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="BRAM0_ADDRA" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_BRAM0_addra">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_BRAM0" PORT="addra"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="BRAM0_CLKA" SIGIS="clk" SIGNAME="RIFFA_AXIS_BRAM0_clka">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_BRAM0" PORT="clka"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="BRAM0_DINA" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_BRAM0_dina">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_BRAM0" PORT="dina"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="BRAM0_WEA" SIGIS="undef" SIGNAME="RIFFA_AXIS_BRAM0_wea">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_BRAM0" PORT="wea"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="BRAM0_ADDRB" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_BRAM0_addrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_BRAM0" PORT="addrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="BRAM0_CLKB" SIGIS="clk" SIGNAME="RIFFA_AXIS_BRAM0_clkb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_BRAM0" PORT="clkb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="127" NAME="BRAM0_DOUTB" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_BRAM0_doutb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_BRAM0" PORT="doutb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="BRAM0_ENB" SIGIS="undef" SIGNAME="RIFFA_AXIS_BRAM0_enb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_BRAM0" PORT="enb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="BRAM1_ADDRA" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_BRAM1_addra">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_BRAM1" PORT="addra"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="BRAM1_CLKA" SIGIS="clk" SIGNAME="RIFFA_AXIS_BRAM1_clka">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_BRAM1" PORT="clka"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="127" NAME="BRAM1_DINA" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_BRAM1_dina">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_BRAM1" PORT="dina"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="BRAM1_WEA" SIGIS="undef" SIGNAME="RIFFA_AXIS_BRAM1_wea">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_BRAM1" PORT="wea"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="BRAM1_ADDRB" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_BRAM1_addrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_BRAM1" PORT="addrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="BRAM1_CLKB" SIGIS="clk" SIGNAME="RIFFA_AXIS_BRAM1_clkb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_BRAM1" PORT="clkb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="BRAM1_DOUTB" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_BRAM1_doutb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_BRAM1" PORT="doutb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="BRAM1_ENB" SIGIS="undef" SIGNAME="RIFFA_AXIS_BRAM1_enb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_BRAM1" PORT="enb"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="RIFFA_AXIS_Riffa_Axis_M_AXIS" NAME="M_AXIS" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="1"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_pcie3_7x_0_0_user_clk"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TID" PHYSICAL="M_AXIS_TID"/>
+            <PORTMAP LOGICAL="TDEST" PHYSICAL="M_AXIS_TDEST"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="M_AXIS_TDATA"/>
+            <PORTMAP LOGICAL="TSTRB" PHYSICAL="M_AXIS_TSTRB"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="M_AXIS_TKEEP"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="M_AXIS_TLAST"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="M_AXIS_TUSER"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="M_AXIS_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="M_AXIS_TREADY"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="ImageRotate_M_AXIS" NAME="S_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="1"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_pcie3_7x_0_0_user_clk"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TDATA_WIDTH 8 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TUSER_WIDTH 1}"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TID" PHYSICAL="S_AXIS_TID"/>
+            <PORTMAP LOGICAL="TDEST" PHYSICAL="S_AXIS_TDEST"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="S_AXIS_TDATA"/>
+            <PORTMAP LOGICAL="TSTRB" PHYSICAL="S_AXIS_TSTRB"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="S_AXIS_TKEEP"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="S_AXIS_TLAST"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="S_AXIS_TUSER"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="S_AXIS_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="S_AXIS_TREADY"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="RIFFA_AXIS_Riffa_Axis_BRAM0_PORTA" NAME="BRAM0_PORTA" TYPE="INITIATOR" VLNV="xilinx.com:interface:bram:1.0">
+          <PARAMETER NAME="MEM_SIZE" VALUE="8192"/>
+          <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
+          <PARAMETER NAME="MASTER_TYPE" VALUE="OTHER"/>
+          <PARAMETER NAME="READ_WRITE_MODE"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="DIN" PHYSICAL="BRAM0_DINA"/>
+            <PORTMAP LOGICAL="CLK" PHYSICAL="BRAM0_CLKA"/>
+            <PORTMAP LOGICAL="WE" PHYSICAL="BRAM0_WEA"/>
+            <PORTMAP LOGICAL="ADDR" PHYSICAL="BRAM0_ADDRA"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="RIFFA_AXIS_Riffa_Axis_BRAM0_PORTB" NAME="BRAM0_PORTB" TYPE="INITIATOR" VLNV="xilinx.com:interface:bram:1.0">
+          <PARAMETER NAME="MEM_SIZE" VALUE="8192"/>
+          <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
+          <PARAMETER NAME="MASTER_TYPE" VALUE="OTHER"/>
+          <PARAMETER NAME="READ_WRITE_MODE"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="EN" PHYSICAL="BRAM0_ENB"/>
+            <PORTMAP LOGICAL="DOUT" PHYSICAL="BRAM0_DOUTB"/>
+            <PORTMAP LOGICAL="CLK" PHYSICAL="BRAM0_CLKB"/>
+            <PORTMAP LOGICAL="ADDR" PHYSICAL="BRAM0_ADDRB"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="RIFFA_AXIS_Riffa_Axis_BRAM1_PORTA" NAME="BRAM1_PORTA" TYPE="INITIATOR" VLNV="xilinx.com:interface:bram:1.0">
+          <PARAMETER NAME="MEM_SIZE" VALUE="8192"/>
+          <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
+          <PARAMETER NAME="MASTER_TYPE" VALUE="OTHER"/>
+          <PARAMETER NAME="READ_WRITE_MODE"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="DIN" PHYSICAL="BRAM1_DINA"/>
+            <PORTMAP LOGICAL="CLK" PHYSICAL="BRAM1_CLKA"/>
+            <PORTMAP LOGICAL="WE" PHYSICAL="BRAM1_WEA"/>
+            <PORTMAP LOGICAL="ADDR" PHYSICAL="BRAM1_ADDRA"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="RIFFA_AXIS_Riffa_Axis_BRAM1_PORTB" NAME="BRAM1_PORTB" TYPE="INITIATOR" VLNV="xilinx.com:interface:bram:1.0">
+          <PARAMETER NAME="MEM_SIZE" VALUE="8192"/>
+          <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
+          <PARAMETER NAME="MASTER_TYPE" VALUE="OTHER"/>
+          <PARAMETER NAME="READ_WRITE_MODE"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="EN" PHYSICAL="BRAM1_ENB"/>
+            <PORTMAP LOGICAL="DOUT" PHYSICAL="BRAM1_DOUTB"/>
+            <PORTMAP LOGICAL="CLK" PHYSICAL="BRAM1_CLKB"/>
+            <PORTMAP LOGICAL="ADDR" PHYSICAL="BRAM1_ADDRB"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE FULLNAME="/RIFFA_AXIS/clk_wiz_0" HWVERSION="6.0" INSTANCE="RIFFA_AXIS_clk_wiz_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clk_wiz" VLNV="xilinx.com:ip:clk_wiz:6.0">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=clk_wiz;v=v6_0;d=pg065-clk-wiz.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_CLKOUT2_USED" VALUE="0"/>
+        <PARAMETER NAME="C_USER_CLK_FREQ0" VALUE="100.0"/>
+        <PARAMETER NAME="C_AUTO_PRIMITIVE" VALUE="MMCM"/>
+        <PARAMETER NAME="C_USER_CLK_FREQ1" VALUE="100.0"/>
+        <PARAMETER NAME="C_USER_CLK_FREQ2" VALUE="100.0"/>
+        <PARAMETER NAME="C_USER_CLK_FREQ3" VALUE="100.0"/>
+        <PARAMETER NAME="C_ENABLE_CLOCK_MONITOR" VALUE="0"/>
+        <PARAMETER NAME="C_ENABLE_USER_CLOCK0" VALUE="0"/>
+        <PARAMETER NAME="C_ENABLE_USER_CLOCK1" VALUE="0"/>
+        <PARAMETER NAME="C_ENABLE_USER_CLOCK2" VALUE="0"/>
+        <PARAMETER NAME="C_ENABLE_USER_CLOCK3" VALUE="0"/>
+        <PARAMETER NAME="C_Enable_PLL0" VALUE="0"/>
+        <PARAMETER NAME="C_Enable_PLL1" VALUE="0"/>
+        <PARAMETER NAME="C_REF_CLK_FREQ" VALUE="100.0"/>
+        <PARAMETER NAME="C_PRECISION" VALUE="1"/>
+        <PARAMETER NAME="C_CLKOUT3_USED" VALUE="0"/>
+        <PARAMETER NAME="C_CLKOUT4_USED" VALUE="0"/>
+        <PARAMETER NAME="C_CLKOUT5_USED" VALUE="0"/>
+        <PARAMETER NAME="C_CLKOUT6_USED" VALUE="0"/>
+        <PARAMETER NAME="C_CLKOUT7_USED" VALUE="0"/>
+        <PARAMETER NAME="C_USE_CLKOUT1_BAR" VALUE="0"/>
+        <PARAMETER NAME="C_USE_CLKOUT2_BAR" VALUE="0"/>
+        <PARAMETER NAME="C_USE_CLKOUT3_BAR" VALUE="0"/>
+        <PARAMETER NAME="C_USE_CLKOUT4_BAR" VALUE="0"/>
+        <PARAMETER NAME="c_component_name" VALUE="design_1_clk_wiz_0_1"/>
+        <PARAMETER NAME="C_PLATFORM" VALUE="UNKNOWN"/>
+        <PARAMETER NAME="C_USE_FREQ_SYNTH" VALUE="1"/>
+        <PARAMETER NAME="C_USE_PHASE_ALIGNMENT" VALUE="1"/>
+        <PARAMETER NAME="C_PRIM_IN_JITTER" VALUE="0.010"/>
+        <PARAMETER NAME="C_SECONDARY_IN_JITTER" VALUE="0.010"/>
+        <PARAMETER NAME="C_JITTER_SEL" VALUE="No_Jitter"/>
+        <PARAMETER NAME="C_USE_MIN_POWER" VALUE="0"/>
+        <PARAMETER NAME="C_USE_MIN_O_JITTER" VALUE="0"/>
+        <PARAMETER NAME="C_USE_MAX_I_JITTER" VALUE="0"/>
+        <PARAMETER NAME="C_USE_DYN_PHASE_SHIFT" VALUE="0"/>
+        <PARAMETER NAME="C_USE_INCLK_SWITCHOVER" VALUE="0"/>
+        <PARAMETER NAME="C_USE_DYN_RECONFIG" VALUE="0"/>
+        <PARAMETER NAME="C_USE_SPREAD_SPECTRUM" VALUE="0"/>
+        <PARAMETER NAME="C_USE_FAST_SIMULATION" VALUE="0"/>
+        <PARAMETER NAME="C_PRIMTYPE_SEL" VALUE="AUTO"/>
+        <PARAMETER NAME="C_USE_CLK_VALID" VALUE="0"/>
+        <PARAMETER NAME="C_PRIM_IN_FREQ" VALUE="250.000"/>
+        <PARAMETER NAME="C_PRIM_IN_TIMEPERIOD" VALUE="10.000"/>
+        <PARAMETER NAME="C_IN_FREQ_UNITS" VALUE="Units_MHz"/>
+        <PARAMETER NAME="C_SECONDARY_IN_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="C_SECONDARY_IN_TIMEPERIOD" VALUE="10.000"/>
+        <PARAMETER NAME="C_FEEDBACK_SOURCE" VALUE="FDBK_AUTO"/>
+        <PARAMETER NAME="C_PRIM_SOURCE" VALUE="No_buffer"/>
+        <PARAMETER NAME="C_PHASESHIFT_MODE" VALUE="WAVEFORM"/>
+        <PARAMETER NAME="C_SECONDARY_SOURCE" VALUE="Single_ended_clock_capable_pin"/>
+        <PARAMETER NAME="C_CLKFB_IN_SIGNALING" VALUE="SINGLE"/>
+        <PARAMETER NAME="C_USE_RESET" VALUE="0"/>
+        <PARAMETER NAME="C_RESET_LOW" VALUE="0"/>
+        <PARAMETER NAME="C_USE_LOCKED" VALUE="0"/>
+        <PARAMETER NAME="C_USE_INCLK_STOPPED" VALUE="0"/>
+        <PARAMETER NAME="C_USE_CLKFB_STOPPED" VALUE="0"/>
+        <PARAMETER NAME="C_USE_POWER_DOWN" VALUE="0"/>
+        <PARAMETER NAME="C_USE_STATUS" VALUE="0"/>
+        <PARAMETER NAME="C_USE_FREEZE" VALUE="0"/>
+        <PARAMETER NAME="C_NUM_OUT_CLKS" VALUE="1"/>
+        <PARAMETER NAME="C_CLKOUT1_DRIVES" VALUE="BUFG"/>
+        <PARAMETER NAME="C_CLKOUT2_DRIVES" VALUE="BUFG"/>
+        <PARAMETER NAME="C_CLKOUT3_DRIVES" VALUE="BUFG"/>
+        <PARAMETER NAME="C_CLKOUT4_DRIVES" VALUE="BUFG"/>
+        <PARAMETER NAME="C_CLKOUT5_DRIVES" VALUE="BUFG"/>
+        <PARAMETER NAME="C_CLKOUT6_DRIVES" VALUE="BUFG"/>
+        <PARAMETER NAME="C_CLKOUT7_DRIVES" VALUE="BUFG"/>
+        <PARAMETER NAME="C_INCLK_SUM_ROW0" VALUE="Input Clock   Freq (MHz)    Input Jitter (UI)"/>
+        <PARAMETER NAME="C_INCLK_SUM_ROW1" VALUE="__primary_________250.000____________0.010"/>
+        <PARAMETER NAME="C_INCLK_SUM_ROW2" VALUE="no_secondary_input_clock"/>
+        <PARAMETER NAME="C_OUTCLK_SUM_ROW0A" VALUE="Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase"/>
+        <PARAMETER NAME="C_OUTCLK_SUM_ROW0B" VALUE="Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)"/>
+        <PARAMETER NAME="C_OUTCLK_SUM_ROW1" VALUE="clk_out1____50.000______0.000______50.0______197.183____155.540"/>
+        <PARAMETER NAME="C_OUTCLK_SUM_ROW2" VALUE="no_CLK_OUT2_output"/>
+        <PARAMETER NAME="C_OUTCLK_SUM_ROW3" VALUE="no_CLK_OUT3_output"/>
+        <PARAMETER NAME="C_OUTCLK_SUM_ROW4" VALUE="no_CLK_OUT4_output"/>
+        <PARAMETER NAME="C_OUTCLK_SUM_ROW5" VALUE="no_CLK_OUT5_output"/>
+        <PARAMETER NAME="C_OUTCLK_SUM_ROW6" VALUE="no_CLK_OUT6_output"/>
+        <PARAMETER NAME="C_OUTCLK_SUM_ROW7" VALUE="no_CLK_OUT7_output"/>
+        <PARAMETER NAME="C_CLKOUT1_REQUESTED_OUT_FREQ" VALUE="50.000"/>
+        <PARAMETER NAME="C_CLKOUT2_REQUESTED_OUT_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="C_CLKOUT3_REQUESTED_OUT_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="C_CLKOUT4_REQUESTED_OUT_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="C_CLKOUT5_REQUESTED_OUT_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="C_CLKOUT6_REQUESTED_OUT_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="C_CLKOUT7_REQUESTED_OUT_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="C_CLKOUT1_REQUESTED_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_CLKOUT2_REQUESTED_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_CLKOUT3_REQUESTED_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_CLKOUT4_REQUESTED_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_CLKOUT5_REQUESTED_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_CLKOUT6_REQUESTED_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_CLKOUT7_REQUESTED_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_CLKOUT1_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="C_CLKOUT2_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="C_CLKOUT3_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="C_CLKOUT4_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="C_CLKOUT5_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="C_CLKOUT6_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="C_CLKOUT7_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="C_CLKOUT1_OUT_FREQ" VALUE="50.000"/>
+        <PARAMETER NAME="C_CLKOUT2_OUT_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="C_CLKOUT3_OUT_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="C_CLKOUT4_OUT_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="C_CLKOUT5_OUT_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="C_CLKOUT6_OUT_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="C_CLKOUT7_OUT_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="C_CLKOUT1_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_CLKOUT2_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_CLKOUT3_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_CLKOUT4_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_CLKOUT5_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_CLKOUT6_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_CLKOUT7_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_CLKOUT1_DUTY_CYCLE" VALUE="50.0"/>
+        <PARAMETER NAME="C_CLKOUT2_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="C_CLKOUT3_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="C_CLKOUT4_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="C_CLKOUT5_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="C_CLKOUT6_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="C_CLKOUT7_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="C_USE_SAFE_CLOCK_STARTUP" VALUE="0"/>
+        <PARAMETER NAME="C_USE_CLOCK_SEQUENCING" VALUE="0"/>
+        <PARAMETER NAME="C_CLKOUT1_SEQUENCE_NUMBER" VALUE="1"/>
+        <PARAMETER NAME="C_CLKOUT2_SEQUENCE_NUMBER" VALUE="1"/>
+        <PARAMETER NAME="C_CLKOUT3_SEQUENCE_NUMBER" VALUE="1"/>
+        <PARAMETER NAME="C_CLKOUT4_SEQUENCE_NUMBER" VALUE="1"/>
+        <PARAMETER NAME="C_CLKOUT5_SEQUENCE_NUMBER" VALUE="1"/>
+        <PARAMETER NAME="C_CLKOUT6_SEQUENCE_NUMBER" VALUE="1"/>
+        <PARAMETER NAME="C_CLKOUT7_SEQUENCE_NUMBER" VALUE="1"/>
+        <PARAMETER NAME="C_MMCM_NOTES" VALUE="None"/>
+        <PARAMETER NAME="C_MMCM_BANDWIDTH" VALUE="OPTIMIZED"/>
+        <PARAMETER NAME="C_MMCM_CLKFBOUT_MULT_F" VALUE="17.000"/>
+        <PARAMETER NAME="C_MMCM_CLKIN1_PERIOD" VALUE="4.000"/>
+        <PARAMETER NAME="C_MMCM_CLKIN2_PERIOD" VALUE="10.0"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT4_CASCADE" VALUE="FALSE"/>
+        <PARAMETER NAME="C_MMCM_CLOCK_HOLD" VALUE="FALSE"/>
+        <PARAMETER NAME="C_MMCM_COMPENSATION" VALUE="ZHOLD"/>
+        <PARAMETER NAME="C_MMCM_DIVCLK_DIVIDE" VALUE="5"/>
+        <PARAMETER NAME="C_MMCM_REF_JITTER1" VALUE="0.010"/>
+        <PARAMETER NAME="C_MMCM_REF_JITTER2" VALUE="0.010"/>
+        <PARAMETER NAME="C_MMCM_STARTUP_WAIT" VALUE="FALSE"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT0_DIVIDE_F" VALUE="17.000"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT1_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT2_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT3_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT4_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT5_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT6_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT0_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT1_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT2_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT3_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT4_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT5_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT6_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="C_MMCM_CLKFBOUT_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT0_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT1_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT2_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT3_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT4_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT5_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT6_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_MMCM_CLKFBOUT_USE_FINE_PS" VALUE="FALSE"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT0_USE_FINE_PS" VALUE="FALSE"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT1_USE_FINE_PS" VALUE="FALSE"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT2_USE_FINE_PS" VALUE="FALSE"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT3_USE_FINE_PS" VALUE="FALSE"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT4_USE_FINE_PS" VALUE="FALSE"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT5_USE_FINE_PS" VALUE="FALSE"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT6_USE_FINE_PS" VALUE="FALSE"/>
+        <PARAMETER NAME="C_PLL_NOTES" VALUE="No notes"/>
+        <PARAMETER NAME="C_PLL_BANDWIDTH" VALUE="OPTIMIZED"/>
+        <PARAMETER NAME="C_PLL_CLK_FEEDBACK" VALUE="CLKFBOUT"/>
+        <PARAMETER NAME="C_PLL_CLKFBOUT_MULT" VALUE="1"/>
+        <PARAMETER NAME="C_PLL_CLKIN_PERIOD" VALUE="1.000"/>
+        <PARAMETER NAME="C_PLL_COMPENSATION" VALUE="SYSTEM_SYNCHRONOUS"/>
+        <PARAMETER NAME="C_PLL_DIVCLK_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="C_PLL_REF_JITTER" VALUE="0.010"/>
+        <PARAMETER NAME="C_PLL_CLKOUT0_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="C_PLL_CLKOUT1_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="C_PLL_CLKOUT2_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="C_PLL_CLKOUT3_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="C_PLL_CLKOUT4_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="C_PLL_CLKOUT5_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="C_PLL_CLKOUT0_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="C_PLL_CLKOUT1_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="C_PLL_CLKOUT2_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="C_PLL_CLKOUT3_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="C_PLL_CLKOUT4_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="C_PLL_CLKOUT5_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="C_PLL_CLKFBOUT_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_PLL_CLKOUT0_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_PLL_CLKOUT1_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_PLL_CLKOUT2_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_PLL_CLKOUT3_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_PLL_CLKOUT4_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_PLL_CLKOUT5_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="C_CLOCK_MGR_TYPE" VALUE="NA"/>
+        <PARAMETER NAME="C_OVERRIDE_MMCM" VALUE="0"/>
+        <PARAMETER NAME="C_OVERRIDE_PLL" VALUE="0"/>
+        <PARAMETER NAME="C_PRIMARY_PORT" VALUE="clk_in1"/>
+        <PARAMETER NAME="C_SECONDARY_PORT" VALUE="clk_in2"/>
+        <PARAMETER NAME="C_CLK_OUT1_PORT" VALUE="clk_out1"/>
+        <PARAMETER NAME="C_CLK_OUT2_PORT" VALUE="clk_out2"/>
+        <PARAMETER NAME="C_CLK_OUT3_PORT" VALUE="clk_out3"/>
+        <PARAMETER NAME="C_CLK_OUT4_PORT" VALUE="clk_out4"/>
+        <PARAMETER NAME="C_CLK_OUT5_PORT" VALUE="clk_out5"/>
+        <PARAMETER NAME="C_CLK_OUT6_PORT" VALUE="clk_out6"/>
+        <PARAMETER NAME="C_CLK_OUT7_PORT" VALUE="clk_out7"/>
+        <PARAMETER NAME="C_RESET_PORT" VALUE="reset"/>
+        <PARAMETER NAME="C_LOCKED_PORT" VALUE="locked"/>
+        <PARAMETER NAME="C_CLKFB_IN_PORT" VALUE="clkfb_in"/>
+        <PARAMETER NAME="C_CLKFB_IN_P_PORT" VALUE="clkfb_in_p"/>
+        <PARAMETER NAME="C_CLKFB_IN_N_PORT" VALUE="clkfb_in_n"/>
+        <PARAMETER NAME="C_CLKFB_OUT_PORT" VALUE="clkfb_out"/>
+        <PARAMETER NAME="C_CLKFB_OUT_P_PORT" VALUE="clkfb_out_p"/>
+        <PARAMETER NAME="C_CLKFB_OUT_N_PORT" VALUE="clkfb_out_n"/>
+        <PARAMETER NAME="C_POWER_DOWN_PORT" VALUE="power_down"/>
+        <PARAMETER NAME="C_DADDR_PORT" VALUE="daddr"/>
+        <PARAMETER NAME="C_DCLK_PORT" VALUE="dclk"/>
+        <PARAMETER NAME="C_DRDY_PORT" VALUE="drdy"/>
+        <PARAMETER NAME="C_DWE_PORT" VALUE="dwe"/>
+        <PARAMETER NAME="C_DIN_PORT" VALUE="din"/>
+        <PARAMETER NAME="C_DOUT_PORT" VALUE="dout"/>
+        <PARAMETER NAME="C_DEN_PORT" VALUE="den"/>
+        <PARAMETER NAME="C_PSCLK_PORT" VALUE="psclk"/>
+        <PARAMETER NAME="C_PSEN_PORT" VALUE="psen"/>
+        <PARAMETER NAME="C_PSINCDEC_PORT" VALUE="psincdec"/>
+        <PARAMETER NAME="C_PSDONE_PORT" VALUE="psdone"/>
+        <PARAMETER NAME="C_CLK_VALID_PORT" VALUE="CLK_VALID"/>
+        <PARAMETER NAME="C_STATUS_PORT" VALUE="STATUS"/>
+        <PARAMETER NAME="C_CLK_IN_SEL_PORT" VALUE="clk_in_sel"/>
+        <PARAMETER NAME="C_INPUT_CLK_STOPPED_PORT" VALUE="input_clk_stopped"/>
+        <PARAMETER NAME="C_CLKFB_STOPPED_PORT" VALUE="clkfb_stopped"/>
+        <PARAMETER NAME="C_CLKIN1_JITTER_PS" VALUE="40.0"/>
+        <PARAMETER NAME="C_CLKIN2_JITTER_PS" VALUE="100.0"/>
+        <PARAMETER NAME="C_PRIMITIVE" VALUE="PLL"/>
+        <PARAMETER NAME="C_SS_MODE" VALUE="CENTER_HIGH"/>
+        <PARAMETER NAME="C_SS_MOD_PERIOD" VALUE="4000"/>
+        <PARAMETER NAME="C_SS_MOD_TIME" VALUE="0.004"/>
+        <PARAMETER NAME="C_HAS_CDDC" VALUE="0"/>
+        <PARAMETER NAME="C_CDDCDONE_PORT" VALUE="cddcdone"/>
+        <PARAMETER NAME="C_CDDCREQ_PORT" VALUE="cddcreq"/>
+        <PARAMETER NAME="C_CLKOUTPHY_MODE" VALUE="VCO"/>
+        <PARAMETER NAME="C_ENABLE_CLKOUTPHY" VALUE="0"/>
+        <PARAMETER NAME="C_INTERFACE_SELECTION" VALUE="0"/>
+        <PARAMETER NAME="C_S_AXI_ADDR_WIDTH" VALUE="11"/>
+        <PARAMETER NAME="C_S_AXI_DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_POWER_REG" VALUE="0000"/>
+        <PARAMETER NAME="C_CLKOUT0_1" VALUE="0000"/>
+        <PARAMETER NAME="C_CLKOUT0_2" VALUE="0000"/>
+        <PARAMETER NAME="C_CLKOUT1_1" VALUE="0000"/>
+        <PARAMETER NAME="C_CLKOUT1_2" VALUE="0000"/>
+        <PARAMETER NAME="C_CLKOUT2_1" VALUE="0000"/>
+        <PARAMETER NAME="C_CLKOUT2_2" VALUE="0000"/>
+        <PARAMETER NAME="C_CLKOUT3_1" VALUE="0000"/>
+        <PARAMETER NAME="C_CLKOUT3_2" VALUE="0000"/>
+        <PARAMETER NAME="C_CLKOUT4_1" VALUE="0000"/>
+        <PARAMETER NAME="C_CLKOUT4_2" VALUE="0000"/>
+        <PARAMETER NAME="C_CLKOUT5_1" VALUE="0000"/>
+        <PARAMETER NAME="C_CLKOUT5_2" VALUE="0000"/>
+        <PARAMETER NAME="C_CLKOUT6_1" VALUE="0000"/>
+        <PARAMETER NAME="C_CLKOUT6_2" VALUE="0000"/>
+        <PARAMETER NAME="C_CLKFBOUT_1" VALUE="0000"/>
+        <PARAMETER NAME="C_CLKFBOUT_2" VALUE="0000"/>
+        <PARAMETER NAME="C_DIVCLK" VALUE="0000"/>
+        <PARAMETER NAME="C_LOCK_1" VALUE="0000"/>
+        <PARAMETER NAME="C_LOCK_2" VALUE="0000"/>
+        <PARAMETER NAME="C_LOCK_3" VALUE="0000"/>
+        <PARAMETER NAME="C_FILTER_1" VALUE="0000"/>
+        <PARAMETER NAME="C_FILTER_2" VALUE="0000"/>
+        <PARAMETER NAME="C_DIVIDE1_AUTO" VALUE="1"/>
+        <PARAMETER NAME="C_DIVIDE2_AUTO" VALUE="0.5"/>
+        <PARAMETER NAME="C_DIVIDE3_AUTO" VALUE="0.5"/>
+        <PARAMETER NAME="C_DIVIDE4_AUTO" VALUE="0.5"/>
+        <PARAMETER NAME="C_DIVIDE5_AUTO" VALUE="0.5"/>
+        <PARAMETER NAME="C_DIVIDE6_AUTO" VALUE="0.5"/>
+        <PARAMETER NAME="C_DIVIDE7_AUTO" VALUE="0.5"/>
+        <PARAMETER NAME="C_PLLBUFGCEDIV" VALUE="false"/>
+        <PARAMETER NAME="C_MMCMBUFGCEDIV" VALUE="false"/>
+        <PARAMETER NAME="C_PLLBUFGCEDIV1" VALUE="false"/>
+        <PARAMETER NAME="C_PLLBUFGCEDIV2" VALUE="false"/>
+        <PARAMETER NAME="C_PLLBUFGCEDIV3" VALUE="false"/>
+        <PARAMETER NAME="C_PLLBUFGCEDIV4" VALUE="false"/>
+        <PARAMETER NAME="C_MMCMBUFGCEDIV1" VALUE="false"/>
+        <PARAMETER NAME="C_MMCMBUFGCEDIV2" VALUE="false"/>
+        <PARAMETER NAME="C_MMCMBUFGCEDIV3" VALUE="false"/>
+        <PARAMETER NAME="C_MMCMBUFGCEDIV4" VALUE="false"/>
+        <PARAMETER NAME="C_MMCMBUFGCEDIV5" VALUE="false"/>
+        <PARAMETER NAME="C_MMCMBUFGCEDIV6" VALUE="false"/>
+        <PARAMETER NAME="C_MMCMBUFGCEDIV7" VALUE="false"/>
+        <PARAMETER NAME="C_CLKOUT1_MATCHED_ROUTING" VALUE="false"/>
+        <PARAMETER NAME="C_CLKOUT2_MATCHED_ROUTING" VALUE="false"/>
+        <PARAMETER NAME="C_CLKOUT3_MATCHED_ROUTING" VALUE="false"/>
+        <PARAMETER NAME="C_CLKOUT4_MATCHED_ROUTING" VALUE="false"/>
+        <PARAMETER NAME="C_CLKOUT5_MATCHED_ROUTING" VALUE="false"/>
+        <PARAMETER NAME="C_CLKOUT6_MATCHED_ROUTING" VALUE="false"/>
+        <PARAMETER NAME="C_CLKOUT7_MATCHED_ROUTING" VALUE="false"/>
+        <PARAMETER NAME="C_CLKOUT0_ACTUAL_FREQ" VALUE="50.000"/>
+        <PARAMETER NAME="C_CLKOUT1_ACTUAL_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="C_CLKOUT2_ACTUAL_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="C_CLKOUT3_ACTUAL_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="C_CLKOUT4_ACTUAL_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="C_CLKOUT5_ACTUAL_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="C_CLKOUT6_ACTUAL_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_clk_wiz_0_1"/>
+        <PARAMETER NAME="USER_CLK_FREQ0" VALUE="100.0"/>
+        <PARAMETER NAME="USER_CLK_FREQ1" VALUE="100.0"/>
+        <PARAMETER NAME="USER_CLK_FREQ2" VALUE="100.0"/>
+        <PARAMETER NAME="USER_CLK_FREQ3" VALUE="100.0"/>
+        <PARAMETER NAME="ENABLE_CLOCK_MONITOR" VALUE="false"/>
+        <PARAMETER NAME="ENABLE_USER_CLOCK0" VALUE="false"/>
+        <PARAMETER NAME="ENABLE_USER_CLOCK1" VALUE="false"/>
+        <PARAMETER NAME="ENABLE_USER_CLOCK2" VALUE="false"/>
+        <PARAMETER NAME="ENABLE_USER_CLOCK3" VALUE="false"/>
+        <PARAMETER NAME="Enable_PLL0" VALUE="false"/>
+        <PARAMETER NAME="Enable_PLL1" VALUE="false"/>
+        <PARAMETER NAME="REF_CLK_FREQ" VALUE="100.0"/>
+        <PARAMETER NAME="PRECISION" VALUE="1"/>
+        <PARAMETER NAME="PRIMITIVE" VALUE="PLL"/>
+        <PARAMETER NAME="PRIMTYPE_SEL" VALUE="mmcm_adv"/>
+        <PARAMETER NAME="CLOCK_MGR_TYPE" VALUE="auto"/>
+        <PARAMETER NAME="USE_FREQ_SYNTH" VALUE="true"/>
+        <PARAMETER NAME="USE_SPREAD_SPECTRUM" VALUE="false"/>
+        <PARAMETER NAME="USE_PHASE_ALIGNMENT" VALUE="true"/>
+        <PARAMETER NAME="USE_MIN_POWER" VALUE="false"/>
+        <PARAMETER NAME="USE_DYN_PHASE_SHIFT" VALUE="false"/>
+        <PARAMETER NAME="USE_DYN_RECONFIG" VALUE="false"/>
+        <PARAMETER NAME="JITTER_SEL" VALUE="No_Jitter"/>
+        <PARAMETER NAME="PRIM_IN_FREQ" VALUE="250.000"/>
+        <PARAMETER NAME="PRIM_IN_TIMEPERIOD" VALUE="10.000"/>
+        <PARAMETER NAME="IN_FREQ_UNITS" VALUE="Units_MHz"/>
+        <PARAMETER NAME="PHASESHIFT_MODE" VALUE="WAVEFORM"/>
+        <PARAMETER NAME="IN_JITTER_UNITS" VALUE="Units_UI"/>
+        <PARAMETER NAME="RELATIVE_INCLK" VALUE="REL_PRIMARY"/>
+        <PARAMETER NAME="USE_INCLK_SWITCHOVER" VALUE="false"/>
+        <PARAMETER NAME="SECONDARY_IN_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="SECONDARY_IN_TIMEPERIOD" VALUE="10.000"/>
+        <PARAMETER NAME="SECONDARY_PORT" VALUE="clk_in2"/>
+        <PARAMETER NAME="SECONDARY_SOURCE" VALUE="Single_ended_clock_capable_pin"/>
+        <PARAMETER NAME="JITTER_OPTIONS" VALUE="UI"/>
+        <PARAMETER NAME="CLKIN1_UI_JITTER" VALUE="0.010"/>
+        <PARAMETER NAME="CLKIN2_UI_JITTER" VALUE="0.010"/>
+        <PARAMETER NAME="PRIM_IN_JITTER" VALUE="0.010"/>
+        <PARAMETER NAME="SECONDARY_IN_JITTER" VALUE="0.010"/>
+        <PARAMETER NAME="CLKIN1_JITTER_PS" VALUE="40.0"/>
+        <PARAMETER NAME="CLKIN2_JITTER_PS" VALUE="100.0"/>
+        <PARAMETER NAME="CLKOUT1_USED" VALUE="true"/>
+        <PARAMETER NAME="CLKOUT2_USED" VALUE="false"/>
+        <PARAMETER NAME="CLKOUT3_USED" VALUE="false"/>
+        <PARAMETER NAME="CLKOUT4_USED" VALUE="false"/>
+        <PARAMETER NAME="CLKOUT5_USED" VALUE="false"/>
+        <PARAMETER NAME="CLKOUT6_USED" VALUE="false"/>
+        <PARAMETER NAME="CLKOUT7_USED" VALUE="false"/>
+        <PARAMETER NAME="NUM_OUT_CLKS" VALUE="1"/>
+        <PARAMETER NAME="CLK_OUT1_USE_FINE_PS_GUI" VALUE="false"/>
+        <PARAMETER NAME="CLK_OUT2_USE_FINE_PS_GUI" VALUE="false"/>
+        <PARAMETER NAME="CLK_OUT3_USE_FINE_PS_GUI" VALUE="false"/>
+        <PARAMETER NAME="CLK_OUT4_USE_FINE_PS_GUI" VALUE="false"/>
+        <PARAMETER NAME="CLK_OUT5_USE_FINE_PS_GUI" VALUE="false"/>
+        <PARAMETER NAME="CLK_OUT6_USE_FINE_PS_GUI" VALUE="false"/>
+        <PARAMETER NAME="CLK_OUT7_USE_FINE_PS_GUI" VALUE="false"/>
+        <PARAMETER NAME="PRIMARY_PORT" VALUE="clk_in1"/>
+        <PARAMETER NAME="CLK_OUT1_PORT" VALUE="clk_out1"/>
+        <PARAMETER NAME="CLK_OUT2_PORT" VALUE="clk_out2"/>
+        <PARAMETER NAME="CLK_OUT3_PORT" VALUE="clk_out3"/>
+        <PARAMETER NAME="CLK_OUT4_PORT" VALUE="clk_out4"/>
+        <PARAMETER NAME="CLK_OUT5_PORT" VALUE="clk_out5"/>
+        <PARAMETER NAME="CLK_OUT6_PORT" VALUE="clk_out6"/>
+        <PARAMETER NAME="CLK_OUT7_PORT" VALUE="clk_out7"/>
+        <PARAMETER NAME="DADDR_PORT" VALUE="daddr"/>
+        <PARAMETER NAME="DCLK_PORT" VALUE="dclk"/>
+        <PARAMETER NAME="DRDY_PORT" VALUE="drdy"/>
+        <PARAMETER NAME="DWE_PORT" VALUE="dwe"/>
+        <PARAMETER NAME="DIN_PORT" VALUE="din"/>
+        <PARAMETER NAME="DOUT_PORT" VALUE="dout"/>
+        <PARAMETER NAME="DEN_PORT" VALUE="den"/>
+        <PARAMETER NAME="PSCLK_PORT" VALUE="psclk"/>
+        <PARAMETER NAME="PSEN_PORT" VALUE="psen"/>
+        <PARAMETER NAME="PSINCDEC_PORT" VALUE="psincdec"/>
+        <PARAMETER NAME="PSDONE_PORT" VALUE="psdone"/>
+        <PARAMETER NAME="CLKOUT1_REQUESTED_OUT_FREQ" VALUE="50.000"/>
+        <PARAMETER NAME="CLKOUT1_REQUESTED_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="CLKOUT1_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="CLKOUT2_REQUESTED_OUT_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="CLKOUT2_REQUESTED_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="CLKOUT2_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="CLKOUT3_REQUESTED_OUT_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="CLKOUT3_REQUESTED_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="CLKOUT3_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="CLKOUT4_REQUESTED_OUT_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="CLKOUT4_REQUESTED_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="CLKOUT4_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="CLKOUT5_REQUESTED_OUT_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="CLKOUT5_REQUESTED_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="CLKOUT5_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="CLKOUT6_REQUESTED_OUT_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="CLKOUT6_REQUESTED_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="CLKOUT6_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="CLKOUT7_REQUESTED_OUT_FREQ" VALUE="100.000"/>
+        <PARAMETER NAME="CLKOUT7_REQUESTED_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="CLKOUT7_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
+        <PARAMETER NAME="USE_MAX_I_JITTER" VALUE="false"/>
+        <PARAMETER NAME="USE_MIN_O_JITTER" VALUE="false"/>
+        <PARAMETER NAME="CLKOUT1_MATCHED_ROUTING" VALUE="false"/>
+        <PARAMETER NAME="CLKOUT2_MATCHED_ROUTING" VALUE="false"/>
+        <PARAMETER NAME="CLKOUT3_MATCHED_ROUTING" VALUE="false"/>
+        <PARAMETER NAME="CLKOUT4_MATCHED_ROUTING" VALUE="false"/>
+        <PARAMETER NAME="CLKOUT5_MATCHED_ROUTING" VALUE="false"/>
+        <PARAMETER NAME="CLKOUT6_MATCHED_ROUTING" VALUE="false"/>
+        <PARAMETER NAME="CLKOUT7_MATCHED_ROUTING" VALUE="false"/>
+        <PARAMETER NAME="PRIM_SOURCE" VALUE="No_buffer"/>
+        <PARAMETER NAME="CLKOUT1_DRIVES" VALUE="BUFG"/>
+        <PARAMETER NAME="CLKOUT2_DRIVES" VALUE="BUFG"/>
+        <PARAMETER NAME="CLKOUT3_DRIVES" VALUE="BUFG"/>
+        <PARAMETER NAME="CLKOUT4_DRIVES" VALUE="BUFG"/>
+        <PARAMETER NAME="CLKOUT5_DRIVES" VALUE="BUFG"/>
+        <PARAMETER NAME="CLKOUT6_DRIVES" VALUE="BUFG"/>
+        <PARAMETER NAME="CLKOUT7_DRIVES" VALUE="BUFG"/>
+        <PARAMETER NAME="FEEDBACK_SOURCE" VALUE="FDBK_AUTO"/>
+        <PARAMETER NAME="CLKFB_IN_SIGNALING" VALUE="SINGLE"/>
+        <PARAMETER NAME="CLKFB_IN_PORT" VALUE="clkfb_in"/>
+        <PARAMETER NAME="CLKFB_IN_P_PORT" VALUE="clkfb_in_p"/>
+        <PARAMETER NAME="CLKFB_IN_N_PORT" VALUE="clkfb_in_n"/>
+        <PARAMETER NAME="CLKFB_OUT_PORT" VALUE="clkfb_out"/>
+        <PARAMETER NAME="CLKFB_OUT_P_PORT" VALUE="clkfb_out_p"/>
+        <PARAMETER NAME="CLKFB_OUT_N_PORT" VALUE="clkfb_out_n"/>
+        <PARAMETER NAME="PLATFORM" VALUE="UNKNOWN"/>
+        <PARAMETER NAME="SUMMARY_STRINGS" VALUE="empty"/>
+        <PARAMETER NAME="USE_LOCKED" VALUE="false"/>
+        <PARAMETER NAME="CALC_DONE" VALUE="empty"/>
+        <PARAMETER NAME="USE_RESET" VALUE="false"/>
+        <PARAMETER NAME="USE_POWER_DOWN" VALUE="false"/>
+        <PARAMETER NAME="USE_STATUS" VALUE="false"/>
+        <PARAMETER NAME="USE_FREEZE" VALUE="false"/>
+        <PARAMETER NAME="USE_CLK_VALID" VALUE="false"/>
+        <PARAMETER NAME="USE_INCLK_STOPPED" VALUE="false"/>
+        <PARAMETER NAME="USE_CLKFB_STOPPED" VALUE="false"/>
+        <PARAMETER NAME="RESET_PORT" VALUE="reset"/>
+        <PARAMETER NAME="LOCKED_PORT" VALUE="locked"/>
+        <PARAMETER NAME="POWER_DOWN_PORT" VALUE="power_down"/>
+        <PARAMETER NAME="CLK_VALID_PORT" VALUE="CLK_VALID"/>
+        <PARAMETER NAME="STATUS_PORT" VALUE="STATUS"/>
+        <PARAMETER NAME="CLK_IN_SEL_PORT" VALUE="clk_in_sel"/>
+        <PARAMETER NAME="INPUT_CLK_STOPPED_PORT" VALUE="input_clk_stopped"/>
+        <PARAMETER NAME="CLKFB_STOPPED_PORT" VALUE="clkfb_stopped"/>
+        <PARAMETER NAME="SS_MODE" VALUE="CENTER_HIGH"/>
+        <PARAMETER NAME="SS_MOD_FREQ" VALUE="250"/>
+        <PARAMETER NAME="SS_MOD_TIME" VALUE="0.004"/>
+        <PARAMETER NAME="OVERRIDE_MMCM" VALUE="false"/>
+        <PARAMETER NAME="MMCM_NOTES" VALUE="None"/>
+        <PARAMETER NAME="MMCM_DIVCLK_DIVIDE" VALUE="5"/>
+        <PARAMETER NAME="MMCM_BANDWIDTH" VALUE="OPTIMIZED"/>
+        <PARAMETER NAME="MMCM_CLKFBOUT_MULT_F" VALUE="17"/>
+        <PARAMETER NAME="MMCM_CLKFBOUT_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="MMCM_CLKFBOUT_USE_FINE_PS" VALUE="false"/>
+        <PARAMETER NAME="MMCM_CLKIN1_PERIOD" VALUE="4.000"/>
+        <PARAMETER NAME="MMCM_CLKIN2_PERIOD" VALUE="10.0"/>
+        <PARAMETER NAME="MMCM_CLKOUT4_CASCADE" VALUE="false"/>
+        <PARAMETER NAME="MMCM_CLOCK_HOLD" VALUE="false"/>
+        <PARAMETER NAME="MMCM_COMPENSATION" VALUE="ZHOLD"/>
+        <PARAMETER NAME="MMCM_REF_JITTER1" VALUE="0.010"/>
+        <PARAMETER NAME="MMCM_REF_JITTER2" VALUE="0.010"/>
+        <PARAMETER NAME="MMCM_STARTUP_WAIT" VALUE="false"/>
+        <PARAMETER NAME="MMCM_CLKOUT0_DIVIDE_F" VALUE="17"/>
+        <PARAMETER NAME="MMCM_CLKOUT0_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="MMCM_CLKOUT0_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="MMCM_CLKOUT0_USE_FINE_PS" VALUE="false"/>
+        <PARAMETER NAME="MMCM_CLKOUT1_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="MMCM_CLKOUT1_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="MMCM_CLKOUT1_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="MMCM_CLKOUT1_USE_FINE_PS" VALUE="false"/>
+        <PARAMETER NAME="MMCM_CLKOUT2_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="MMCM_CLKOUT2_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="MMCM_CLKOUT2_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="MMCM_CLKOUT2_USE_FINE_PS" VALUE="false"/>
+        <PARAMETER NAME="MMCM_CLKOUT3_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="MMCM_CLKOUT3_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="MMCM_CLKOUT3_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="MMCM_CLKOUT3_USE_FINE_PS" VALUE="false"/>
+        <PARAMETER NAME="MMCM_CLKOUT4_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="MMCM_CLKOUT4_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="MMCM_CLKOUT4_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="MMCM_CLKOUT4_USE_FINE_PS" VALUE="false"/>
+        <PARAMETER NAME="MMCM_CLKOUT5_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="MMCM_CLKOUT5_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="MMCM_CLKOUT5_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="MMCM_CLKOUT5_USE_FINE_PS" VALUE="false"/>
+        <PARAMETER NAME="MMCM_CLKOUT6_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="MMCM_CLKOUT6_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="MMCM_CLKOUT6_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="MMCM_CLKOUT6_USE_FINE_PS" VALUE="false"/>
+        <PARAMETER NAME="OVERRIDE_PLL" VALUE="false"/>
+        <PARAMETER NAME="PLL_NOTES" VALUE="None"/>
+        <PARAMETER NAME="PLL_BANDWIDTH" VALUE="OPTIMIZED"/>
+        <PARAMETER NAME="PLL_CLKFBOUT_MULT" VALUE="4"/>
+        <PARAMETER NAME="PLL_CLKFBOUT_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="PLL_CLK_FEEDBACK" VALUE="CLKFBOUT"/>
+        <PARAMETER NAME="PLL_DIVCLK_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="PLL_CLKIN_PERIOD" VALUE="10.000"/>
+        <PARAMETER NAME="PLL_COMPENSATION" VALUE="SYSTEM_SYNCHRONOUS"/>
+        <PARAMETER NAME="PLL_REF_JITTER" VALUE="0.010"/>
+        <PARAMETER NAME="PLL_CLKOUT0_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="PLL_CLKOUT0_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="PLL_CLKOUT0_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="PLL_CLKOUT1_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="PLL_CLKOUT1_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="PLL_CLKOUT1_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="PLL_CLKOUT2_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="PLL_CLKOUT2_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="PLL_CLKOUT2_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="PLL_CLKOUT3_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="PLL_CLKOUT3_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="PLL_CLKOUT3_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="PLL_CLKOUT4_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="PLL_CLKOUT4_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="PLL_CLKOUT4_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="PLL_CLKOUT5_DIVIDE" VALUE="1"/>
+        <PARAMETER NAME="PLL_CLKOUT5_DUTY_CYCLE" VALUE="0.500"/>
+        <PARAMETER NAME="PLL_CLKOUT5_PHASE" VALUE="0.000"/>
+        <PARAMETER NAME="RESET_TYPE" VALUE="ACTIVE_HIGH"/>
+        <PARAMETER NAME="USE_SAFE_CLOCK_STARTUP" VALUE="false"/>
+        <PARAMETER NAME="USE_CLOCK_SEQUENCING" VALUE="false"/>
+        <PARAMETER NAME="CLKOUT1_SEQUENCE_NUMBER" VALUE="1"/>
+        <PARAMETER NAME="CLKOUT2_SEQUENCE_NUMBER" VALUE="1"/>
+        <PARAMETER NAME="CLKOUT3_SEQUENCE_NUMBER" VALUE="1"/>
+        <PARAMETER NAME="CLKOUT4_SEQUENCE_NUMBER" VALUE="1"/>
+        <PARAMETER NAME="CLKOUT5_SEQUENCE_NUMBER" VALUE="1"/>
+        <PARAMETER NAME="CLKOUT6_SEQUENCE_NUMBER" VALUE="1"/>
+        <PARAMETER NAME="CLKOUT7_SEQUENCE_NUMBER" VALUE="1"/>
+        <PARAMETER NAME="USE_BOARD_FLOW" VALUE="false"/>
+        <PARAMETER NAME="CLK_IN1_BOARD_INTERFACE" VALUE="Custom"/>
+        <PARAMETER NAME="CLK_IN2_BOARD_INTERFACE" VALUE="Custom"/>
+        <PARAMETER NAME="DIFF_CLK_IN1_BOARD_INTERFACE" VALUE="Custom"/>
+        <PARAMETER NAME="DIFF_CLK_IN2_BOARD_INTERFACE" VALUE="Custom"/>
+        <PARAMETER NAME="AUTO_PRIMITIVE" VALUE="MMCM"/>
+        <PARAMETER NAME="RESET_BOARD_INTERFACE" VALUE="Custom"/>
+        <PARAMETER NAME="ENABLE_CDDC" VALUE="false"/>
+        <PARAMETER NAME="CDDCDONE_PORT" VALUE="cddcdone"/>
+        <PARAMETER NAME="CDDCREQ_PORT" VALUE="cddcreq"/>
+        <PARAMETER NAME="ENABLE_CLKOUTPHY" VALUE="false"/>
+        <PARAMETER NAME="CLKOUTPHY_REQUESTED_FREQ" VALUE="600.000"/>
+        <PARAMETER NAME="CLKOUT1_JITTER" VALUE="197.183"/>
+        <PARAMETER NAME="CLKOUT1_PHASE_ERROR" VALUE="155.540"/>
+        <PARAMETER NAME="CLKOUT2_JITTER" VALUE="0.0"/>
+        <PARAMETER NAME="CLKOUT2_PHASE_ERROR" VALUE="0.0"/>
+        <PARAMETER NAME="CLKOUT3_JITTER" VALUE="0.0"/>
+        <PARAMETER NAME="CLKOUT3_PHASE_ERROR" VALUE="0.0"/>
+        <PARAMETER NAME="CLKOUT4_JITTER" VALUE="0.0"/>
+        <PARAMETER NAME="CLKOUT4_PHASE_ERROR" VALUE="0.0"/>
+        <PARAMETER NAME="CLKOUT5_JITTER" VALUE="0.0"/>
+        <PARAMETER NAME="CLKOUT5_PHASE_ERROR" VALUE="0.0"/>
+        <PARAMETER NAME="CLKOUT6_JITTER" VALUE="0.0"/>
+        <PARAMETER NAME="CLKOUT6_PHASE_ERROR" VALUE="0.0"/>
+        <PARAMETER NAME="CLKOUT7_JITTER" VALUE="0.0"/>
+        <PARAMETER NAME="CLKOUT7_PHASE_ERROR" VALUE="0.0"/>
+        <PARAMETER NAME="INPUT_MODE" VALUE="frequency"/>
+        <PARAMETER NAME="INTERFACE_SELECTION" VALUE="Enable_AXI"/>
+        <PARAMETER NAME="AXI_DRP" VALUE="false"/>
+        <PARAMETER NAME="PHASE_DUTY_CONFIG" VALUE="false"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="250000000" DIR="I" NAME="clk_in1" SIGIS="clk" SIGNAME="RIFFA_AXIS_PCIE_user_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="user_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="50000000" DIR="O" NAME="clk_out1" SIGIS="clk" SIGNAME="RIFFA_AXIS_clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ImageRotate" PORT="ap_clk"/>
+            <CONNECTION INSTANCE="AP_CTRL" PORT="clk"/>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CHNL_TX_CLK"/>
+            <CONNECTION INSTANCE="RIFFA_AXIS_riffa_controller" PORT="CHNL_RX_CLK"/>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/RIFFA_AXIS/riffa_controller" HWVERSION="1.0" INSTANCE="RIFFA_AXIS_riffa_controller" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="riffa_controller" VLNV="xilinx.com:user:riffa_controller:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_NUM_CHNL" VALUE="1"/>
+        <PARAMETER NAME="C_PCI_DATA_WIDTH" VALUE="128"/>
+        <PARAMETER NAME="C_MAX_PAYLOAD_BYTES" VALUE="256"/>
+        <PARAMETER NAME="C_LOG_NUM_TAGS" VALUE="5"/>
+        <PARAMETER NAME="C_FPGA_ID" VALUE="7V30"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_riffa_controller_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="S_AXIS_CQ_TVALID" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_m_axis_cq_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="m_axis_cq_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S_AXIS_CQ_TLAST" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_m_axis_cq_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="m_axis_cq_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="127" NAME="S_AXIS_CQ_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_m_axis_cq_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="m_axis_cq_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="S_AXIS_CQ_TKEEP" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_m_axis_cq_tkeep">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="m_axis_cq_tkeep"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="84" NAME="S_AXIS_CQ_TUSER" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_m_axis_cq_tuser">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="m_axis_cq_tuser"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S_AXIS_CQ_TREADY" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_m_axis_cq_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="m_axis_cq_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S_AXIS_RC_TVALID" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_m_axis_rc_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="m_axis_rc_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S_AXIS_RC_TLAST" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_m_axis_rc_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="m_axis_rc_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="127" NAME="S_AXIS_RC_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_m_axis_rc_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="m_axis_rc_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="S_AXIS_RC_TKEEP" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_m_axis_rc_tkeep">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="m_axis_rc_tkeep"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="74" NAME="S_AXIS_RC_TUSER" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_m_axis_rc_tuser">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="m_axis_rc_tuser"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S_AXIS_RC_TREADY" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_m_axis_rc_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="m_axis_rc_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M_AXIS_CC_TREADY" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_s_axis_cc_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="s_axis_cc_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M_AXIS_CC_TVALID" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_s_axis_cc_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="s_axis_cc_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M_AXIS_CC_TLAST" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_s_axis_cc_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="s_axis_cc_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="127" NAME="M_AXIS_CC_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_s_axis_cc_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="s_axis_cc_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M_AXIS_CC_TKEEP" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_s_axis_cc_tkeep">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="s_axis_cc_tkeep"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="32" NAME="M_AXIS_CC_TUSER" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_s_axis_cc_tuser">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="s_axis_cc_tuser"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M_AXIS_RQ_TREADY" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_s_axis_rq_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="s_axis_rq_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M_AXIS_RQ_TVALID" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_s_axis_rq_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="s_axis_rq_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M_AXIS_RQ_TLAST" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_s_axis_rq_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="s_axis_rq_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="127" NAME="M_AXIS_RQ_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_s_axis_rq_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="s_axis_rq_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M_AXIS_RQ_TKEEP" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_s_axis_rq_tkeep">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="s_axis_rq_tkeep"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="59" NAME="M_AXIS_RQ_TUSER" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_s_axis_rq_tuser">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="s_axis_rq_tuser"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="250000000" DIR="I" NAME="USER_CLK" SIGIS="clk" SIGNAME="RIFFA_AXIS_PCIE_user_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="user_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="USER_RESET" SIGIS="rst" SIGNAME="RIFFA_AXIS_PCIE_user_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="user_reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="CFG_INTERRUPT_INT" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_interrupt_int">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="cfg_interrupt_int"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="CFG_INTERRUPT_PENDING" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_interrupt_pending">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="cfg_interrupt_pending"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="CFG_INTERRUPT_MSI_ENABLE" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_interrupt_msi_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="cfg_interrupt_msi_enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="CFG_INTERRUPT_MSI_MASK_UPDATE" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_interrupt_msi_mask_update">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="cfg_interrupt_msi_mask_update"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="CFG_INTERRUPT_MSI_DATA" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_interrupt_msi_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="cfg_interrupt_msi_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="CFG_INTERRUPT_MSI_SELECT" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_interrupt_msi_select">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="cfg_interrupt_msi_select"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="CFG_INTERRUPT_MSI_INT" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_interrupt_msi_int">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="cfg_interrupt_msi_int"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="CFG_INTERRUPT_MSI_PENDING_STATUS" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_interrupt_msi_pending_status">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="cfg_interrupt_msi_pending_status"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="CFG_INTERRUPT_MSI_SENT" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_interrupt_msi_sent">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="cfg_interrupt_msi_sent"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="CFG_INTERRUPT_MSI_FAIL" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_interrupt_msi_fail">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="cfg_interrupt_msi_fail"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="CFG_INTERRUPT_MSI_ATTR" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_interrupt_msi_attr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="cfg_interrupt_msi_attr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="CFG_INTERRUPT_MSI_TPH_PRESENT" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_interrupt_msi_tph_present">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="cfg_interrupt_msi_tph_present"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="CFG_INTERRUPT_MSI_TPH_TYPE" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_interrupt_msi_tph_type">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="cfg_interrupt_msi_tph_type"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="8" NAME="CFG_INTERRUPT_MSI_TPH_ST_TAG" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_interrupt_msi_tph_st_tag">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="cfg_interrupt_msi_tph_st_tag"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="CFG_INTERRUPT_MSI_FUNCTION_NUMBER" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_interrupt_msi_function_number">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="cfg_interrupt_msi_function_number"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="CFG_FC_CPLH" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_fc_cplh">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="cfg_fc_cplh"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="CFG_FC_CPLD" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_fc_cpld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="cfg_fc_cpld"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="CFG_FC_SEL" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_fc_sel">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="cfg_fc_sel"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="CFG_NEGOTIATED_WIDTH" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_negotiated_width">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="cfg_negotiated_width"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="CFG_CURRENT_SPEED" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_current_speed">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="cfg_current_speed"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="CFG_MAX_PAYLOAD" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_max_payload">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="cfg_max_payload"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="CFG_MAX_READ_REQ" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_max_read_req">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="cfg_max_read_req"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="CFG_FUNCTION_STATUS" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_function_status">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="cfg_function_status"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="CFG_RCB_STATUS" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_cfg_rcb_status">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="cfg_rcb_status"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="PCIE_CQ_NP_REQ" SIGIS="undef" SIGNAME="RIFFA_AXIS_PCIE_pcie_cq_np_req">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="pcie_cq_np_req"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="RST_OUT" SIGIS="undef"/>
+        <PORT CLKFREQUENCY="50000000" DIR="I" LEFT="0" NAME="CHNL_TX_CLK" RIGHT="0" SIGIS="clk" SIGNAME="RIFFA_AXIS_clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="CHNL_TX" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_riffa_controller_CHNL_TX">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="CHNL_RX"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="CHNL_TX_ACK" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_Riffa_Axis_CHNL_RX_ACK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="CHNL_RX_ACK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="CHNL_TX_LAST" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_riffa_controller_CHNL_TX_LAST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="CHNL_RX_LAST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="CHNL_TX_LEN" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_riffa_controller_CHNL_TX_LEN">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="CHNL_RX_LEN"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="30" NAME="CHNL_TX_OFF" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_riffa_controller_CHNL_TX_OFF">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="CHNL_RX_OFF"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="127" NAME="CHNL_TX_DATA" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_riffa_controller_CHNL_TX_DATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="CHNL_RX_DATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="CHNL_TX_DATA_VALID" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_riffa_controller_CHNL_TX_DATA_VALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="CHNL_RX_DATA_VALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="CHNL_TX_DATA_REN" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_Riffa_Axis_CHNL_RX_DATA_READY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="CHNL_RX_DATA_READY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="50000000" DIR="I" LEFT="0" NAME="CHNL_RX_CLK" RIGHT="0" SIGIS="clk" SIGNAME="RIFFA_AXIS_clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="CHNL_RX" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_Riffa_Axis_CHNL_TX">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="CHNL_TX"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="CHNL_RX_ACK" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_riffa_controller_CHNL_RX_ACK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="CHNL_TX_ACK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="CHNL_RX_LAST" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_Riffa_Axis_CHNL_TX_LAST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="CHNL_TX_LAST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="CHNL_RX_LEN" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_Riffa_Axis_CHNL_TX_LEN">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="CHNL_TX_LEN"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="30" NAME="CHNL_RX_OFF" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_Riffa_Axis_CHNL_TX_OFF">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="CHNL_TX_OFF"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="127" NAME="CHNL_RX_DATA" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_Riffa_Axis_CHNL_TX_DATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="CHNL_TX_DATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="CHNL_RX_DATA_VALID" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_Riffa_Axis_CHNL_TX_DATA_VALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="CHNL_TX_DATA_VALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="CHNL_RX_DATA_REN" RIGHT="0" SIGIS="undef" SIGNAME="RIFFA_AXIS_riffa_controller_CHNL_RX_DATA_REN">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_Riffa_Axis" PORT="CHNL_TX_DATA_READY"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="RIFFA_AXIS_riffa_controller_M_AXIS_CC" NAME="M_AXIS_CC" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="16"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="33"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="250000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="M_AXIS_CC_TDATA"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="M_AXIS_CC_TKEEP"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="M_AXIS_CC_TLAST"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="M_AXIS_CC_TUSER"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="M_AXIS_CC_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="M_AXIS_CC_TREADY"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="RIFFA_AXIS_riffa_controller_M_AXIS_RQ" NAME="M_AXIS_RQ" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="16"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="60"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="250000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="M_AXIS_RQ_TDATA"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="M_AXIS_RQ_TKEEP"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="M_AXIS_RQ_TLAST"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="M_AXIS_RQ_TUSER"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="M_AXIS_RQ_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="M_AXIS_RQ_TREADY"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="RIFFA_AXIS_PCIE_m_axis_cq" NAME="S_AXIS_CQ" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="16"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="85"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="250000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="S_AXIS_CQ_TDATA"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="S_AXIS_CQ_TKEEP"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="S_AXIS_CQ_TLAST"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="S_AXIS_CQ_TUSER"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="S_AXIS_CQ_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="S_AXIS_CQ_TREADY"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="RIFFA_AXIS_PCIE_m_axis_rc" NAME="S_AXIS_RC" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="16"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="75"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="250000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="S_AXIS_RC_TDATA"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="S_AXIS_RC_TKEEP"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="S_AXIS_RC_TLAST"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="S_AXIS_RC_TUSER"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="S_AXIS_RC_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="S_AXIS_RC_TREADY"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="RIFFA_AXIS_PCIE_pcie3_cfg_status" NAME="PCIE3_CFG_STATUS" TYPE="TARGET" VLNV="xilinx.com:interface:pcie3_cfg_status:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="negotiated_width" PHYSICAL="CFG_NEGOTIATED_WIDTH"/>
+            <PORTMAP LOGICAL="current_speed" PHYSICAL="CFG_CURRENT_SPEED"/>
+            <PORTMAP LOGICAL="max_payload" PHYSICAL="CFG_MAX_PAYLOAD"/>
+            <PORTMAP LOGICAL="cq_np_req" PHYSICAL="PCIE_CQ_NP_REQ"/>
+            <PORTMAP LOGICAL="max_read_req" PHYSICAL="CFG_MAX_READ_REQ"/>
+            <PORTMAP LOGICAL="rcb_status" PHYSICAL="CFG_RCB_STATUS"/>
+            <PORTMAP LOGICAL="function_status" PHYSICAL="CFG_FUNCTION_STATUS"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="RIFFA_AXIS_PCIE_pcie_cfg_fc" NAME="PCIE_CFG_FC" TYPE="TARGET" VLNV="xilinx.com:interface:pcie_cfg_fc:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="CPLH" PHYSICAL="CFG_FC_CPLH"/>
+            <PORTMAP LOGICAL="CPLD" PHYSICAL="CFG_FC_CPLD"/>
+            <PORTMAP LOGICAL="SEL" PHYSICAL="CFG_FC_SEL"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="RIFFA_AXIS_riffa_controller_PCIE3_CFG_MSI" NAME="PCIE3_CFG_MSI" TYPE="INITIATOR" VLNV="xilinx.com:interface:pcie3_cfg_msi:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="tph_st_tag" PHYSICAL="CFG_INTERRUPT_MSI_TPH_ST_TAG"/>
+            <PORTMAP LOGICAL="mask_update" PHYSICAL="CFG_INTERRUPT_MSI_MASK_UPDATE"/>
+            <PORTMAP LOGICAL="select" PHYSICAL="CFG_INTERRUPT_MSI_SELECT"/>
+            <PORTMAP LOGICAL="data" PHYSICAL="CFG_INTERRUPT_MSI_DATA"/>
+            <PORTMAP LOGICAL="tph_type" PHYSICAL="CFG_INTERRUPT_MSI_TPH_TYPE"/>
+            <PORTMAP LOGICAL="int_vector" PHYSICAL="CFG_INTERRUPT_MSI_INT"/>
+            <PORTMAP LOGICAL="sent" PHYSICAL="CFG_INTERRUPT_MSI_SENT"/>
+            <PORTMAP LOGICAL="tph_present" PHYSICAL="CFG_INTERRUPT_MSI_TPH_PRESENT"/>
+            <PORTMAP LOGICAL="function_number" PHYSICAL="CFG_INTERRUPT_MSI_FUNCTION_NUMBER"/>
+            <PORTMAP LOGICAL="fail" PHYSICAL="CFG_INTERRUPT_MSI_FAIL"/>
+            <PORTMAP LOGICAL="enable" PHYSICAL="CFG_INTERRUPT_MSI_ENABLE"/>
+            <PORTMAP LOGICAL="pending_status" PHYSICAL="CFG_INTERRUPT_MSI_PENDING_STATUS"/>
+            <PORTMAP LOGICAL="attr" PHYSICAL="CFG_INTERRUPT_MSI_ATTR"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="RIFFA_AXIS_riffa_controller_PCIE3_CFG_INTERRUPT" NAME="PCIE3_CFG_INTERRUPT" TYPE="INITIATOR" VLNV="xilinx.com:interface:pcie3_cfg_interrupt:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="INTx_VECTOR" PHYSICAL="CFG_INTERRUPT_INT"/>
+            <PORTMAP LOGICAL="PENDING" PHYSICAL="CFG_INTERRUPT_PENDING"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE FULLNAME="/SYS_CLK" HWVERSION="2.1" INSTANCE="SYS_CLK" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_ds_buf" VLNV="xilinx.com:ip:util_ds_buf:2.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_BUF_TYPE" VALUE="ibufdsgte2"/>
+        <PARAMETER NAME="C_SIZE" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_util_ds_buf_0_0"/>
+        <PARAMETER NAME="USE_BOARD_FLOW" VALUE="false"/>
+        <PARAMETER NAME="DIFF_CLK_IN_BOARD_INTERFACE" VALUE="Custom"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" LEFT="0" NAME="IBUF_DS_P" RIGHT="0" SIGIS="clk" SIGNAME="External_Ports_sys_clk_p">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sys_clk_p"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" LEFT="0" NAME="IBUF_DS_N" RIGHT="0" SIGIS="clk" SIGNAME="External_Ports_sys_clk_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sys_clk_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="O" LEFT="0" NAME="IBUF_OUT" RIGHT="0" SIGIS="clk" SIGNAME="SYS_CLK_IBUF_OUT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="sys_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="O" LEFT="0" NAME="IBUF_DS_ODIV2" RIGHT="0" SIGIS="clk"/>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="CLK_IN_D" TYPE="TARGET" VLNV="xilinx.com:interface:diff_clock:1.0">
+          <PARAMETER NAME="CAN_DEBUG" VALUE="false"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="CLK_P" PHYSICAL="IBUF_DS_P"/>
+            <PORTMAP LOGICAL="CLK_N" PHYSICAL="IBUF_DS_N"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE FULLNAME="/inv" HWVERSION="2.0" INSTANCE="inv" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_vector_logic" VLNV="xilinx.com:ip:util_vector_logic:2.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_OPERATION" VALUE="not"/>
+        <PARAMETER NAME="C_SIZE" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_util_vector_logic_0_0"/>
+        <PARAMETER NAME="LOGO_FILE" VALUE="data/sym_notgate.png"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="0" NAME="Op1" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_sys_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sys_rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="Res" RIGHT="0" SIGIS="undef" SIGNAME="inv_Res">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RIFFA_AXIS_PCIE" PORT="sys_reset"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

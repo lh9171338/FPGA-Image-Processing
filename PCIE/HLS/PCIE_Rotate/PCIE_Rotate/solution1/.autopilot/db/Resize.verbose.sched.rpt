@@ -1,0 +1,951 @@
+
+
+================================================================
+== Vivado HLS Report for 'Resize'
+================================================================
+* Date:           Fri Nov 23 08:52:15 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        PCIE_Rotate
+* Solution:       solution1
+* Product family: virtex7
+* Target device:  xc7vx690tffg1761-3
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.709|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+--------+-----+--------+---------+
+    |    Latency   |   Interval   | Pipeline|
+    | min |   max  | min |   max  |   Type  |
+    +-----+--------+-----+--------+---------+
+    |   39|  132391|   39|  132391|   none  |
+    +-----+--------+-----+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+-----+--------+----------+-----------+-----------+---------+----------+
+        |             |    Latency   | Iteration|  Initiation Interval  |   Trip  |          |
+        |  Loop Name  | min |   max  |  Latency |  achieved |   target  |  Count  | Pipelined|
+        +-------------+-----+--------+----------+-----------+-----------+---------+----------+
+        |- Loop 1     |    0|   66304|  3 ~ 259 |          -|          -| 0 ~ 256 |    no    |
+        | + Loop 1.1  |    0|     256|         2|          1|          1| 0 ~ 256 |    yes   |
+        |- Loop 2     |    0|  132352|  3 ~ 517 |          -|          -| 0 ~ 256 |    no    |
+        | + Loop 2.1  |    0|     514|         5|          2|          2| 0 ~ 256 |    yes   |
+        +-------------+-----+--------+----------+-----------+-----------+---------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 2, depth = 5
+  * Pipeline-1: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 49
+* Pipeline : 2
+  Pipeline-0 : II = 2, D = 5, States = { 41 42 43 44 45 }
+  Pipeline-1 : II = 1, D = 2, States = { 47 48 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	28  / true
+28 --> 
+	29  / true
+29 --> 
+	30  / true
+30 --> 
+	31  / true
+31 --> 
+	32  / true
+32 --> 
+	33  / true
+33 --> 
+	34  / true
+34 --> 
+	35  / true
+35 --> 
+	36  / true
+36 --> 
+	37  / true
+37 --> 
+	38  / true
+38 --> 
+	39  / true
+39 --> 
+	40  / true
+40 --> 
+	41  / (!tmp_23_i_i & tmp_25_i_i & tmp_28_i_i)
+	47  / (tmp_23_i_i & tmp_26_i_i)
+41 --> 
+	46  / (!tmp_32_i_i)
+	42  / (tmp_32_i_i)
+42 --> 
+	43  / true
+43 --> 
+	44  / true
+44 --> 
+	45  / true
+45 --> 
+	41  / true
+46 --> 
+	40  / true
+47 --> 
+	49  / (!tmp_29_i_i)
+	48  / (tmp_29_i_i)
+48 --> 
+	47  / true
+49 --> 
+	40  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.99>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%scale_read = call float @_ssdm_op_Read.ap_auto.float(float %scale)"   --->   Operation 50 'read' 'scale_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (2.65ns)   --->   "%d_assign = fpext float %scale_read to double" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 51 'fpext' 'd_assign' <Predicate = true> <Delay = 2.65> <Core = "Float2Double">   --->   Core 108 'Float2Double' <Latency = 0> <II = 1> <Delay = 2.65> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%ireg_V = bitcast double %d_assign to i64" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 52 'bitcast' 'ireg_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%tmp_18 = trunc i64 %ireg_V to i63" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 53 'trunc' 'tmp_18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%isneg = call i1 @_ssdm_op_BitSelect.i1.i64.i32(i64 %ireg_V, i32 63)" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 54 'bitselect' 'isneg' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%exp_tmp_V = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %ireg_V, i32 52, i32 62)" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 55 'partselect' 'exp_tmp_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%tmp_4_i_i = zext i11 %exp_tmp_V to i12" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 56 'zext' 'tmp_4_i_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%tmp_20 = trunc i64 %ireg_V to i52" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 57 'trunc' 'tmp_20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (1.33ns)   --->   "%tmp_2_i_i = icmp eq i63 %tmp_18, 0" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 58 'icmp' 'tmp_2_i_i' <Predicate = true> <Delay = 1.33> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 59 [1/1] (1.26ns)   --->   "%F2 = sub i12 1075, %tmp_4_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 59 'sub' 'F2' <Predicate = true> <Delay = 1.26> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 7.89>
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%tmp_1_i_i = call i53 @_ssdm_op_BitConcatenate.i53.i1.i52(i1 true, i52 %tmp_20)" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 60 'bitconcatenate' 'tmp_1_i_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 61 [1/1] (0.00ns)   --->   "%p_Result_2 = zext i53 %tmp_1_i_i to i54" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 61 'zext' 'p_Result_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 62 [1/1] (1.67ns)   --->   "%man_V_1 = sub i54 0, %p_Result_2" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 62 'sub' 'man_V_1' <Predicate = (isneg)> <Delay = 1.67> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 63 [1/1] (0.53ns)   --->   "%man_V_2 = select i1 %isneg, i54 %man_V_1, i54 %p_Result_2" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 63 'select' 'man_V_2' <Predicate = true> <Delay = 0.53> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 64 [1/1] (1.11ns)   --->   "%tmp_10_i_i = icmp sgt i12 %F2, 16" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 64 'icmp' 'tmp_10_i_i' <Predicate = true> <Delay = 1.11> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 65 [1/1] (1.26ns)   --->   "%tmp_11_i_i = add i12 -16, %F2" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 65 'add' 'tmp_11_i_i' <Predicate = true> <Delay = 1.26> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 66 [1/1] (1.26ns)   --->   "%tmp_12_i_i = sub i12 16, %F2" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 66 'sub' 'tmp_12_i_i' <Predicate = true> <Delay = 1.26> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 67 [1/1] (0.55ns)   --->   "%sh_amt = select i1 %tmp_10_i_i, i12 %tmp_11_i_i, i12 %tmp_12_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 67 'select' 'sh_amt' <Predicate = true> <Delay = 0.55> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 68 [1/1] (0.00ns)   --->   "%sh_amt_cast_i_i = sext i12 %sh_amt to i32" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 68 'sext' 'sh_amt_cast_i_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 69 [1/1] (1.11ns)   --->   "%tmp_13_i_i = icmp eq i12 %F2, 16" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 69 'icmp' 'tmp_13_i_i' <Predicate = true> <Delay = 1.11> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 70 [1/1] (0.00ns)   --->   "%tmp_23 = trunc i54 %man_V_2 to i32" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 70 'trunc' 'tmp_23' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 71 [1/1] (1.11ns)   --->   "%tmp_15_i_i = icmp ult i12 %sh_amt, 54" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 71 'icmp' 'tmp_15_i_i' <Predicate = true> <Delay = 1.11> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 72 [1/1] (0.00ns)   --->   "%tmp_24 = call i7 @_ssdm_op_PartSelect.i7.i12.i32.i32(i12 %sh_amt, i32 5, i32 11)" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 72 'partselect' 'tmp_24' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 73 [1/1] (0.94ns)   --->   "%icmp = icmp eq i7 %tmp_24, 0" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 73 'icmp' 'icmp' <Predicate = true> <Delay = 0.94> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 74 [1/1] (0.00ns) (grouped into LUT with out node newSel)   --->   "%tmp_18_i_i = zext i32 %sh_amt_cast_i_i to i54" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 74 'zext' 'tmp_18_i_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 75 [1/1] (0.00ns) (grouped into LUT with out node newSel)   --->   "%tmp_19_i_i = ashr i54 %man_V_2, %tmp_18_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 75 'ashr' 'tmp_19_i_i' <Predicate = true> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.79> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 76 [1/1] (0.00ns) (grouped into LUT with out node newSel)   --->   "%tmp_25 = trunc i54 %tmp_19_i_i to i32" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 76 'trunc' 'tmp_25' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 77 [1/1] (0.00ns) (grouped into LUT with out node newSel3)   --->   "%p_071_i_i = select i1 %isneg, i32 -1, i32 0" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 77 'select' 'p_071_i_i' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 78 [1/1] (0.00ns) (grouped into LUT with out node newSel)   --->   "%tmp_21_i_i = shl i32 %tmp_23, %sh_amt_cast_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 78 'shl' 'tmp_21_i_i' <Predicate = true> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.79> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 79 [1/1] (0.00ns) (grouped into LUT with out node or_cond6)   --->   "%sel_tmp1 = xor i1 %tmp_2_i_i, true" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 79 'xor' 'sel_tmp1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.46> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 80 [1/1] (0.00ns) (grouped into LUT with out node or_cond6)   --->   "%sel_tmp2 = and i1 %tmp_13_i_i, %sel_tmp1" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 80 'and' 'sel_tmp2' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.46> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 81 [1/1] (0.46ns)   --->   "%sel_tmp6_demorgan = or i1 %tmp_2_i_i, %tmp_13_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 81 'or' 'sel_tmp6_demorgan' <Predicate = true> <Delay = 0.46> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.46> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 82 [1/1] (0.00ns) (grouped into LUT with out node sel_tmp7)   --->   "%sel_tmp6 = xor i1 %sel_tmp6_demorgan, true" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 82 'xor' 'sel_tmp6' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.46> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 83 [1/1] (0.46ns) (out node of the LUT)   --->   "%sel_tmp7 = and i1 %tmp_10_i_i, %sel_tmp6" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 83 'and' 'sel_tmp7' <Predicate = true> <Delay = 0.46> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.46> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 84 [1/1] (0.00ns) (grouped into LUT with out node sel_tmp9)   --->   "%sel_tmp8 = xor i1 %tmp_15_i_i, true" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 84 'xor' 'sel_tmp8' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.46> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 85 [1/1] (0.46ns) (out node of the LUT)   --->   "%sel_tmp9 = and i1 %sel_tmp7, %sel_tmp8" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 85 'and' 'sel_tmp9' <Predicate = true> <Delay = 0.46> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.46> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 86 [1/1] (0.00ns) (grouped into LUT with out node or_cond)   --->   "%sel_tmp = and i1 %sel_tmp7, %tmp_15_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 86 'and' 'sel_tmp' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.46> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 87 [1/1] (0.00ns) (grouped into LUT with out node sel_tmp4)   --->   "%sel_tmp21_demorgan = or i1 %sel_tmp6_demorgan, %tmp_10_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 87 'or' 'sel_tmp21_demorgan' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.46> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 88 [1/1] (0.00ns) (grouped into LUT with out node sel_tmp4)   --->   "%sel_tmp3 = xor i1 %sel_tmp21_demorgan, true" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 88 'xor' 'sel_tmp3' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.46> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 89 [1/1] (0.46ns) (out node of the LUT)   --->   "%sel_tmp4 = and i1 %icmp, %sel_tmp3" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 89 'and' 'sel_tmp4' <Predicate = true> <Delay = 0.46> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.46> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 90 [1/1] (2.17ns) (out node of the LUT)   --->   "%newSel = select i1 %sel_tmp4, i32 %tmp_21_i_i, i32 %tmp_25" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 90 'select' 'newSel' <Predicate = true> <Delay = 2.17> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 91 [1/1] (0.46ns) (out node of the LUT)   --->   "%or_cond = or i1 %sel_tmp4, %sel_tmp" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 91 'or' 'or_cond' <Predicate = true> <Delay = 0.46> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.46> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 92 [1/1] (0.47ns) (out node of the LUT)   --->   "%newSel3 = select i1 %sel_tmp9, i32 %p_071_i_i, i32 %tmp_23" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 92 'select' 'newSel3' <Predicate = true> <Delay = 0.47> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 93 [1/1] (0.00ns) (grouped into LUT with out node or_cond6)   --->   "%or_cond4 = or i1 %sel_tmp9, %sel_tmp2" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 93 'or' 'or_cond4' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.46> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 94 [1/1] (0.00ns) (grouped into LUT with out node newSel7)   --->   "%newSel5 = select i1 %or_cond, i32 %newSel, i32 %newSel3" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 94 'select' 'newSel5' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 95 [1/1] (0.46ns) (out node of the LUT)   --->   "%or_cond6 = or i1 %or_cond, %or_cond4" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 95 'or' 'or_cond6' <Predicate = true> <Delay = 0.46> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.46> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 96 [1/1] (0.45ns) (out node of the LUT)   --->   "%newSel7 = select i1 %or_cond6, i32 %newSel5, i32 0" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 96 'select' 'newSel7' <Predicate = true> <Delay = 0.45> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 97 [1/1] (0.00ns)   --->   "%tmp_24_tr_i_i = sext i32 %newSel7 to i34" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 97 'sext' 'tmp_24_tr_i_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 98 [38/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 98 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 2.03>
+ST_3 : Operation 99 [37/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 99 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 2.03>
+ST_4 : Operation 100 [36/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 100 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 2.03>
+ST_5 : Operation 101 [35/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 101 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 2.03>
+ST_6 : Operation 102 [34/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 102 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 2.03>
+ST_7 : Operation 103 [33/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 103 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 2.03>
+ST_8 : Operation 104 [32/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 104 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 2.03>
+ST_9 : Operation 105 [31/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 105 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 2.03>
+ST_10 : Operation 106 [30/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 106 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 2.03>
+ST_11 : Operation 107 [29/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 107 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 2.03>
+ST_12 : Operation 108 [28/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 108 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 2.03>
+ST_13 : Operation 109 [27/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 109 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 2.03>
+ST_14 : Operation 110 [26/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 110 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 2.03>
+ST_15 : Operation 111 [25/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 111 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 2.03>
+ST_16 : Operation 112 [24/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 112 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 2.03>
+ST_17 : Operation 113 [23/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 113 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 2.03>
+ST_18 : Operation 114 [22/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 114 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 2.03>
+ST_19 : Operation 115 [21/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 115 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 2.03>
+ST_20 : Operation 116 [20/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 116 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 20> <Delay = 2.03>
+ST_21 : Operation 117 [19/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 117 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 22 <SV = 21> <Delay = 2.03>
+ST_22 : Operation 118 [18/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 118 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 23 <SV = 22> <Delay = 2.03>
+ST_23 : Operation 119 [17/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 119 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 24 <SV = 23> <Delay = 2.03>
+ST_24 : Operation 120 [16/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 120 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 25 <SV = 24> <Delay = 2.03>
+ST_25 : Operation 121 [15/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 121 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 26 <SV = 25> <Delay = 2.03>
+ST_26 : Operation 122 [14/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 122 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 27 <SV = 26> <Delay = 2.03>
+ST_27 : Operation 123 [13/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 123 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 28 <SV = 27> <Delay = 2.03>
+ST_28 : Operation 124 [12/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 124 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 29 <SV = 28> <Delay = 2.03>
+ST_29 : Operation 125 [11/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 125 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 30 <SV = 29> <Delay = 2.26>
+ST_30 : Operation 126 [1/1] (2.26ns)   --->   "%rows = call i32 @_ssdm_op_Read.ap_fifo.i32P(i32* %src_rows)" [./imgproc.h:249->image_core.cpp:36]   --->   Operation 126 'read' 'rows' <Predicate = true> <Delay = 2.26> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_30 : Operation 127 [1/1] (2.26ns)   --->   "%cols = call i32 @_ssdm_op_Read.ap_fifo.i32P(i32* %src_cols)" [./imgproc.h:250->image_core.cpp:36]   --->   Operation 127 'read' 'cols' <Predicate = true> <Delay = 2.26> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_30 : Operation 128 [10/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 128 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 31 <SV = 30> <Delay = 8.28>
+ST_31 : Operation 129 [2/2] (8.28ns)   --->   "%tmp_i_i = sitofp i32 %rows to float" [./imgproc.h:251->image_core.cpp:36]   --->   Operation 129 'sitofp' 'tmp_i_i' <Predicate = true> <Delay = 8.28> <Core = "Int2Float">   --->   Core 106 'Int2Float' <Latency = 1> <II = 1> <Delay = 8.28> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_31 : Operation 130 [2/2] (8.28ns)   --->   "%tmp_8_i_i = sitofp i32 %cols to float" [./imgproc.h:252->image_core.cpp:36]   --->   Operation 130 'sitofp' 'tmp_8_i_i' <Predicate = true> <Delay = 8.28> <Core = "Int2Float">   --->   Core 106 'Int2Float' <Latency = 1> <II = 1> <Delay = 8.28> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_31 : Operation 131 [9/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 131 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 32 <SV = 31> <Delay = 8.28>
+ST_32 : Operation 132 [1/2] (8.28ns)   --->   "%tmp_i_i = sitofp i32 %rows to float" [./imgproc.h:251->image_core.cpp:36]   --->   Operation 132 'sitofp' 'tmp_i_i' <Predicate = true> <Delay = 8.28> <Core = "Int2Float">   --->   Core 106 'Int2Float' <Latency = 1> <II = 1> <Delay = 8.28> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_32 : Operation 133 [1/2] (8.28ns)   --->   "%tmp_8_i_i = sitofp i32 %cols to float" [./imgproc.h:252->image_core.cpp:36]   --->   Operation 133 'sitofp' 'tmp_8_i_i' <Predicate = true> <Delay = 8.28> <Core = "Int2Float">   --->   Core 106 'Int2Float' <Latency = 1> <II = 1> <Delay = 8.28> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_32 : Operation 134 [8/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 134 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 33 <SV = 32> <Delay = 7.30>
+ST_33 : Operation 135 [2/2] (7.30ns)   --->   "%tmp_6_i_i = fmul float %tmp_i_i, %scale_read" [./imgproc.h:251->image_core.cpp:36]   --->   Operation 135 'fmul' 'tmp_6_i_i' <Predicate = true> <Delay = 7.30> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 1> <II = 1> <Delay = 7.30> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 136 [2/2] (7.30ns)   --->   "%tmp_9_i_i = fmul float %tmp_8_i_i, %scale_read" [./imgproc.h:252->image_core.cpp:36]   --->   Operation 136 'fmul' 'tmp_9_i_i' <Predicate = true> <Delay = 7.30> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 1> <II = 1> <Delay = 7.30> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 137 [7/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 137 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 34 <SV = 33> <Delay = 7.30>
+ST_34 : Operation 138 [1/2] (7.30ns)   --->   "%tmp_6_i_i = fmul float %tmp_i_i, %scale_read" [./imgproc.h:251->image_core.cpp:36]   --->   Operation 138 'fmul' 'tmp_6_i_i' <Predicate = true> <Delay = 7.30> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 1> <II = 1> <Delay = 7.30> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_34 : Operation 139 [1/2] (7.30ns)   --->   "%tmp_9_i_i = fmul float %tmp_8_i_i, %scale_read" [./imgproc.h:252->image_core.cpp:36]   --->   Operation 139 'fmul' 'tmp_9_i_i' <Predicate = true> <Delay = 7.30> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 1> <II = 1> <Delay = 7.30> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_34 : Operation 140 [6/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 140 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 35 <SV = 34> <Delay = 5.96>
+ST_35 : Operation 141 [4/4] (5.96ns)   --->   "%x_assign = fadd float %tmp_6_i_i, 5.000000e-01" [./imgproc.h:251->image_core.cpp:36]   --->   Operation 141 'fadd' 'x_assign' <Predicate = true> <Delay = 5.96> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 3> <II = 1> <Delay = 5.96> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_35 : Operation 142 [4/4] (5.96ns)   --->   "%x_assign_1 = fadd float %tmp_9_i_i, 5.000000e-01" [./imgproc.h:252->image_core.cpp:36]   --->   Operation 142 'fadd' 'x_assign_1' <Predicate = true> <Delay = 5.96> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 3> <II = 1> <Delay = 5.96> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_35 : Operation 143 [5/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 143 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 36 <SV = 35> <Delay = 5.96>
+ST_36 : Operation 144 [3/4] (5.96ns)   --->   "%x_assign = fadd float %tmp_6_i_i, 5.000000e-01" [./imgproc.h:251->image_core.cpp:36]   --->   Operation 144 'fadd' 'x_assign' <Predicate = true> <Delay = 5.96> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 3> <II = 1> <Delay = 5.96> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 145 [3/4] (5.96ns)   --->   "%x_assign_1 = fadd float %tmp_9_i_i, 5.000000e-01" [./imgproc.h:252->image_core.cpp:36]   --->   Operation 145 'fadd' 'x_assign_1' <Predicate = true> <Delay = 5.96> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 3> <II = 1> <Delay = 5.96> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 146 [4/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 146 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 37 <SV = 36> <Delay = 5.96>
+ST_37 : Operation 147 [2/4] (5.96ns)   --->   "%x_assign = fadd float %tmp_6_i_i, 5.000000e-01" [./imgproc.h:251->image_core.cpp:36]   --->   Operation 147 'fadd' 'x_assign' <Predicate = true> <Delay = 5.96> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 3> <II = 1> <Delay = 5.96> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 148 [2/4] (5.96ns)   --->   "%x_assign_1 = fadd float %tmp_9_i_i, 5.000000e-01" [./imgproc.h:252->image_core.cpp:36]   --->   Operation 148 'fadd' 'x_assign_1' <Predicate = true> <Delay = 5.96> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 3> <II = 1> <Delay = 5.96> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 149 [3/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 149 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 38 <SV = 37> <Delay = 5.96>
+ST_38 : Operation 150 [1/4] (5.96ns)   --->   "%x_assign = fadd float %tmp_6_i_i, 5.000000e-01" [./imgproc.h:251->image_core.cpp:36]   --->   Operation 150 'fadd' 'x_assign' <Predicate = true> <Delay = 5.96> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 3> <II = 1> <Delay = 5.96> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 151 [1/4] (5.96ns)   --->   "%x_assign_1 = fadd float %tmp_9_i_i, 5.000000e-01" [./imgproc.h:252->image_core.cpp:36]   --->   Operation 151 'fadd' 'x_assign_1' <Predicate = true> <Delay = 5.96> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 3> <II = 1> <Delay = 5.96> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 152 [2/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 152 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 39 <SV = 38> <Delay = 7.80>
+ST_39 : Operation 153 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %dst_cols, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 153 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 154 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %dst_rows, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 154 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 155 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %src_rows, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 155 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 156 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %src_cols, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 156 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 157 [1/1] (0.00ns)   --->   "%method_read = call i2 @_ssdm_op_Read.ap_auto.i2(i2 %method)"   --->   Operation 157 'read' 'method_read' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 158 [1/1] (0.00ns)   --->   "%p_Val2_s = bitcast float %x_assign to i32" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files\utils/x_hls_utils.h:273->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files\utils/x_hls_utils.h:282->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:12->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:251->image_core.cpp:36]   --->   Operation 158 'bitcast' 'p_Val2_s' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 159 [1/1] (0.00ns)   --->   "%p_Result_s = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %p_Val2_s, i32 31)" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files\utils/x_hls_utils.h:279->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files\utils/x_hls_utils.h:282->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:12->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:251->image_core.cpp:36]   --->   Operation 159 'bitselect' 'p_Result_s' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 160 [1/1] (0.00ns)   --->   "%loc_V = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %p_Val2_s, i32 23, i32 30) nounwind" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files\utils/x_hls_utils.h:280->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files\utils/x_hls_utils.h:282->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:12->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:251->image_core.cpp:36]   --->   Operation 160 'partselect' 'loc_V' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 161 [1/1] (0.00ns)   --->   "%loc_V_1 = trunc i32 %p_Val2_s to i23" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files\utils/x_hls_utils.h:281->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files\utils/x_hls_utils.h:282->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:12->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:251->image_core.cpp:36]   --->   Operation 161 'trunc' 'loc_V_1' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 162 [1/1] (0.00ns)   --->   "%tmp_73_i_i_i_i_i = call i25 @_ssdm_op_BitConcatenate.i25.i1.i23.i1(i1 true, i23 %loc_V_1, i1 false)" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:14->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:251->image_core.cpp:36]   --->   Operation 162 'bitconcatenate' 'tmp_73_i_i_i_i_i' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 163 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_3)   --->   "%tmp_73_i_i_i_cast59_s = zext i25 %tmp_73_i_i_i_i_i to i79" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:14->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:251->image_core.cpp:36]   --->   Operation 163 'zext' 'tmp_73_i_i_i_cast59_s' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 164 [1/1] (0.00ns)   --->   "%tmp_i_i_i_i_cast_i_i = zext i8 %loc_V to i9" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files\utils/x_hls_utils.h:302->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:17->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:251->image_core.cpp:36]   --->   Operation 164 'zext' 'tmp_i_i_i_i_cast_i_i' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 165 [1/1] (1.28ns)   --->   "%sh_assign = add i9 -127, %tmp_i_i_i_i_cast_i_i" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files\utils/x_hls_utils.h:302->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:17->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:251->image_core.cpp:36]   --->   Operation 165 'add' 'sh_assign' <Predicate = true> <Delay = 1.28> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 166 [1/1] (0.00ns)   --->   "%isNeg = call i1 @_ssdm_op_BitSelect.i1.i9.i32(i9 %sh_assign, i32 8)" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:17->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:251->image_core.cpp:36]   --->   Operation 166 'bitselect' 'isNeg' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 167 [1/1] (1.28ns)   --->   "%tmp_74_i_i_i_i_i = sub i8 127, %loc_V" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:17->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:251->image_core.cpp:36]   --->   Operation 167 'sub' 'tmp_74_i_i_i_i_i' <Predicate = true> <Delay = 1.28> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 168 [1/1] (0.00ns)   --->   "%tmp_74_i_i_i_cast_i_s = sext i8 %tmp_74_i_i_i_i_i to i9" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:17->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:251->image_core.cpp:36]   --->   Operation 168 'sext' 'tmp_74_i_i_i_cast_i_s' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 169 [1/1] (0.42ns)   --->   "%sh_assign_1 = select i1 %isNeg, i9 %tmp_74_i_i_i_cast_i_s, i9 %sh_assign" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:17->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:251->image_core.cpp:36]   --->   Operation 169 'select' 'sh_assign_1' <Predicate = true> <Delay = 0.42> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_39 : Operation 170 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_3)   --->   "%sh_assign_1_i_i_i_ca = sext i9 %sh_assign_1 to i32" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:17->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:251->image_core.cpp:36]   --->   Operation 170 'sext' 'sh_assign_1_i_i_i_ca' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 171 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_3)   --->   "%sh_assign_1_i_i_i_ca_1 = sext i9 %sh_assign_1 to i25" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:17->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:251->image_core.cpp:36]   --->   Operation 171 'sext' 'sh_assign_1_i_i_i_ca_1' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 172 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_3)   --->   "%tmp_75_i_i_i_i_i = zext i32 %sh_assign_1_i_i_i_ca to i79" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:17->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:251->image_core.cpp:36]   --->   Operation 172 'zext' 'tmp_75_i_i_i_i_i' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 173 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_3)   --->   "%tmp_76_i_i_i_i_i = lshr i25 %tmp_73_i_i_i_i_i, %sh_assign_1_i_i_i_ca_1" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:17->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:251->image_core.cpp:36]   --->   Operation 173 'lshr' 'tmp_76_i_i_i_i_i' <Predicate = true> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.79> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 174 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_3)   --->   "%tmp_77_i_i_i_i_i = shl i79 %tmp_73_i_i_i_cast59_s, %tmp_75_i_i_i_i_i" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:17->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:251->image_core.cpp:36]   --->   Operation 174 'shl' 'tmp_77_i_i_i_i_i' <Predicate = true> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.79> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 175 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_3)   --->   "%tmp_12 = call i1 @_ssdm_op_BitSelect.i1.i25.i32(i25 %tmp_76_i_i_i_i_i, i32 24)" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:20->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:251->image_core.cpp:36]   --->   Operation 175 'bitselect' 'tmp_12' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 176 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_3)   --->   "%tmp_6 = zext i1 %tmp_12 to i32" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:20->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:251->image_core.cpp:36]   --->   Operation 176 'zext' 'tmp_6' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 177 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_3)   --->   "%tmp_7 = call i32 @_ssdm_op_PartSelect.i32.i79.i32.i32(i79 %tmp_77_i_i_i_i_i, i32 24, i32 55)" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:20->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:251->image_core.cpp:36]   --->   Operation 177 'partselect' 'tmp_7' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 178 [1/1] (1.80ns) (out node of the LUT)   --->   "%p_Val2_3 = select i1 %isNeg, i32 %tmp_6, i32 %tmp_7" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:17->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:251->image_core.cpp:36]   --->   Operation 178 'select' 'p_Val2_3' <Predicate = true> <Delay = 1.80> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_39 : Operation 179 [1/1] (1.57ns)   --->   "%p_Val2_i_i_i_i_i = sub i32 0, %p_Val2_3" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:49->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:251->image_core.cpp:36]   --->   Operation 179 'sub' 'p_Val2_i_i_i_i_i' <Predicate = true> <Delay = 1.57> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 180 [1/1] (0.45ns)   --->   "%p_Val2_33 = select i1 %p_Result_s, i32 %p_Val2_i_i_i_i_i, i32 %p_Val2_3" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:49->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:251->image_core.cpp:36]   --->   Operation 180 'select' 'p_Val2_33' <Predicate = true> <Delay = 0.45> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_39 : Operation 181 [1/1] (0.00ns)   --->   "%p_Val2_6 = bitcast float %x_assign_1 to i32" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files\utils/x_hls_utils.h:273->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files\utils/x_hls_utils.h:282->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:12->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:252->image_core.cpp:36]   --->   Operation 181 'bitcast' 'p_Val2_6' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 182 [1/1] (0.00ns)   --->   "%p_Result_1 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %p_Val2_6, i32 31)" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files\utils/x_hls_utils.h:279->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files\utils/x_hls_utils.h:282->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:12->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:252->image_core.cpp:36]   --->   Operation 182 'bitselect' 'p_Result_1' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 183 [1/1] (0.00ns)   --->   "%loc_V_2 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %p_Val2_6, i32 23, i32 30) nounwind" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files\utils/x_hls_utils.h:280->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files\utils/x_hls_utils.h:282->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:12->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:252->image_core.cpp:36]   --->   Operation 183 'partselect' 'loc_V_2' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 184 [1/1] (0.00ns)   --->   "%loc_V_3 = trunc i32 %p_Val2_6 to i23" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files\utils/x_hls_utils.h:281->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files\utils/x_hls_utils.h:282->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:12->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:252->image_core.cpp:36]   --->   Operation 184 'trunc' 'loc_V_3' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 185 [1/1] (0.00ns)   --->   "%tmp_73_i_i_i40_i_i = call i25 @_ssdm_op_BitConcatenate.i25.i1.i23.i1(i1 true, i23 %loc_V_3, i1 false)" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:14->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:252->image_core.cpp:36]   --->   Operation 185 'bitconcatenate' 'tmp_73_i_i_i40_i_i' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 186 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_8)   --->   "%tmp_73_i_i_i40_cast5 = zext i25 %tmp_73_i_i_i40_i_i to i79" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:14->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:252->image_core.cpp:36]   --->   Operation 186 'zext' 'tmp_73_i_i_i40_cast5' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 187 [1/1] (0.00ns)   --->   "%tmp_i_i_i_i41_cast_i = zext i8 %loc_V_2 to i9" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files\utils/x_hls_utils.h:302->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:17->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:252->image_core.cpp:36]   --->   Operation 187 'zext' 'tmp_i_i_i_i41_cast_i' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 188 [1/1] (1.28ns)   --->   "%sh_assign_2 = add i9 -127, %tmp_i_i_i_i41_cast_i" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files\utils/x_hls_utils.h:302->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:17->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:252->image_core.cpp:36]   --->   Operation 188 'add' 'sh_assign_2' <Predicate = true> <Delay = 1.28> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 189 [1/1] (0.00ns)   --->   "%isNeg_1 = call i1 @_ssdm_op_BitSelect.i1.i9.i32(i9 %sh_assign_2, i32 8)" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:17->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:252->image_core.cpp:36]   --->   Operation 189 'bitselect' 'isNeg_1' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 190 [1/1] (1.28ns)   --->   "%tmp_74_i_i_i44_i_i = sub i8 127, %loc_V_2" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:17->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:252->image_core.cpp:36]   --->   Operation 190 'sub' 'tmp_74_i_i_i44_i_i' <Predicate = true> <Delay = 1.28> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 191 [1/1] (0.00ns)   --->   "%tmp_74_i_i_i44_cast_s = sext i8 %tmp_74_i_i_i44_i_i to i9" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:17->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:252->image_core.cpp:36]   --->   Operation 191 'sext' 'tmp_74_i_i_i44_cast_s' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 192 [1/1] (0.42ns)   --->   "%sh_assign_3 = select i1 %isNeg_1, i9 %tmp_74_i_i_i44_cast_s, i9 %sh_assign_2" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:17->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:252->image_core.cpp:36]   --->   Operation 192 'select' 'sh_assign_3' <Predicate = true> <Delay = 0.42> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_39 : Operation 193 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_8)   --->   "%sh_assign_1_i_i_i45_s = sext i9 %sh_assign_3 to i32" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:17->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:252->image_core.cpp:36]   --->   Operation 193 'sext' 'sh_assign_1_i_i_i45_s' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 194 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_8)   --->   "%sh_assign_1_i_i_i45_1 = sext i9 %sh_assign_3 to i25" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:17->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:252->image_core.cpp:36]   --->   Operation 194 'sext' 'sh_assign_1_i_i_i45_1' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 195 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_8)   --->   "%tmp_75_i_i_i46_i_i = zext i32 %sh_assign_1_i_i_i45_s to i79" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:17->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:252->image_core.cpp:36]   --->   Operation 195 'zext' 'tmp_75_i_i_i46_i_i' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 196 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_8)   --->   "%tmp_76_i_i_i47_i_i = lshr i25 %tmp_73_i_i_i40_i_i, %sh_assign_1_i_i_i45_1" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:17->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:252->image_core.cpp:36]   --->   Operation 196 'lshr' 'tmp_76_i_i_i47_i_i' <Predicate = true> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.79> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 197 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_8)   --->   "%tmp_77_i_i_i48_i_i = shl i79 %tmp_73_i_i_i40_cast5, %tmp_75_i_i_i46_i_i" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:17->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:252->image_core.cpp:36]   --->   Operation 197 'shl' 'tmp_77_i_i_i48_i_i' <Predicate = true> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.79> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 198 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_8)   --->   "%tmp_16 = call i1 @_ssdm_op_BitSelect.i1.i25.i32(i25 %tmp_76_i_i_i47_i_i, i32 24)" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:20->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:252->image_core.cpp:36]   --->   Operation 198 'bitselect' 'tmp_16' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 199 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_8)   --->   "%tmp_s = zext i1 %tmp_16 to i32" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:20->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:252->image_core.cpp:36]   --->   Operation 199 'zext' 'tmp_s' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 200 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_8)   --->   "%tmp_4 = call i32 @_ssdm_op_PartSelect.i32.i79.i32.i32(i79 %tmp_77_i_i_i48_i_i, i32 24, i32 55)" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:20->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:252->image_core.cpp:36]   --->   Operation 200 'partselect' 'tmp_4' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 201 [1/1] (1.80ns) (out node of the LUT)   --->   "%p_Val2_8 = select i1 %isNeg_1, i32 %tmp_s, i32 %tmp_4" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:17->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:252->image_core.cpp:36]   --->   Operation 201 'select' 'p_Val2_8' <Predicate = true> <Delay = 1.80> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_39 : Operation 202 [1/1] (1.57ns)   --->   "%p_Val2_i_i_i54_i_s = sub i32 0, %p_Val2_8" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:49->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:252->image_core.cpp:36]   --->   Operation 202 'sub' 'p_Val2_i_i_i54_i_s' <Predicate = true> <Delay = 1.57> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 203 [1/1] (0.45ns)   --->   "%p_Val2_34 = select i1 %p_Result_1, i32 %p_Val2_i_i_i54_i_s, i32 %p_Val2_8" [r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:49->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:252->image_core.cpp:36]   --->   Operation 203 'select' 'p_Val2_34' <Predicate = true> <Delay = 0.45> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_39 : Operation 204 [1/1] (2.26ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i32P(i32* %dst_rows, i32 %p_Val2_33)" [./imgproc.h:255->image_core.cpp:36]   --->   Operation 204 'write' <Predicate = true> <Delay = 2.26> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_39 : Operation 205 [1/1] (2.26ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i32P(i32* %dst_cols, i32 %p_Val2_34)" [./imgproc.h:256->image_core.cpp:36]   --->   Operation 205 'write' <Predicate = true> <Delay = 2.26> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_39 : Operation 206 [1/38] (2.03ns)   --->   "%tmp_22_i_i = sdiv i34 4294967296, %tmp_24_tr_i_i" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 206 'sdiv' 'tmp_22_i_i' <Predicate = true> <Delay = 2.03> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 37> <II = 32> <Delay = 2.03> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 207 [1/1] (0.00ns)   --->   "%iscale_V = trunc i34 %tmp_22_i_i to i32" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 207 'trunc' 'iscale_V' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 208 [1/1] (0.45ns)   --->   "%tmp_23_i_i = icmp eq i2 %method_read, 0" [./imgproc.h:263->image_core.cpp:36]   --->   Operation 208 'icmp' 'tmp_23_i_i' <Predicate = true> <Delay = 0.45> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 209 [1/1] (0.00ns)   --->   "br i1 %tmp_23_i_i, label %.preheader490.preheader.i.i, label %0" [./imgproc.h:263->image_core.cpp:36]   --->   Operation 209 'br' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 210 [1/1] (0.45ns)   --->   "%tmp_25_i_i = icmp eq i2 %method_read, 1" [./imgproc.h:279->image_core.cpp:36]   --->   Operation 210 'icmp' 'tmp_25_i_i' <Predicate = (!tmp_23_i_i)> <Delay = 0.45> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 211 [1/1] (0.00ns)   --->   "br i1 %tmp_25_i_i, label %.preheader488.preheader.i.i, label %.loopexit.i.i" [./imgproc.h:279->image_core.cpp:36]   --->   Operation 211 'br' <Predicate = (!tmp_23_i_i)> <Delay = 0.00>
+ST_39 : Operation 212 [1/1] (0.00ns)   --->   "%tmp_30 = trunc i32 %cols to i18" [./imgproc.h:303->image_core.cpp:36]   --->   Operation 212 'trunc' 'tmp_30' <Predicate = (!tmp_23_i_i & tmp_25_i_i)> <Delay = 0.00>
+ST_39 : Operation 213 [1/1] (0.97ns)   --->   "br label %.preheader488.i.i" [./imgproc.h:281->image_core.cpp:36]   --->   Operation 213 'br' <Predicate = (!tmp_23_i_i & tmp_25_i_i)> <Delay = 0.97>
+ST_39 : Operation 214 [1/1] (0.00ns)   --->   "%tmp_29 = trunc i32 %cols to i18" [./imgproc.h:274->image_core.cpp:36]   --->   Operation 214 'trunc' 'tmp_29' <Predicate = (tmp_23_i_i)> <Delay = 0.00>
+ST_39 : Operation 215 [1/1] (0.97ns)   --->   "br label %.preheader490.i.i" [./imgproc.h:264->image_core.cpp:36]   --->   Operation 215 'br' <Predicate = (tmp_23_i_i)> <Delay = 0.97>
+
+State 40 <SV = 39> <Delay = 6.59>
+ST_40 : Operation 216 [1/1] (0.00ns)   --->   "%i_op_assign_2 = phi i31 [ 0, %.preheader488.preheader.i.i ], [ %i_1, %.preheader488.i.i.loopexit ]"   --->   Operation 216 'phi' 'i_op_assign_2' <Predicate = (!tmp_23_i_i & tmp_25_i_i)> <Delay = 0.00>
+ST_40 : Operation 217 [1/1] (0.00ns)   --->   "%i_op_assign_2_cast_i = zext i31 %i_op_assign_2 to i32" [./imgproc.h:281->image_core.cpp:36]   --->   Operation 217 'zext' 'i_op_assign_2_cast_i' <Predicate = (!tmp_23_i_i & tmp_25_i_i)> <Delay = 0.00>
+ST_40 : Operation 218 [1/1] (1.31ns)   --->   "%tmp_28_i_i = icmp slt i32 %i_op_assign_2_cast_i, %p_Val2_33" [./imgproc.h:281->image_core.cpp:36]   --->   Operation 218 'icmp' 'tmp_28_i_i' <Predicate = (!tmp_23_i_i & tmp_25_i_i)> <Delay = 1.31> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 219 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 0, i64 256, i64 0)"   --->   Operation 219 'speclooptripcount' <Predicate = (!tmp_23_i_i & tmp_25_i_i)> <Delay = 0.00>
+ST_40 : Operation 220 [1/1] (1.55ns)   --->   "%i_1 = add i31 %i_op_assign_2, 1" [./imgproc.h:281->image_core.cpp:36]   --->   Operation 220 'add' 'i_1' <Predicate = (!tmp_23_i_i & tmp_25_i_i)> <Delay = 1.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 221 [1/1] (0.00ns)   --->   "br i1 %tmp_28_i_i, label %.preheader487.preheader.i.i, label %.loopexit.i.i.loopexit" [./imgproc.h:281->image_core.cpp:36]   --->   Operation 221 'br' <Predicate = (!tmp_23_i_i & tmp_25_i_i)> <Delay = 0.00>
+ST_40 : Operation 222 [1/1] (0.00ns)   --->   "%tmp_34 = trunc i31 %i_op_assign_2 to i10" [./imgproc.h:281->image_core.cpp:36]   --->   Operation 222 'trunc' 'tmp_34' <Predicate = (!tmp_23_i_i & tmp_25_i_i & tmp_28_i_i)> <Delay = 0.00>
+ST_40 : Operation 223 [1/1] (0.00ns)   --->   "%tmp_16_cast = call i18 @_ssdm_op_BitConcatenate.i18.i10.i8(i10 %tmp_34, i8 0)" [./imgproc.h:285->image_core.cpp:36]   --->   Operation 223 'bitconcatenate' 'tmp_16_cast' <Predicate = (!tmp_23_i_i & tmp_25_i_i & tmp_28_i_i)> <Delay = 0.00>
+ST_40 : Operation 224 [1/1] (5.02ns)   --->   "%p_Val2_2 = mul i32 %i_op_assign_2_cast_i, %iscale_V" [./imgproc.h:285->image_core.cpp:36]   --->   Operation 224 'mul' 'p_Val2_2' <Predicate = (!tmp_23_i_i & tmp_25_i_i & tmp_28_i_i)> <Delay = 5.02> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 5.02> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 225 [1/1] (0.97ns)   --->   "br label %.preheader487.i.i" [./imgproc.h:282->image_core.cpp:36]   --->   Operation 225 'br' <Predicate = (!tmp_23_i_i & tmp_25_i_i & tmp_28_i_i)> <Delay = 0.97>
+ST_40 : Operation 226 [1/1] (0.00ns)   --->   "br label %.loopexit.i.i"   --->   Operation 226 'br' <Predicate = (!tmp_23_i_i & tmp_25_i_i & !tmp_28_i_i)> <Delay = 0.00>
+ST_40 : Operation 227 [1/1] (0.00ns)   --->   "br label %.exit"   --->   Operation 227 'br' <Predicate = (!tmp_23_i_i & !tmp_25_i_i) | (!tmp_23_i_i & !tmp_28_i_i)> <Delay = 0.00>
+ST_40 : Operation 228 [1/1] (0.00ns)   --->   "%i_op_assign = phi i31 [ 0, %.preheader490.preheader.i.i ], [ %i, %.preheader490.i.i.loopexit ]"   --->   Operation 228 'phi' 'i_op_assign' <Predicate = (tmp_23_i_i)> <Delay = 0.00>
+ST_40 : Operation 229 [1/1] (0.00ns)   --->   "%i_op_assign_cast_i_i = zext i31 %i_op_assign to i32" [./imgproc.h:264->image_core.cpp:36]   --->   Operation 229 'zext' 'i_op_assign_cast_i_i' <Predicate = (tmp_23_i_i)> <Delay = 0.00>
+ST_40 : Operation 230 [1/1] (1.31ns)   --->   "%tmp_26_i_i = icmp slt i32 %i_op_assign_cast_i_i, %p_Val2_33" [./imgproc.h:264->image_core.cpp:36]   --->   Operation 230 'icmp' 'tmp_26_i_i' <Predicate = (tmp_23_i_i)> <Delay = 1.31> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 231 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 0, i64 256, i64 0)"   --->   Operation 231 'speclooptripcount' <Predicate = (tmp_23_i_i)> <Delay = 0.00>
+ST_40 : Operation 232 [1/1] (1.55ns)   --->   "%i = add i31 %i_op_assign, 1" [./imgproc.h:264->image_core.cpp:36]   --->   Operation 232 'add' 'i' <Predicate = (tmp_23_i_i)> <Delay = 1.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 233 [1/1] (0.00ns)   --->   "br i1 %tmp_26_i_i, label %.preheader489.preheader.i.i, label %.exit.loopexit" [./imgproc.h:264->image_core.cpp:36]   --->   Operation 233 'br' <Predicate = (tmp_23_i_i)> <Delay = 0.00>
+ST_40 : Operation 234 [1/1] (0.00ns)   --->   "%tmp_33 = trunc i31 %i_op_assign to i10" [./imgproc.h:264->image_core.cpp:36]   --->   Operation 234 'trunc' 'tmp_33' <Predicate = (tmp_23_i_i & tmp_26_i_i)> <Delay = 0.00>
+ST_40 : Operation 235 [1/1] (0.00ns)   --->   "%tmp_14_cast = call i18 @_ssdm_op_BitConcatenate.i18.i10.i8(i10 %tmp_33, i8 0)" [./imgproc.h:268->image_core.cpp:36]   --->   Operation 235 'bitconcatenate' 'tmp_14_cast' <Predicate = (tmp_23_i_i & tmp_26_i_i)> <Delay = 0.00>
+ST_40 : Operation 236 [1/1] (5.02ns)   --->   "%p_Val2_13 = mul i32 %i_op_assign_cast_i_i, %iscale_V" [./imgproc.h:268->image_core.cpp:36]   --->   Operation 236 'mul' 'p_Val2_13' <Predicate = (tmp_23_i_i & tmp_26_i_i)> <Delay = 5.02> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 5.02> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 237 [1/1] (0.00ns)   --->   "%tmp_31_i_i = sext i32 %p_Val2_13 to i33" [./imgproc.h:270->image_core.cpp:36]   --->   Operation 237 'sext' 'tmp_31_i_i' <Predicate = (tmp_23_i_i & tmp_26_i_i)> <Delay = 0.00>
+ST_40 : Operation 238 [1/1] (1.57ns)   --->   "%r_V = add nsw i33 32768, %tmp_31_i_i" [./imgproc.h:270->image_core.cpp:36]   --->   Operation 238 'add' 'r_V' <Predicate = (tmp_23_i_i & tmp_26_i_i)> <Delay = 1.57> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 239 [1/1] (0.97ns)   --->   "br label %.preheader489.i.i" [./imgproc.h:265->image_core.cpp:36]   --->   Operation 239 'br' <Predicate = (tmp_23_i_i & tmp_26_i_i)> <Delay = 0.97>
+ST_40 : Operation 240 [1/1] (0.00ns)   --->   "br label %.exit"   --->   Operation 240 'br' <Predicate = (tmp_23_i_i & !tmp_26_i_i)> <Delay = 0.00>
+ST_40 : Operation 241 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 241 'ret' <Predicate = (!tmp_23_i_i & !tmp_25_i_i) | (tmp_23_i_i & !tmp_26_i_i) | (!tmp_23_i_i & !tmp_28_i_i)> <Delay = 0.00>
+
+State 41 <SV = 40> <Delay = 8.32>
+ST_41 : Operation 242 [1/1] (0.00ns)   --->   "%i_op_assign_3 = phi i31 [ %j_1, %_ifconv ], [ 0, %.preheader487.preheader.i.i ]"   --->   Operation 242 'phi' 'i_op_assign_3' <Predicate = true> <Delay = 0.00>
+ST_41 : Operation 243 [1/1] (0.00ns)   --->   "%p_Val2_23 = phi i32 [ %next_mul1, %_ifconv ], [ 0, %.preheader487.preheader.i.i ]" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 243 'phi' 'p_Val2_23' <Predicate = true> <Delay = 0.00>
+ST_41 : Operation 244 [1/1] (0.00ns)   --->   "%i_op_assign_3_cast_i = zext i31 %i_op_assign_3 to i32" [./imgproc.h:282->image_core.cpp:36]   --->   Operation 244 'zext' 'i_op_assign_3_cast_i' <Predicate = true> <Delay = 0.00>
+ST_41 : Operation 245 [1/1] (1.31ns)   --->   "%tmp_32_i_i = icmp slt i32 %i_op_assign_3_cast_i, %p_Val2_34" [./imgproc.h:282->image_core.cpp:36]   --->   Operation 245 'icmp' 'tmp_32_i_i' <Predicate = true> <Delay = 1.31> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 246 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 0, i64 256, i64 0)"   --->   Operation 246 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_41 : Operation 247 [1/1] (1.55ns)   --->   "%j_1 = add i31 %i_op_assign_3, 1" [./imgproc.h:282->image_core.cpp:36]   --->   Operation 247 'add' 'j_1' <Predicate = true> <Delay = 1.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 248 [1/1] (0.00ns)   --->   "br i1 %tmp_32_i_i, label %_ifconv, label %.preheader488.i.i.loopexit" [./imgproc.h:282->image_core.cpp:36]   --->   Operation 248 'br' <Predicate = true> <Delay = 0.00>
+ST_41 : Operation 249 [1/1] (0.00ns)   --->   "%tmp_46 = trunc i31 %i_op_assign_3 to i18" [./imgproc.h:307->image_core.cpp:36]   --->   Operation 249 'trunc' 'tmp_46' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_41 : Operation 250 [1/1] (1.28ns)   --->   "%tmp_10 = add i18 %tmp_46, %tmp_16_cast" [./imgproc.h:307->image_core.cpp:36]   --->   Operation 250 'add' 'tmp_10' <Predicate = (tmp_32_i_i)> <Delay = 1.28> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 251 [1/1] (1.57ns)   --->   "%next_mul1 = add i32 %iscale_V, %p_Val2_23" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 251 'add' 'next_mul1' <Predicate = (tmp_32_i_i)> <Delay = 1.57> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 252 [1/1] (0.00ns)   --->   "%ret_V_7 = call i16 @_ssdm_op_PartSelect.i16.i32.i32.i32(i32 %p_Val2_2, i32 16, i32 31)" [./imgproc.h:287->image_core.cpp:36]   --->   Operation 252 'partselect' 'ret_V_7' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_41 : Operation 253 [1/1] (0.00ns) (grouped into LUT with out node p_7_i_i)   --->   "%tmp_47 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %p_Val2_2, i32 31)" [./imgproc.h:287->image_core.cpp:36]   --->   Operation 253 'bitselect' 'tmp_47' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_41 : Operation 254 [1/1] (0.00ns)   --->   "%tmp_48 = trunc i32 %p_Val2_2 to i16" [./imgproc.h:287->image_core.cpp:36]   --->   Operation 254 'trunc' 'tmp_48' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_41 : Operation 255 [1/1] (1.25ns)   --->   "%tmp_41_i_i = icmp eq i16 %tmp_48, 0" [./imgproc.h:287->image_core.cpp:36]   --->   Operation 255 'icmp' 'tmp_41_i_i' <Predicate = (tmp_32_i_i)> <Delay = 1.25> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 256 [1/1] (1.24ns)   --->   "%ret_V_9 = add i16 1, %ret_V_7" [./imgproc.h:287->image_core.cpp:36]   --->   Operation 256 'add' 'ret_V_9' <Predicate = (tmp_32_i_i)> <Delay = 1.24> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 257 [1/1] (0.00ns) (grouped into LUT with out node p_7_i_i)   --->   "%p_1_i_i = select i1 %tmp_41_i_i, i16 %ret_V_7, i16 %ret_V_9" [./imgproc.h:287->image_core.cpp:36]   --->   Operation 257 'select' 'p_1_i_i' <Predicate = (tmp_32_i_i)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_41 : Operation 258 [1/1] (0.47ns) (out node of the LUT)   --->   "%p_7_i_i = select i1 %tmp_47, i16 %p_1_i_i, i16 %ret_V_7" [./imgproc.h:287->image_core.cpp:36]   --->   Operation 258 'select' 'p_7_i_i' <Predicate = (tmp_32_i_i)> <Delay = 0.47> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_41 : Operation 259 [1/1] (0.00ns)   --->   "%r0_2 = sext i16 %p_7_i_i to i32" [./imgproc.h:287->image_core.cpp:36]   --->   Operation 259 'sext' 'r0_2' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_41 : Operation 260 [1/1] (0.00ns)   --->   "%r0_3_cast_i_i = sext i16 %p_7_i_i to i17" [./imgproc.h:287->image_core.cpp:36]   --->   Operation 260 'sext' 'r0_3_cast_i_i' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_41 : Operation 261 [1/1] (0.00ns)   --->   "%ret_V_10 = call i16 @_ssdm_op_PartSelect.i16.i32.i32.i32(i32 %p_Val2_23, i32 16, i32 31)" [./imgproc.h:288->image_core.cpp:36]   --->   Operation 261 'partselect' 'ret_V_10' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_41 : Operation 262 [1/1] (0.00ns) (grouped into LUT with out node p_9_i_i)   --->   "%tmp_49 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %p_Val2_23, i32 31)" [./imgproc.h:288->image_core.cpp:36]   --->   Operation 262 'bitselect' 'tmp_49' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_41 : Operation 263 [1/1] (0.00ns)   --->   "%tmp_50 = trunc i32 %p_Val2_23 to i16" [./imgproc.h:288->image_core.cpp:36]   --->   Operation 263 'trunc' 'tmp_50' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_41 : Operation 264 [1/1] (1.25ns)   --->   "%tmp_42_i_i = icmp eq i16 %tmp_50, 0" [./imgproc.h:288->image_core.cpp:36]   --->   Operation 264 'icmp' 'tmp_42_i_i' <Predicate = (tmp_32_i_i)> <Delay = 1.25> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 265 [1/1] (1.24ns)   --->   "%ret_V_11 = add i16 1, %ret_V_10" [./imgproc.h:288->image_core.cpp:36]   --->   Operation 265 'add' 'ret_V_11' <Predicate = (tmp_32_i_i)> <Delay = 1.24> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 266 [1/1] (0.00ns) (grouped into LUT with out node p_9_i_i)   --->   "%p_3_i_i = select i1 %tmp_42_i_i, i16 %ret_V_10, i16 %ret_V_11" [./imgproc.h:288->image_core.cpp:36]   --->   Operation 266 'select' 'p_3_i_i' <Predicate = (tmp_32_i_i)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_41 : Operation 267 [1/1] (0.47ns) (out node of the LUT)   --->   "%p_9_i_i = select i1 %tmp_49, i16 %p_3_i_i, i16 %ret_V_10" [./imgproc.h:288->image_core.cpp:36]   --->   Operation 267 'select' 'p_9_i_i' <Predicate = (tmp_32_i_i)> <Delay = 0.47> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_41 : Operation 268 [1/1] (0.00ns)   --->   "%c0_2 = sext i16 %p_9_i_i to i32" [./imgproc.h:288->image_core.cpp:36]   --->   Operation 268 'sext' 'c0_2' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_41 : Operation 269 [1/1] (0.00ns)   --->   "%c0_3_cast_i_i = sext i16 %p_9_i_i to i17" [./imgproc.h:288->image_core.cpp:36]   --->   Operation 269 'sext' 'c0_3_cast_i_i' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_41 : Operation 270 [1/1] (0.00ns)   --->   "%tmp_44_i_i = call i32 @_ssdm_op_BitConcatenate.i32.i16.i16(i16 %p_7_i_i, i16 0)" [./imgproc.h:289->image_core.cpp:36]   --->   Operation 270 'bitconcatenate' 'tmp_44_i_i' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_41 : Operation 271 [1/1] (1.57ns)   --->   "%p_Val2_25 = sub i32 %p_Val2_2, %tmp_44_i_i" [./imgproc.h:289->image_core.cpp:36]   --->   Operation 271 'sub' 'p_Val2_25' <Predicate = (tmp_32_i_i)> <Delay = 1.57> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 272 [1/1] (0.00ns)   --->   "%tmp_46_i_i = call i32 @_ssdm_op_BitConcatenate.i32.i16.i16(i16 %p_9_i_i, i16 0)" [./imgproc.h:291->image_core.cpp:36]   --->   Operation 272 'bitconcatenate' 'tmp_46_i_i' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_41 : Operation 273 [1/1] (1.57ns)   --->   "%p_Val2_27 = sub i32 %p_Val2_23, %tmp_46_i_i" [./imgproc.h:291->image_core.cpp:36]   --->   Operation 273 'sub' 'p_Val2_27' <Predicate = (tmp_32_i_i)> <Delay = 1.57> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 274 [1/1] (0.00ns)   --->   "%OP2_V_1_cast_i_i = sext i32 %p_Val2_27 to i48" [./imgproc.h:294->image_core.cpp:36]   --->   Operation 274 'sext' 'OP2_V_1_cast_i_i' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_41 : Operation 275 [1/1] (0.00ns)   --->   "%OP1_V_5_cast_i_i = sext i32 %p_Val2_25 to i48" [./imgproc.h:295->image_core.cpp:36]   --->   Operation 275 'sext' 'OP1_V_5_cast_i_i' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_41 : Operation 276 [1/1] (5.02ns)   --->   "%p_Val2_31 = mul i48 %OP2_V_1_cast_i_i, %OP1_V_5_cast_i_i" [./imgproc.h:296->image_core.cpp:36]   --->   Operation 276 'mul' 'p_Val2_31' <Predicate = (tmp_32_i_i)> <Delay = 5.02> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 5.02> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 277 [1/1] (0.00ns)   --->   "%tmp_54_i_i = call i32 @_ssdm_op_PartSelect.i32.i48.i32.i32(i48 %p_Val2_31, i32 16, i32 47)" [./imgproc.h:296->image_core.cpp:36]   --->   Operation 277 'partselect' 'tmp_54_i_i' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_41 : Operation 278 [1/1] (1.31ns)   --->   "%slt1 = icmp slt i32 %r0_2, %rows" [./imgproc.h:302->image_core.cpp:36]   --->   Operation 278 'icmp' 'slt1' <Predicate = (tmp_32_i_i)> <Delay = 1.31> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 279 [1/1] (0.00ns) (grouped into LUT with out node tmp_53)   --->   "%rev1 = xor i1 %slt1, true" [./imgproc.h:302->image_core.cpp:36]   --->   Operation 279 'xor' 'rev1' <Predicate = (tmp_32_i_i)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.46> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 280 [1/1] (0.00ns)   --->   "%tmp_51 = trunc i32 %rows to i10" [./imgproc.h:249->image_core.cpp:36]   --->   Operation 280 'trunc' 'tmp_51' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_41 : Operation 281 [1/1] (0.00ns) (grouped into LUT with out node tmp_53)   --->   "%tmp_52 = trunc i16 %p_7_i_i to i10" [./imgproc.h:287->image_core.cpp:36]   --->   Operation 281 'trunc' 'tmp_52' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_41 : Operation 282 [1/1] (0.48ns) (out node of the LUT)   --->   "%tmp_53 = select i1 %rev1, i10 %tmp_51, i10 %tmp_52" [./imgproc.h:302->image_core.cpp:36]   --->   Operation 282 'select' 'tmp_53' <Predicate = (tmp_32_i_i)> <Delay = 0.48> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_41 : Operation 283 [1/1] (0.00ns)   --->   "%tmp_25_cast = call i18 @_ssdm_op_BitConcatenate.i18.i10.i8(i10 %tmp_53, i8 0)" [./imgproc.h:303->image_core.cpp:36]   --->   Operation 283 'bitconcatenate' 'tmp_25_cast' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_41 : Operation 284 [1/1] (1.31ns)   --->   "%tmp_81_0_i_i = icmp slt i32 %c0_2, %cols" [./imgproc.h:303->image_core.cpp:36]   --->   Operation 284 'icmp' 'tmp_81_0_i_i' <Predicate = (tmp_32_i_i)> <Delay = 1.31> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 285 [1/1] (0.00ns)   --->   "%tmp_54 = sext i16 %p_9_i_i to i18" [./imgproc.h:304->image_core.cpp:36]   --->   Operation 285 'sext' 'tmp_54' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_41 : Operation 286 [1/1] (1.28ns)   --->   "%tmp_55 = add i18 -1, %tmp_30" [./imgproc.h:304->image_core.cpp:36]   --->   Operation 286 'add' 'tmp_55' <Predicate = (tmp_32_i_i)> <Delay = 1.28> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 287 [1/1] (0.56ns)   --->   "%tmp_56 = select i1 %tmp_81_0_i_i, i18 %tmp_54, i18 %tmp_55" [./imgproc.h:303->image_core.cpp:36]   --->   Operation 287 'select' 'tmp_56' <Predicate = (tmp_32_i_i)> <Delay = 0.56> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_41 : Operation 288 [1/1] (1.28ns)   --->   "%tmp_11 = add i18 %tmp_56, %tmp_25_cast" [./imgproc.h:304->image_core.cpp:36]   --->   Operation 288 'add' 'tmp_11' <Predicate = (tmp_32_i_i)> <Delay = 1.28> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 289 [1/1] (0.00ns)   --->   "%tmp_26_cast = sext i18 %tmp_11 to i64" [./imgproc.h:304->image_core.cpp:36]   --->   Operation 289 'sext' 'tmp_26_cast' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_41 : Operation 290 [1/1] (0.00ns)   --->   "%src_val_addr_1 = getelementptr [65536 x i8]* %src_val, i64 0, i64 %tmp_26_cast" [./imgproc.h:304->image_core.cpp:36]   --->   Operation 290 'getelementptr' 'src_val_addr_1' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_41 : Operation 291 [2/2] (1.99ns)   --->   "%src_val_load_1 = load i8* %src_val_addr_1, align 1" [./imgproc.h:304->image_core.cpp:36]   --->   Operation 291 'load' 'src_val_load_1' <Predicate = (tmp_32_i_i)> <Delay = 1.99> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.99> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 65536> <RAM>
+ST_41 : Operation 292 [1/1] (1.24ns)   --->   "%c1_0_1_i_i = add i17 1, %c0_3_cast_i_i" [./imgproc.h:301->image_core.cpp:36]   --->   Operation 292 'add' 'c1_0_1_i_i' <Predicate = (tmp_32_i_i)> <Delay = 1.24> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 293 [1/1] (0.00ns)   --->   "%c1_0_1_cast_i_i = sext i17 %c1_0_1_i_i to i32" [./imgproc.h:301->image_core.cpp:36]   --->   Operation 293 'sext' 'c1_0_1_cast_i_i' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_41 : Operation 294 [1/1] (1.31ns)   --->   "%tmp_81_0_1_i_i = icmp slt i32 %c1_0_1_cast_i_i, %cols" [./imgproc.h:303->image_core.cpp:36]   --->   Operation 294 'icmp' 'tmp_81_0_1_i_i' <Predicate = (tmp_32_i_i)> <Delay = 1.31> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 295 [1/1] (0.00ns)   --->   "%tmp_57 = sext i17 %c1_0_1_i_i to i18" [./imgproc.h:304->image_core.cpp:36]   --->   Operation 295 'sext' 'tmp_57' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_41 : Operation 296 [1/1] (0.56ns)   --->   "%tmp_58 = select i1 %tmp_81_0_1_i_i, i18 %tmp_57, i18 %tmp_55" [./imgproc.h:303->image_core.cpp:36]   --->   Operation 296 'select' 'tmp_58' <Predicate = (tmp_32_i_i)> <Delay = 0.56> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_41 : Operation 297 [1/1] (1.28ns)   --->   "%tmp_13 = add i18 %tmp_58, %tmp_25_cast" [./imgproc.h:304->image_core.cpp:36]   --->   Operation 297 'add' 'tmp_13' <Predicate = (tmp_32_i_i)> <Delay = 1.28> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 298 [1/1] (0.00ns)   --->   "%tmp_27_cast = sext i18 %tmp_13 to i64" [./imgproc.h:304->image_core.cpp:36]   --->   Operation 298 'sext' 'tmp_27_cast' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_41 : Operation 299 [1/1] (0.00ns)   --->   "%src_val_addr_2 = getelementptr [65536 x i8]* %src_val, i64 0, i64 %tmp_27_cast" [./imgproc.h:304->image_core.cpp:36]   --->   Operation 299 'getelementptr' 'src_val_addr_2' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_41 : Operation 300 [2/2] (1.99ns)   --->   "%src_val_load_2 = load i8* %src_val_addr_2, align 1" [./imgproc.h:304->image_core.cpp:36]   --->   Operation 300 'load' 'src_val_load_2' <Predicate = (tmp_32_i_i)> <Delay = 1.99> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.99> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 65536> <RAM>
+ST_41 : Operation 301 [1/1] (1.24ns)   --->   "%r1_i_i = add i17 1, %r0_3_cast_i_i" [./imgproc.h:300->image_core.cpp:36]   --->   Operation 301 'add' 'r1_i_i' <Predicate = (tmp_32_i_i)> <Delay = 1.24> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 302 [1/1] (0.00ns)   --->   "%r1_cast_i_i = sext i17 %r1_i_i to i32" [./imgproc.h:300->image_core.cpp:36]   --->   Operation 302 'sext' 'r1_cast_i_i' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_41 : Operation 303 [1/1] (1.31ns)   --->   "%slt2 = icmp slt i32 %r1_cast_i_i, %rows" [./imgproc.h:302->image_core.cpp:36]   --->   Operation 303 'icmp' 'slt2' <Predicate = (tmp_32_i_i)> <Delay = 1.31> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 304 [1/1] (0.00ns) (grouped into LUT with out node tmp_60)   --->   "%rev2 = xor i1 %slt2, true" [./imgproc.h:302->image_core.cpp:36]   --->   Operation 304 'xor' 'rev2' <Predicate = (tmp_32_i_i)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.46> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 305 [1/1] (0.00ns) (grouped into LUT with out node tmp_60)   --->   "%tmp_59 = trunc i17 %r1_i_i to i10" [./imgproc.h:300->image_core.cpp:36]   --->   Operation 305 'trunc' 'tmp_59' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_41 : Operation 306 [1/1] (0.48ns) (out node of the LUT)   --->   "%tmp_60 = select i1 %rev2, i10 %tmp_51, i10 %tmp_59" [./imgproc.h:302->image_core.cpp:36]   --->   Operation 306 'select' 'tmp_60' <Predicate = (tmp_32_i_i)> <Delay = 0.48> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_41 : Operation 307 [1/1] (0.00ns)   --->   "%tmp_30_cast = call i18 @_ssdm_op_BitConcatenate.i18.i10.i8(i10 %tmp_60, i8 0)" [./imgproc.h:304->image_core.cpp:36]   --->   Operation 307 'bitconcatenate' 'tmp_30_cast' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_41 : Operation 308 [1/1] (1.28ns)   --->   "%tmp_14 = add i18 %tmp_56, %tmp_30_cast" [./imgproc.h:304->image_core.cpp:36]   --->   Operation 308 'add' 'tmp_14' <Predicate = (tmp_32_i_i)> <Delay = 1.28> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 309 [1/1] (1.28ns)   --->   "%tmp_15 = add i18 %tmp_58, %tmp_30_cast" [./imgproc.h:304->image_core.cpp:36]   --->   Operation 309 'add' 'tmp_15' <Predicate = (tmp_32_i_i)> <Delay = 1.28> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 42 <SV = 41> <Delay = 6.59>
+ST_42 : Operation 310 [1/1] (1.57ns)   --->   "%p_Val2_i_i = sub i32 65536, %p_Val2_25" [./imgproc.h:290->image_core.cpp:36]   --->   Operation 310 'sub' 'p_Val2_i_i' <Predicate = (tmp_32_i_i)> <Delay = 1.57> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_42 : Operation 311 [1/1] (1.57ns)   --->   "%p_Val2_11_i_i = sub i32 65536, %p_Val2_27" [./imgproc.h:292->image_core.cpp:36]   --->   Operation 311 'sub' 'p_Val2_11_i_i' <Predicate = (tmp_32_i_i)> <Delay = 1.57> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_42 : Operation 312 [1/1] (0.00ns)   --->   "%OP1_V_4_cast_i_i = sext i32 %p_Val2_i_i to i48" [./imgproc.h:293->image_core.cpp:36]   --->   Operation 312 'sext' 'OP1_V_4_cast_i_i' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_42 : Operation 313 [1/1] (0.00ns)   --->   "%OP2_V_cast_i_i = sext i32 %p_Val2_11_i_i to i48" [./imgproc.h:293->image_core.cpp:36]   --->   Operation 313 'sext' 'OP2_V_cast_i_i' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_42 : Operation 314 [1/1] (5.02ns)   --->   "%p_Val2_28 = mul i48 %OP2_V_cast_i_i, %OP1_V_4_cast_i_i" [./imgproc.h:293->image_core.cpp:36]   --->   Operation 314 'mul' 'p_Val2_28' <Predicate = (tmp_32_i_i)> <Delay = 5.02> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 5.02> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_42 : Operation 315 [1/1] (0.00ns)   --->   "%tmp_48_i_i = call i32 @_ssdm_op_PartSelect.i32.i48.i32.i32(i48 %p_Val2_28, i32 16, i32 47)" [./imgproc.h:293->image_core.cpp:36]   --->   Operation 315 'partselect' 'tmp_48_i_i' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_42 : Operation 316 [1/1] (5.02ns)   --->   "%p_Val2_29 = mul i48 %OP2_V_1_cast_i_i, %OP1_V_4_cast_i_i" [./imgproc.h:294->image_core.cpp:36]   --->   Operation 316 'mul' 'p_Val2_29' <Predicate = (tmp_32_i_i)> <Delay = 5.02> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 5.02> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_42 : Operation 317 [1/1] (0.00ns)   --->   "%tmp_50_i_i = call i32 @_ssdm_op_PartSelect.i32.i48.i32.i32(i48 %p_Val2_29, i32 16, i32 47)" [./imgproc.h:294->image_core.cpp:36]   --->   Operation 317 'partselect' 'tmp_50_i_i' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_42 : Operation 318 [1/1] (5.02ns)   --->   "%p_Val2_30 = mul i48 %OP2_V_cast_i_i, %OP1_V_5_cast_i_i" [./imgproc.h:295->image_core.cpp:36]   --->   Operation 318 'mul' 'p_Val2_30' <Predicate = (tmp_32_i_i)> <Delay = 5.02> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 5.02> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_42 : Operation 319 [1/1] (0.00ns)   --->   "%tmp_52_i_i = call i32 @_ssdm_op_PartSelect.i32.i48.i32.i32(i48 %p_Val2_30, i32 16, i32 47)" [./imgproc.h:295->image_core.cpp:36]   --->   Operation 319 'partselect' 'tmp_52_i_i' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_42 : Operation 320 [1/2] (1.99ns)   --->   "%src_val_load_1 = load i8* %src_val_addr_1, align 1" [./imgproc.h:304->image_core.cpp:36]   --->   Operation 320 'load' 'src_val_load_1' <Predicate = (tmp_32_i_i)> <Delay = 1.99> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.99> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 65536> <RAM>
+ST_42 : Operation 321 [1/2] (1.99ns)   --->   "%src_val_load_2 = load i8* %src_val_addr_2, align 1" [./imgproc.h:304->image_core.cpp:36]   --->   Operation 321 'load' 'src_val_load_2' <Predicate = (tmp_32_i_i)> <Delay = 1.99> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.99> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 65536> <RAM>
+ST_42 : Operation 322 [1/1] (0.00ns)   --->   "%tmp_31_cast = sext i18 %tmp_14 to i64" [./imgproc.h:304->image_core.cpp:36]   --->   Operation 322 'sext' 'tmp_31_cast' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_42 : Operation 323 [1/1] (0.00ns)   --->   "%src_val_addr_3 = getelementptr [65536 x i8]* %src_val, i64 0, i64 %tmp_31_cast" [./imgproc.h:304->image_core.cpp:36]   --->   Operation 323 'getelementptr' 'src_val_addr_3' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_42 : Operation 324 [1/1] (0.00ns)   --->   "%tmp_32_cast = sext i18 %tmp_15 to i64" [./imgproc.h:304->image_core.cpp:36]   --->   Operation 324 'sext' 'tmp_32_cast' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_42 : Operation 325 [1/1] (0.00ns)   --->   "%src_val_addr_4 = getelementptr [65536 x i8]* %src_val, i64 0, i64 %tmp_32_cast" [./imgproc.h:304->image_core.cpp:36]   --->   Operation 325 'getelementptr' 'src_val_addr_4' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_42 : Operation 326 [2/2] (1.99ns)   --->   "%src_val_load_3 = load i8* %src_val_addr_3, align 1" [./imgproc.h:304->image_core.cpp:36]   --->   Operation 326 'load' 'src_val_load_3' <Predicate = (tmp_32_i_i)> <Delay = 1.99> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.99> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 65536> <RAM>
+ST_42 : Operation 327 [2/2] (1.99ns)   --->   "%src_val_load_4 = load i8* %src_val_addr_4, align 1" [./imgproc.h:304->image_core.cpp:36]   --->   Operation 327 'load' 'src_val_load_4' <Predicate = (tmp_32_i_i)> <Delay = 1.99> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.99> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 65536> <RAM>
+
+State 43 <SV = 42> <Delay = 7.01>
+ST_43 : Operation 328 [1/1] (0.00ns)   --->   "%OP2_V_4_0_i_i = zext i8 %src_val_load_1 to i32" [./imgproc.h:304->image_core.cpp:36]   --->   Operation 328 'zext' 'OP2_V_4_0_i_i' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_43 : Operation 329 [1/1] (5.02ns)   --->   "%p_Val2_28_0_i_i = mul i32 %tmp_48_i_i, %OP2_V_4_0_i_i" [./imgproc.h:304->image_core.cpp:36]   --->   Operation 329 'mul' 'p_Val2_28_0_i_i' <Predicate = (tmp_32_i_i)> <Delay = 5.02> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 5.02> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_43 : Operation 330 [1/1] (0.00ns)   --->   "%OP2_V_4_0_1_i_i = zext i8 %src_val_load_2 to i32" [./imgproc.h:304->image_core.cpp:36]   --->   Operation 330 'zext' 'OP2_V_4_0_1_i_i' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_43 : Operation 331 [1/1] (5.02ns)   --->   "%p_Val2_28_0_1_i_i = mul i32 %tmp_50_i_i, %OP2_V_4_0_1_i_i" [./imgproc.h:304->image_core.cpp:36]   --->   Operation 331 'mul' 'p_Val2_28_0_1_i_i' <Predicate = (tmp_32_i_i)> <Delay = 5.02> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 5.02> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_43 : Operation 332 [1/2] (1.99ns)   --->   "%src_val_load_3 = load i8* %src_val_addr_3, align 1" [./imgproc.h:304->image_core.cpp:36]   --->   Operation 332 'load' 'src_val_load_3' <Predicate = (tmp_32_i_i)> <Delay = 1.99> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.99> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 65536> <RAM>
+ST_43 : Operation 333 [1/2] (1.99ns)   --->   "%src_val_load_4 = load i8* %src_val_addr_4, align 1" [./imgproc.h:304->image_core.cpp:36]   --->   Operation 333 'load' 'src_val_load_4' <Predicate = (tmp_32_i_i)> <Delay = 1.99> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.99> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 65536> <RAM>
+ST_43 : Operation 334 [1/1] (0.00ns)   --->   "%OP2_V_4_1_1_i_i = zext i8 %src_val_load_4 to i32" [./imgproc.h:304->image_core.cpp:36]   --->   Operation 334 'zext' 'OP2_V_4_1_1_i_i' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_43 : Operation 335 [1/1] (5.02ns)   --->   "%p_Val2_28_1_1_i_i = mul i32 %tmp_54_i_i, %OP2_V_4_1_1_i_i" [./imgproc.h:304->image_core.cpp:36]   --->   Operation 335 'mul' 'p_Val2_28_1_1_i_i' <Predicate = (tmp_32_i_i)> <Delay = 5.02> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 5.02> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 44 <SV = 43> <Delay = 8.70>
+ST_44 : Operation 336 [1/1] (0.00ns)   --->   "%OP2_V_4_1_i_i = zext i8 %src_val_load_3 to i32" [./imgproc.h:304->image_core.cpp:36]   --->   Operation 336 'zext' 'OP2_V_4_1_i_i' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_44 : Operation 337 [1/1] (5.02ns)   --->   "%p_Val2_28_1_i_i = mul i32 %tmp_52_i_i, %OP2_V_4_1_i_i" [./imgproc.h:304->image_core.cpp:36]   --->   Operation 337 'mul' 'p_Val2_28_1_i_i' <Predicate = (tmp_32_i_i)> <Delay = 5.02> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 5.02> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_44 : Operation 338 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp = add i32 %p_Val2_28_0_i_i, %p_Val2_28_0_1_i_i" [./imgproc.h:304->image_core.cpp:36]   --->   Operation 338 'add' 'tmp' <Predicate = (tmp_32_i_i)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.05> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_44 : Operation 339 [1/1] (1.57ns)   --->   "%tmp2 = add i32 %p_Val2_28_1_i_i, %p_Val2_28_1_1_i_i" [./imgproc.h:304->image_core.cpp:36]   --->   Operation 339 'add' 'tmp2' <Predicate = (tmp_32_i_i)> <Delay = 1.57> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_44 : Operation 340 [1/1] (2.11ns) (root node of TernaryAdder)   --->   "%p_Val2_29_1_1_i_i = add i32 %tmp2, %tmp" [./imgproc.h:304->image_core.cpp:36]   --->   Operation 340 'add' 'p_Val2_29_1_1_i_i' <Predicate = (tmp_32_i_i)> <Delay = 2.11> <Core = "TAddSub">   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.05> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 45 <SV = 44> <Delay = 5.21>
+ST_45 : Operation 341 [1/1] (0.00ns)   --->   "%tmp_35_i_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str27)" [./imgproc.h:282->image_core.cpp:36]   --->   Operation 341 'specregionbegin' 'tmp_35_i_i' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_45 : Operation 342 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 2, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [./imgproc.h:284->image_core.cpp:36]   --->   Operation 342 'specpipeline' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_45 : Operation 343 [1/1] (0.00ns)   --->   "%tmp_22_cast = zext i18 %tmp_10 to i64" [./imgproc.h:307->image_core.cpp:36]   --->   Operation 343 'zext' 'tmp_22_cast' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_45 : Operation 344 [1/1] (0.00ns)   --->   "%dst_val_addr_1 = getelementptr [65536 x i8]* %dst_val, i64 0, i64 %tmp_22_cast" [./imgproc.h:307->image_core.cpp:36]   --->   Operation 344 'getelementptr' 'dst_val_addr_1' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_45 : Operation 345 [1/1] (0.00ns)   --->   "%tmp_55_i_i = sext i32 %p_Val2_29_1_1_i_i to i33" [./imgproc.h:307->image_core.cpp:36]   --->   Operation 345 'sext' 'tmp_55_i_i' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_45 : Operation 346 [1/1] (1.57ns)   --->   "%r_V_2 = add nsw i33 32768, %tmp_55_i_i" [./imgproc.h:307->image_core.cpp:36]   --->   Operation 346 'add' 'r_V_2' <Predicate = (tmp_32_i_i)> <Delay = 1.57> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_45 : Operation 347 [1/1] (0.00ns) (grouped into LUT with out node tmp_5)   --->   "%tmp_61 = call i1 @_ssdm_op_BitSelect.i1.i33.i32(i33 %r_V_2, i32 32)" [./imgproc.h:307->image_core.cpp:36]   --->   Operation 347 'bitselect' 'tmp_61' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_45 : Operation 348 [1/1] (0.00ns)   --->   "%tmp_62 = trunc i33 %r_V_2 to i16" [./imgproc.h:307->image_core.cpp:36]   --->   Operation 348 'trunc' 'tmp_62' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_45 : Operation 349 [1/1] (1.25ns)   --->   "%tmp_56_i_i = icmp eq i16 %tmp_62, 0" [./imgproc.h:307->image_core.cpp:36]   --->   Operation 349 'icmp' 'tmp_56_i_i' <Predicate = (tmp_32_i_i)> <Delay = 1.25> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_45 : Operation 350 [1/1] (0.00ns)   --->   "%tmp_1 = call i8 @_ssdm_op_PartSelect.i8.i33.i32.i32(i33 %r_V_2, i32 16, i32 23)" [./imgproc.h:307->image_core.cpp:36]   --->   Operation 350 'partselect' 'tmp_1' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_45 : Operation 351 [1/1] (1.28ns)   --->   "%tmp_2 = add i8 1, %tmp_1" [./imgproc.h:307->image_core.cpp:36]   --->   Operation 351 'add' 'tmp_2' <Predicate = (tmp_32_i_i)> <Delay = 1.28> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_45 : Operation 352 [1/1] (0.00ns) (grouped into LUT with out node tmp_5)   --->   "%tmp_3 = select i1 %tmp_56_i_i, i8 %tmp_1, i8 %tmp_2" [./imgproc.h:307->image_core.cpp:36]   --->   Operation 352 'select' 'tmp_3' <Predicate = (tmp_32_i_i)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_45 : Operation 353 [1/1] (0.35ns) (out node of the LUT)   --->   "%tmp_5 = select i1 %tmp_61, i8 %tmp_3, i8 %tmp_1" [./imgproc.h:307->image_core.cpp:36]   --->   Operation 353 'select' 'tmp_5' <Predicate = (tmp_32_i_i)> <Delay = 0.35> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_45 : Operation 354 [1/1] (1.99ns)   --->   "store i8 %tmp_5, i8* %dst_val_addr_1, align 1" [./imgproc.h:307->image_core.cpp:36]   --->   Operation 354 'store' <Predicate = (tmp_32_i_i)> <Delay = 1.99> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.99> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 65536> <RAM>
+ST_45 : Operation 355 [1/1] (0.00ns)   --->   "%empty_79 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str27, i32 %tmp_35_i_i)" [./imgproc.h:308->image_core.cpp:36]   --->   Operation 355 'specregionend' 'empty_79' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+ST_45 : Operation 356 [1/1] (0.00ns)   --->   "br label %.preheader487.i.i" [./imgproc.h:282->image_core.cpp:36]   --->   Operation 356 'br' <Predicate = (tmp_32_i_i)> <Delay = 0.00>
+
+State 46 <SV = 41> <Delay = 0.00>
+ST_46 : Operation 357 [1/1] (0.00ns)   --->   "br label %.preheader488.i.i"   --->   Operation 357 'br' <Predicate = true> <Delay = 0.00>
+
+State 47 <SV = 40> <Delay = 7.96>
+ST_47 : Operation 358 [1/1] (0.00ns)   --->   "%i_op_assign_1 = phi i31 [ %j, %ap_fixed_base.exit505.i.i_ifconv ], [ 0, %.preheader489.preheader.i.i ]"   --->   Operation 358 'phi' 'i_op_assign_1' <Predicate = true> <Delay = 0.00>
+ST_47 : Operation 359 [1/1] (0.00ns)   --->   "%p_Val2_15 = phi i32 [ %next_mul, %ap_fixed_base.exit505.i.i_ifconv ], [ 0, %.preheader489.preheader.i.i ]" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 359 'phi' 'p_Val2_15' <Predicate = true> <Delay = 0.00>
+ST_47 : Operation 360 [1/1] (0.00ns)   --->   "%i_op_assign_1_cast_i = zext i31 %i_op_assign_1 to i32" [./imgproc.h:265->image_core.cpp:36]   --->   Operation 360 'zext' 'i_op_assign_1_cast_i' <Predicate = true> <Delay = 0.00>
+ST_47 : Operation 361 [1/1] (1.31ns)   --->   "%tmp_29_i_i = icmp slt i32 %i_op_assign_1_cast_i, %p_Val2_34" [./imgproc.h:265->image_core.cpp:36]   --->   Operation 361 'icmp' 'tmp_29_i_i' <Predicate = true> <Delay = 1.31> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 362 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 0, i64 256, i64 0)"   --->   Operation 362 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_47 : Operation 363 [1/1] (1.55ns)   --->   "%j = add i31 %i_op_assign_1, 1" [./imgproc.h:265->image_core.cpp:36]   --->   Operation 363 'add' 'j' <Predicate = true> <Delay = 1.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 364 [1/1] (0.00ns)   --->   "br i1 %tmp_29_i_i, label %ap_fixed_base.exit505.i.i_ifconv, label %.preheader490.i.i.loopexit" [./imgproc.h:265->image_core.cpp:36]   --->   Operation 364 'br' <Predicate = true> <Delay = 0.00>
+ST_47 : Operation 365 [1/1] (0.00ns)   --->   "%tmp_35 = trunc i31 %i_op_assign_1 to i18" [./imgproc.h:275->image_core.cpp:36]   --->   Operation 365 'trunc' 'tmp_35' <Predicate = (tmp_29_i_i)> <Delay = 0.00>
+ST_47 : Operation 366 [1/1] (1.28ns)   --->   "%tmp_8 = add i18 %tmp_35, %tmp_14_cast" [./imgproc.h:275->image_core.cpp:36]   --->   Operation 366 'add' 'tmp_8' <Predicate = (tmp_29_i_i)> <Delay = 1.28> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 367 [1/1] (1.57ns)   --->   "%next_mul = add i32 %iscale_V, %p_Val2_15" [./imgproc.h:258->image_core.cpp:36]   --->   Operation 367 'add' 'next_mul' <Predicate = (tmp_29_i_i)> <Delay = 1.57> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 368 [1/1] (0.00ns)   --->   "%ret_V_4 = call i17 @_ssdm_op_PartSelect.i17.i33.i32.i32(i33 %r_V, i32 16, i32 32)" [./imgproc.h:270->image_core.cpp:36]   --->   Operation 368 'partselect' 'ret_V_4' <Predicate = (tmp_29_i_i)> <Delay = 0.00>
+ST_47 : Operation 369 [1/1] (0.00ns) (grouped into LUT with out node p_6_i_i)   --->   "%tmp_36 = call i1 @_ssdm_op_BitSelect.i1.i33.i32(i33 %r_V, i32 32)" [./imgproc.h:270->image_core.cpp:36]   --->   Operation 369 'bitselect' 'tmp_36' <Predicate = (tmp_29_i_i)> <Delay = 0.00>
+ST_47 : Operation 370 [1/1] (0.00ns)   --->   "%tmp_37 = trunc i33 %r_V to i16" [./imgproc.h:270->image_core.cpp:36]   --->   Operation 370 'trunc' 'tmp_37' <Predicate = (tmp_29_i_i)> <Delay = 0.00>
+ST_47 : Operation 371 [1/1] (1.25ns)   --->   "%tmp_33_i_i = icmp eq i16 %tmp_37, 0" [./imgproc.h:270->image_core.cpp:36]   --->   Operation 371 'icmp' 'tmp_33_i_i' <Predicate = (tmp_29_i_i)> <Delay = 1.25> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 372 [1/1] (1.26ns)   --->   "%ret_V_5 = add i17 1, %ret_V_4" [./imgproc.h:270->image_core.cpp:36]   --->   Operation 372 'add' 'ret_V_5' <Predicate = (tmp_29_i_i)> <Delay = 1.26> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 373 [1/1] (0.00ns) (grouped into LUT with out node p_6_i_i)   --->   "%p_i_i = select i1 %tmp_33_i_i, i17 %ret_V_4, i17 %ret_V_5" [./imgproc.h:270->image_core.cpp:36]   --->   Operation 373 'select' 'p_i_i' <Predicate = (tmp_29_i_i)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_47 : Operation 374 [1/1] (0.52ns) (out node of the LUT)   --->   "%p_6_i_i = select i1 %tmp_36, i17 %p_i_i, i17 %ret_V_4" [./imgproc.h:270->image_core.cpp:36]   --->   Operation 374 'select' 'p_6_i_i' <Predicate = (tmp_29_i_i)> <Delay = 0.52> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_47 : Operation 375 [1/1] (0.00ns)   --->   "%r0 = sext i17 %p_6_i_i to i32" [./imgproc.h:270->image_core.cpp:36]   --->   Operation 375 'sext' 'r0' <Predicate = (tmp_29_i_i)> <Delay = 0.00>
+ST_47 : Operation 376 [1/1] (0.00ns)   --->   "%tmp_34_i_i = sext i32 %p_Val2_15 to i33" [./imgproc.h:271->image_core.cpp:36]   --->   Operation 376 'sext' 'tmp_34_i_i' <Predicate = (tmp_29_i_i)> <Delay = 0.00>
+ST_47 : Operation 377 [1/1] (1.57ns)   --->   "%r_V_1 = add nsw i33 32768, %tmp_34_i_i" [./imgproc.h:271->image_core.cpp:36]   --->   Operation 377 'add' 'r_V_1' <Predicate = (tmp_29_i_i)> <Delay = 1.57> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 378 [1/1] (0.00ns)   --->   "%ret_V_6 = call i17 @_ssdm_op_PartSelect.i17.i33.i32.i32(i33 %r_V_1, i32 16, i32 32)" [./imgproc.h:271->image_core.cpp:36]   --->   Operation 378 'partselect' 'ret_V_6' <Predicate = (tmp_29_i_i)> <Delay = 0.00>
+ST_47 : Operation 379 [1/1] (0.00ns) (grouped into LUT with out node p_8_i_i)   --->   "%tmp_38 = call i1 @_ssdm_op_BitSelect.i1.i33.i32(i33 %r_V_1, i32 32)" [./imgproc.h:271->image_core.cpp:36]   --->   Operation 379 'bitselect' 'tmp_38' <Predicate = (tmp_29_i_i)> <Delay = 0.00>
+ST_47 : Operation 380 [1/1] (0.00ns)   --->   "%tmp_39 = trunc i33 %r_V_1 to i16" [./imgproc.h:271->image_core.cpp:36]   --->   Operation 380 'trunc' 'tmp_39' <Predicate = (tmp_29_i_i)> <Delay = 0.00>
+ST_47 : Operation 381 [1/1] (1.25ns)   --->   "%tmp_36_i_i = icmp eq i16 %tmp_39, 0" [./imgproc.h:271->image_core.cpp:36]   --->   Operation 381 'icmp' 'tmp_36_i_i' <Predicate = (tmp_29_i_i)> <Delay = 1.25> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 382 [1/1] (1.26ns)   --->   "%ret_V_8 = add i17 1, %ret_V_6" [./imgproc.h:271->image_core.cpp:36]   --->   Operation 382 'add' 'ret_V_8' <Predicate = (tmp_29_i_i)> <Delay = 1.26> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 383 [1/1] (0.00ns) (grouped into LUT with out node p_8_i_i)   --->   "%p_2_i_i = select i1 %tmp_36_i_i, i17 %ret_V_6, i17 %ret_V_8" [./imgproc.h:271->image_core.cpp:36]   --->   Operation 383 'select' 'p_2_i_i' <Predicate = (tmp_29_i_i)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_47 : Operation 384 [1/1] (0.52ns) (out node of the LUT)   --->   "%p_8_i_i = select i1 %tmp_38, i17 %p_2_i_i, i17 %ret_V_6" [./imgproc.h:271->image_core.cpp:36]   --->   Operation 384 'select' 'p_8_i_i' <Predicate = (tmp_29_i_i)> <Delay = 0.52> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_47 : Operation 385 [1/1] (0.00ns)   --->   "%c0 = sext i17 %p_8_i_i to i32" [./imgproc.h:271->image_core.cpp:36]   --->   Operation 385 'sext' 'c0' <Predicate = (tmp_29_i_i)> <Delay = 0.00>
+ST_47 : Operation 386 [1/1] (1.31ns)   --->   "%slt = icmp slt i32 %r0, %rows" [./imgproc.h:273->image_core.cpp:36]   --->   Operation 386 'icmp' 'slt' <Predicate = (tmp_29_i_i)> <Delay = 1.31> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 387 [1/1] (0.00ns) (grouped into LUT with out node tmp_9)   --->   "%rev = xor i1 %slt, true" [./imgproc.h:273->image_core.cpp:36]   --->   Operation 387 'xor' 'rev' <Predicate = (tmp_29_i_i)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.46> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 388 [1/1] (1.31ns)   --->   "%tmp_38_i_i = icmp slt i32 %c0, %cols" [./imgproc.h:274->image_core.cpp:36]   --->   Operation 388 'icmp' 'tmp_38_i_i' <Predicate = (tmp_29_i_i)> <Delay = 1.31> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 389 [1/1] (0.00ns) (grouped into LUT with out node tmp_9)   --->   "%tmp_40 = sext i17 %p_8_i_i to i18" [./imgproc.h:273->image_core.cpp:36]   --->   Operation 389 'sext' 'tmp_40' <Predicate = (tmp_29_i_i)> <Delay = 0.00>
+ST_47 : Operation 390 [1/1] (1.28ns)   --->   "%tmp_41 = add i18 -1, %tmp_29" [./imgproc.h:273->image_core.cpp:36]   --->   Operation 390 'add' 'tmp_41' <Predicate = (tmp_29_i_i)> <Delay = 1.28> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 391 [1/1] (0.00ns) (grouped into LUT with out node tmp_9)   --->   "%tmp_42 = select i1 %tmp_38_i_i, i18 %tmp_40, i18 %tmp_41" [./imgproc.h:274->image_core.cpp:36]   --->   Operation 391 'select' 'tmp_42' <Predicate = (tmp_29_i_i)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_47 : Operation 392 [1/1] (0.00ns) (grouped into LUT with out node tmp_9)   --->   "%tmp_43 = trunc i32 %rows to i10" [./imgproc.h:249->image_core.cpp:36]   --->   Operation 392 'trunc' 'tmp_43' <Predicate = (tmp_29_i_i)> <Delay = 0.00>
+ST_47 : Operation 393 [1/1] (0.00ns) (grouped into LUT with out node tmp_9)   --->   "%tmp_44 = trunc i17 %p_6_i_i to i10" [./imgproc.h:270->image_core.cpp:36]   --->   Operation 393 'trunc' 'tmp_44' <Predicate = (tmp_29_i_i)> <Delay = 0.00>
+ST_47 : Operation 394 [1/1] (0.00ns) (grouped into LUT with out node tmp_9)   --->   "%tmp_45 = select i1 %rev, i10 %tmp_43, i10 %tmp_44" [./imgproc.h:273->image_core.cpp:36]   --->   Operation 394 'select' 'tmp_45' <Predicate = (tmp_29_i_i)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.45> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_47 : Operation 395 [1/1] (0.00ns) (grouped into LUT with out node tmp_9)   --->   "%tmp_20_cast = call i18 @_ssdm_op_BitConcatenate.i18.i10.i8(i10 %tmp_45, i8 0)" [./imgproc.h:275->image_core.cpp:36]   --->   Operation 395 'bitconcatenate' 'tmp_20_cast' <Predicate = (tmp_29_i_i)> <Delay = 0.00>
+ST_47 : Operation 396 [1/1] (1.28ns) (out node of the LUT)   --->   "%tmp_9 = add i18 %tmp_42, %tmp_20_cast" [./imgproc.h:275->image_core.cpp:36]   --->   Operation 396 'add' 'tmp_9' <Predicate = (tmp_29_i_i)> <Delay = 1.28> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 397 [1/1] (0.00ns)   --->   "%tmp_21_cast = sext i18 %tmp_9 to i64" [./imgproc.h:275->image_core.cpp:36]   --->   Operation 397 'sext' 'tmp_21_cast' <Predicate = (tmp_29_i_i)> <Delay = 0.00>
+ST_47 : Operation 398 [1/1] (0.00ns)   --->   "%src_val_addr = getelementptr [65536 x i8]* %src_val, i64 0, i64 %tmp_21_cast" [./imgproc.h:275->image_core.cpp:36]   --->   Operation 398 'getelementptr' 'src_val_addr' <Predicate = (tmp_29_i_i)> <Delay = 0.00>
+ST_47 : Operation 399 [2/2] (1.99ns)   --->   "%src_val_load = load i8* %src_val_addr, align 1" [./imgproc.h:275->image_core.cpp:36]   --->   Operation 399 'load' 'src_val_load' <Predicate = (tmp_29_i_i)> <Delay = 1.99> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.99> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 65536> <RAM>
+
+State 48 <SV = 41> <Delay = 3.99>
+ST_48 : Operation 400 [1/1] (0.00ns)   --->   "%tmp_30_i_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str26)" [./imgproc.h:265->image_core.cpp:36]   --->   Operation 400 'specregionbegin' 'tmp_30_i_i' <Predicate = (tmp_29_i_i)> <Delay = 0.00>
+ST_48 : Operation 401 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [./imgproc.h:267->image_core.cpp:36]   --->   Operation 401 'specpipeline' <Predicate = (tmp_29_i_i)> <Delay = 0.00>
+ST_48 : Operation 402 [1/1] (0.00ns)   --->   "%tmp_17_cast = zext i18 %tmp_8 to i64" [./imgproc.h:275->image_core.cpp:36]   --->   Operation 402 'zext' 'tmp_17_cast' <Predicate = (tmp_29_i_i)> <Delay = 0.00>
+ST_48 : Operation 403 [1/1] (0.00ns)   --->   "%dst_val_addr = getelementptr [65536 x i8]* %dst_val, i64 0, i64 %tmp_17_cast" [./imgproc.h:275->image_core.cpp:36]   --->   Operation 403 'getelementptr' 'dst_val_addr' <Predicate = (tmp_29_i_i)> <Delay = 0.00>
+ST_48 : Operation 404 [1/2] (1.99ns)   --->   "%src_val_load = load i8* %src_val_addr, align 1" [./imgproc.h:275->image_core.cpp:36]   --->   Operation 404 'load' 'src_val_load' <Predicate = (tmp_29_i_i)> <Delay = 1.99> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.99> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 65536> <RAM>
+ST_48 : Operation 405 [1/1] (1.99ns)   --->   "store i8 %src_val_load, i8* %dst_val_addr, align 1" [./imgproc.h:275->image_core.cpp:36]   --->   Operation 405 'store' <Predicate = (tmp_29_i_i)> <Delay = 1.99> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.99> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 65536> <RAM>
+ST_48 : Operation 406 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str26, i32 %tmp_30_i_i)" [./imgproc.h:276->image_core.cpp:36]   --->   Operation 406 'specregionend' 'empty' <Predicate = (tmp_29_i_i)> <Delay = 0.00>
+ST_48 : Operation 407 [1/1] (0.00ns)   --->   "br label %.preheader489.i.i" [./imgproc.h:265->image_core.cpp:36]   --->   Operation 407 'br' <Predicate = (tmp_29_i_i)> <Delay = 0.00>
+
+State 49 <SV = 41> <Delay = 0.00>
+ST_49 : Operation 408 [1/1] (0.00ns)   --->   "br label %.preheader490.i.i"   --->   Operation 408 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 4ns
+The critical path consists of the following:
+	wire read on port 'scale' [14]  (0 ns)
+	'fpext' operation ('d', ./imgproc.h:258->image_core.cpp:36) [71]  (2.66 ns)
+	'icmp' operation ('tmp_2_i_i', ./imgproc.h:258->image_core.cpp:36) [82]  (1.34 ns)
+
+ <State 2>: 7.9ns
+The critical path consists of the following:
+	'add' operation ('tmp_11_i_i', ./imgproc.h:258->image_core.cpp:36) [85]  (1.27 ns)
+	'select' operation ('sh_amt', ./imgproc.h:258->image_core.cpp:36) [87]  (0.557 ns)
+	'icmp' operation ('icmp', ./imgproc.h:258->image_core.cpp:36) [93]  (0.946 ns)
+	'and' operation ('sel_tmp4', ./imgproc.h:258->image_core.cpp:36) [109]  (0.464 ns)
+	'select' operation ('newSel', ./imgproc.h:258->image_core.cpp:36) [110]  (2.17 ns)
+	'select' operation ('newSel5', ./imgproc.h:258->image_core.cpp:36) [114]  (0 ns)
+	'select' operation ('newSel7', ./imgproc.h:258->image_core.cpp:36) [116]  (0.457 ns)
+	'sdiv' operation ('tmp_22_i_i', ./imgproc.h:258->image_core.cpp:36) [118]  (2.04 ns)
+
+ <State 3>: 2.04ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_22_i_i', ./imgproc.h:258->image_core.cpp:36) [118]  (2.04 ns)
+
+ <State 4>: 2.04ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_22_i_i', ./imgproc.h:258->image_core.cpp:36) [118]  (2.04 ns)
+
+ <State 5>: 2.04ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_22_i_i', ./imgproc.h:258->image_core.cpp:36) [118]  (2.04 ns)
+
+ <State 6>: 2.04ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_22_i_i', ./imgproc.h:258->image_core.cpp:36) [118]  (2.04 ns)
+
+ <State 7>: 2.04ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_22_i_i', ./imgproc.h:258->image_core.cpp:36) [118]  (2.04 ns)
+
+ <State 8>: 2.04ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_22_i_i', ./imgproc.h:258->image_core.cpp:36) [118]  (2.04 ns)
+
+ <State 9>: 2.04ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_22_i_i', ./imgproc.h:258->image_core.cpp:36) [118]  (2.04 ns)
+
+ <State 10>: 2.04ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_22_i_i', ./imgproc.h:258->image_core.cpp:36) [118]  (2.04 ns)
+
+ <State 11>: 2.04ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_22_i_i', ./imgproc.h:258->image_core.cpp:36) [118]  (2.04 ns)
+
+ <State 12>: 2.04ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_22_i_i', ./imgproc.h:258->image_core.cpp:36) [118]  (2.04 ns)
+
+ <State 13>: 2.04ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_22_i_i', ./imgproc.h:258->image_core.cpp:36) [118]  (2.04 ns)
+
+ <State 14>: 2.04ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_22_i_i', ./imgproc.h:258->image_core.cpp:36) [118]  (2.04 ns)
+
+ <State 15>: 2.04ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_22_i_i', ./imgproc.h:258->image_core.cpp:36) [118]  (2.04 ns)
+
+ <State 16>: 2.04ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_22_i_i', ./imgproc.h:258->image_core.cpp:36) [118]  (2.04 ns)
+
+ <State 17>: 2.04ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_22_i_i', ./imgproc.h:258->image_core.cpp:36) [118]  (2.04 ns)
+
+ <State 18>: 2.04ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_22_i_i', ./imgproc.h:258->image_core.cpp:36) [118]  (2.04 ns)
+
+ <State 19>: 2.04ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_22_i_i', ./imgproc.h:258->image_core.cpp:36) [118]  (2.04 ns)
+
+ <State 20>: 2.04ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_22_i_i', ./imgproc.h:258->image_core.cpp:36) [118]  (2.04 ns)
+
+ <State 21>: 2.04ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_22_i_i', ./imgproc.h:258->image_core.cpp:36) [118]  (2.04 ns)
+
+ <State 22>: 2.04ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_22_i_i', ./imgproc.h:258->image_core.cpp:36) [118]  (2.04 ns)
+
+ <State 23>: 2.04ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_22_i_i', ./imgproc.h:258->image_core.cpp:36) [118]  (2.04 ns)
+
+ <State 24>: 2.04ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_22_i_i', ./imgproc.h:258->image_core.cpp:36) [118]  (2.04 ns)
+
+ <State 25>: 2.04ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_22_i_i', ./imgproc.h:258->image_core.cpp:36) [118]  (2.04 ns)
+
+ <State 26>: 2.04ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_22_i_i', ./imgproc.h:258->image_core.cpp:36) [118]  (2.04 ns)
+
+ <State 27>: 2.04ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_22_i_i', ./imgproc.h:258->image_core.cpp:36) [118]  (2.04 ns)
+
+ <State 28>: 2.04ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_22_i_i', ./imgproc.h:258->image_core.cpp:36) [118]  (2.04 ns)
+
+ <State 29>: 2.04ns
+The critical path consists of the following:
+	'sdiv' operation ('tmp_22_i_i', ./imgproc.h:258->image_core.cpp:36) [118]  (2.04 ns)
+
+ <State 30>: 2.26ns
+The critical path consists of the following:
+	fifo read on port 'src_rows' (./imgproc.h:249->image_core.cpp:36) [15]  (2.26 ns)
+
+ <State 31>: 8.29ns
+The critical path consists of the following:
+	'sitofp' operation ('tmp_i_i', ./imgproc.h:251->image_core.cpp:36) [17]  (8.29 ns)
+
+ <State 32>: 8.29ns
+The critical path consists of the following:
+	'sitofp' operation ('tmp_i_i', ./imgproc.h:251->image_core.cpp:36) [17]  (8.29 ns)
+
+ <State 33>: 7.31ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_6_i_i', ./imgproc.h:251->image_core.cpp:36) [18]  (7.31 ns)
+
+ <State 34>: 7.31ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_6_i_i', ./imgproc.h:251->image_core.cpp:36) [18]  (7.31 ns)
+
+ <State 35>: 5.97ns
+The critical path consists of the following:
+	'fadd' operation ('x', ./imgproc.h:251->image_core.cpp:36) [19]  (5.97 ns)
+
+ <State 36>: 5.97ns
+The critical path consists of the following:
+	'fadd' operation ('x', ./imgproc.h:251->image_core.cpp:36) [19]  (5.97 ns)
+
+ <State 37>: 5.97ns
+The critical path consists of the following:
+	'fadd' operation ('x', ./imgproc.h:251->image_core.cpp:36) [19]  (5.97 ns)
+
+ <State 38>: 5.97ns
+The critical path consists of the following:
+	'fadd' operation ('x', ./imgproc.h:251->image_core.cpp:36) [19]  (5.97 ns)
+
+ <State 39>: 7.81ns
+The critical path consists of the following:
+	'add' operation ('sh', r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/src/technology/autopilot/header_files\utils/x_hls_utils.h:302->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:17->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:251->image_core.cpp:36) [27]  (1.28 ns)
+	'select' operation ('sh', r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:17->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:251->image_core.cpp:36) [31]  (0.421 ns)
+	'shl' operation ('tmp_77_i_i_i_i_i', r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:17->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:251->image_core.cpp:36) [36]  (0 ns)
+	'select' operation ('__Val2__', r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:17->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:251->image_core.cpp:36) [40]  (1.81 ns)
+	'sub' operation ('p_Val2_i_i_i_i_i', r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:49->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:251->image_core.cpp:36) [41]  (1.58 ns)
+	'select' operation ('__Val2__', r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:49->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:98->r:/builds/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50->./imgproc.h:251->image_core.cpp:36) [42]  (0.457 ns)
+	fifo write on port 'dst_rows' (./imgproc.h:255->image_core.cpp:36) [69]  (2.26 ns)
+
+ <State 40>: 6.6ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', ./imgproc.h:264->image_core.cpp:36) [263]  (0 ns)
+	'mul' operation ('__Val2__', ./imgproc.h:268->image_core.cpp:36) [272]  (5.02 ns)
+	'add' operation ('r.V', ./imgproc.h:270->image_core.cpp:36) [274]  (1.58 ns)
+
+ <State 41>: 8.32ns
+The critical path consists of the following:
+	'phi' operation ('__Val2__', ./imgproc.h:258->image_core.cpp:36) with incoming values : ('next_mul1', ./imgproc.h:258->image_core.cpp:36) [142]  (0 ns)
+	'icmp' operation ('tmp_42_i_i', ./imgproc.h:288->image_core.cpp:36) [168]  (1.25 ns)
+	'select' operation ('p_3_i_i', ./imgproc.h:288->image_core.cpp:36) [170]  (0 ns)
+	'select' operation ('p_9_i_i', ./imgproc.h:288->image_core.cpp:36) [171]  (0.473 ns)
+	'sub' operation ('__Val2__', ./imgproc.h:291->image_core.cpp:36) [178]  (1.58 ns)
+	'mul' operation ('__Val2__', ./imgproc.h:296->image_core.cpp:36) [190]  (5.02 ns)
+
+ <State 42>: 6.6ns
+The critical path consists of the following:
+	'sub' operation ('p_Val2_i_i', ./imgproc.h:290->image_core.cpp:36) [176]  (1.58 ns)
+	'mul' operation ('__Val2__', ./imgproc.h:293->image_core.cpp:36) [182]  (5.02 ns)
+
+ <State 43>: 7.02ns
+The critical path consists of the following:
+	'load' operation ('src_val_load_4', ./imgproc.h:304->image_core.cpp:36) on array 'src_val' [235]  (2 ns)
+	'mul' operation ('p_Val2_28_1_1_i_i', ./imgproc.h:304->image_core.cpp:36) [237]  (5.02 ns)
+
+ <State 44>: 8.71ns
+The critical path consists of the following:
+	'mul' operation ('p_Val2_28_1_i_i', ./imgproc.h:304->image_core.cpp:36) [234]  (5.02 ns)
+	'add' operation ('tmp2', ./imgproc.h:304->image_core.cpp:36) [239]  (1.58 ns)
+	'add' operation ('p_Val2_29_1_1_i_i', ./imgproc.h:304->image_core.cpp:36) [240]  (2.11 ns)
+
+ <State 45>: 5.21ns
+The critical path consists of the following:
+	'add' operation ('r.V', ./imgproc.h:307->image_core.cpp:36) [242]  (1.58 ns)
+	'add' operation ('tmp_2', ./imgproc.h:307->image_core.cpp:36) [247]  (1.28 ns)
+	'select' operation ('tmp_3', ./imgproc.h:307->image_core.cpp:36) [248]  (0 ns)
+	'select' operation ('tmp_5', ./imgproc.h:307->image_core.cpp:36) [249]  (0.355 ns)
+	'store' operation (./imgproc.h:307->image_core.cpp:36) of variable 'tmp_5', ./imgproc.h:307->image_core.cpp:36 on array 'dst_val' [250]  (2 ns)
+
+ <State 46>: 0ns
+The critical path consists of the following:
+
+ <State 47>: 7.96ns
+The critical path consists of the following:
+	'phi' operation ('__Val2__', ./imgproc.h:258->image_core.cpp:36) with incoming values : ('next_mul', ./imgproc.h:258->image_core.cpp:36) [278]  (0 ns)
+	'add' operation ('r.V', ./imgproc.h:271->image_core.cpp:36) [301]  (1.58 ns)
+	'add' operation ('ret.V', ./imgproc.h:271->image_core.cpp:36) [306]  (1.27 ns)
+	'select' operation ('p_2_i_i', ./imgproc.h:271->image_core.cpp:36) [307]  (0 ns)
+	'select' operation ('p_8_i_i', ./imgproc.h:271->image_core.cpp:36) [308]  (0.521 ns)
+	'icmp' operation ('tmp_38_i_i', ./imgproc.h:274->image_core.cpp:36) [312]  (1.31 ns)
+	'select' operation ('tmp_42', ./imgproc.h:274->image_core.cpp:36) [315]  (0 ns)
+	'add' operation ('tmp_9', ./imgproc.h:275->image_core.cpp:36) [320]  (1.29 ns)
+	'getelementptr' operation ('src_val_addr', ./imgproc.h:275->image_core.cpp:36) [322]  (0 ns)
+	'load' operation ('src_val_load', ./imgproc.h:275->image_core.cpp:36) on array 'src_val' [323]  (2 ns)
+
+ <State 48>: 4ns
+The critical path consists of the following:
+	'load' operation ('src_val_load', ./imgproc.h:275->image_core.cpp:36) on array 'src_val' [323]  (2 ns)
+	'store' operation (./imgproc.h:275->image_core.cpp:36) of variable 'src_val_load', ./imgproc.h:275->image_core.cpp:36 on array 'dst_val' [324]  (2 ns)
+
+ <State 49>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

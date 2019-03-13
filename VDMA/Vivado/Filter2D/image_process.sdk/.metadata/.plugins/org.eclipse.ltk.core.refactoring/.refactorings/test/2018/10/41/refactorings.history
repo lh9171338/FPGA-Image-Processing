@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;platform_config.h, platform.h&apos; to &apos;inc&apos;" description="Move 2 resources to &apos;inc&apos;" destination="inc" element1="src/platform_config.h" element2="src/platform.h" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="2" stamp="1539086431595" updateReferences="true"/>
+</session>

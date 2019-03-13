@@ -1,0 +1,4 @@
+NumberHits:0
+Timestamp: Tue Oct 09 11:39:11 UTC 2018
+VLNV: xilinx.com:hls:Filter2D_Core:1.0
+SynthRuntime: 147

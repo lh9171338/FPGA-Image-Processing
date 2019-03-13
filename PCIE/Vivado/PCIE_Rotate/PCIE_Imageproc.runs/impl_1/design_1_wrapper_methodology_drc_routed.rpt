@@ -1,0 +1,77 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Fri Nov 30 20:16:00 2018
+| Host         : DESKTOP-7JLTO9Q running 64-bit major release  (build 9200)
+| Command      : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
+| Design       : design_1_wrapper
+| Device       : xc7vx690tffg1761-3
+| Speed File   : -3
+| Design State : Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 8
++-----------+----------+------------------------------------------------+------------+
+| Rule      | Severity | Description                                    | Violations |
++-----------+----------+------------------------------------------------+------------+
+| LUTAR-1   | Warning  | LUT drives async reset alert                   | 5          |
+| TIMING-3  | Warning  | Invalid primary clock on Clock Modifying Block | 1          |
+| TIMING-17 | Warning  | Non-clocked sequential cell                    | 2          |
++-----------+----------+------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/RIFFA_AXIS/PCIE/inst/gt_top_i/pipe_wrapper_i/pipe_lane[2].pipe_user_i/reg_phy_rdy[1]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/RIFFA_AXIS/PCIE/inst/gt_top_i/reg_phy_rdy_reg[0]/PRE, design_1_i/RIFFA_AXIS/PCIE/inst/gt_top_i/reg_phy_rdy_reg[1]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/RIFFA_AXIS/PCIE/inst/pcie_top_i/pcie_7vx_i/user_reset_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/RIFFA_AXIS/PCIE/inst/user_reset_int_reg/PRE, design_1_i/RIFFA_AXIS/PCIE/inst/user_reset_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#3 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/RIFFA_AXIS/riffa_controller/inst/riffa_inst/channels[0].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rDir_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/RIFFA_AXIS/riffa_controller/inst/riffa_inst/channels[0].channel/channel/rxPort/mainFifo/fifo/asyncCompare/rDir_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#4 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/RIFFA_AXIS/riffa_controller/inst/riffa_inst/channels[0].channel/channel/rxPort/reader/rDataValid_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/RIFFA_AXIS/riffa_controller/inst/riffa_inst/channels[0].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBinP1_reg[1]/CLR, design_1_i/RIFFA_AXIS/riffa_controller/inst/riffa_inst/channels[0].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBinP1_reg[2]/CLR, design_1_i/RIFFA_AXIS/riffa_controller/inst/riffa_inst/channels[0].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBinP1_reg[3]/CLR, design_1_i/RIFFA_AXIS/riffa_controller/inst/riffa_inst/channels[0].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBinP1_reg[4]/CLR, design_1_i/RIFFA_AXIS/riffa_controller/inst/riffa_inst/channels[0].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBinP1_reg[5]/CLR, design_1_i/RIFFA_AXIS/riffa_controller/inst/riffa_inst/channels[0].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBinP1_reg[6]/CLR, design_1_i/RIFFA_AXIS/riffa_controller/inst/riffa_inst/channels[0].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBinP1_reg[7]/CLR, design_1_i/RIFFA_AXIS/riffa_controller/inst/riffa_inst/channels[0].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBinP1_reg[8]/CLR, design_1_i/RIFFA_AXIS/riffa_controller/inst/riffa_inst/channels[0].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBin_reg[0]/CLR, design_1_i/RIFFA_AXIS/riffa_controller/inst/riffa_inst/channels[0].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBin_reg[1]/CLR, design_1_i/RIFFA_AXIS/riffa_controller/inst/riffa_inst/channels[0].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBin_reg[2]/CLR, design_1_i/RIFFA_AXIS/riffa_controller/inst/riffa_inst/channels[0].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBin_reg[3]/CLR, design_1_i/RIFFA_AXIS/riffa_controller/inst/riffa_inst/channels[0].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBin_reg[4]/CLR, design_1_i/RIFFA_AXIS/riffa_controller/inst/riffa_inst/channels[0].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBin_reg[5]/CLR, design_1_i/RIFFA_AXIS/riffa_controller/inst/riffa_inst/channels[0].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBin_reg[6]/CLR (the first 15 of 76 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#5 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/RIFFA_AXIS/riffa_controller/inst/riffa_inst/channels[0].channel/channel/txPort/gate/fifo/rdPtrEmpty/rDir_i_2__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/RIFFA_AXIS/riffa_controller/inst/riffa_inst/channels[0].channel/channel/txPort/gate/fifo/asyncCompare/rDir_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+TIMING-3#1 Warning
+Invalid primary clock on Clock Modifying Block  
+A primary clock design_1_i/SYS_CLK/U0/IBUF_OUT[0] is created on the output pin or net design_1_i/SYS_CLK/U0/IBUF_OUT[0] of a Clock Modifying Block
+Related violations: <none>
+
+TIMING-17#1 Warning
+Non-clocked sequential cell  
+The clock pin design_1_i/RIFFA_AXIS/riffa_controller/inst/riffa_inst/channels[0].channel/channel/rxPort/mainFifo/fifo/asyncCompare/rDir_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#2 Warning
+Non-clocked sequential cell  
+The clock pin design_1_i/RIFFA_AXIS/riffa_controller/inst/riffa_inst/channels[0].channel/channel/txPort/gate/fifo/asyncCompare/rDir_reg/C is not reached by a timing clock
+Related violations: <none>
+
+

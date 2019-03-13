@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="design_1_ImageFifo_0_0_synth_1" LaunchDir="F:/FPGA/project/Vivado/PCIE_Imageproc/PCIE_Imageproc.runs/design_1_ImageFifo_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_Ap_Controller_0_synth_1" LaunchDir="F:/FPGA/project/Vivado/PCIE_Imageproc/PCIE_Imageproc.runs/design_1_Ap_Controller_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_Riffa_Axis_0_synth_1" LaunchDir="F:/FPGA/project/Vivado/PCIE_Imageproc/PCIE_Imageproc.runs/design_1_Riffa_Axis_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_riffa_controller_0_synth_1" LaunchDir="F:/FPGA/project/Vivado/PCIE_Imageproc/PCIE_Imageproc.runs/design_1_riffa_controller_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_clk_wiz_0_0_synth_1" LaunchDir="F:/FPGA/project/Vivado/PCIE_Imageproc/PCIE_Imageproc.runs/design_1_clk_wiz_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+

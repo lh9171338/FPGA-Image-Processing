@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="design_1_axi_intc_0_0_synth_1" LaunchDir="F:/FPGA/project/Vivado/FAST/image_process.runs/design_1_axi_intc_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_xlconcat_0_0_synth_1" LaunchDir="F:/FPGA/project/Vivado/FAST/image_process.runs/design_1_xlconcat_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_xbar_0_synth_1" LaunchDir="F:/FPGA/project/Vivado/FAST/image_process.runs/design_1_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_image_core_0_0_synth_1" LaunchDir="F:/FPGA/project/Vivado/FAST/image_process.runs/design_1_image_core_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+

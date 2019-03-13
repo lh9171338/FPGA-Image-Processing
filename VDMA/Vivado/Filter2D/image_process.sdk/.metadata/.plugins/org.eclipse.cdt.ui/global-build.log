@@ -1,0 +1,1438 @@
+19:59:42 **** Build of project test_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/axivdma_v6_5/src"
+make -C microblaze_0/libsrc/axivdma_v6_5/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_7/src"
+make -C microblaze_0/libsrc/cpu_v2_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/Filter2D_Core_v1_0/src"
+make -C microblaze_0/libsrc/Filter2D_Core_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_7/src"
+make -C microblaze_0/libsrc/intc_v3_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_7/src"
+make -C microblaze_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/axivdma_v6_5/src"
+make -C microblaze_0/libsrc/axivdma_v6_5/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling axivdma"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+"Running Make libs in microblaze_0/libsrc/cpu_v2_7/src"
+make -C microblaze_0/libsrc/cpu_v2_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/Filter2D_Core_v1_0/src"
+make -C microblaze_0/libsrc/Filter2D_Core_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling Filter2D_Core"
+"Running Make libs in microblaze_0/libsrc/intc_v3_7/src"
+make -C microblaze_0/libsrc/intc_v3_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/standalone_v6_7/src"
+make -C microblaze_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:74:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+19:59:54 **** Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3120	    324	   3108	   6552	   1998	test.elf
+'Finished building: test.elf.size'
+' '
+20:00:07 **** Auto Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+20:00:24 **** Auto Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+20:00:31 **** Clean-only build of configuration Debug for project test ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  test.elf.size  test.elf
+' '
+20:00:32 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3120	    324	   3108	   6552	   1998	test.elf
+'Finished building: test.elf.size'
+' '
+20:00:35 **** Clean-only build of configuration Debug for project test ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  test.elf.size  test.elf
+' '
+20:00:36 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+e:/xilinx/sdk/2018.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/lib/le/crtinit.o: In function `_crtinit':
+(.text+0x78): undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [test.elf] ´íÎó 1
+20:00:48 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/image_core.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/image_core.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/image_core.d" -MT"src/image_core.o" -o "src/image_core.o" "../src/image_core.c"
+../src/image_core.c:8:10: fatal error: image_core.h: No such file or directory
+ #include "image_core.h"
+          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/image_core.o] ´íÎó 1
+20:00:56 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/image_core.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/image_core.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/image_core.d" -MT"src/image_core.o" -o "src/image_core.o" "../src/image_core.c"
+../src/image_core.c:8:10: fatal error: image_core.h: No such file or directory
+ #include "image_core.h"
+          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/image_core.o] ´íÎó 1
+20:01:10 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/image_core.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/image_core.o" -I../../test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/image_core.d" -MT"src/image_core.o" -o "src/image_core.o" "../src/image_core.c"
+../src/image_core.c:8:10: fatal error: image_core.h: No such file or directory
+ #include "image_core.h"
+          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/image_core.o] ´íÎó 1
+20:01:27 **** Clean-only build of configuration Debug for project test ****
+make clean 
+rm -rf  ./src/image_core.o ./src/intc.o ./src/platform.o ./src/vdma.o  ./helloworld.o  ./src/image_core.d ./src/intc.d ./src/platform.d ./src/vdma.d  ./helloworld.d  test.elf.size  test.elf
+' '
+20:01:27 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/image_core.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_0/include -I../../test/inc -c -fmessage-length=0 -MT"src/image_core.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/image_core.d" -MT"src/image_core.o" -o "src/image_core.o" "../src/image_core.c"
+In file included from ../src/image_core.c:8:0:
+../../test/inc/image_core.h:12:10: fatal error: xhoughcircles_core_hw.h: No such file or directory
+ #include "xhoughcircles_core_hw.h"
+          ^~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/image_core.o] ´íÎó 1
+20:02:02 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/image_core.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_0/include -I../../test/inc -c -fmessage-length=0 -MT"src/image_core.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/image_core.d" -MT"src/image_core.o" -o "src/image_core.o" "../src/image_core.c"
+In file included from ../../test/inc/image_core.h:11:0,
+                 from ../src/image_core.c:8:
+../src/image_core.c: In function 'Init_Image_Core':
+../src/image_core.c:17:7: error: 'XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_BRAM_TRCL1_S_AXI_CTRL_BASEADDR'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA,image_core_inst.rows);
+       ^
+../../test/inc/define.h:32:44: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                            ^~~~
+../src/image_core.c:17:7: note: each undeclared identifier is reported only once for each function it appears in
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA,image_core_inst.rows);
+       ^
+../../test/inc/define.h:32:44: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                            ^~~~
+../src/image_core.c:17:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA' undeclared (first use in this function); did you mean 'XFILTER2D_CORE_CTRL_ADDR_ROWS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA,image_core_inst.rows);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:18:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA,image_core_inst.cols);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:19:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GRAY_THRESH_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_GRAY_THRESH_DATA,image_core_inst.gray_thresh);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:20:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ACC_THRESH_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GRAY_THRESH_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ACC_THRESH_DATA,image_core_inst.acc_thresh);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:21:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_DIST_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_DIST_DATA,image_core_inst.min_dist);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:22:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_RADIUS_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_DIST_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_RADIUS_DATA,image_core_inst.min_radius);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:23:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MAX_RADIUS_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_RADIUS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MAX_RADIUS_DATA,image_core_inst.max_radius);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:25:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_AP_CTRL' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_AP_CTRL,0x81);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:28:46: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GIE' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_AP_CTRL'?
+   IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_GIE,0x1);
+                                              ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:29:46: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_IER' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GIE'?
+   IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_IER,0x3);
+                                              ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:33:5: error: 'XPAR_INTC_HOUGHCIRCLES_INTERRUPT_INTR' undeclared (first use in this function); did you mean 'XPAR_INTC_FILTER2D_CORE_INTERRUPT_INTR'?
+     XPAR_INTC_HOUGHCIRCLES_INTERRUPT_INTR,
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     XPAR_INTC_FILTER2D_CORE_INTERRUPT_INTR
+In file included from ../../test/inc/image_core.h:11:0,
+                 from ../src/image_core.c:8:
+../src/image_core.c: In function 'Image_Core_intr_handler':
+../src/image_core.c:40:18: error: 'XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_BRAM_TRCL1_S_AXI_CTRL_BASEADDR'?
+  u32 status=IORD(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ISR);
+                  ^
+../../test/inc/define.h:33:38: note: in definition of macro 'IORD'
+ #define IORD(addr,offset)   Xil_In32(addr+offset)
+                                      ^~~~
+../src/image_core.c:40:56: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ISR' undeclared (first use in this function); did you mean 'XFILTER2D_CORE_CTRL_ADDR_ISR'?
+  u32 status=IORD(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ISR);
+                                                        ^
+../../test/inc/define.h:33:43: note: in definition of macro 'IORD'
+ #define IORD(addr,offset)   Xil_In32(addr+offset)
+                                           ^~~~~~
+make: *** [src/image_core.o] ´íÎó 1
+20:02:47 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/image_core.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_0/include -I../../test/inc -c -fmessage-length=0 -MT"src/image_core.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/image_core.d" -MT"src/image_core.o" -o "src/image_core.o" "../src/image_core.c"
+In file included from ../../test/inc/image_core.h:11:0,
+                 from ../src/image_core.c:8:
+../src/image_core.c: In function 'Init_Image_Core':
+../src/image_core.c:17:7: error: 'XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_BRAM_TRCL1_S_AXI_CTRL_BASEADDR'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA,image_core_inst.rows);
+       ^
+../../test/inc/define.h:32:44: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                            ^~~~
+../src/image_core.c:17:7: note: each undeclared identifier is reported only once for each function it appears in
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA,image_core_inst.rows);
+       ^
+../../test/inc/define.h:32:44: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                            ^~~~
+../src/image_core.c:17:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA' undeclared (first use in this function); did you mean 'XFILTER2D_CORE_CTRL_ADDR_ROWS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA,image_core_inst.rows);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:18:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA,image_core_inst.cols);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:19:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GRAY_THRESH_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_GRAY_THRESH_DATA,image_core_inst.gray_thresh);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:20:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ACC_THRESH_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GRAY_THRESH_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ACC_THRESH_DATA,image_core_inst.acc_thresh);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:21:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_DIST_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_DIST_DATA,image_core_inst.min_dist);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:22:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_RADIUS_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_DIST_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_RADIUS_DATA,image_core_inst.min_radius);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:23:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MAX_RADIUS_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_RADIUS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MAX_RADIUS_DATA,image_core_inst.max_radius);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:25:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_AP_CTRL' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_AP_CTRL,0x81);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:28:46: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GIE' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_AP_CTRL'?
+   IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_GIE,0x1);
+                                              ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:29:46: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_IER' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GIE'?
+   IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_IER,0x3);
+                                              ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:33:5: error: 'XPAR_INTC_HOUGHCIRCLES_INTERRUPT_INTR' undeclared (first use in this function); did you mean 'XPAR_INTC_FILTER2D_CORE_INTERRUPT_INTR'?
+     XPAR_INTC_HOUGHCIRCLES_INTERRUPT_INTR,
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     XPAR_INTC_FILTER2D_CORE_INTERRUPT_INTR
+In file included from ../../test/inc/image_core.h:11:0,
+                 from ../src/image_core.c:8:
+../src/image_core.c: In function 'Image_Core_intr_handler':
+../src/image_core.c:40:18: error: 'XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_BRAM_TRCL1_S_AXI_CTRL_BASEADDR'?
+  u32 status=IORD(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ISR);
+                  ^
+../../test/inc/define.h:33:38: note: in definition of macro 'IORD'
+ #define IORD(addr,offset)   Xil_In32(addr+offset)
+                                      ^~~~
+../src/image_core.c:40:56: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ISR' undeclared (first use in this function); did you mean 'XFILTER2D_CORE_CTRL_ADDR_ISR'?
+  u32 status=IORD(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ISR);
+                                                        ^
+../../test/inc/define.h:33:43: note: in definition of macro 'IORD'
+ #define IORD(addr,offset)   Xil_In32(addr+offset)
+                                           ^~~~~~
+make: *** [src/image_core.o] ´íÎó 1
+20:02:58 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/image_core.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_0/include -I../../test/inc -c -fmessage-length=0 -MT"src/image_core.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/image_core.d" -MT"src/image_core.o" -o "src/image_core.o" "../src/image_core.c"
+In file included from ../../test/inc/image_core.h:11:0,
+                 from ../src/image_core.c:8:
+../src/image_core.c: In function 'Init_Image_Core':
+../src/image_core.c:17:7: error: 'XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_BRAM_TRCL1_S_AXI_CTRL_BASEADDR'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA,image_core_inst.rows);
+       ^
+../../test/inc/define.h:32:44: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                            ^~~~
+../src/image_core.c:17:7: note: each undeclared identifier is reported only once for each function it appears in
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA,image_core_inst.rows);
+       ^
+../../test/inc/define.h:32:44: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                            ^~~~
+../src/image_core.c:17:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA' undeclared (first use in this function); did you mean 'XFILTER2D_CORE_CTRL_ADDR_ROWS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA,image_core_inst.rows);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:18:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA,image_core_inst.cols);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:19:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GRAY_THRESH_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_GRAY_THRESH_DATA,image_core_inst.gray_thresh);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:20:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ACC_THRESH_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GRAY_THRESH_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ACC_THRESH_DATA,image_core_inst.acc_thresh);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:21:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_DIST_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_DIST_DATA,image_core_inst.min_dist);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:22:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_RADIUS_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_DIST_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_RADIUS_DATA,image_core_inst.min_radius);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:23:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MAX_RADIUS_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_RADIUS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MAX_RADIUS_DATA,image_core_inst.max_radius);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:25:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_AP_CTRL' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_AP_CTRL,0x81);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:28:46: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GIE' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_AP_CTRL'?
+   IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_GIE,0x1);
+                                              ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:29:46: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_IER' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GIE'?
+   IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_IER,0x3);
+                                              ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:33:5: error: 'XPAR_INTC_HOUGHCIRCLES_INTERRUPT_INTR' undeclared (first use in this function); did you mean 'XPAR_INTC_FILTER2D_CORE_INTERRUPT_INTR'?
+     XPAR_INTC_HOUGHCIRCLES_INTERRUPT_INTR,
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     XPAR_INTC_FILTER2D_CORE_INTERRUPT_INTR
+In file included from ../../test/inc/image_core.h:11:0,
+                 from ../src/image_core.c:8:
+../src/image_core.c: In function 'Image_Core_intr_handler':
+../src/image_core.c:40:18: error: 'XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_BRAM_TRCL1_S_AXI_CTRL_BASEADDR'?
+  u32 status=IORD(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ISR);
+                  ^
+../../test/inc/define.h:33:38: note: in definition of macro 'IORD'
+ #define IORD(addr,offset)   Xil_In32(addr+offset)
+                                      ^~~~
+../src/image_core.c:40:56: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ISR' undeclared (first use in this function); did you mean 'XFILTER2D_CORE_CTRL_ADDR_ISR'?
+  u32 status=IORD(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ISR);
+                                                        ^
+../../test/inc/define.h:33:43: note: in definition of macro 'IORD'
+ #define IORD(addr,offset)   Xil_In32(addr+offset)
+                                           ^~~~~~
+make: *** [src/image_core.o] ´íÎó 1
+20:03:04 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/image_core.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_0/include -I../../test/inc -c -fmessage-length=0 -MT"src/image_core.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/image_core.d" -MT"src/image_core.o" -o "src/image_core.o" "../src/image_core.c"
+In file included from ../../test/inc/image_core.h:11:0,
+                 from ../src/image_core.c:8:
+../src/image_core.c: In function 'Init_Image_Core':
+../src/image_core.c:17:7: error: 'XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_BRAM_TRCL1_S_AXI_CTRL_BASEADDR'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA,image_core_inst.rows);
+       ^
+../../test/inc/define.h:32:44: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                            ^~~~
+../src/image_core.c:17:7: note: each undeclared identifier is reported only once for each function it appears in
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA,image_core_inst.rows);
+       ^
+../../test/inc/define.h:32:44: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                            ^~~~
+../src/image_core.c:17:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA' undeclared (first use in this function); did you mean 'XFILTER2D_CORE_CTRL_ADDR_ROWS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA,image_core_inst.rows);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:18:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA,image_core_inst.cols);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:19:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GRAY_THRESH_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_GRAY_THRESH_DATA,image_core_inst.gray_thresh);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:20:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ACC_THRESH_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GRAY_THRESH_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ACC_THRESH_DATA,image_core_inst.acc_thresh);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:21:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_DIST_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_DIST_DATA,image_core_inst.min_dist);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:22:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_RADIUS_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_DIST_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_RADIUS_DATA,image_core_inst.min_radius);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:23:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MAX_RADIUS_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_RADIUS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MAX_RADIUS_DATA,image_core_inst.max_radius);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:25:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_AP_CTRL' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_AP_CTRL,0x81);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:28:46: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GIE' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_AP_CTRL'?
+   IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_GIE,0x1);
+                                              ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:29:46: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_IER' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GIE'?
+   IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_IER,0x3);
+                                              ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:33:5: error: 'XPAR_INTC_HOUGHCIRCLES_INTERRUPT_INTR' undeclared (first use in this function); did you mean 'XPAR_INTC_FILTER2D_CORE_INTERRUPT_INTR'?
+     XPAR_INTC_HOUGHCIRCLES_INTERRUPT_INTR,
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     XPAR_INTC_FILTER2D_CORE_INTERRUPT_INTR
+In file included from ../../test/inc/image_core.h:11:0,
+                 from ../src/image_core.c:8:
+../src/image_core.c: In function 'Image_Core_intr_handler':
+../src/image_core.c:40:18: error: 'XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_BRAM_TRCL1_S_AXI_CTRL_BASEADDR'?
+  u32 status=IORD(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ISR);
+                  ^
+../../test/inc/define.h:33:38: note: in definition of macro 'IORD'
+ #define IORD(addr,offset)   Xil_In32(addr+offset)
+                                      ^~~~
+../src/image_core.c:40:56: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ISR' undeclared (first use in this function); did you mean 'XFILTER2D_CORE_CTRL_ADDR_ISR'?
+  u32 status=IORD(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ISR);
+                                                        ^
+../../test/inc/define.h:33:43: note: in definition of macro 'IORD'
+ #define IORD(addr,offset)   Xil_In32(addr+offset)
+                                           ^~~~~~
+make: *** [src/image_core.o] ´íÎó 1
+20:03:13 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/image_core.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_0/include -I../../test/inc -c -fmessage-length=0 -MT"src/image_core.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/image_core.d" -MT"src/image_core.o" -o "src/image_core.o" "../src/image_core.c"
+In file included from ../../test/inc/image_core.h:11:0,
+                 from ../src/image_core.c:8:
+../src/image_core.c: In function 'Init_Image_Core':
+../src/image_core.c:17:7: error: 'XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_BRAM_TRCL1_S_AXI_CTRL_BASEADDR'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA,image_core_inst.rows);
+       ^
+../../test/inc/define.h:32:44: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                            ^~~~
+../src/image_core.c:17:7: note: each undeclared identifier is reported only once for each function it appears in
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA,image_core_inst.rows);
+       ^
+../../test/inc/define.h:32:44: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                            ^~~~
+../src/image_core.c:17:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA' undeclared (first use in this function); did you mean 'XFILTER2D_CORE_CTRL_ADDR_ROWS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA,image_core_inst.rows);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:18:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA,image_core_inst.cols);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:19:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GRAY_THRESH_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_GRAY_THRESH_DATA,image_core_inst.gray_thresh);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:20:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ACC_THRESH_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GRAY_THRESH_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ACC_THRESH_DATA,image_core_inst.acc_thresh);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:21:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_DIST_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_DIST_DATA,image_core_inst.min_dist);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:22:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_RADIUS_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_DIST_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_RADIUS_DATA,image_core_inst.min_radius);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:23:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MAX_RADIUS_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_RADIUS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MAX_RADIUS_DATA,image_core_inst.max_radius);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:25:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_AP_CTRL' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_AP_CTRL,0x81);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:28:46: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GIE' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_AP_CTRL'?
+   IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_GIE,0x1);
+                                              ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:29:46: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_IER' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GIE'?
+   IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_IER,0x3);
+                                              ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:33:5: error: 'XPAR_INTC_HOUGHCIRCLES_INTERRUPT_INTR' undeclared (first use in this function); did you mean 'XPAR_INTC_FILTER2D_CORE_INTERRUPT_INTR'?
+     XPAR_INTC_HOUGHCIRCLES_INTERRUPT_INTR,
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     XPAR_INTC_FILTER2D_CORE_INTERRUPT_INTR
+In file included from ../../test/inc/image_core.h:11:0,
+                 from ../src/image_core.c:8:
+../src/image_core.c: In function 'Image_Core_intr_handler':
+../src/image_core.c:40:18: error: 'XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_BRAM_TRCL1_S_AXI_CTRL_BASEADDR'?
+  u32 status=IORD(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ISR);
+                  ^
+../../test/inc/define.h:33:38: note: in definition of macro 'IORD'
+ #define IORD(addr,offset)   Xil_In32(addr+offset)
+                                      ^~~~
+../src/image_core.c:40:56: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ISR' undeclared (first use in this function); did you mean 'XFILTER2D_CORE_CTRL_ADDR_ISR'?
+  u32 status=IORD(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ISR);
+                                                        ^
+../../test/inc/define.h:33:43: note: in definition of macro 'IORD'
+ #define IORD(addr,offset)   Xil_In32(addr+offset)
+                                           ^~~~~~
+make: *** [src/image_core.o] ´íÎó 1
+20:03:21 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/image_core.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_0/include -I../../test/inc -c -fmessage-length=0 -MT"src/image_core.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/image_core.d" -MT"src/image_core.o" -o "src/image_core.o" "../src/image_core.c"
+In file included from ../../test/inc/image_core.h:11:0,
+                 from ../src/image_core.c:8:
+../src/image_core.c: In function 'Init_Image_Core':
+../src/image_core.c:17:7: error: 'XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_BRAM_TRCL1_S_AXI_CTRL_BASEADDR'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA,image_core_inst.rows);
+       ^
+../../test/inc/define.h:32:44: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                            ^~~~
+../src/image_core.c:17:7: note: each undeclared identifier is reported only once for each function it appears in
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA,image_core_inst.rows);
+       ^
+../../test/inc/define.h:32:44: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                            ^~~~
+../src/image_core.c:17:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA' undeclared (first use in this function); did you mean 'XFILTER2D_CORE_CTRL_ADDR_ROWS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA,image_core_inst.rows);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:18:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA,image_core_inst.cols);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:19:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GRAY_THRESH_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_GRAY_THRESH_DATA,image_core_inst.gray_thresh);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:20:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ACC_THRESH_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GRAY_THRESH_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ACC_THRESH_DATA,image_core_inst.acc_thresh);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:21:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_DIST_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_DIST_DATA,image_core_inst.min_dist);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:22:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_RADIUS_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_DIST_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_RADIUS_DATA,image_core_inst.min_radius);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:23:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MAX_RADIUS_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_RADIUS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MAX_RADIUS_DATA,image_core_inst.max_radius);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:25:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_AP_CTRL' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_AP_CTRL,0x81);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:28:46: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GIE' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_AP_CTRL'?
+   IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_GIE,0x1);
+                                              ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:29:46: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_IER' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GIE'?
+   IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_IER,0x3);
+                                              ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:33:5: error: 'XPAR_INTC_HOUGHCIRCLES_INTERRUPT_INTR' undeclared (first use in this function); did you mean 'XPAR_INTC_FILTER2D_CORE_INTERRUPT_INTR'?
+     XPAR_INTC_HOUGHCIRCLES_INTERRUPT_INTR,
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     XPAR_INTC_FILTER2D_CORE_INTERRUPT_INTR
+In file included from ../../test/inc/image_core.h:11:0,
+                 from ../src/image_core.c:8:
+../src/image_core.c: In function 'Image_Core_intr_handler':
+../src/image_core.c:40:18: error: 'XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_BRAM_TRCL1_S_AXI_CTRL_BASEADDR'?
+  u32 status=IORD(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ISR);
+                  ^
+../../test/inc/define.h:33:38: note: in definition of macro 'IORD'
+ #define IORD(addr,offset)   Xil_In32(addr+offset)
+                                      ^~~~
+../src/image_core.c:40:56: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ISR' undeclared (first use in this function); did you mean 'XFILTER2D_CORE_CTRL_ADDR_ISR'?
+  u32 status=IORD(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ISR);
+                                                        ^
+../../test/inc/define.h:33:43: note: in definition of macro 'IORD'
+ #define IORD(addr,offset)   Xil_In32(addr+offset)
+                                           ^~~~~~
+make: *** [src/image_core.o] ´íÎó 1
+20:03:37 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/image_core.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_0/include -I../../test/inc -c -fmessage-length=0 -MT"src/image_core.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/image_core.d" -MT"src/image_core.o" -o "src/image_core.o" "../src/image_core.c"
+In file included from ../../test/inc/image_core.h:11:0,
+                 from ../src/image_core.c:8:
+../src/image_core.c: In function 'Init_Image_Core':
+../src/image_core.c:17:7: error: 'XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_BRAM_TRCL1_S_AXI_CTRL_BASEADDR'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA,image_core_inst.rows);
+       ^
+../../test/inc/define.h:32:44: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                            ^~~~
+../src/image_core.c:17:7: note: each undeclared identifier is reported only once for each function it appears in
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA,image_core_inst.rows);
+       ^
+../../test/inc/define.h:32:44: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                            ^~~~
+../src/image_core.c:17:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA' undeclared (first use in this function); did you mean 'XFILTER2D_CORE_CTRL_ADDR_ROWS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA,image_core_inst.rows);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:18:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA,image_core_inst.cols);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:19:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GRAY_THRESH_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_GRAY_THRESH_DATA,image_core_inst.gray_thresh);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:20:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ACC_THRESH_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GRAY_THRESH_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ACC_THRESH_DATA,image_core_inst.acc_thresh);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:21:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_DIST_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_DIST_DATA,image_core_inst.min_dist);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:22:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_RADIUS_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_DIST_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_RADIUS_DATA,image_core_inst.min_radius);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:23:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MAX_RADIUS_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_RADIUS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MAX_RADIUS_DATA,image_core_inst.max_radius);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:25:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_AP_CTRL' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_AP_CTRL,0x81);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:28:46: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GIE' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_AP_CTRL'?
+   IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_GIE,0x1);
+                                              ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:29:46: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_IER' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GIE'?
+   IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_IER,0x3);
+                                              ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:33:5: error: 'XPAR_INTC_HOUGHCIRCLES_INTERRUPT_INTR' undeclared (first use in this function); did you mean 'XPAR_INTC_FILTER2D_CORE_INTERRUPT_INTR'?
+     XPAR_INTC_HOUGHCIRCLES_INTERRUPT_INTR,
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     XPAR_INTC_FILTER2D_CORE_INTERRUPT_INTR
+In file included from ../../test/inc/image_core.h:11:0,
+                 from ../src/image_core.c:8:
+../src/image_core.c: In function 'Image_Core_intr_handler':
+../src/image_core.c:40:18: error: 'XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_BRAM_TRCL1_S_AXI_CTRL_BASEADDR'?
+  u32 status=IORD(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ISR);
+                  ^
+../../test/inc/define.h:33:38: note: in definition of macro 'IORD'
+ #define IORD(addr,offset)   Xil_In32(addr+offset)
+                                      ^~~~
+../src/image_core.c:40:56: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ISR' undeclared (first use in this function); did you mean 'XFILTER2D_CORE_CTRL_ADDR_ISR'?
+  u32 status=IORD(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ISR);
+                                                        ^
+../../test/inc/define.h:33:43: note: in definition of macro 'IORD'
+ #define IORD(addr,offset)   Xil_In32(addr+offset)
+                                           ^~~~~~
+make: *** [src/image_core.o] ´íÎó 1
+20:04:47 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/image_core.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_0/include -I../../test/inc -c -fmessage-length=0 -MT"src/image_core.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/image_core.d" -MT"src/image_core.o" -o "src/image_core.o" "../src/image_core.c"
+In file included from ../../test/inc/image_core.h:11:0,
+                 from ../src/image_core.c:8:
+../src/image_core.c: In function 'Init_Image_Core':
+../src/image_core.c:17:7: error: 'XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_BRAM_TRCL1_S_AXI_CTRL_BASEADDR'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA,image_core_inst.rows);
+       ^
+../../test/inc/define.h:32:44: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                            ^~~~
+../src/image_core.c:17:7: note: each undeclared identifier is reported only once for each function it appears in
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA,image_core_inst.rows);
+       ^
+../../test/inc/define.h:32:44: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                            ^~~~
+../src/image_core.c:17:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA' undeclared (first use in this function); did you mean 'XFILTER2D_CORE_CTRL_ADDR_ROWS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA,image_core_inst.rows);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:18:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA,image_core_inst.cols);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:19:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GRAY_THRESH_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_GRAY_THRESH_DATA,image_core_inst.gray_thresh);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:20:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ACC_THRESH_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GRAY_THRESH_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ACC_THRESH_DATA,image_core_inst.acc_thresh);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:20:106: error: 'Image_Core_Struct {aka struct <anonymous>}' has no member named 'acc_thresh'; did you mean 'gray_thresh'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ACC_THRESH_DATA,image_core_inst.acc_thresh);
+                                                                                                          ^
+../../test/inc/define.h:32:56: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                        ^~~~~
+../src/image_core.c:21:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_DIST_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_DIST_DATA,image_core_inst.min_dist);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:21:103: error: 'Image_Core_Struct {aka struct <anonymous>}' has no member named 'min_dist'
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_DIST_DATA,image_core_inst.min_dist);
+                                                                                                       ^
+../../test/inc/define.h:32:56: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                        ^~~~~
+../src/image_core.c:22:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_RADIUS_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_DIST_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_RADIUS_DATA,image_core_inst.min_radius);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:22:105: error: 'Image_Core_Struct {aka struct <anonymous>}' has no member named 'min_radius'
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_RADIUS_DATA,image_core_inst.min_radius);
+                                                                                                         ^
+../../test/inc/define.h:32:56: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                        ^~~~~
+../src/image_core.c:23:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MAX_RADIUS_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_RADIUS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MAX_RADIUS_DATA,image_core_inst.max_radius);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:23:105: error: 'Image_Core_Struct {aka struct <anonymous>}' has no member named 'max_radius'
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MAX_RADIUS_DATA,image_core_inst.max_radius);
+                                                                                                         ^
+../../test/inc/define.h:32:56: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                        ^~~~~
+../src/image_core.c:25:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_AP_CTRL' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_AP_CTRL,0x81);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:28:46: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GIE' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_AP_CTRL'?
+   IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_GIE,0x1);
+                                              ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:29:46: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_IER' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GIE'?
+   IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_IER,0x3);
+                                              ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:33:5: error: 'XPAR_INTC_HOUGHCIRCLES_INTERRUPT_INTR' undeclared (first use in this function); did you mean 'XPAR_INTC_FILTER2D_CORE_INTERRUPT_INTR'?
+     XPAR_INTC_HOUGHCIRCLES_INTERRUPT_INTR,
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     XPAR_INTC_FILTER2D_CORE_INTERRUPT_INTR
+In file included from ../../test/inc/image_core.h:11:0,
+                 from ../src/image_core.c:8:
+../src/image_core.c: In function 'Image_Core_intr_handler':
+../src/image_core.c:40:18: error: 'XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_BRAM_TRCL1_S_AXI_CTRL_BASEADDR'?
+  u32 status=IORD(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ISR);
+                  ^
+../../test/inc/define.h:33:38: note: in definition of macro 'IORD'
+ #define IORD(addr,offset)   Xil_In32(addr+offset)
+                                      ^~~~
+../src/image_core.c:40:56: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ISR' undeclared (first use in this function); did you mean 'XFILTER2D_CORE_CTRL_ADDR_ISR'?
+  u32 status=IORD(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ISR);
+                                                        ^
+../../test/inc/define.h:33:43: note: in definition of macro 'IORD'
+ #define IORD(addr,offset)   Xil_In32(addr+offset)
+                                           ^~~~~~
+make: *** [src/image_core.o] ´íÎó 1
+20:04:51 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/image_core.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_0/include -I../../test/inc -c -fmessage-length=0 -MT"src/image_core.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/image_core.d" -MT"src/image_core.o" -o "src/image_core.o" "../src/image_core.c"
+In file included from ../../test/inc/image_core.h:11:0,
+                 from ../src/image_core.c:8:
+../src/image_core.c: In function 'Init_Image_Core':
+../src/image_core.c:17:7: error: 'XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_BRAM_TRCL1_S_AXI_CTRL_BASEADDR'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA,image_core_inst.rows);
+       ^
+../../test/inc/define.h:32:44: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                            ^~~~
+../src/image_core.c:17:7: note: each undeclared identifier is reported only once for each function it appears in
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA,image_core_inst.rows);
+       ^
+../../test/inc/define.h:32:44: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                            ^~~~
+../src/image_core.c:17:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA' undeclared (first use in this function); did you mean 'XFILTER2D_CORE_CTRL_ADDR_ROWS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA,image_core_inst.rows);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:18:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA,image_core_inst.cols);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:19:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GRAY_THRESH_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_GRAY_THRESH_DATA,image_core_inst.gray_thresh);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:19:106: error: 'Image_Core_Struct {aka struct <anonymous>}' has no member named 'gray_thresh'
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_GRAY_THRESH_DATA,image_core_inst.gray_thresh);
+                                                                                                          ^
+../../test/inc/define.h:32:56: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                        ^~~~~
+../src/image_core.c:20:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ACC_THRESH_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GRAY_THRESH_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ACC_THRESH_DATA,image_core_inst.acc_thresh);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:20:105: error: 'Image_Core_Struct {aka struct <anonymous>}' has no member named 'acc_thresh'
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ACC_THRESH_DATA,image_core_inst.acc_thresh);
+                                                                                                         ^
+../../test/inc/define.h:32:56: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                        ^~~~~
+../src/image_core.c:21:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_DIST_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_DIST_DATA,image_core_inst.min_dist);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:21:103: error: 'Image_Core_Struct {aka struct <anonymous>}' has no member named 'min_dist'
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_DIST_DATA,image_core_inst.min_dist);
+                                                                                                       ^
+../../test/inc/define.h:32:56: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                        ^~~~~
+../src/image_core.c:22:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_RADIUS_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_DIST_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_RADIUS_DATA,image_core_inst.min_radius);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:22:105: error: 'Image_Core_Struct {aka struct <anonymous>}' has no member named 'min_radius'
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_RADIUS_DATA,image_core_inst.min_radius);
+                                                                                                         ^
+../../test/inc/define.h:32:56: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                        ^~~~~
+../src/image_core.c:23:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MAX_RADIUS_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_RADIUS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MAX_RADIUS_DATA,image_core_inst.max_radius);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:23:105: error: 'Image_Core_Struct {aka struct <anonymous>}' has no member named 'max_radius'
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MAX_RADIUS_DATA,image_core_inst.max_radius);
+                                                                                                         ^
+../../test/inc/define.h:32:56: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                        ^~~~~
+../src/image_core.c:25:45: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_AP_CTRL' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA'?
+  IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_AP_CTRL,0x81);
+                                             ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:28:46: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GIE' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_AP_CTRL'?
+   IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_GIE,0x1);
+                                              ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:29:46: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_IER' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GIE'?
+   IOWR(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_IER,0x3);
+                                              ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:33:5: error: 'XPAR_INTC_HOUGHCIRCLES_INTERRUPT_INTR' undeclared (first use in this function); did you mean 'XPAR_INTC_FILTER2D_CORE_INTERRUPT_INTR'?
+     XPAR_INTC_HOUGHCIRCLES_INTERRUPT_INTR,
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     XPAR_INTC_FILTER2D_CORE_INTERRUPT_INTR
+In file included from ../../test/inc/image_core.h:11:0,
+                 from ../src/image_core.c:8:
+../src/image_core.c: In function 'Image_Core_intr_handler':
+../src/image_core.c:40:18: error: 'XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_BRAM_TRCL1_S_AXI_CTRL_BASEADDR'?
+  u32 status=IORD(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ISR);
+                  ^
+../../test/inc/define.h:33:38: note: in definition of macro 'IORD'
+ #define IORD(addr,offset)   Xil_In32(addr+offset)
+                                      ^~~~
+../src/image_core.c:40:56: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ISR' undeclared (first use in this function); did you mean 'XFILTER2D_CORE_CTRL_ADDR_ISR'?
+  u32 status=IORD(XPAR_HOUGHCIRCLES_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ISR);
+                                                        ^
+../../test/inc/define.h:33:43: note: in definition of macro 'IORD'
+ #define IORD(addr,offset)   Xil_In32(addr+offset)
+                                           ^~~~~~
+make: *** [src/image_core.o] ´íÎó 1
+20:05:26 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/image_core.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_0/include -I../../test/inc -c -fmessage-length=0 -MT"src/image_core.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/image_core.d" -MT"src/image_core.o" -o "src/image_core.o" "../src/image_core.c"
+In file included from ../../test/inc/image_core.h:11:0,
+                 from ../src/image_core.c:8:
+../src/image_core.c: In function 'Init_Image_Core':
+../src/image_core.c:17:46: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA' undeclared (first use in this function); did you mean 'XFILTER2D_CORE_CTRL_ADDR_ROWS_DATA'?
+  IOWR(XPAR_FILTER2D_CORE_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA,image_core_inst.rows);
+                                              ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:17:46: note: each undeclared identifier is reported only once for each function it appears in
+  IOWR(XPAR_FILTER2D_CORE_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA,image_core_inst.rows);
+                                              ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:18:46: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA'?
+  IOWR(XPAR_FILTER2D_CORE_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA,image_core_inst.cols);
+                                              ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:19:46: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GRAY_THRESH_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ROWS_DATA'?
+  IOWR(XPAR_FILTER2D_CORE_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_GRAY_THRESH_DATA,image_core_inst.gray_thresh);
+                                              ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:19:107: error: 'Image_Core_Struct {aka struct <anonymous>}' has no member named 'gray_thresh'
+  IOWR(XPAR_FILTER2D_CORE_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_GRAY_THRESH_DATA,image_core_inst.gray_thresh);
+                                                                                                           ^
+../../test/inc/define.h:32:56: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                        ^~~~~
+../src/image_core.c:20:46: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ACC_THRESH_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GRAY_THRESH_DATA'?
+  IOWR(XPAR_FILTER2D_CORE_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ACC_THRESH_DATA,image_core_inst.acc_thresh);
+                                              ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:20:106: error: 'Image_Core_Struct {aka struct <anonymous>}' has no member named 'acc_thresh'
+  IOWR(XPAR_FILTER2D_CORE_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ACC_THRESH_DATA,image_core_inst.acc_thresh);
+                                                                                                          ^
+../../test/inc/define.h:32:56: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                        ^~~~~
+../src/image_core.c:21:46: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_DIST_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA'?
+  IOWR(XPAR_FILTER2D_CORE_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_DIST_DATA,image_core_inst.min_dist);
+                                              ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:21:104: error: 'Image_Core_Struct {aka struct <anonymous>}' has no member named 'min_dist'
+  IOWR(XPAR_FILTER2D_CORE_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_DIST_DATA,image_core_inst.min_dist);
+                                                                                                        ^
+../../test/inc/define.h:32:56: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                        ^~~~~
+../src/image_core.c:22:46: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_RADIUS_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_DIST_DATA'?
+  IOWR(XPAR_FILTER2D_CORE_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_RADIUS_DATA,image_core_inst.min_radius);
+                                              ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:22:106: error: 'Image_Core_Struct {aka struct <anonymous>}' has no member named 'min_radius'
+  IOWR(XPAR_FILTER2D_CORE_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_RADIUS_DATA,image_core_inst.min_radius);
+                                                                                                          ^
+../../test/inc/define.h:32:56: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                        ^~~~~
+../src/image_core.c:23:46: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MAX_RADIUS_DATA' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_MIN_RADIUS_DATA'?
+  IOWR(XPAR_FILTER2D_CORE_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MAX_RADIUS_DATA,image_core_inst.max_radius);
+                                              ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:23:106: error: 'Image_Core_Struct {aka struct <anonymous>}' has no member named 'max_radius'
+  IOWR(XPAR_FILTER2D_CORE_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_MAX_RADIUS_DATA,image_core_inst.max_radius);
+                                                                                                          ^
+../../test/inc/define.h:32:56: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                        ^~~~~
+../src/image_core.c:25:46: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_AP_CTRL' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_COLS_DATA'?
+  IOWR(XPAR_FILTER2D_CORE_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_AP_CTRL,0x81);
+                                              ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:28:47: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GIE' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_AP_CTRL'?
+   IOWR(XPAR_FILTER2D_CORE_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_GIE,0x1);
+                                               ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:29:47: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_IER' undeclared (first use in this function); did you mean 'XHOUGHCIRCLES_CORE_CTRL_ADDR_GIE'?
+   IOWR(XPAR_FILTER2D_CORE_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_IER,0x3);
+                                               ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:33:5: error: 'XPAR_INTC_HOUGHCIRCLES_INTERRUPT_INTR' undeclared (first use in this function); did you mean 'XPAR_INTC_FILTER2D_CORE_INTERRUPT_INTR'?
+     XPAR_INTC_HOUGHCIRCLES_INTERRUPT_INTR,
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     XPAR_INTC_FILTER2D_CORE_INTERRUPT_INTR
+In file included from ../../test/inc/image_core.h:11:0,
+                 from ../src/image_core.c:8:
+../src/image_core.c: In function 'Image_Core_intr_handler':
+../src/image_core.c:40:57: error: 'XHOUGHCIRCLES_CORE_CTRL_ADDR_ISR' undeclared (first use in this function); did you mean 'XFILTER2D_CORE_CTRL_ADDR_ISR'?
+  u32 status=IORD(XPAR_FILTER2D_CORE_S_AXI_CTRL_BASEADDR,XHOUGHCIRCLES_CORE_CTRL_ADDR_ISR);
+                                                         ^
+../../test/inc/define.h:33:43: note: in definition of macro 'IORD'
+ #define IORD(addr,offset)   Xil_In32(addr+offset)
+                                           ^~~~~~
+make: *** [src/image_core.o] ´íÎó 1
+20:05:56 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/image_core.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_0/include -I../../test/inc -c -fmessage-length=0 -MT"src/image_core.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/image_core.d" -MT"src/image_core.o" -o "src/image_core.o" "../src/image_core.c"
+In file included from ../../test/inc/image_core.h:11:0,
+                 from ../src/image_core.c:8:
+../src/image_core.c: In function 'Init_Image_Core':
+../src/image_core.c:19:46: error: 'XFILTER2D_CORE_CTRL_ADDR_GRAY_THRESH_DATA' undeclared (first use in this function); did you mean 'XFILTER2D_CORE_CTRL_ADDR_ROWS_DATA'?
+  IOWR(XPAR_FILTER2D_CORE_S_AXI_CTRL_BASEADDR,XFILTER2D_CORE_CTRL_ADDR_GRAY_THRESH_DATA,image_core_inst.gray_thresh);
+                                              ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:19:46: note: each undeclared identifier is reported only once for each function it appears in
+  IOWR(XPAR_FILTER2D_CORE_S_AXI_CTRL_BASEADDR,XFILTER2D_CORE_CTRL_ADDR_GRAY_THRESH_DATA,image_core_inst.gray_thresh);
+                                              ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:19:103: error: 'Image_Core_Struct {aka struct <anonymous>}' has no member named 'gray_thresh'
+  IOWR(XPAR_FILTER2D_CORE_S_AXI_CTRL_BASEADDR,XFILTER2D_CORE_CTRL_ADDR_GRAY_THRESH_DATA,image_core_inst.gray_thresh);
+                                                                                                       ^
+../../test/inc/define.h:32:56: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                        ^~~~~
+../src/image_core.c:20:46: error: 'XFILTER2D_CORE_CTRL_ADDR_ACC_THRESH_DATA' undeclared (first use in this function); did you mean 'XFILTER2D_CORE_CTRL_ADDR_GRAY_THRESH_DATA'?
+  IOWR(XPAR_FILTER2D_CORE_S_AXI_CTRL_BASEADDR,XFILTER2D_CORE_CTRL_ADDR_ACC_THRESH_DATA,image_core_inst.acc_thresh);
+                                              ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:20:102: error: 'Image_Core_Struct {aka struct <anonymous>}' has no member named 'acc_thresh'
+  IOWR(XPAR_FILTER2D_CORE_S_AXI_CTRL_BASEADDR,XFILTER2D_CORE_CTRL_ADDR_ACC_THRESH_DATA,image_core_inst.acc_thresh);
+                                                                                                      ^
+../../test/inc/define.h:32:56: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                        ^~~~~
+../src/image_core.c:21:46: error: 'XFILTER2D_CORE_CTRL_ADDR_MIN_DIST_DATA' undeclared (first use in this function); did you mean 'XFILTER2D_CORE_CTRL_ADDR_SIGMA_DATA'?
+  IOWR(XPAR_FILTER2D_CORE_S_AXI_CTRL_BASEADDR,XFILTER2D_CORE_CTRL_ADDR_MIN_DIST_DATA,image_core_inst.min_dist);
+                                              ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:21:100: error: 'Image_Core_Struct {aka struct <anonymous>}' has no member named 'min_dist'
+  IOWR(XPAR_FILTER2D_CORE_S_AXI_CTRL_BASEADDR,XFILTER2D_CORE_CTRL_ADDR_MIN_DIST_DATA,image_core_inst.min_dist);
+                                                                                                    ^
+../../test/inc/define.h:32:56: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                        ^~~~~
+../src/image_core.c:22:46: error: 'XFILTER2D_CORE_CTRL_ADDR_MIN_RADIUS_DATA' undeclared (first use in this function); did you mean 'XFILTER2D_CORE_CTRL_ADDR_MIN_DIST_DATA'?
+  IOWR(XPAR_FILTER2D_CORE_S_AXI_CTRL_BASEADDR,XFILTER2D_CORE_CTRL_ADDR_MIN_RADIUS_DATA,image_core_inst.min_radius);
+                                              ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:22:102: error: 'Image_Core_Struct {aka struct <anonymous>}' has no member named 'min_radius'
+  IOWR(XPAR_FILTER2D_CORE_S_AXI_CTRL_BASEADDR,XFILTER2D_CORE_CTRL_ADDR_MIN_RADIUS_DATA,image_core_inst.min_radius);
+                                                                                                      ^
+../../test/inc/define.h:32:56: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                        ^~~~~
+../src/image_core.c:23:46: error: 'XFILTER2D_CORE_CTRL_ADDR_MAX_RADIUS_DATA' undeclared (first use in this function); did you mean 'XFILTER2D_CORE_CTRL_ADDR_MIN_RADIUS_DATA'?
+  IOWR(XPAR_FILTER2D_CORE_S_AXI_CTRL_BASEADDR,XFILTER2D_CORE_CTRL_ADDR_MAX_RADIUS_DATA,image_core_inst.max_radius);
+                                              ^
+../../test/inc/define.h:32:49: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                 ^~~~~~
+../src/image_core.c:23:102: error: 'Image_Core_Struct {aka struct <anonymous>}' has no member named 'max_radius'
+  IOWR(XPAR_FILTER2D_CORE_S_AXI_CTRL_BASEADDR,XFILTER2D_CORE_CTRL_ADDR_MAX_RADIUS_DATA,image_core_inst.max_radius);
+                                                                                                      ^
+../../test/inc/define.h:32:56: note: in definition of macro 'IOWR'
+ #define IOWR(addr,offset,value)  Xil_Out32(addr+offset,value)
+                                                        ^~~~~
+../src/image_core.c:33:5: error: 'XPAR_INTC_FILTER2D_INTERRUPT_INTR' undeclared (first use in this function); did you mean 'XPAR_INTC_FILTER2D_CORE_INTERRUPT_INTR'?
+     XPAR_INTC_FILTER2D_INTERRUPT_INTR,
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     XPAR_INTC_FILTER2D_CORE_INTERRUPT_INTR
+make: *** [src/image_core.o] ´íÎó 1
+20:06:25 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/image_core.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_0/include -I../../test/inc -c -fmessage-length=0 -MT"src/image_core.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/image_core.d" -MT"src/image_core.o" -o "src/image_core.o" "../src/image_core.c"
+../src/image_core.c: In function 'Init_Image_Core':
+../src/image_core.c:29:5: error: 'XPAR_INTC_FILTER2D_INTERRUPT_INTR' undeclared (first use in this function); did you mean 'XPAR_INTC_FILTER2D_CORE_INTERRUPT_INTR'?
+     XPAR_INTC_FILTER2D_INTERRUPT_INTR,
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     XPAR_INTC_FILTER2D_CORE_INTERRUPT_INTR
+../src/image_core.c:29:5: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/image_core.o] ´íÎó 1
+20:06:45 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/image_core.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_0/include -I../../test/inc -c -fmessage-length=0 -MT"src/image_core.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/image_core.d" -MT"src/image_core.o" -o "src/image_core.o" "../src/image_core.c"
+'Finished building: ../src/image_core.c'
+' '
+'Building file: ../src/intc.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_0/include -I../../test/inc -c -fmessage-length=0 -MT"src/intc.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/intc.d" -MT"src/intc.o" -o "src/intc.o" "../src/intc.c"
+'Finished building: ../src/intc.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_0/include -I../../test/inc -c -fmessage-length=0 -MT"src/platform.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/vdma.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_0/include -I../../test/inc -c -fmessage-length=0 -MT"src/vdma.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/vdma.d" -MT"src/vdma.o" -o "src/vdma.o" "../src/vdma.c"
+'Finished building: ../src/vdma.c'
+' '
+'Building file: ../helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_0/include -I../../test/inc -c -fmessage-length=0 -MT"helloworld.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"helloworld.d" -MT"helloworld.o" -o "helloworld.o" "../helloworld.c"
+../helloworld.c: In function 'main':
+../helloworld.c:87:20: error: 'Image_Core_Struct {aka struct <anonymous>}' has no member named 'gray_thresh'
+     image_core_inst.gray_thresh=400;
+                    ^
+../helloworld.c:88:20: error: 'Image_Core_Struct {aka struct <anonymous>}' has no member named 'acc_thresh'
+     image_core_inst.acc_thresh=20;
+                    ^
+../helloworld.c:89:20: error: 'Image_Core_Struct {aka struct <anonymous>}' has no member named 'min_dist'
+     image_core_inst.min_dist=10;
+                    ^
+../helloworld.c:90:20: error: 'Image_Core_Struct {aka struct <anonymous>}' has no member named 'min_radius'
+     image_core_inst.min_radius=0;
+                    ^
+../helloworld.c:91:20: error: 'Image_Core_Struct {aka struct <anonymous>}' has no member named 'max_radius'
+     image_core_inst.max_radius=0;
+                    ^
+make: *** [helloworld.o] ´íÎó 1
+20:07:05 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_0/include -I../../test/inc -c -fmessage-length=0 -MT"helloworld.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"helloworld.d" -MT"helloworld.o" -o "helloworld.o" "../helloworld.c"
+'Finished building: ../helloworld.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/image_core.o ./src/intc.o ./src/platform.o ./src/vdma.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  95800	  67028	   3228	 166056	  288a8	test.elf
+'Finished building: test.elf.size'
+' '
+20:08:08 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_0/include -I../../test/inc -c -fmessage-length=0 -MT"helloworld.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"helloworld.d" -MT"helloworld.o" -o "helloworld.o" "../helloworld.c"
+'Finished building: ../helloworld.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/image_core.o ./src/intc.o ./src/platform.o ./src/vdma.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  95800	  67028	   3228	 166056	  288a8	test.elf
+'Finished building: test.elf.size'
+' '
+20:08:33 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+20:12:31 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+19:13:34 **** Auto Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/image_core.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../test_bsp/microblaze_0/include -I../../test/inc -c -fmessage-length=0 -MT"src/image_core.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/image_core.d" -MT"src/image_core.o" -o "src/image_core.o" "../src/image_core.c"
+'Finished building: ../src/image_core.c'
+' '
+'Building target: test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "test.elf"  ./src/image_core.o ./src/intc.o ./src/platform.o ./src/vdma.o  ./helloworld.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  95800	  67028	   3228	 166056	  288a8	test.elf
+'Finished building: test.elf.size'
+' '
+19:14:09 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+19:15:33 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+19:15:46 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.
+19:16:39 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for `all'.

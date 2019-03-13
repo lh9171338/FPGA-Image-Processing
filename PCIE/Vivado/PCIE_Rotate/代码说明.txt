@@ -1,0 +1,5 @@
+实现功能：图像旋转
+使用模块：PCIE+Riffa_Controller+Riffa_Axis+ImageRotate IP核
+输入：灰度图+参数（旋转角度、插值方式）
+输出：旋转后的灰度图
+备注：图像最大尺寸为255*256

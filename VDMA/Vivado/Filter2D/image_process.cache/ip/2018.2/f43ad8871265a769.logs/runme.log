@@ -1,0 +1,1685 @@
+
+*** Running vivado
+    with args -log design_1_image_core_0_1.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_image_core_0_1.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source design_1_image_core_0_1.tcl -notrace
+Command: synth_design -top design_1_image_core_0_1 -part xc7vx690tffg1761-3 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 1688 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 455.254 ; gain = 106.645
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_image_core_0_1' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ip/design_1_image_core_0_1/synth/design_1_image_core_0_1.v:58]
+INFO: [Synth 8-6157] synthesizing module 'image_core' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/image_core.v:12]
+	Parameter C_S_AXI_CTRL_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_WSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_WSTRB_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'image_core_ctrl_s_axi' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/image_core_ctrl_s_axi.v:9]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_AP_CTRL bound to: 6'b000000 
+	Parameter ADDR_GIE bound to: 6'b000100 
+	Parameter ADDR_IER bound to: 6'b001000 
+	Parameter ADDR_ISR bound to: 6'b001100 
+	Parameter ADDR_ROWS_DATA_0 bound to: 6'b010000 
+	Parameter ADDR_ROWS_CTRL bound to: 6'b010100 
+	Parameter ADDR_COLS_DATA_0 bound to: 6'b011000 
+	Parameter ADDR_COLS_CTRL bound to: 6'b011100 
+	Parameter ADDR_THREHOLD_DATA_0 bound to: 6'b100000 
+	Parameter ADDR_THREHOLD_CTRL bound to: 6'b100100 
+	Parameter WRIDLE bound to: 2'b00 
+	Parameter WRDATA bound to: 2'b01 
+	Parameter WRRESP bound to: 2'b10 
+	Parameter WRRESET bound to: 2'b11 
+	Parameter RDIDLE bound to: 2'b00 
+	Parameter RDDATA bound to: 2'b01 
+	Parameter RDRESET bound to: 2'b10 
+	Parameter ADDR_BITS bound to: 6 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/image_core_ctrl_s_axi.v:210]
+INFO: [Synth 8-6155] done synthesizing module 'image_core_ctrl_s_axi' (1#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/image_core_ctrl_s_axi.v:9]
+INFO: [Synth 8-6157] synthesizing module 'image_core_keypoimb6' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/image_core_keypoimb6.v:11]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 1000 - type: integer 
+	Parameter AddressWidth bound to: 10 - type: integer 
+	Parameter BufferCount bound to: 2 - type: integer 
+	Parameter IndexWidth bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'image_core_keypoimb6_memcore' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/image_core_keypoimb6_memcore.v:66]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressRange bound to: 2000 - type: integer 
+	Parameter AddressWidth bound to: 11 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'image_core_keypoimb6_memcore_ram' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/image_core_keypoimb6_memcore.v:9]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter AWIDTH bound to: 11 - type: integer 
+	Parameter MEM_SIZE bound to: 2000 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/image_core_keypoimb6_memcore.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'image_core_keypoimb6_memcore_ram' (2#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/image_core_keypoimb6_memcore.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'image_core_keypoimb6_memcore' (3#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/image_core_keypoimb6_memcore.v:66]
+INFO: [Synth 8-6155] done synthesizing module 'image_core_keypoimb6' (4#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/image_core_keypoimb6.v:11]
+INFO: [Synth 8-6157] synthesizing module 'Block_Mat_exit410_pr' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/Block_Mat_exit410_pr.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 1'b1 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/Block_Mat_exit410_pr.v:112]
+INFO: [Synth 8-6155] done synthesizing module 'Block_Mat_exit410_pr' (5#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/Block_Mat_exit410_pr.v:10]
+INFO: [Synth 8-6157] synthesizing module 'AXIvideo2Mat' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/AXIvideo2Mat.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 8'b00000001 
+	Parameter ap_ST_fsm_state2 bound to: 8'b00000010 
+	Parameter ap_ST_fsm_state3 bound to: 8'b00000100 
+	Parameter ap_ST_fsm_state4 bound to: 8'b00001000 
+	Parameter ap_ST_fsm_pp1_stage0 bound to: 8'b00010000 
+	Parameter ap_ST_fsm_state7 bound to: 8'b00100000 
+	Parameter ap_ST_fsm_pp2_stage0 bound to: 8'b01000000 
+	Parameter ap_ST_fsm_state10 bound to: 8'b10000000 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/AXIvideo2Mat.v:117]
+INFO: [Synth 8-6155] done synthesizing module 'AXIvideo2Mat' (6#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/AXIvideo2Mat.v:10]
+INFO: [Synth 8-6157] synthesizing module 'Duplicate' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/Duplicate.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 4'b0001 
+	Parameter ap_ST_fsm_state2 bound to: 4'b0010 
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 4'b0100 
+	Parameter ap_ST_fsm_state5 bound to: 4'b1000 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/Duplicate.v:94]
+INFO: [Synth 8-6155] done synthesizing module 'Duplicate' (7#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/Duplicate.v:10]
+INFO: [Synth 8-6157] synthesizing module 'CvtColor' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/CvtColor.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 4'b0001 
+	Parameter ap_ST_fsm_state2 bound to: 4'b0010 
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 4'b0100 
+	Parameter ap_ST_fsm_state7 bound to: 4'b1000 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/CvtColor.v:80]
+INFO: [Synth 8-6157] synthesizing module 'image_core_mul_mubkb' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/image_core_mul_mubkb.v:14]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 22 - type: integer 
+	Parameter dout_WIDTH bound to: 29 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'image_core_mul_mubkb_DSP48_0' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/image_core_mul_mubkb.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'image_core_mul_mubkb_DSP48_0' (8#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/image_core_mul_mubkb.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'image_core_mul_mubkb' (9#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/image_core_mul_mubkb.v:14]
+INFO: [Synth 8-6157] synthesizing module 'image_core_mac_mucud' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/image_core_mac_mucud.v:34]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 20 - type: integer 
+	Parameter din2_WIDTH bound to: 29 - type: integer 
+	Parameter dout_WIDTH bound to: 29 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'image_core_mac_mucud_DSP48_1' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/image_core_mac_mucud.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'image_core_mac_mucud_DSP48_1' (10#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/image_core_mac_mucud.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'image_core_mac_mucud' (11#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/image_core_mac_mucud.v:34]
+INFO: [Synth 8-6157] synthesizing module 'image_core_mac_mudEe' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/image_core_mac_mudEe.v:34]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 23 - type: integer 
+	Parameter din2_WIDTH bound to: 29 - type: integer 
+	Parameter dout_WIDTH bound to: 30 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'image_core_mac_mudEe_DSP48_2' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/image_core_mac_mudEe.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'image_core_mac_mudEe_DSP48_2' (12#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/image_core_mac_mudEe.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'image_core_mac_mudEe' (13#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/image_core_mac_mudEe.v:34]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/CvtColor.v:566]
+INFO: [Synth 8-6155] done synthesizing module 'CvtColor' (14#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/CvtColor.v:10]
+INFO: [Synth 8-6157] synthesizing module 'FAST_t_opr' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 4'b0001 
+	Parameter ap_ST_fsm_state2 bound to: 4'b0010 
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 4'b0100 
+	Parameter ap_ST_fsm_state16 bound to: 4'b1000 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:78]
+INFO: [Synth 8-6157] synthesizing module 'FAST_t_opr_k_buf_eOg' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr_k_buf_eOg.v:54]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 320 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'FAST_t_opr_k_buf_eOg_ram' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr_k_buf_eOg.v:9]
+	Parameter DWIDTH bound to: 8 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 320 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr_k_buf_eOg.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'FAST_t_opr_k_buf_eOg_ram' (15#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr_k_buf_eOg.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'FAST_t_opr_k_buf_eOg' (16#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr_k_buf_eOg.v:54]
+INFO: [Synth 8-6157] synthesizing module 'FAST_t_opr_core_bkbM' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr_core_bkbM.v:54]
+	Parameter DataWidth bound to: 16 - type: integer 
+	Parameter AddressRange bound to: 327 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'FAST_t_opr_core_bkbM_ram' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr_core_bkbM.v:9]
+	Parameter DWIDTH bound to: 16 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 327 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr_core_bkbM.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'FAST_t_opr_core_bkbM_ram' (17#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr_core_bkbM.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'FAST_t_opr_core_bkbM' (18#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr_core_bkbM.v:54]
+INFO: [Synth 8-6157] synthesizing module 'min_int_s' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/min_int_s.v:10]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/min_int_s.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'min_int_s' (19#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/min_int_s.v:10]
+INFO: [Synth 8-6157] synthesizing module 'max_int_s' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/max_int_s.v:10]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/max_int_s.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'max_int_s' (20#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/max_int_s.v:10]
+INFO: [Synth 8-6157] synthesizing module 'reg_int_s' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/reg_int_s.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'reg_int_s' (21#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/reg_int_s.v:10]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4071]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4073]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4075]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4077]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4079]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4081]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4083]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4085]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4087]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4089]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4091]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4095]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4097]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4099]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4101]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4103]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4105]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4107]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4109]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4113]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4165]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4167]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4169]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4171]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4173]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4175]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4177]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4179]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4181]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4183]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4185]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4187]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4189]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4191]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4193]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4195]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4359]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4361]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4363]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4365]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4367]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4369]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4371]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4373]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4375]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4381]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4383]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4397]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4399]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4401]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4403]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4405]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4407]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4409]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:4413]
+INFO: [Synth 8-6155] done synthesizing module 'FAST_t_opr' (22#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:10]
+INFO: [Synth 8-6157] synthesizing module 'Array2Mat' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/Array2Mat.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 4'b0001 
+	Parameter ap_ST_fsm_state2 bound to: 4'b0010 
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 4'b0100 
+	Parameter ap_ST_fsm_state5 bound to: 4'b1000 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/Array2Mat.v:95]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/Array2Mat.v:490]
+INFO: [Synth 8-6155] done synthesizing module 'Array2Mat' (23#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/Array2Mat.v:10]
+INFO: [Synth 8-6157] synthesizing module 'Mat2AXIvideo' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/Mat2AXIvideo.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 4'b0001 
+	Parameter ap_ST_fsm_state2 bound to: 4'b0010 
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 4'b0100 
+	Parameter ap_ST_fsm_state6 bound to: 4'b1000 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/Mat2AXIvideo.v:84]
+WARNING: [Synth 8-6014] Unused sequential element AXI_video_strm_V_dest_V_1_sel_rd_reg was removed.  [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/Mat2AXIvideo.v:270]
+WARNING: [Synth 8-6014] Unused sequential element AXI_video_strm_V_id_V_1_sel_rd_reg was removed.  [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/Mat2AXIvideo.v:296]
+WARNING: [Synth 8-6014] Unused sequential element AXI_video_strm_V_keep_V_1_sel_rd_reg was removed.  [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/Mat2AXIvideo.v:322]
+WARNING: [Synth 8-6014] Unused sequential element AXI_video_strm_V_strb_V_1_sel_rd_reg was removed.  [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/Mat2AXIvideo.v:384]
+INFO: [Synth 8-6155] done synthesizing module 'Mat2AXIvideo' (24#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/Mat2AXIvideo.v:10]
+INFO: [Synth 8-6157] synthesizing module 'fifo_w32_d2_A' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w32_d2_A.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'fifo_w32_d2_A_shiftReg' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w32_d2_A.v:11]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w32_d2_A_shiftReg' (25#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w32_d2_A.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w32_d2_A' (26#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w32_d2_A.v:45]
+INFO: [Synth 8-6157] synthesizing module 'fifo_w32_d4_A' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w32_d4_A.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3'b100 
+INFO: [Synth 8-6157] synthesizing module 'fifo_w32_d4_A_shiftReg' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w32_d4_A.v:11]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3'b100 
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w32_d4_A_shiftReg' (27#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w32_d4_A.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w32_d4_A' (28#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w32_d4_A.v:45]
+INFO: [Synth 8-6157] synthesizing module 'fifo_w32_d5_A' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w32_d5_A.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 3 - type: integer 
+	Parameter DEPTH bound to: 4'b0101 
+INFO: [Synth 8-6157] synthesizing module 'fifo_w32_d5_A_shiftReg' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w32_d5_A.v:11]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 3 - type: integer 
+	Parameter DEPTH bound to: 4'b0101 
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w32_d5_A_shiftReg' (29#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w32_d5_A.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w32_d5_A' (30#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w32_d5_A.v:45]
+INFO: [Synth 8-6157] synthesizing module 'fifo_w1_d6_A' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w1_d6_A.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 3 - type: integer 
+	Parameter DEPTH bound to: 4'b0110 
+INFO: [Synth 8-6157] synthesizing module 'fifo_w1_d6_A_shiftReg' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w1_d6_A.v:11]
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 3 - type: integer 
+	Parameter DEPTH bound to: 4'b0110 
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w1_d6_A_shiftReg' (31#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w1_d6_A.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w1_d6_A' (32#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w1_d6_A.v:45]
+INFO: [Synth 8-6157] synthesizing module 'fifo_w11_d6_A' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w11_d6_A.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 11 - type: integer 
+	Parameter ADDR_WIDTH bound to: 3 - type: integer 
+	Parameter DEPTH bound to: 4'b0110 
+INFO: [Synth 8-6157] synthesizing module 'fifo_w11_d6_A_shiftReg' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w11_d6_A.v:11]
+	Parameter DATA_WIDTH bound to: 11 - type: integer 
+	Parameter ADDR_WIDTH bound to: 3 - type: integer 
+	Parameter DEPTH bound to: 4'b0110 
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w11_d6_A_shiftReg' (33#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w11_d6_A.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w11_d6_A' (34#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w11_d6_A.v:45]
+INFO: [Synth 8-6157] synthesizing module 'fifo_w8_d2_A' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w8_d2_A.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'fifo_w8_d2_A_shiftReg' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w8_d2_A.v:11]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w8_d2_A_shiftReg' (35#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w8_d2_A.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w8_d2_A' (36#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w8_d2_A.v:45]
+INFO: [Synth 8-6157] synthesizing module 'fifo_w16_d2_A' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w16_d2_A.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'fifo_w16_d2_A_shiftReg' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w16_d2_A.v:11]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w16_d2_A_shiftReg' (37#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w16_d2_A.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w16_d2_A' (38#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w16_d2_A.v:45]
+INFO: [Synth 8-6157] synthesizing module 'fifo_w1_d2_A' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w1_d2_A.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'fifo_w1_d2_A_shiftReg' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w1_d2_A.v:11]
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w1_d2_A_shiftReg' (39#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w1_d2_A.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w1_d2_A' (40#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w1_d2_A.v:45]
+INFO: [Synth 8-6157] synthesizing module 'fifo_w11_d2_A' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w11_d2_A.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 11 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'fifo_w11_d2_A_shiftReg' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w11_d2_A.v:11]
+	Parameter DATA_WIDTH bound to: 11 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w11_d2_A_shiftReg' (41#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w11_d2_A.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w11_d2_A' (42#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w11_d2_A.v:45]
+INFO: [Synth 8-6157] synthesizing module 'start_for_CvtColoncg' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/start_for_CvtColoncg.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3'b100 
+INFO: [Synth 8-6157] synthesizing module 'start_for_CvtColoncg_shiftReg' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/start_for_CvtColoncg.v:11]
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3'b100 
+INFO: [Synth 8-6155] done synthesizing module 'start_for_CvtColoncg_shiftReg' (43#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/start_for_CvtColoncg.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'start_for_CvtColoncg' (44#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/start_for_CvtColoncg.v:45]
+INFO: [Synth 8-6157] synthesizing module 'start_for_FAST_t_ocq' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/start_for_FAST_t_ocq.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 3 - type: integer 
+	Parameter DEPTH bound to: 4'b0101 
+INFO: [Synth 8-6157] synthesizing module 'start_for_FAST_t_ocq_shiftReg' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/start_for_FAST_t_ocq.v:11]
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 3 - type: integer 
+	Parameter DEPTH bound to: 4'b0101 
+INFO: [Synth 8-6155] done synthesizing module 'start_for_FAST_t_ocq_shiftReg' (45#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/start_for_FAST_t_ocq.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'start_for_FAST_t_ocq' (46#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/start_for_FAST_t_ocq.v:45]
+INFO: [Synth 8-6157] synthesizing module 'start_for_DuplicapcA' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/start_for_DuplicapcA.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3'b011 
+INFO: [Synth 8-6157] synthesizing module 'start_for_DuplicapcA_shiftReg' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/start_for_DuplicapcA.v:11]
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3'b011 
+INFO: [Synth 8-6155] done synthesizing module 'start_for_DuplicapcA_shiftReg' (47#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/start_for_DuplicapcA.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'start_for_DuplicapcA' (48#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/start_for_DuplicapcA.v:45]
+INFO: [Synth 8-6157] synthesizing module 'start_for_Mat2AXIqcK' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/start_for_Mat2AXIqcK.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 3 - type: integer 
+	Parameter DEPTH bound to: 4'b0110 
+INFO: [Synth 8-6157] synthesizing module 'start_for_Mat2AXIqcK_shiftReg' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/start_for_Mat2AXIqcK.v:11]
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 3 - type: integer 
+	Parameter DEPTH bound to: 4'b0110 
+INFO: [Synth 8-6155] done synthesizing module 'start_for_Mat2AXIqcK_shiftReg' (49#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/start_for_Mat2AXIqcK.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'start_for_Mat2AXIqcK' (50#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/start_for_Mat2AXIqcK.v:45]
+WARNING: [Synth 8-6014] Unused sequential element AXIvideo2Mat_U0_ap_ready_count_reg was removed.  [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/image_core.v:1007]
+WARNING: [Synth 8-6014] Unused sequential element Block_Mat_exit410_pr_U0_ap_ready_count_reg was removed.  [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/image_core.v:1015]
+INFO: [Synth 8-6155] done synthesizing module 'image_core' (51#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/image_core.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_image_core_0_1' (52#1) [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ip/design_1_image_core_0_1/synth/design_1_image_core_0_1.v:58]
+WARNING: [Synth 8-3331] design reg_int_s has unconnected port ap_rst
+WARNING: [Synth 8-3331] design FAST_t_opr_core_bkbM has unconnected port reset
+WARNING: [Synth 8-3331] design FAST_t_opr_k_buf_eOg has unconnected port reset
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[31]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[30]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[29]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[28]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[27]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[26]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[25]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[24]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[23]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[22]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[21]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[20]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[19]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[18]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[17]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[16]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[15]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[14]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[13]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[12]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[11]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[10]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[9]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[8]
+WARNING: [Synth 8-3331] design AXIvideo2Mat has unconnected port src_axis_TKEEP[3]
+WARNING: [Synth 8-3331] design AXIvideo2Mat has unconnected port src_axis_TKEEP[2]
+WARNING: [Synth 8-3331] design AXIvideo2Mat has unconnected port src_axis_TKEEP[1]
+WARNING: [Synth 8-3331] design AXIvideo2Mat has unconnected port src_axis_TKEEP[0]
+WARNING: [Synth 8-3331] design AXIvideo2Mat has unconnected port src_axis_TSTRB[3]
+WARNING: [Synth 8-3331] design AXIvideo2Mat has unconnected port src_axis_TSTRB[2]
+WARNING: [Synth 8-3331] design AXIvideo2Mat has unconnected port src_axis_TSTRB[1]
+WARNING: [Synth 8-3331] design AXIvideo2Mat has unconnected port src_axis_TSTRB[0]
+WARNING: [Synth 8-3331] design AXIvideo2Mat has unconnected port src_axis_TID[0]
+WARNING: [Synth 8-3331] design AXIvideo2Mat has unconnected port src_axis_TDEST[0]
+WARNING: [Synth 8-3331] design image_core_keypoimb6_memcore has unconnected port reset
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 542.031 ; gain = 193.422
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 542.031 ; gain = 193.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 542.031 ; gain = 193.422
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7vx690tffg1761-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ip/design_1_image_core_0_1/constraints/image_core_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ip/design_1_image_core_0_1/constraints/image_core_ooc.xdc] for cell 'inst'
+Parsing XDC File [F:/FPGA/project/Vivado/FAST_2.0/image_process.runs/design_1_image_core_0_1_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [F:/FPGA/project/Vivado/FAST_2.0/image_process.runs/design_1_image_core_0_1_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 1121.375 ; gain = 4.176
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:46 . Memory (MB): peak = 1121.375 ; gain = 772.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx690tffg1761-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:46 . Memory (MB): peak = 1121.375 ; gain = 772.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  F:/FPGA/project/Vivado/FAST_2.0/image_process.runs/design_1_image_core_0_1_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:46 . Memory (MB): peak = 1121.375 ; gain = 772.766
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'image_core_ctrl_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'image_core_ctrl_s_axi'
+INFO: [Synth 8-5544] ROM "wnext" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "wnext" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4471] merging register 'rhs_V_reg_4487_reg[7:0]' into 'a0_reg_4482_reg[7:0]' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:2770]
+INFO: [Synth 8-4471] merging register 'core_buf_val_1_V_ad_reg_5184_reg[8:0]' into 'core_buf_val_0_V_ad_reg_5178_reg[8:0]' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:1327]
+INFO: [Synth 8-4471] merging register 'k_buf_val_1_V_addr_reg_4581_reg[8:0]' into 'k_buf_val_0_V_addr_reg_4575_reg[8:0]' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:1231]
+INFO: [Synth 8-4471] merging register 'k_buf_val_2_V_addr_reg_4587_reg[8:0]' into 'k_buf_val_0_V_addr_reg_4575_reg[8:0]' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:1247]
+INFO: [Synth 8-4471] merging register 'k_buf_val_3_V_addr_reg_4593_reg[8:0]' into 'k_buf_val_0_V_addr_reg_4575_reg[8:0]' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:1263]
+INFO: [Synth 8-4471] merging register 'k_buf_val_4_V_addr_reg_4599_reg[8:0]' into 'k_buf_val_0_V_addr_reg_4575_reg[8:0]' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:1279]
+INFO: [Synth 8-4471] merging register 'k_buf_val_5_V_addr_reg_4605_reg[8:0]' into 'k_buf_val_0_V_addr_reg_4575_reg[8:0]' [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:1295]
+WARNING: [Synth 8-6014] Unused sequential element core_buf_val_1_V_ad_reg_5184_reg was removed.  [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:1327]
+WARNING: [Synth 8-6014] Unused sequential element k_buf_val_1_V_addr_reg_4581_reg was removed.  [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:1231]
+WARNING: [Synth 8-6014] Unused sequential element k_buf_val_2_V_addr_reg_4587_reg was removed.  [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:1247]
+WARNING: [Synth 8-6014] Unused sequential element k_buf_val_3_V_addr_reg_4593_reg was removed.  [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:1263]
+WARNING: [Synth 8-6014] Unused sequential element k_buf_val_4_V_addr_reg_4599_reg was removed.  [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:1279]
+WARNING: [Synth 8-6014] Unused sequential element k_buf_val_5_V_addr_reg_4605_reg was removed.  [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/FAST_t_opr.v:1295]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "tmp_19_i_i_fu_3936_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "tmp_53_7_i_i_fu_2515_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_53_6_i_i_fu_2423_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_53_5_i_i_fu_2405_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_53_4_i_i_fu_2387_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_53_3_i_i_fu_2369_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_53_2_i_i_fu_2351_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_53_1_i_i_fu_2333_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_53_i_i_fu_2315_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_53_9_i_i_fu_2585_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_53_8_i_i_fu_2861_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_53_i_i_56_fu_2802_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_53_10_i_i_fu_2911_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_53_11_i_i_fu_2973_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_53_12_i_i_fu_3027_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_full_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w32_d5_A.v:92]
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_full_n" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w1_d6_A.v:92]
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_full_n" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/fifo_w11_d6_A.v:92]
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_full_n" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_full_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/start_for_FAST_t_ocq.v:92]
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_full_n" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_full_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/start_for_Mat2AXIqcK.v:92]
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_full_n" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'image_core_ctrl_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'image_core_ctrl_s_axi'
+INFO: [Synth 8-3971] The signal ram_reg was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:49 . Memory (MB): peak = 1121.375 ; gain = 772.766
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     33 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 8     
+	   2 Input     31 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
+	   3 Input      9 Bit       Adders := 16    
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 10    
+	   2 Input      4 Bit       Adders := 13    
+	   2 Input      3 Bit       Adders := 4     
+	   2 Input      2 Bit       Adders := 16    
+	   2 Input      1 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 28    
++---Registers : 
+	               33 Bit    Registers := 1     
+	               32 Bit    Registers := 142   
+	               31 Bit    Registers := 2     
+	               29 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	               16 Bit    Registers := 24    
+	               11 Bit    Registers := 2     
+	                9 Bit    Registers := 107   
+	                8 Bit    Registers := 68    
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 13    
+	                3 Bit    Registers := 4     
+	                2 Bit    Registers := 30    
+	                1 Bit    Registers := 246   
++---RAMs : 
+	              62K Bit         RAMs := 1     
+	               5K Bit         RAMs := 2     
+	               2K Bit         RAMs := 6     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 136   
+	   8 Input     32 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 3     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   3 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 7     
+	   3 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 9     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 15    
+	   3 Input      4 Bit        Muxes := 4     
+	   3 Input      3 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 15    
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 39    
+	   4 Input      2 Bit        Muxes := 11    
+	   2 Input      1 Bit        Muxes := 204   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module image_core_ctrl_s_axi 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               32 Bit    Registers := 4     
+	                6 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   8 Input     32 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module image_core_keypoimb6_memcore_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
++---RAMs : 
+	              62K Bit         RAMs := 1     
+Module image_core_keypoimb6 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
+	   2 Input      1 Bit       Adders := 2     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module Block_Mat_exit410_pr 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module AXIvideo2Mat 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 10    
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 25    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 13    
+	   3 Input      8 Bit        Muxes := 1     
+	   3 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 5     
+	   4 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 26    
+Module Duplicate 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 4     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+Module CvtColor 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     31 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               31 Bit    Registers := 2     
+	               29 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module FAST_t_opr_k_buf_eOg_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---RAMs : 
+	               2K Bit         RAMs := 1     
+Module FAST_t_opr_core_bkbM_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---RAMs : 
+	               5K Bit         RAMs := 1     
+Module min_int_s 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module max_int_s 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module reg_int_s 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module FAST_t_opr 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 6     
+	   2 Input     16 Bit       Adders := 1     
+	   3 Input      9 Bit       Adders := 16    
+	   2 Input      5 Bit       Adders := 10    
+	   2 Input      4 Bit       Adders := 6     
++---XORs : 
+	   2 Input      1 Bit         XORs := 16    
++---Registers : 
+	               32 Bit    Registers := 60    
+	               24 Bit    Registers := 1     
+	               16 Bit    Registers := 18    
+	                9 Bit    Registers := 107   
+	                8 Bit    Registers := 44    
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 111   
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 8     
+	   2 Input      4 Bit        Muxes := 10    
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 18    
+	   2 Input      1 Bit        Muxes := 20    
+Module Array2Mat 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+Module Mat2AXIvideo 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     33 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               33 Bit    Registers := 1     
+	               32 Bit    Registers := 3     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 7     
+	                1 Bit    Registers := 20    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 8     
+	   4 Input      2 Bit        Muxes := 7     
+	   2 Input      1 Bit        Muxes := 14    
+Module fifo_w32_d2_A_shiftReg 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module fifo_w32_d2_A 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 4     
+Module fifo_w32_d4_A 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module fifo_w32_d5_A 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module fifo_w1_d6_A 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module fifo_w11_d6_A 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module fifo_w8_d2_A_shiftReg 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+Module fifo_w8_d2_A 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 4     
+Module fifo_w16_d2_A_shiftReg 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+Module fifo_w16_d2_A 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 4     
+Module fifo_w1_d2_A_shiftReg 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module fifo_w1_d2_A 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 4     
+Module fifo_w11_d2_A_shiftReg 
+Detailed RTL Component Info : 
++---Registers : 
+	               11 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 1     
+Module fifo_w11_d2_A 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 4     
+Module start_for_CvtColoncg 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module start_for_FAST_t_ocq 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module start_for_DuplicapcA 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module start_for_Mat2AXIqcK 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module image_core 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 3600 (col length:200)
+BRAMs: 2940 (col length: RAMB18 200 RAMB36 100)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5544] ROM "data41" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element r_V_4_i_i_reg_314_reg was removed.  [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/CvtColor.v:182]
+WARNING: [Synth 8-6014] Unused sequential element tmp_33_reg_309_reg was removed.  [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/CvtColor.v:307]
+WARNING: [Synth 8-6014] Unused sequential element tmp_32_reg_304_reg was removed.  [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/CvtColor.v:306]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/image_core_mac_mucud.v:26]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/image_core_mac_mudEe.v:26]
+DSP Report: Generating DSP r_V_4_i_i_reg_314_reg, operation Mode is: ((A:0x1322d0)*B)'.
+DSP Report: register r_V_4_i_i_reg_314_reg is absorbed into DSP r_V_4_i_i_reg_314_reg.
+DSP Report: operator image_core_mul_mubkb_U35/image_core_mul_mubkb_DSP48_0_U/p is absorbed into DSP r_V_4_i_i_reg_314_reg.
+DSP Report: Generating DSP image_core_mac_mucud_U36/image_core_mac_mucud_DSP48_1_U/p, operation Mode is: PCIN+(A:0x74bc6)*B2.
+DSP Report: register B is absorbed into DSP image_core_mac_mucud_U36/image_core_mac_mucud_DSP48_1_U/p.
+DSP Report: operator image_core_mac_mucud_U36/image_core_mac_mucud_DSP48_1_U/p is absorbed into DSP image_core_mac_mucud_U36/image_core_mac_mucud_DSP48_1_U/p.
+DSP Report: operator image_core_mac_mucud_U36/image_core_mac_mucud_DSP48_1_U/m is absorbed into DSP image_core_mac_mucud_U36/image_core_mac_mucud_DSP48_1_U/p.
+DSP Report: Generating DSP image_core_mac_mudEe_U37/image_core_mac_mudEe_DSP48_2_U/p, operation Mode is: C+(A:0x259168)*B2.
+DSP Report: register B is absorbed into DSP image_core_mac_mudEe_U37/image_core_mac_mudEe_DSP48_2_U/p.
+DSP Report: operator image_core_mac_mudEe_U37/image_core_mac_mudEe_DSP48_2_U/p is absorbed into DSP image_core_mac_mudEe_U37/image_core_mac_mudEe_DSP48_2_U/p.
+DSP Report: operator image_core_mac_mudEe_U37/image_core_mac_mudEe_DSP48_2_U/m is absorbed into DSP image_core_mac_mudEe_U37/image_core_mac_mudEe_DSP48_2_U/p.
+INFO: [Synth 8-5546] ROM "tmp_19_i_i_fu_3936_p2" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[31]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[30]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[29]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[28]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[27]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[26]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[25]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[24]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[23]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[22]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[21]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[20]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[19]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[18]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[17]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[16]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[15]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[14]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[13]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[12]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[11]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[10]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[9]
+WARNING: [Synth 8-3331] design FAST_t_opr has unconnected port threhold_dout[8]
+WARNING: [Synth 8-3331] design AXIvideo2Mat has unconnected port src_axis_TKEEP[3]
+WARNING: [Synth 8-3331] design AXIvideo2Mat has unconnected port src_axis_TKEEP[2]
+WARNING: [Synth 8-3331] design AXIvideo2Mat has unconnected port src_axis_TKEEP[1]
+WARNING: [Synth 8-3331] design AXIvideo2Mat has unconnected port src_axis_TKEEP[0]
+WARNING: [Synth 8-3331] design AXIvideo2Mat has unconnected port src_axis_TSTRB[3]
+WARNING: [Synth 8-3331] design AXIvideo2Mat has unconnected port src_axis_TSTRB[2]
+WARNING: [Synth 8-3331] design AXIvideo2Mat has unconnected port src_axis_TSTRB[1]
+WARNING: [Synth 8-3331] design AXIvideo2Mat has unconnected port src_axis_TSTRB[0]
+WARNING: [Synth 8-3331] design AXIvideo2Mat has unconnected port src_axis_TID[0]
+WARNING: [Synth 8-3331] design AXIvideo2Mat has unconnected port src_axis_TDEST[0]
+WARNING: [Synth 8-6014] Unused sequential element keypoints_U/image_core_keypoimb6_memcore_U/image_core_keypoimb6_memcore_ram_U/q0_reg was removed.  [f:/FPGA/project/Vivado/FAST_2.0/image_process.srcs/sources_1/bd/design_1/ipshared/80a7/hdl/verilog/image_core_keypoimb6_memcore.v:39]
+WARNING: [Synth 8-6014] Unused sequential element keypoints_U/image_core_keypoimb6_memcore_U/image_core_keypoimb6_memcore_ram_U/ram_reg was removed. 
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/b0_reg_4527_reg[0]' (FDE) to 'inst/FAST_t_opr_U0/r_V_reg_4507_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/b0_reg_4527_reg[1]' (FDE) to 'inst/FAST_t_opr_U0/r_V_reg_4507_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/b0_reg_4527_reg[2]' (FDE) to 'inst/FAST_t_opr_U0/r_V_reg_4507_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/b0_reg_4527_reg[3]' (FDE) to 'inst/FAST_t_opr_U0/r_V_reg_4507_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/b0_reg_4527_reg[4]' (FDE) to 'inst/FAST_t_opr_U0/r_V_reg_4507_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/b0_reg_4527_reg[5]' (FDE) to 'inst/FAST_t_opr_U0/r_V_reg_4507_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/b0_reg_4527_reg[6]' (FDE) to 'inst/FAST_t_opr_U0/r_V_reg_4507_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/b0_reg_4527_reg[7]' (FDE) to 'inst/FAST_t_opr_U0/r_V_reg_4507_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/b0_reg_4527_reg[8]' (FDE) to 'inst/FAST_t_opr_U0/r_V_reg_4507_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/b0_reg_4527_reg[9]' (FDE) to 'inst/FAST_t_opr_U0/r_V_reg_4507_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/b0_reg_4527_reg[10]' (FDE) to 'inst/FAST_t_opr_U0/r_V_reg_4507_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/b0_reg_4527_reg[11]' (FDE) to 'inst/FAST_t_opr_U0/r_V_reg_4507_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/b0_reg_4527_reg[12]' (FDE) to 'inst/FAST_t_opr_U0/r_V_reg_4507_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/b0_reg_4527_reg[13]' (FDE) to 'inst/FAST_t_opr_U0/r_V_reg_4507_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/b0_reg_4527_reg[14]' (FDE) to 'inst/FAST_t_opr_U0/r_V_reg_4507_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/b0_reg_4527_reg[15]' (FDE) to 'inst/FAST_t_opr_U0/r_V_reg_4507_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/b0_reg_4527_reg[16]' (FDE) to 'inst/FAST_t_opr_U0/r_V_reg_4507_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/b0_reg_4527_reg[17]' (FDE) to 'inst/FAST_t_opr_U0/r_V_reg_4507_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/b0_reg_4527_reg[18]' (FDE) to 'inst/FAST_t_opr_U0/r_V_reg_4507_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/b0_reg_4527_reg[19]' (FDE) to 'inst/FAST_t_opr_U0/r_V_reg_4507_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/b0_reg_4527_reg[20]' (FDE) to 'inst/FAST_t_opr_U0/r_V_reg_4507_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/b0_reg_4527_reg[21]' (FDE) to 'inst/FAST_t_opr_U0/r_V_reg_4507_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/b0_reg_4527_reg[22]' (FDE) to 'inst/FAST_t_opr_U0/r_V_reg_4507_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/b0_reg_4527_reg[23]' (FDE) to 'inst/FAST_t_opr_U0/r_V_reg_4507_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/b0_reg_4527_reg[24]' (FDE) to 'inst/FAST_t_opr_U0/r_V_reg_4507_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/b0_reg_4527_reg[25]' (FDE) to 'inst/FAST_t_opr_U0/r_V_reg_4507_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/b0_reg_4527_reg[26]' (FDE) to 'inst/FAST_t_opr_U0/r_V_reg_4507_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/b0_reg_4527_reg[27]' (FDE) to 'inst/FAST_t_opr_U0/r_V_reg_4507_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/b0_reg_4527_reg[28]' (FDE) to 'inst/FAST_t_opr_U0/r_V_reg_4507_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/b0_reg_4527_reg[29]' (FDE) to 'inst/FAST_t_opr_U0/r_V_reg_4507_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/b0_reg_4527_reg[30]' (FDE) to 'inst/FAST_t_opr_U0/r_V_reg_4507_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/b0_reg_4527_reg[31]' (FDE) to 'inst/FAST_t_opr_U0/r_V_reg_4507_reg[8]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/FAST_t_opr_U0/\a0_reg_4482_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/FAST_t_opr_U0/\a0_reg_4482_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/FAST_t_opr_U0/\a0_reg_4482_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/FAST_t_opr_U0/\a0_reg_4482_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/FAST_t_opr_U0/\a0_reg_4482_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/FAST_t_opr_U0/\a0_reg_4482_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/FAST_t_opr_U0/\a0_reg_4482_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/FAST_t_opr_U0/\a0_reg_4482_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/FAST_t_opr_U0/\a0_reg_4482_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/FAST_t_opr_U0/\a0_reg_4482_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/FAST_t_opr_U0/\a0_reg_4482_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/FAST_t_opr_U0/\a0_reg_4482_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/FAST_t_opr_U0/\a0_reg_4482_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/FAST_t_opr_U0/\a0_reg_4482_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/FAST_t_opr_U0/\a0_reg_4482_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/FAST_t_opr_U0/\a0_reg_4482_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/FAST_t_opr_U0/\a0_reg_4482_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/FAST_t_opr_U0/\a0_reg_4482_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/FAST_t_opr_U0/\a0_reg_4482_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/FAST_t_opr_U0/\a0_reg_4482_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/FAST_t_opr_U0/\a0_reg_4482_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/FAST_t_opr_U0/\a0_reg_4482_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/FAST_t_opr_U0/\a0_reg_4482_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/FAST_t_opr_U0/\a0_reg_4482_reg[31] )
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter1_core_1_i_i_reg_545_reg[0]' (FDRE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter1_core_1_i_i_reg_545_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter1_core_1_i_i_reg_545_reg[1]' (FDRE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter1_core_1_i_i_reg_545_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter1_core_1_i_i_reg_545_reg[2]' (FDRE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter1_core_1_i_i_reg_545_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter1_core_1_i_i_reg_545_reg[3]' (FDRE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter1_core_1_i_i_reg_545_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter1_core_1_i_i_reg_545_reg[4]' (FDRE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter1_core_1_i_i_reg_545_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter1_core_1_i_i_reg_545_reg[5]' (FDRE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter1_core_1_i_i_reg_545_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter1_core_1_i_i_reg_545_reg[6]' (FDRE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter1_core_1_i_i_reg_545_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter1_core_1_i_i_reg_545_reg[7]' (FDRE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter1_core_1_i_i_reg_545_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter1_core_1_i_i_reg_545_reg[8]' (FDRE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter1_core_1_i_i_reg_545_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter1_core_1_i_i_reg_545_reg[9]' (FDRE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter1_core_1_i_i_reg_545_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter1_core_1_i_i_reg_545_reg[10]' (FDRE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter1_core_1_i_i_reg_545_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter1_core_1_i_i_reg_545_reg[11]' (FDRE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter1_core_1_i_i_reg_545_reg[12]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter1_core_1_i_i_reg_545_reg[12]' (FDRE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter1_core_1_i_i_reg_545_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter1_core_1_i_i_reg_545_reg[13]' (FDRE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter1_core_1_i_i_reg_545_reg[14]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter1_core_1_i_i_reg_545_reg[14]' (FDRE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter1_core_1_i_i_reg_545_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/FAST_t_opr_U0/\ap_phi_reg_pp0_iter1_core_1_i_i_reg_545_reg[15] )
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter2_core_1_i_i_reg_545_reg[0]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter2_core_1_i_i_reg_545_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter2_core_1_i_i_reg_545_reg[1]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter2_core_1_i_i_reg_545_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter2_core_1_i_i_reg_545_reg[2]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter2_core_1_i_i_reg_545_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter2_core_1_i_i_reg_545_reg[3]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter2_core_1_i_i_reg_545_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter2_core_1_i_i_reg_545_reg[4]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter2_core_1_i_i_reg_545_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter2_core_1_i_i_reg_545_reg[5]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter2_core_1_i_i_reg_545_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter2_core_1_i_i_reg_545_reg[6]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter2_core_1_i_i_reg_545_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter2_core_1_i_i_reg_545_reg[7]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter2_core_1_i_i_reg_545_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter2_core_1_i_i_reg_545_reg[8]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter2_core_1_i_i_reg_545_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter2_core_1_i_i_reg_545_reg[9]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter2_core_1_i_i_reg_545_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter2_core_1_i_i_reg_545_reg[10]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter2_core_1_i_i_reg_545_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter2_core_1_i_i_reg_545_reg[11]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter2_core_1_i_i_reg_545_reg[12]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter2_core_1_i_i_reg_545_reg[12]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter2_core_1_i_i_reg_545_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter2_core_1_i_i_reg_545_reg[13]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter2_core_1_i_i_reg_545_reg[14]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter2_core_1_i_i_reg_545_reg[14]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter2_core_1_i_i_reg_545_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter3_core_1_i_i_reg_545_reg[0]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter3_core_1_i_i_reg_545_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter3_core_1_i_i_reg_545_reg[1]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter3_core_1_i_i_reg_545_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter3_core_1_i_i_reg_545_reg[2]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter3_core_1_i_i_reg_545_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter3_core_1_i_i_reg_545_reg[3]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter3_core_1_i_i_reg_545_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter3_core_1_i_i_reg_545_reg[4]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter3_core_1_i_i_reg_545_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter3_core_1_i_i_reg_545_reg[5]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter3_core_1_i_i_reg_545_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter3_core_1_i_i_reg_545_reg[6]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter3_core_1_i_i_reg_545_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter3_core_1_i_i_reg_545_reg[7]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter3_core_1_i_i_reg_545_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter3_core_1_i_i_reg_545_reg[8]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter3_core_1_i_i_reg_545_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter3_core_1_i_i_reg_545_reg[9]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter3_core_1_i_i_reg_545_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter3_core_1_i_i_reg_545_reg[10]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter3_core_1_i_i_reg_545_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter3_core_1_i_i_reg_545_reg[11]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter3_core_1_i_i_reg_545_reg[12]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter3_core_1_i_i_reg_545_reg[12]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter3_core_1_i_i_reg_545_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter3_core_1_i_i_reg_545_reg[13]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter3_core_1_i_i_reg_545_reg[14]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter3_core_1_i_i_reg_545_reg[14]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter3_core_1_i_i_reg_545_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/r_V_reg_4507_reg[0]' (FDE) to 'inst/FAST_t_opr_U0/a0_reg_4482_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/FAST_t_opr_U0/\rhs_V_reg_4487_reg[8] )
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter4_core_1_i_i_reg_545_reg[0]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter4_core_1_i_i_reg_545_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter4_core_1_i_i_reg_545_reg[1]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter4_core_1_i_i_reg_545_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter4_core_1_i_i_reg_545_reg[2]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter4_core_1_i_i_reg_545_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter4_core_1_i_i_reg_545_reg[3]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter4_core_1_i_i_reg_545_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter4_core_1_i_i_reg_545_reg[4]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter4_core_1_i_i_reg_545_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter4_core_1_i_i_reg_545_reg[5]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter4_core_1_i_i_reg_545_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter4_core_1_i_i_reg_545_reg[6]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter4_core_1_i_i_reg_545_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter4_core_1_i_i_reg_545_reg[7]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter4_core_1_i_i_reg_545_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter4_core_1_i_i_reg_545_reg[8]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter4_core_1_i_i_reg_545_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter4_core_1_i_i_reg_545_reg[9]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter4_core_1_i_i_reg_545_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter4_core_1_i_i_reg_545_reg[10]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter4_core_1_i_i_reg_545_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter4_core_1_i_i_reg_545_reg[11]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter4_core_1_i_i_reg_545_reg[12]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter4_core_1_i_i_reg_545_reg[12]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter4_core_1_i_i_reg_545_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter4_core_1_i_i_reg_545_reg[13]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter4_core_1_i_i_reg_545_reg[14]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter4_core_1_i_i_reg_545_reg[14]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter4_core_1_i_i_reg_545_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter5_core_1_i_i_reg_545_reg[0]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter5_core_1_i_i_reg_545_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter5_core_1_i_i_reg_545_reg[1]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter5_core_1_i_i_reg_545_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter5_core_1_i_i_reg_545_reg[2]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter5_core_1_i_i_reg_545_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter5_core_1_i_i_reg_545_reg[3]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter5_core_1_i_i_reg_545_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter5_core_1_i_i_reg_545_reg[4]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter5_core_1_i_i_reg_545_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter5_core_1_i_i_reg_545_reg[5]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter5_core_1_i_i_reg_545_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter5_core_1_i_i_reg_545_reg[6]' (FDE) to 'inst/FAST_t_opr_U0/ap_phi_reg_pp0_iter5_core_1_i_i_reg_545_reg[7]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\Array2Mat_U0/r_V_cast_cast_reg_230_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\Array2Mat_U0/r_V_cast_cast_reg_230_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\Array2Mat_U0/r_V_cast_cast_reg_230_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\Array2Mat_U0/r_V_cast_cast_reg_230_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\Duplicate_U0/ap_done_reg_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\CvtColor_U0/ap_done_reg_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\Array2Mat_U0/ap_done_reg_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\AXIvideo2Mat_U0/ap_done_reg_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\Mat2AXIvideo_U0/ap_done_reg_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\Block_Mat_exit410_pr_U0/ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\Block_Mat_exit410_pr_U0/ap_done_reg_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/FAST_t_opr_U0/\ap_phi_reg_pp0_iter2_core_1_i_i_reg_545_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/FAST_t_opr_U0/\ap_phi_reg_pp0_iter3_core_1_i_i_reg_545_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/FAST_t_opr_U0/\ap_phi_reg_pp0_iter4_core_1_i_i_reg_545_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/FAST_t_opr_U0/\ap_phi_reg_pp0_iter5_core_1_i_i_reg_545_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/FAST_t_opr_U0/\ap_phi_reg_pp0_iter7_core_1_i_i_reg_545_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/FAST_t_opr_U0/\ap_phi_reg_pp0_iter8_core_1_i_i_reg_545_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/FAST_t_opr_U0/\ap_phi_reg_pp0_iter9_core_1_i_i_reg_545_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/FAST_t_opr_U0/\ap_phi_reg_pp0_iter10_core_1_i_i_reg_545_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/FAST_t_opr_U0/\ap_phi_reg_pp0_iter11_core_1_i_i_reg_545_reg[15] )
+WARNING: [Synth 8-3332] Sequential element (Block_Mat_exit410_pr_U0/ap_done_reg_reg) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (Block_Mat_exit410_pr_U0/ap_CS_fsm_reg[0]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/ap_done_reg_reg) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/AXI_video_strm_V_data_V_0_payload_A_reg[31]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/AXI_video_strm_V_data_V_0_payload_A_reg[30]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/AXI_video_strm_V_data_V_0_payload_A_reg[29]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/AXI_video_strm_V_data_V_0_payload_A_reg[28]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/AXI_video_strm_V_data_V_0_payload_A_reg[27]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/AXI_video_strm_V_data_V_0_payload_A_reg[26]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/AXI_video_strm_V_data_V_0_payload_A_reg[25]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/AXI_video_strm_V_data_V_0_payload_A_reg[24]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/AXI_video_strm_V_data_V_0_payload_B_reg[31]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/AXI_video_strm_V_data_V_0_payload_B_reg[30]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/AXI_video_strm_V_data_V_0_payload_B_reg[29]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/AXI_video_strm_V_data_V_0_payload_B_reg[28]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/AXI_video_strm_V_data_V_0_payload_B_reg[27]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/AXI_video_strm_V_data_V_0_payload_B_reg[26]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/AXI_video_strm_V_data_V_0_payload_B_reg[25]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/AXI_video_strm_V_data_V_0_payload_B_reg[24]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/axi_data_V_3_i_reg_289_reg[31]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/axi_data_V_3_i_reg_289_reg[30]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/axi_data_V_3_i_reg_289_reg[29]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/axi_data_V_3_i_reg_289_reg[28]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/axi_data_V_3_i_reg_289_reg[27]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/axi_data_V_3_i_reg_289_reg[26]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/axi_data_V_3_i_reg_289_reg[25]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/axi_data_V_3_i_reg_289_reg[24]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/tmp_data_V_reg_393_reg[31]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/tmp_data_V_reg_393_reg[30]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/tmp_data_V_reg_393_reg[29]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/tmp_data_V_reg_393_reg[28]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/tmp_data_V_reg_393_reg[27]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/tmp_data_V_reg_393_reg[26]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/tmp_data_V_reg_393_reg[25]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/tmp_data_V_reg_393_reg[24]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/axi_data_V1_i_reg_175_reg[31]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/axi_data_V1_i_reg_175_reg[30]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/axi_data_V1_i_reg_175_reg[29]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/axi_data_V1_i_reg_175_reg[28]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/axi_data_V1_i_reg_175_reg[27]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/axi_data_V1_i_reg_175_reg[26]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/axi_data_V1_i_reg_175_reg[25]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/axi_data_V1_i_reg_175_reg[24]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/axi_data_V_1_i_reg_230_reg[31]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/axi_data_V_1_i_reg_230_reg[30]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/axi_data_V_1_i_reg_230_reg[29]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/axi_data_V_1_i_reg_230_reg[28]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/axi_data_V_1_i_reg_230_reg[27]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/axi_data_V_1_i_reg_230_reg[26]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/axi_data_V_1_i_reg_230_reg[25]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2Mat_U0/axi_data_V_1_i_reg_230_reg[24]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (Duplicate_U0/ap_done_reg_reg) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (CvtColor_U0/ap_done_reg_reg) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (ap_phi_reg_pp0_iter1_core_1_i_i_reg_545_reg[15]) is unused and will be removed from module FAST_t_opr.
+WARNING: [Synth 8-3332] Sequential element (ap_phi_reg_pp0_iter2_core_1_i_i_reg_545_reg[15]) is unused and will be removed from module FAST_t_opr.
+WARNING: [Synth 8-3332] Sequential element (ap_phi_reg_pp0_iter3_core_1_i_i_reg_545_reg[15]) is unused and will be removed from module FAST_t_opr.
+WARNING: [Synth 8-3332] Sequential element (ap_phi_reg_pp0_iter4_core_1_i_i_reg_545_reg[15]) is unused and will be removed from module FAST_t_opr.
+WARNING: [Synth 8-3332] Sequential element (ap_phi_reg_pp0_iter5_core_1_i_i_reg_545_reg[15]) is unused and will be removed from module FAST_t_opr.
+WARNING: [Synth 8-3332] Sequential element (ap_phi_reg_pp0_iter6_core_1_i_i_reg_545_reg[15]) is unused and will be removed from module FAST_t_opr.
+WARNING: [Synth 8-3332] Sequential element (ap_phi_reg_pp0_iter7_core_1_i_i_reg_545_reg[15]) is unused and will be removed from module FAST_t_opr.
+WARNING: [Synth 8-3332] Sequential element (ap_phi_reg_pp0_iter8_core_1_i_i_reg_545_reg[15]) is unused and will be removed from module FAST_t_opr.
+WARNING: [Synth 8-3332] Sequential element (ap_phi_reg_pp0_iter9_core_1_i_i_reg_545_reg[15]) is unused and will be removed from module FAST_t_opr.
+WARNING: [Synth 8-3332] Sequential element (ap_phi_reg_pp0_iter10_core_1_i_i_reg_545_reg[15]) is unused and will be removed from module FAST_t_opr.
+WARNING: [Synth 8-3332] Sequential element (ap_phi_reg_pp0_iter11_core_1_i_i_reg_545_reg[15]) is unused and will be removed from module FAST_t_opr.
+WARNING: [Synth 8-3332] Sequential element (Array2Mat_U0/r_V_cast_cast_reg_230_reg[10]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (Array2Mat_U0/r_V_cast_cast_reg_230_reg[4]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (Array2Mat_U0/r_V_cast_cast_reg_230_reg[2]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (Array2Mat_U0/r_V_cast_cast_reg_230_reg[1]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (Array2Mat_U0/r_V_cast_cast_reg_230_reg[0]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (Array2Mat_U0/ap_done_reg_reg) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (Mat2AXIvideo_U0/ap_done_reg_reg) is unused and will be removed from module image_core.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\Mat2AXIvideo_U0/r_V_reg_251_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\p_dst_cols_V_c28_U/U_fifo_w11_d2_A_ram/SRL_SIG_reg[0][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\Array2Mat_U0/cols_V_reg_221_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\p_dst_cols_V_c28_U/U_fifo_w11_d2_A_ram/SRL_SIG_reg[1][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\Mat2AXIvideo_U0/r_V_reg_251_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\Mat2AXIvideo_U0/cols_V_reg_246_reg[31] )
+WARNING: [Synth 8-3332] Sequential element (Array2Mat_U0/cols_V_reg_221_reg[31]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (Mat2AXIvideo_U0/cols_V_reg_246_reg[31]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (Mat2AXIvideo_U0/r_V_reg_251_reg[0]) is unused and will be removed from module image_core.
+WARNING: [Synth 8-3332] Sequential element (p_dst_cols_V_c28_U/U_fifo_w11_d2_A_ram/SRL_SIG_reg[1][0]) is unused and will be removed from module image_core.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:01:13 . Memory (MB): peak = 1121.375 ; gain = 772.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping  Report (see note below)
++----------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                       | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++----------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|image_core_keypoimb6_memcore_ram: | ram_reg    | 2 K x 32(WRITE_FIRST)  | W | R | 2 K x 32(WRITE_FIRST)  | W | R | Port A and B     | 0      | 2      | 
+|FAST_t_opr_k_buf_eOg_ram:         | ram_reg    | 512 x 8(READ_FIRST)    | W |   | 512 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|FAST_t_opr_k_buf_eOg_ram:         | ram_reg    | 512 x 8(READ_FIRST)    | W |   | 512 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|FAST_t_opr_k_buf_eOg_ram:         | ram_reg    | 512 x 8(READ_FIRST)    | W |   | 512 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|FAST_t_opr_k_buf_eOg_ram:         | ram_reg    | 512 x 8(READ_FIRST)    | W |   | 512 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|FAST_t_opr_k_buf_eOg_ram:         | ram_reg    | 512 x 8(READ_FIRST)    | W |   | 512 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|FAST_t_opr_k_buf_eOg_ram:         | ram_reg    | 512 x 8(READ_FIRST)    | W |   | 512 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|FAST_t_opr_core_bkbM_ram:         | ram_reg    | 512 x 16(READ_FIRST)   | W |   | 512 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|FAST_t_opr_core_bkbM_ram:         | ram_reg    | 512 x 16(READ_FIRST)   | W |   | 512 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++----------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The tale above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping         | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|CvtColor    | ((A:0x1322d0)*B)'   | 21     | 8      | -      | -      | 29     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|CvtColor    | PCIN+(A:0x74bc6)*B2 | 20     | 9      | -      | -      | 29     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|CvtColor    | C+(A:0x259168)*B2   | 23     | 9      | 30     | -      | 30     | 0    | 1    | 0    | -    | -     | 0    | 0    | 
++------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance inst/i_14/keypoints_U/image_core_keypoimb6_memcore_U/image_core_keypoimb6_memcore_ram_U/ram_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/FAST_t_opr_U0/i_1/k_buf_val_1_V_U/FAST_t_opr_k_buf_eOg_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/FAST_t_opr_U0/i_2/k_buf_val_2_V_U/FAST_t_opr_k_buf_eOg_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/FAST_t_opr_U0/i_6/k_buf_val_3_V_U/FAST_t_opr_k_buf_eOg_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/FAST_t_opr_U0/i_7/k_buf_val_4_V_U/FAST_t_opr_k_buf_eOg_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/FAST_t_opr_U0/i_8/k_buf_val_5_V_U/FAST_t_opr_k_buf_eOg_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/FAST_t_opr_U0/i_9/core_buf_val_0_V_U/FAST_t_opr_core_bkbM_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/FAST_t_opr_U0/i_10/core_buf_val_1_V_U/FAST_t_opr_core_bkbM_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:05 ; elapsed = 00:01:26 . Memory (MB): peak = 1138.207 ; gain = 789.598
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:11 ; elapsed = 00:01:31 . Memory (MB): peak = 1242.609 ; gain = 894.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++----------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                       | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++----------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|image_core_keypoimb6_memcore_ram: | ram_reg    | 2 K x 32(WRITE_FIRST)  | W | R | 2 K x 32(WRITE_FIRST)  | W | R | Port A and B     | 0      | 2      | 
+|FAST_t_opr_k_buf_eOg_ram:         | ram_reg    | 512 x 8(READ_FIRST)    | W |   | 512 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|FAST_t_opr_k_buf_eOg_ram:         | ram_reg    | 512 x 8(READ_FIRST)    | W |   | 512 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|FAST_t_opr_k_buf_eOg_ram:         | ram_reg    | 512 x 8(READ_FIRST)    | W |   | 512 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|FAST_t_opr_k_buf_eOg_ram:         | ram_reg    | 512 x 8(READ_FIRST)    | W |   | 512 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|FAST_t_opr_k_buf_eOg_ram:         | ram_reg    | 512 x 8(READ_FIRST)    | W |   | 512 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|FAST_t_opr_k_buf_eOg_ram:         | ram_reg    | 512 x 8(READ_FIRST)    | W |   | 512 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|FAST_t_opr_core_bkbM_ram:         | ram_reg    | 512 x 16(READ_FIRST)   | W |   | 512 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|FAST_t_opr_core_bkbM_ram:         | ram_reg    | 512 x 16(READ_FIRST)   | W |   | 512 x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++----------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance inst/keypoints_U/image_core_keypoimb6_memcore_U/image_core_keypoimb6_memcore_ram_U/ram_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/FAST_t_opr_U0/k_buf_val_1_V_U/FAST_t_opr_k_buf_eOg_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/FAST_t_opr_U0/k_buf_val_2_V_U/FAST_t_opr_k_buf_eOg_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/FAST_t_opr_U0/k_buf_val_3_V_U/FAST_t_opr_k_buf_eOg_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/FAST_t_opr_U0/k_buf_val_4_V_U/FAST_t_opr_k_buf_eOg_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/FAST_t_opr_U0/k_buf_val_5_V_U/FAST_t_opr_k_buf_eOg_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/FAST_t_opr_U0/core_buf_val_0_V_U/FAST_t_opr_core_bkbM_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/FAST_t_opr_U0/core_buf_val_1_V_U/FAST_t_opr_core_bkbM_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:16 ; elapsed = 00:01:36 . Memory (MB): peak = 1276.809 ; gain = 928.199
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:17 ; elapsed = 00:01:37 . Memory (MB): peak = 1276.809 ; gain = 928.199
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:17 ; elapsed = 00:01:37 . Memory (MB): peak = 1276.809 ; gain = 928.199
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:18 ; elapsed = 00:01:38 . Memory (MB): peak = 1276.809 ; gain = 928.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:18 ; elapsed = 00:01:38 . Memory (MB): peak = 1276.809 ; gain = 928.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:18 ; elapsed = 00:01:39 . Memory (MB): peak = 1276.809 ; gain = 928.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:18 ; elapsed = 00:01:39 . Memory (MB): peak = 1276.809 ; gain = 928.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                                                         | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|image_core  | FAST_t_opr_U0/t_V_2_reg_533_pp0_iter10_reg_reg[8]                | 9      | 9     | NO           | NO                 | YES               | 9      | 0       | 
+|image_core  | FAST_t_opr_U0/t_V_2_reg_533_pp0_iter11_reg_reg[31]               | 10     | 23    | NO           | NO                 | YES               | 23     | 0       | 
+|image_core  | FAST_t_opr_U0/win_val_3_V_2_fu_222_reg[7]                        | 3      | 8     | NO           | NO                 | YES               | 8      | 0       | 
+|image_core  | FAST_t_opr_U0/win_val_1_V_1_fu_158_reg[7]                        | 4      | 8     | NO           | NO                 | YES               | 8      | 0       | 
+|image_core  | FAST_t_opr_U0/win_val_2_V_0_fu_182_reg[7]                        | 6      | 8     | NO           | NO                 | YES               | 8      | 0       | 
+|image_core  | FAST_t_opr_U0/win_val_3_V_0_fu_210_reg[7]                        | 3      | 8     | NO           | NO                 | YES               | 8      | 0       | 
+|image_core  | FAST_t_opr_U0/win_val_4_V_0_fu_238_reg[7]                        | 6      | 8     | NO           | NO                 | YES               | 8      | 0       | 
+|image_core  | FAST_t_opr_U0/win_val_5_V_1_fu_266_reg[7]                        | 4      | 8     | NO           | NO                 | YES               | 8      | 0       | 
+|image_core  | FAST_t_opr_U0/win_val_6_V_3_fu_298_reg[7]                        | 3      | 8     | NO           | NO                 | YES               | 8      | 0       | 
+|image_core  | FAST_t_opr_U0/or_cond_i_i_reg_4570_pp0_iter11_reg_reg[0]         | 10     | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|image_core  | FAST_t_opr_U0/flag_d_assign_7_i_i_reg_4952_pp0_iter9_reg_reg[8]  | 5      | 9     | NO           | NO                 | YES               | 9      | 0       | 
+|image_core  | FAST_t_opr_U0/flag_d_assign_14_i_i_reg_4986_pp0_iter9_reg_reg[8] | 4      | 9     | NO           | NO                 | YES               | 9      | 0       | 
+|image_core  | FAST_t_opr_U0/flag_d_assign_5_i_i_reg_4940_pp0_iter9_reg_reg[8]  | 5      | 9     | NO           | NO                 | YES               | 9      | 0       | 
+|image_core  | FAST_t_opr_U0/flag_d_assign_12_i_i_reg_4974_pp0_iter9_reg_reg[8] | 4      | 9     | NO           | NO                 | YES               | 9      | 0       | 
+|image_core  | FAST_t_opr_U0/flag_d_assign_3_i_i_reg_4928_pp0_iter8_reg_reg[8]  | 4      | 9     | NO           | NO                 | YES               | 9      | 0       | 
+|image_core  | FAST_t_opr_U0/flag_d_assign_10_i_i_reg_4922_pp0_iter8_reg_reg[8] | 4      | 9     | NO           | NO                 | YES               | 9      | 0       | 
+|image_core  | FAST_t_opr_U0/flag_d_assign_1_i_i_reg_4904_pp0_iter8_reg_reg[8]  | 4      | 9     | NO           | NO                 | YES               | 9      | 0       | 
+|image_core  | FAST_t_opr_U0/flag_d_assign_8_i_i_reg_4898_pp0_iter8_reg_reg[8]  | 4      | 9     | NO           | NO                 | YES               | 9      | 0       | 
+|image_core  | FAST_t_opr_U0/flag_d_assign_6_i_i_reg_4946_pp0_iter7_reg_reg[8]  | 3      | 9     | NO           | NO                 | YES               | 9      | 0       | 
+|image_core  | FAST_t_opr_U0/flag_d_assign_4_i_i_reg_4934_pp0_iter7_reg_reg[8]  | 3      | 9     | NO           | NO                 | YES               | 9      | 0       | 
+|image_core  | FAST_t_opr_U0/ap_enable_reg_pp0_iter11_reg                       | 9      | 1     | YES          | NO                 | YES               | 1      | 0       | 
++------------+------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+
+Dynamic Shift Register Report:
++------------+----------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name       | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+----------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | SRL_SIG_reg[3] | 32     | 32         | 32     | 0       | 0      | 0      | 0      | 
+|dsrl__1     | SRL_SIG_reg[4] | 32     | 32         | 32     | 0       | 0      | 0      | 0      | 
+|dsrl__2     | SRL_SIG_reg[5] | 1      | 1          | 1      | 0       | 0      | 0      | 0      | 
+|dsrl__3     | SRL_SIG_reg[5] | 11     | 11         | 11     | 0       | 0      | 0      | 0      | 
+|dsrl__4     | SRL_SIG_reg[3] | 1      | 1          | 1      | 0       | 0      | 0      | 0      | 
+|dsrl__5     | SRL_SIG_reg[4] | 1      | 1          | 1      | 0       | 0      | 0      | 0      | 
+|dsrl__6     | SRL_SIG_reg[2] | 1      | 1          | 1      | 0       | 0      | 0      | 0      | 
+|dsrl__7     | SRL_SIG_reg[5] | 1      | 1          | 1      | 0       | 0      | 0      | 0      | 
++------------+----------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |CARRY4     |   767|
+|2     |DSP48E1_1  |     1|
+|3     |DSP48E1_2  |     1|
+|4     |DSP48E1_3  |     1|
+|5     |LUT1       |   116|
+|6     |LUT2       |  2418|
+|7     |LUT3       |   994|
+|8     |LUT4       |  2012|
+|9     |LUT5       |   629|
+|10    |LUT6       |   602|
+|11    |MUXF7      |     2|
+|12    |RAMB18E1   |     7|
+|13    |RAMB18E1_1 |     1|
+|14    |RAMB36E1   |     1|
+|15    |RAMB36E1_1 |     1|
+|16    |SRL16E     |   323|
+|17    |FDRE       |  3781|
+|18    |FDSE       |    89|
++------+-----------+------+
+
+Report Instance Areas: 
++------+-------------------------------------------+---------------------------------+------+
+|      |Instance                                   |Module                           |Cells |
++------+-------------------------------------------+---------------------------------+------+
+|1     |top                                        |                                 | 11746|
+|2     |  inst                                     |image_core                       | 11746|
+|3     |    AXIvideo2Mat_U0                        |AXIvideo2Mat                     |   576|
+|4     |    Array2Mat_U0                           |Array2Mat                        |   105|
+|5     |    Block_Mat_exit410_pr_U0                |Block_Mat_exit410_pr             |     1|
+|6     |    CvtColor_U0                            |CvtColor                         |   311|
+|7     |      image_core_mac_mucud_U36             |image_core_mac_mucud             |     1|
+|8     |        image_core_mac_mucud_DSP48_1_U     |image_core_mac_mucud_DSP48_1     |     1|
+|9     |      image_core_mac_mudEe_U37             |image_core_mac_mudEe             |    14|
+|10    |        image_core_mac_mudEe_DSP48_2_U     |image_core_mac_mudEe_DSP48_2     |    14|
+|11    |    Duplicate_U0                           |Duplicate                        |   230|
+|12    |    FAST_t_opr_U0                          |FAST_t_opr                       |  8743|
+|13    |      core_buf_val_0_V_U                   |FAST_t_opr_core_bkbM             |    24|
+|14    |        FAST_t_opr_core_bkbM_ram_U         |FAST_t_opr_core_bkbM_ram_84      |    24|
+|15    |      core_buf_val_1_V_U                   |FAST_t_opr_core_bkbM_26          |    37|
+|16    |        FAST_t_opr_core_bkbM_ram_U         |FAST_t_opr_core_bkbM_ram         |    37|
+|17    |      grp_reg_int_s_fu_3502                |reg_int_s                        |    90|
+|18    |      grp_reg_int_s_fu_3509                |reg_int_s_27                     |    64|
+|19    |      grp_reg_int_s_fu_3516                |reg_int_s_28                     |    99|
+|20    |      grp_reg_int_s_fu_3524                |reg_int_s_29                     |    99|
+|21    |      grp_reg_int_s_fu_3532                |reg_int_s_30                     |    99|
+|22    |      grp_reg_int_s_fu_3540                |reg_int_s_31                     |    99|
+|23    |      grp_reg_int_s_fu_3548                |reg_int_s_32                     |    99|
+|24    |      grp_reg_int_s_fu_3556                |reg_int_s_33                     |    99|
+|25    |      grp_reg_int_s_fu_3564                |reg_int_s_34                     |    64|
+|26    |      grp_reg_int_s_fu_3571                |reg_int_s_35                     |    89|
+|27    |      grp_reg_int_s_fu_3608                |reg_int_s_36                     |   134|
+|28    |      grp_reg_int_s_fu_3616                |reg_int_s_37                     |   109|
+|29    |      grp_reg_int_s_fu_3624                |reg_int_s_38                     |    99|
+|30    |      grp_reg_int_s_fu_3632                |reg_int_s_39                     |    99|
+|31    |      grp_reg_int_s_fu_3640                |reg_int_s_40                     |   109|
+|32    |      grp_reg_int_s_fu_3648                |reg_int_s_41                     |   134|
+|33    |      grp_reg_int_s_fu_3656                |reg_int_s_42                     |    44|
+|34    |      grp_reg_int_s_fu_3663                |reg_int_s_43                     |    19|
+|35    |      grp_reg_int_s_fu_3670                |reg_int_s_44                     |    44|
+|36    |      grp_reg_int_s_fu_3677                |reg_int_s_45                     |    19|
+|37    |      grp_reg_int_s_fu_3684                |reg_int_s_46                     |    19|
+|38    |      grp_reg_int_s_fu_3691                |reg_int_s_47                     |    44|
+|39    |      grp_reg_int_s_fu_3698                |reg_int_s_48                     |    19|
+|40    |      grp_reg_int_s_fu_3705                |reg_int_s_49                     |    44|
+|41    |      grp_reg_int_s_fu_3712                |reg_int_s_50                     |    89|
+|42    |      grp_reg_int_s_fu_3720                |reg_int_s_51                     |    64|
+|43    |      grp_reg_int_s_fu_3728                |reg_int_s_52                     |    89|
+|44    |      grp_reg_int_s_fu_3736                |reg_int_s_53                     |    64|
+|45    |      grp_reg_int_s_fu_3744                |reg_int_s_54                     |    64|
+|46    |      grp_reg_int_s_fu_3752                |reg_int_s_55                     |    89|
+|47    |      grp_reg_int_s_fu_3760                |reg_int_s_56                     |    64|
+|48    |      grp_reg_int_s_fu_3768                |reg_int_s_57                     |    89|
+|49    |      grp_reg_int_s_fu_3776                |reg_int_s_58                     |   158|
+|50    |      grp_reg_int_s_fu_3784                |reg_int_s_59                     |   179|
+|51    |      grp_reg_int_s_fu_3792                |reg_int_s_60                     |   143|
+|52    |      grp_reg_int_s_fu_3800                |reg_int_s_61                     |   143|
+|53    |      grp_reg_int_s_fu_3808                |reg_int_s_62                     |   182|
+|54    |      grp_reg_int_s_fu_3816                |reg_int_s_63                     |   182|
+|55    |      grp_reg_int_s_fu_3824                |reg_int_s_64                     |   139|
+|56    |      grp_reg_int_s_fu_3832                |reg_int_s_65                     |   139|
+|57    |      grp_reg_int_s_fu_3840                |reg_int_s_66                     |   182|
+|58    |      grp_reg_int_s_fu_3847                |reg_int_s_67                     |   182|
+|59    |      grp_reg_int_s_fu_3854                |reg_int_s_68                     |   139|
+|60    |      grp_reg_int_s_fu_3861                |reg_int_s_69                     |   139|
+|61    |      grp_reg_int_s_fu_3868                |reg_int_s_70                     |   182|
+|62    |      grp_reg_int_s_fu_3875                |reg_int_s_71                     |   182|
+|63    |      grp_reg_int_s_fu_3882                |reg_int_s_72                     |   139|
+|64    |      grp_reg_int_s_fu_3889                |reg_int_s_73                     |   139|
+|65    |      k_buf_val_0_V_U                      |FAST_t_opr_k_buf_eOg             |     2|
+|66    |        FAST_t_opr_k_buf_eOg_ram_U         |FAST_t_opr_k_buf_eOg_ram_83      |     2|
+|67    |      k_buf_val_1_V_U                      |FAST_t_opr_k_buf_eOg_74          |     1|
+|68    |        FAST_t_opr_k_buf_eOg_ram_U         |FAST_t_opr_k_buf_eOg_ram_82      |     1|
+|69    |      k_buf_val_2_V_U                      |FAST_t_opr_k_buf_eOg_75          |     1|
+|70    |        FAST_t_opr_k_buf_eOg_ram_U         |FAST_t_opr_k_buf_eOg_ram_81      |     1|
+|71    |      k_buf_val_3_V_U                      |FAST_t_opr_k_buf_eOg_76          |     1|
+|72    |        FAST_t_opr_k_buf_eOg_ram_U         |FAST_t_opr_k_buf_eOg_ram_80      |     1|
+|73    |      k_buf_val_4_V_U                      |FAST_t_opr_k_buf_eOg_77          |     1|
+|74    |        FAST_t_opr_k_buf_eOg_ram_U         |FAST_t_opr_k_buf_eOg_ram_79      |     1|
+|75    |      k_buf_val_5_V_U                      |FAST_t_opr_k_buf_eOg_78          |    12|
+|76    |        FAST_t_opr_k_buf_eOg_ram_U         |FAST_t_opr_k_buf_eOg_ram         |    12|
+|77    |    Mat2AXIvideo_U0                        |Mat2AXIvideo                     |   269|
+|78    |    gray_cols_V_c_U                        |fifo_w32_d5_A                    |    52|
+|79    |      U_fifo_w32_d5_A_ram                  |fifo_w32_d5_A_shiftReg_25        |    36|
+|80    |    gray_data_stream_0_s_U                 |fifo_w8_d2_A                     |    32|
+|81    |      U_fifo_w8_d2_A_ram                   |fifo_w8_d2_A_shiftReg_24         |    24|
+|82    |    gray_rows_V_c_U                        |fifo_w32_d5_A_0                  |    52|
+|83    |      U_fifo_w32_d5_A_ram                  |fifo_w32_d5_A_shiftReg_23        |    36|
+|84    |    image_core_ctrl_s_axi_U                |image_core_ctrl_s_axi            |   319|
+|85    |    keypoints_U                            |image_core_keypoimb6             |    12|
+|86    |      image_core_keypoimb6_memcore_U       |image_core_keypoimb6_memcore     |     2|
+|87    |        image_core_keypoimb6_memcore_ram_U |image_core_keypoimb6_memcore_ram |     2|
+|88    |    p_dst_cols_V_c28_U                     |fifo_w11_d2_A                    |    40|
+|89    |      U_fifo_w11_d2_A_ram                  |fifo_w11_d2_A_shiftReg           |    30|
+|90    |    p_dst_cols_V_c_U                       |fifo_w11_d6_A                    |    29|
+|91    |      U_fifo_w11_d6_A_ram                  |fifo_w11_d6_A_shiftReg           |    10|
+|92    |    p_dst_data_stream_0_s_U                |fifo_w16_d2_A                    |    56|
+|93    |      U_fifo_w16_d2_A_ram                  |fifo_w16_d2_A_shiftReg_22        |    48|
+|94    |    p_dst_data_stream_1_s_U                |fifo_w16_d2_A_1                  |    42|
+|95    |      U_fifo_w16_d2_A_ram                  |fifo_w16_d2_A_shiftReg           |    34|
+|96    |    p_dst_rows_V_c27_U                     |fifo_w1_d2_A                     |    15|
+|97    |      U_fifo_w1_d2_A_ram                   |fifo_w1_d2_A_shiftReg            |     5|
+|98    |    p_dst_rows_V_c_U                       |fifo_w1_d6_A                     |    21|
+|99    |      U_fifo_w1_d6_A_ram                   |fifo_w1_d6_A_shiftReg            |     5|
+|100   |    p_src_cols_V_c26_U                     |fifo_w32_d2_A                    |   106|
+|101   |      U_fifo_w32_d2_A_ram                  |fifo_w32_d2_A_shiftReg_21        |    97|
+|102   |    p_src_cols_V_c_U                       |fifo_w32_d2_A_2                  |   116|
+|103   |      U_fifo_w32_d2_A_ram                  |fifo_w32_d2_A_shiftReg_20        |    97|
+|104   |    p_src_data_stream_0_s_U                |fifo_w8_d2_A_3                   |    33|
+|105   |      U_fifo_w8_d2_A_ram                   |fifo_w8_d2_A_shiftReg_19         |    25|
+|106   |    p_src_data_stream_1_s_U                |fifo_w8_d2_A_4                   |    35|
+|107   |      U_fifo_w8_d2_A_ram                   |fifo_w8_d2_A_shiftReg_18         |    25|
+|108   |    p_src_data_stream_2_s_U                |fifo_w8_d2_A_5                   |    33|
+|109   |      U_fifo_w8_d2_A_ram                   |fifo_w8_d2_A_shiftReg_17         |    25|
+|110   |    p_src_rows_V_c25_U                     |fifo_w32_d2_A_6                  |   106|
+|111   |      U_fifo_w32_d2_A_ram                  |fifo_w32_d2_A_shiftReg_16        |    97|
+|112   |    p_src_rows_V_c_U                       |fifo_w32_d2_A_7                  |   107|
+|113   |      U_fifo_w32_d2_A_ram                  |fifo_w32_d2_A_shiftReg           |    97|
+|114   |    src0_cols_V_c_U                        |fifo_w32_d4_A                    |    48|
+|115   |      U_fifo_w32_d4_A_ram                  |fifo_w32_d4_A_shiftReg_15        |    35|
+|116   |    src0_data_stream_0_s_U                 |fifo_w8_d2_A_8                   |    33|
+|117   |      U_fifo_w8_d2_A_ram                   |fifo_w8_d2_A_shiftReg_14         |    25|
+|118   |    src0_data_stream_1_s_U                 |fifo_w8_d2_A_9                   |    33|
+|119   |      U_fifo_w8_d2_A_ram                   |fifo_w8_d2_A_shiftReg_13         |    25|
+|120   |    src0_data_stream_2_s_U                 |fifo_w8_d2_A_10                  |    33|
+|121   |      U_fifo_w8_d2_A_ram                   |fifo_w8_d2_A_shiftReg            |    25|
+|122   |    src0_rows_V_c_U                        |fifo_w32_d4_A_11                 |    49|
+|123   |      U_fifo_w32_d4_A_ram                  |fifo_w32_d4_A_shiftReg           |    35|
+|124   |    start_for_CvtColoncg_U                 |start_for_CvtColoncg             |    17|
+|125   |    start_for_DuplicapcA_U                 |start_for_DuplicapcA             |    17|
+|126   |    start_for_FAST_t_ocq_U                 |start_for_FAST_t_ocq             |    17|
+|127   |    start_for_Mat2AXIqcK_U                 |start_for_Mat2AXIqcK             |    19|
+|128   |    threhold_c_U                           |fifo_w32_d5_A_12                 |    37|
+|129   |      U_fifo_w32_d5_A_ram                  |fifo_w32_d5_A_shiftReg           |    21|
++------+-------------------------------------------+---------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:18 ; elapsed = 00:01:39 . Memory (MB): peak = 1276.809 ; gain = 928.199
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 122 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:52 ; elapsed = 00:01:06 . Memory (MB): peak = 1276.809 ; gain = 348.855
+Synthesis Optimization Complete : Time (s): cpu = 00:01:18 ; elapsed = 00:01:39 . Memory (MB): peak = 1276.809 ; gain = 928.199
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 782 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+359 Infos, 225 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:24 ; elapsed = 00:01:46 . Memory (MB): peak = 1276.809 ; gain = 939.668
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'F:/FPGA/project/Vivado/FAST_2.0/image_process.runs/design_1_image_core_0_1_synth_1/design_1_image_core_0_1.dcp' has been generated.

@@ -1,0 +1,4 @@
+NumberHits:0
+Timestamp: Tue Sep 25 07:05:45 UTC 2018
+VLNV: xilinx.com:hls:HoughCircles_Core:1.0
+SynthRuntime: 182

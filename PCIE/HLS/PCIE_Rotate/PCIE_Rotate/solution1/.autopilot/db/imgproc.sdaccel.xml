@@ -1,0 +1,218 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'imgproc'" level="0">
+<item name = "Date">Fri Nov 23 08:52:20 2018
+</item>
+<item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
+<item name = "Project">PCIE_Rotate</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">virtex7</item>
+<item name = "Target device">xc7vx690tffg1761-3</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Target clock period (ns)">10.00</item>
+<item name = "Clock uncertainty (ns)">1.25</item>
+<item name = "Estimated clock period (ns)">8.709</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="Resize_U0">Resize, 39, 132391, 39, 132391, none</column>
+<column name="Block_Mat_exit2022_p_U0">Block_Mat_exit2022_p, ?, ?, ?, ?, none</column>
+<column name="Array2D2Mat_U0">Array2D2Mat, 1, 66564, 1, 66564, none</column>
+<column name="Mat2AXIvideo_U0">Mat2AXIvideo, 1, 66821, 1, 66821, none</column>
+<column name="AXIvideo2Mat_U0">AXIvideo2Mat, 3, 67594, 3, 67594, none</column>
+<column name="Block_Mat_exit20_pro_U0">Block_Mat_exit20_pro, 0, 0, 0, 0, none</column>
+<column name="Block_Mat_exit2030_p_U0">Block_Mat_exit2030_p, 0, 0, 0, 0, none</column>
+<column name="Block_Mat_exit2027_p_U0">Block_Mat_exit2027_p, 0, 0, 0, 0, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 68</column>
+<column name="FIFO">0, -, 95, 760</column>
+<column name="Instance">-, 40, 4378, 8382</column>
+<column name="Memory">64, -, 0, 0</column>
+<column name="Multiplexer">-, -, -, 90</column>
+<column name="Register">-, -, 12, -</column>
+<specialColumn name="Available">2940, 3600, 866400, 433200</specialColumn>
+<specialColumn name="Utilization (%)">2, 1, ~0, 2</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="AXIvideo2Mat_U0">AXIvideo2Mat, 0, 0, 249, 529</column>
+<column name="Array2D2Mat_U0">Array2D2Mat, 0, 0, 249, 803</column>
+<column name="Block_Mat_exit2022_p_U0">Block_Mat_exit2022_p, 0, 0, 550, 926</column>
+<column name="Block_Mat_exit2027_p_U0">Block_Mat_exit2027_p, 0, 0, 66, 47</column>
+<column name="Block_Mat_exit2030_p_U0">Block_Mat_exit2030_p, 0, 0, 98, 56</column>
+<column name="Block_Mat_exit20_pro_U0">Block_Mat_exit20_pro, 0, 0, 2, 68</column>
+<column name="Mat2AXIvideo_U0">Mat2AXIvideo, 0, 0, 249, 469</column>
+<column name="Resize_U0">Resize, 0, 40, 2915, 5484</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="arr0_val_U">imgproc_arr0_val, 32, 0, 0, 65536, 8, 2, 1048576</column>
+<column name="arr1_val_U">imgproc_arr1_val, 32, 0, 0, 65536, 8, 2, 1048576</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+<column name="arr0_cols_c_U">0, 5, 44, 2, 32, 64</column>
+<column name="arr0_rows_c_U">0, 5, 44, 2, 32, 64</column>
+<column name="arr1_cols_c44_U">0, 5, 44, 2, 32, 64</column>
+<column name="arr1_cols_c_U">0, 5, 44, 3, 32, 96</column>
+<column name="arr1_rows_c43_U">0, 5, 44, 3, 32, 96</column>
+<column name="arr1_rows_c_U">0, 5, 44, 2, 32, 64</column>
+<column name="mat0_cols_V_c42_U">0, 5, 44, 2, 32, 64</column>
+<column name="mat0_cols_V_c_U">0, 5, 44, 2, 32, 64</column>
+<column name="mat0_data_stream_0_s_U">0, 5, 20, 2, 8, 16</column>
+<column name="mat0_rows_V_c41_U">0, 5, 44, 2, 32, 64</column>
+<column name="mat0_rows_V_c_U">0, 5, 44, 2, 32, 64</column>
+<column name="mat1_cols_V_c_U">0, 5, 44, 2, 32, 64</column>
+<column name="mat1_data_stream_0_s_U">0, 5, 20, 2, 8, 16</column>
+<column name="mat1_rows_V_c_U">0, 5, 44, 2, 32, 64</column>
+<column name="param1_val_0_V_U">0, 5, 44, 2, 32, 64</column>
+<column name="param1_val_1_V_U">0, 5, 44, 2, 32, 64</column>
+<column name="tmp_4_loc_channel_U">0, 5, 44, 2, 32, 64</column>
+<column name="tmp_5_loc_channel_U">0, 5, 16, 2, 2, 4</column>
+<column name="val_assign_loc_chann_U">0, 5, 44, 2, 32, 64</column>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="AXIvideo2Mat_U0_ap_ready_count">+, 0, 0, 10, 2, 1</column>
+<column name="Block_Mat_exit20_pro_U0_ap_ready_count">+, 0, 0, 10, 2, 1</column>
+<column name="AXIvideo2Mat_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="Array2D2Mat_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="Block_Mat_exit2022_p_U0_ap_continue">and, 0, 0, 2, 1, 1</column>
+<column name="Block_Mat_exit2027_p_U0_ap_continue">and, 0, 0, 2, 1, 1</column>
+<column name="Block_Mat_exit2030_p_U0_ap_continue">and, 0, 0, 2, 1, 1</column>
+<column name="Block_Mat_exit20_pro_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="Resize_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_arr0_val">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_param1_val_0_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_param1_val_1_V">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_tmp_4_loc_channel">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_tmp_5_loc_channel">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_val_assign_loc_chann">and, 0, 0, 2, 1, 1</column>
+<column name="ap_idle">and, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_done">and, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_ready">and, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_AXIvideo2Mat_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_Block_Mat_exit20_pro_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_arr0_val">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_param1_val_0_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_param1_val_1_V">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_tmp_4_loc_channel">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_tmp_5_loc_channel">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_val_assign_loc_chann">or, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="AXIvideo2Mat_U0_ap_ready_count">9, 2, 2, 4</column>
+<column name="Block_Mat_exit20_pro_U0_ap_ready_count">9, 2, 2, 4</column>
+<column name="ap_sync_reg_AXIvideo2Mat_U0_ap_ready">9, 2, 1, 2</column>
+<column name="ap_sync_reg_Block_Mat_exit20_pro_U0_ap_ready">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_arr0_val">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_param1_val_0_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_param1_val_1_V">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_tmp_4_loc_channel">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_tmp_5_loc_channel">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_val_assign_loc_chann">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="AXIvideo2Mat_U0_ap_ready_count">2, 0, 2, 0</column>
+<column name="Block_Mat_exit20_pro_U0_ap_ready_count">2, 0, 2, 0</column>
+<column name="ap_sync_reg_AXIvideo2Mat_U0_ap_ready">1, 0, 1, 0</column>
+<column name="ap_sync_reg_Block_Mat_exit20_pro_U0_ap_ready">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_arr0_val">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_param1_val_0_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_param1_val_1_V">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_tmp_4_loc_channel">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_tmp_5_loc_channel">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_val_assign_loc_chann">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, imgproc, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_hs, imgproc, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, imgproc, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, imgproc, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, imgproc, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, imgproc, return value</column>
+<column name="S_AXIS_TDATA">in, 8, axis, S_AXIS_V_data_V, pointer</column>
+<column name="S_AXIS_TKEEP">in, 1, axis, S_AXIS_V_keep_V, pointer</column>
+<column name="S_AXIS_TSTRB">in, 1, axis, S_AXIS_V_strb_V, pointer</column>
+<column name="S_AXIS_TUSER">in, 1, axis, S_AXIS_V_user_V, pointer</column>
+<column name="S_AXIS_TLAST">in, 1, axis, S_AXIS_V_last_V, pointer</column>
+<column name="S_AXIS_TID">in, 1, axis, S_AXIS_V_id_V, pointer</column>
+<column name="S_AXIS_TDEST">in, 1, axis, S_AXIS_V_dest_V, pointer</column>
+<column name="S_AXIS_TVALID">in, 1, axis, S_AXIS_V_dest_V, pointer</column>
+<column name="S_AXIS_TREADY">out, 1, axis, S_AXIS_V_dest_V, pointer</column>
+<column name="M_AXIS_TDATA">out, 8, axis, M_AXIS_V_data_V, pointer</column>
+<column name="M_AXIS_TKEEP">out, 1, axis, M_AXIS_V_keep_V, pointer</column>
+<column name="M_AXIS_TSTRB">out, 1, axis, M_AXIS_V_strb_V, pointer</column>
+<column name="M_AXIS_TUSER">out, 1, axis, M_AXIS_V_user_V, pointer</column>
+<column name="M_AXIS_TLAST">out, 1, axis, M_AXIS_V_last_V, pointer</column>
+<column name="M_AXIS_TID">out, 1, axis, M_AXIS_V_id_V, pointer</column>
+<column name="M_AXIS_TDEST">out, 1, axis, M_AXIS_V_dest_V, pointer</column>
+<column name="M_AXIS_TVALID">out, 1, axis, M_AXIS_V_dest_V, pointer</column>
+<column name="M_AXIS_TREADY">in, 1, axis, M_AXIS_V_dest_V, pointer</column>
+<column name="rows0">in, 32, ap_none, rows0, scalar</column>
+<column name="cols0">in, 32, ap_none, cols0, scalar</column>
+<column name="rows1">out, 32, ap_none, rows1, pointer</column>
+<column name="cols1">out, 32, ap_none, cols1, pointer</column>
+</table>
+</item>
+</section>
+
+<section name = "Critical Path" level="0">
+<item name = "Max Delay">4.00</item>
+<item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
+<keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
+<column name="">call, 4.00, 4.00, -, -, -, -, -, -, -, -, -, Resize, -</column>
+</table>
+</item>
+</section>
+</profile>

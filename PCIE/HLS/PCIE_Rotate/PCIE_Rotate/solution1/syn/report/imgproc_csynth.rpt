@@ -1,0 +1,243 @@
+
+
+================================================================
+== Vivado HLS Report for 'imgproc'
+================================================================
+* Date:           Fri Nov 23 08:52:20 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        PCIE_Rotate
+* Solution:       solution1
+* Product family: virtex7
+* Target device:  xc7vx690tffg1761-3
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.709|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    ?|    ?|    ?|    ?| dataflow |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------+----------------------+-----+--------+-----+--------+---------+
+        |                         |                      |    Latency   |   Interval   | Pipeline|
+        |         Instance        |        Module        | min |   max  | min |   max  |   Type  |
+        +-------------------------+----------------------+-----+--------+-----+--------+---------+
+        |Resize_U0                |Resize                |   39|  132391|   39|  132391|   none  |
+        |Block_Mat_exit2022_p_U0  |Block_Mat_exit2022_p  |    ?|       ?|    ?|       ?|   none  |
+        |Array2D2Mat_U0           |Array2D2Mat           |    1|   66564|    1|   66564|   none  |
+        |Mat2AXIvideo_U0          |Mat2AXIvideo          |    1|   66821|    1|   66821|   none  |
+        |AXIvideo2Mat_U0          |AXIvideo2Mat          |    3|   67594|    3|   67594|   none  |
+        |Block_Mat_exit20_pro_U0  |Block_Mat_exit20_pro  |    0|       0|    0|       0|   none  |
+        |Block_Mat_exit2030_p_U0  |Block_Mat_exit2030_p  |    0|       0|    0|       0|   none  |
+        |Block_Mat_exit2027_p_U0  |Block_Mat_exit2027_p  |    0|       0|    0|       0|   none  |
+        +-------------------------+----------------------+-----+--------+-----+--------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
++-----------------+---------+-------+--------+--------+
+|DSP              |        -|      -|       -|       -|
+|Expression       |        -|      -|       0|      68|
+|FIFO             |        0|      -|      95|     760|
+|Instance         |        -|     40|    4378|    8382|
+|Memory           |       64|      -|       0|       0|
+|Multiplexer      |        -|      -|       -|      90|
+|Register         |        -|      -|      12|       -|
++-----------------+---------+-------+--------+--------+
+|Total            |       64|     40|    4485|    9300|
++-----------------+---------+-------+--------+--------+
+|Available        |     2940|   3600|  866400|  433200|
++-----------------+---------+-------+--------+--------+
+|Utilization (%)  |        2|      1|   ~0   |       2|
++-----------------+---------+-------+--------+--------+
+
++ Detail: 
+    * Instance: 
+    +-------------------------+----------------------+---------+-------+------+------+
+    |         Instance        |        Module        | BRAM_18K| DSP48E|  FF  |  LUT |
+    +-------------------------+----------------------+---------+-------+------+------+
+    |AXIvideo2Mat_U0          |AXIvideo2Mat          |        0|      0|   249|   529|
+    |Array2D2Mat_U0           |Array2D2Mat           |        0|      0|   249|   803|
+    |Block_Mat_exit2022_p_U0  |Block_Mat_exit2022_p  |        0|      0|   550|   926|
+    |Block_Mat_exit2027_p_U0  |Block_Mat_exit2027_p  |        0|      0|    66|    47|
+    |Block_Mat_exit2030_p_U0  |Block_Mat_exit2030_p  |        0|      0|    98|    56|
+    |Block_Mat_exit20_pro_U0  |Block_Mat_exit20_pro  |        0|      0|     2|    68|
+    |Mat2AXIvideo_U0          |Mat2AXIvideo          |        0|      0|   249|   469|
+    |Resize_U0                |Resize                |        0|     40|  2915|  5484|
+    +-------------------------+----------------------+---------+-------+------+------+
+    |Total                    |                      |        0|     40|  4378|  8382|
+    +-------------------------+----------------------+---------+-------+------+------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    +------------+------------------+---------+---+----+-------+-----+------+-------------+
+    |   Memory   |      Module      | BRAM_18K| FF| LUT| Words | Bits| Banks| W*Bits*Banks|
+    +------------+------------------+---------+---+----+-------+-----+------+-------------+
+    |arr0_val_U  |imgproc_arr0_val  |       32|  0|   0|  65536|    8|     2|      1048576|
+    |arr1_val_U  |imgproc_arr1_val  |       32|  0|   0|  65536|    8|     2|      1048576|
+    +------------+------------------+---------+---+----+-------+-----+------+-------------+
+    |Total       |                  |       64|  0|   0| 131072|   16|     4|      2097152|
+    +------------+------------------+---------+---+----+-------+-----+------+-------------+
+
+    * FIFO: 
+    +------------------------+---------+---+----+------+-----+---------+
+    |          Name          | BRAM_18K| FF| LUT| Depth| Bits| Size:D*B|
+    +------------------------+---------+---+----+------+-----+---------+
+    |arr0_cols_c_U           |        0|  5|  44|     2|   32|       64|
+    |arr0_rows_c_U           |        0|  5|  44|     2|   32|       64|
+    |arr1_cols_c44_U         |        0|  5|  44|     2|   32|       64|
+    |arr1_cols_c_U           |        0|  5|  44|     3|   32|       96|
+    |arr1_rows_c43_U         |        0|  5|  44|     3|   32|       96|
+    |arr1_rows_c_U           |        0|  5|  44|     2|   32|       64|
+    |mat0_cols_V_c42_U       |        0|  5|  44|     2|   32|       64|
+    |mat0_cols_V_c_U         |        0|  5|  44|     2|   32|       64|
+    |mat0_data_stream_0_s_U  |        0|  5|  20|     2|    8|       16|
+    |mat0_rows_V_c41_U       |        0|  5|  44|     2|   32|       64|
+    |mat0_rows_V_c_U         |        0|  5|  44|     2|   32|       64|
+    |mat1_cols_V_c_U         |        0|  5|  44|     2|   32|       64|
+    |mat1_data_stream_0_s_U  |        0|  5|  20|     2|    8|       16|
+    |mat1_rows_V_c_U         |        0|  5|  44|     2|   32|       64|
+    |param1_val_0_V_U        |        0|  5|  44|     2|   32|       64|
+    |param1_val_1_V_U        |        0|  5|  44|     2|   32|       64|
+    |tmp_4_loc_channel_U     |        0|  5|  44|     2|   32|       64|
+    |tmp_5_loc_channel_U     |        0|  5|  16|     2|    2|        4|
+    |val_assign_loc_chann_U  |        0|  5|  44|     2|   32|       64|
+    +------------------------+---------+---+----+------+-----+---------+
+    |Total                   |        0| 95| 760|    40|  530|     1124|
+    +------------------------+---------+---+----+------+-----+---------+
+
+    * Expression: 
+    +--------------------------------------------+----------+-------+---+----+------------+------------+
+    |                Variable Name               | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------------------------+----------+-------+---+----+------------+------------+
+    |AXIvideo2Mat_U0_ap_ready_count              |     +    |      0|  0|  10|           2|           1|
+    |Block_Mat_exit20_pro_U0_ap_ready_count      |     +    |      0|  0|  10|           2|           1|
+    |AXIvideo2Mat_U0_ap_start                    |    and   |      0|  0|   2|           1|           1|
+    |Array2D2Mat_U0_ap_start                     |    and   |      0|  0|   2|           1|           1|
+    |Block_Mat_exit2022_p_U0_ap_continue         |    and   |      0|  0|   2|           1|           1|
+    |Block_Mat_exit2027_p_U0_ap_continue         |    and   |      0|  0|   2|           1|           1|
+    |Block_Mat_exit2030_p_U0_ap_continue         |    and   |      0|  0|   2|           1|           1|
+    |Block_Mat_exit20_pro_U0_ap_start            |    and   |      0|  0|   2|           1|           1|
+    |Resize_U0_ap_start                          |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_arr0_val                    |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_param1_val_0_V              |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_param1_val_1_V              |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_tmp_4_loc_channel           |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_tmp_5_loc_channel           |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_val_assign_loc_chann        |    and   |      0|  0|   2|           1|           1|
+    |ap_idle                                     |    and   |      0|  0|   2|           1|           1|
+    |ap_sync_done                                |    and   |      0|  0|   2|           1|           1|
+    |ap_sync_ready                               |    and   |      0|  0|   2|           1|           1|
+    |ap_sync_AXIvideo2Mat_U0_ap_ready            |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_Block_Mat_exit20_pro_U0_ap_ready    |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_arr0_val              |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_param1_val_0_V        |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_param1_val_1_V        |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_tmp_4_loc_channel     |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_tmp_5_loc_channel     |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_val_assign_loc_chann  |    or    |      0|  0|   2|           1|           1|
+    +--------------------------------------------+----------+-------+---+----+------------+------------+
+    |Total                                       |          |      0|  0|  68|          28|          26|
+    +--------------------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------------------------------+----+-----------+-----+-----------+
+    |                      Name                      | LUT| Input Size| Bits| Total Bits|
+    +------------------------------------------------+----+-----------+-----+-----------+
+    |AXIvideo2Mat_U0_ap_ready_count                  |   9|          2|    2|          4|
+    |Block_Mat_exit20_pro_U0_ap_ready_count          |   9|          2|    2|          4|
+    |ap_sync_reg_AXIvideo2Mat_U0_ap_ready            |   9|          2|    1|          2|
+    |ap_sync_reg_Block_Mat_exit20_pro_U0_ap_ready    |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_arr0_val              |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_param1_val_0_V        |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_param1_val_1_V        |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_tmp_4_loc_channel     |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_tmp_5_loc_channel     |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_val_assign_loc_chann  |   9|          2|    1|          2|
+    +------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                           |  90|         20|   12|         24|
+    +------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------------------+---+----+-----+-----------+
+    |                      Name                      | FF| LUT| Bits| Const Bits|
+    +------------------------------------------------+---+----+-----+-----------+
+    |AXIvideo2Mat_U0_ap_ready_count                  |  2|   0|    2|          0|
+    |Block_Mat_exit20_pro_U0_ap_ready_count          |  2|   0|    2|          0|
+    |ap_sync_reg_AXIvideo2Mat_U0_ap_ready            |  1|   0|    1|          0|
+    |ap_sync_reg_Block_Mat_exit20_pro_U0_ap_ready    |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_arr0_val              |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_param1_val_0_V        |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_param1_val_1_V        |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_tmp_4_loc_channel     |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_tmp_5_loc_channel     |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_val_assign_loc_chann  |  1|   0|    1|          0|
+    +------------------------------------------------+---+----+-----+-----------+
+    |Total                                           | 12|   0|   12|          0|
+    +------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------+-----+-----+------------+-----------------+--------------+
+|   RTL Ports   | Dir | Bits|  Protocol  |  Source Object  |    C Type    |
++---------------+-----+-----+------------+-----------------+--------------+
+|ap_clk         |  in |    1| ap_ctrl_hs |     imgproc     | return value |
+|ap_rst_n       |  in |    1| ap_ctrl_hs |     imgproc     | return value |
+|ap_done        | out |    1| ap_ctrl_hs |     imgproc     | return value |
+|ap_start       |  in |    1| ap_ctrl_hs |     imgproc     | return value |
+|ap_ready       | out |    1| ap_ctrl_hs |     imgproc     | return value |
+|ap_idle        | out |    1| ap_ctrl_hs |     imgproc     | return value |
+|S_AXIS_TDATA   |  in |    8|    axis    | S_AXIS_V_data_V |    pointer   |
+|S_AXIS_TKEEP   |  in |    1|    axis    | S_AXIS_V_keep_V |    pointer   |
+|S_AXIS_TSTRB   |  in |    1|    axis    | S_AXIS_V_strb_V |    pointer   |
+|S_AXIS_TUSER   |  in |    1|    axis    | S_AXIS_V_user_V |    pointer   |
+|S_AXIS_TLAST   |  in |    1|    axis    | S_AXIS_V_last_V |    pointer   |
+|S_AXIS_TID     |  in |    1|    axis    |  S_AXIS_V_id_V  |    pointer   |
+|S_AXIS_TDEST   |  in |    1|    axis    | S_AXIS_V_dest_V |    pointer   |
+|S_AXIS_TVALID  |  in |    1|    axis    | S_AXIS_V_dest_V |    pointer   |
+|S_AXIS_TREADY  | out |    1|    axis    | S_AXIS_V_dest_V |    pointer   |
+|M_AXIS_TDATA   | out |    8|    axis    | M_AXIS_V_data_V |    pointer   |
+|M_AXIS_TKEEP   | out |    1|    axis    | M_AXIS_V_keep_V |    pointer   |
+|M_AXIS_TSTRB   | out |    1|    axis    | M_AXIS_V_strb_V |    pointer   |
+|M_AXIS_TUSER   | out |    1|    axis    | M_AXIS_V_user_V |    pointer   |
+|M_AXIS_TLAST   | out |    1|    axis    | M_AXIS_V_last_V |    pointer   |
+|M_AXIS_TID     | out |    1|    axis    |  M_AXIS_V_id_V  |    pointer   |
+|M_AXIS_TDEST   | out |    1|    axis    | M_AXIS_V_dest_V |    pointer   |
+|M_AXIS_TVALID  | out |    1|    axis    | M_AXIS_V_dest_V |    pointer   |
+|M_AXIS_TREADY  |  in |    1|    axis    | M_AXIS_V_dest_V |    pointer   |
+|rows0          |  in |   32|   ap_none  |      rows0      |    scalar    |
+|cols0          |  in |   32|   ap_none  |      cols0      |    scalar    |
+|rows1          | out |   32|   ap_none  |      rows1      |    pointer   |
+|cols1          | out |   32|   ap_none  |      cols1      |    pointer   |
++---------------+-----+-----+------------+-----------------+--------------+
+

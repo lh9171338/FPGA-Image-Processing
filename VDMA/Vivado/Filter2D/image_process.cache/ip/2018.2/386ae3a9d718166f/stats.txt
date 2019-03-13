@@ -1,0 +1,4 @@
+NumberHits:0
+Timestamp: Tue Sep 25 02:32:15 UTC 2018
+VLNV: xilinx.com:hls:HoughLinesP_Core:1.0
+SynthRuntime: 198

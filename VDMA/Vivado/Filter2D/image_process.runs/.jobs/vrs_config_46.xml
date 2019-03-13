@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="design_1_dlmb_bram_if_cntlr_0_synth_1" LaunchDir="F:/FPGA/project/Vivado/FAST_2.0/image_process.runs/design_1_dlmb_bram_if_cntlr_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_ilmb_bram_if_cntlr_0_synth_1" LaunchDir="F:/FPGA/project/Vivado/FAST_2.0/image_process.runs/design_1_ilmb_bram_if_cntlr_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_lmb_bram_0_synth_1" LaunchDir="F:/FPGA/project/Vivado/FAST_2.0/image_process.runs/design_1_lmb_bram_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+

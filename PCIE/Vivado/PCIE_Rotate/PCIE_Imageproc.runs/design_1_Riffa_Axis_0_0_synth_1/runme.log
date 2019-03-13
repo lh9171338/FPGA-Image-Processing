@@ -1,0 +1,487 @@
+
+*** Running vivado
+    with args -log design_1_Riffa_Axis_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_Riffa_Axis_0_0.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source design_1_Riffa_Axis_0_0.tcl -notrace
+Command: synth_design -top design_1_Riffa_Axis_0_0 -part xc7vx690tffg1761-3 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 11572 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 449.605 ; gain = 100.641
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_Riffa_Axis_0_0' [f:/FPGA/project/Vivado/PCIE_Rotate/PCIE_Imageproc.srcs/sources_1/bd/design_1/ip/design_1_Riffa_Axis_0_0/synth/design_1_Riffa_Axis_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'Riffa_Axis' [f:/FPGA/project/Vivado/PCIE_Rotate/PCIE_Imageproc.srcs/sources_1/bd/design_1/ipshared/71ac/Riffa_Axis.v:21]
+	Parameter PCIE_DATA_WIDTH bound to: 128 - type: integer 
+	Parameter AXIS_DATA_WIDTH bound to: 8 - type: integer 
+	Parameter PCIE_ADDR_WIDTH bound to: 12 - type: integer 
+	Parameter AXIS_ADDR_WIDTH bound to: 16 - type: integer 
+	Parameter AP_CTRL_IN bound to: 1'b0 
+	Parameter AP_CTRL_OUT bound to: 1'b1 
+INFO: [Synth 8-6157] synthesizing module 'Axis2Riffa' [f:/FPGA/project/Vivado/PCIE_Rotate/PCIE_Imageproc.srcs/sources_1/bd/design_1/ipshared/71ac/Axis2Riffa.v:21]
+	Parameter PCIE_DATA_WIDTH bound to: 128 - type: integer 
+	Parameter AXIS_DATA_WIDTH bound to: 8 - type: integer 
+	Parameter PCIE_ADDR_WIDTH bound to: 12 - type: integer 
+	Parameter AXIS_ADDR_WIDTH bound to: 16 - type: integer 
+	Parameter AP_CTRL_ENABLE bound to: 1'b0 
+INFO: [Synth 8-638] synthesizing module 'mult_gen_0' [f:/FPGA/project/Vivado/PCIE_Rotate/PCIE_Imageproc.srcs/sources_1/bd/design_1/ip/design_1_Riffa_Axis_0_0/src/mult_gen_0/synth/mult_gen_0.vhd:68]
+WARNING: [Synth 8-5640] Port 'zero_detect' is missing in component declaration [f:/FPGA/project/Vivado/PCIE_Rotate/PCIE_Imageproc.srcs/sources_1/bd/design_1/ip/design_1_Riffa_Axis_0_0/src/mult_gen_0/synth/mult_gen_0.vhd:71]
+WARNING: [Synth 8-5640] Port 'pcasc' is missing in component declaration [f:/FPGA/project/Vivado/PCIE_Rotate/PCIE_Imageproc.srcs/sources_1/bd/design_1/ip/design_1_Riffa_Axis_0_0/src/mult_gen_0/synth/mult_gen_0.vhd:71]
+	Parameter C_VERBOSITY bound to: 0 - type: integer 
+	Parameter C_MODEL_TYPE bound to: 0 - type: integer 
+	Parameter C_OPTIMIZE_GOAL bound to: 1 - type: integer 
+	Parameter C_XDEVICEFAMILY bound to: virtex7 - type: string 
+	Parameter C_HAS_CE bound to: 0 - type: integer 
+	Parameter C_HAS_SCLR bound to: 0 - type: integer 
+	Parameter C_LATENCY bound to: 3 - type: integer 
+	Parameter C_A_WIDTH bound to: 16 - type: integer 
+	Parameter C_A_TYPE bound to: 1 - type: integer 
+	Parameter C_B_WIDTH bound to: 16 - type: integer 
+	Parameter C_B_TYPE bound to: 1 - type: integer 
+	Parameter C_OUT_HIGH bound to: 31 - type: integer 
+	Parameter C_OUT_LOW bound to: 0 - type: integer 
+	Parameter C_MULT_TYPE bound to: 1 - type: integer 
+	Parameter C_CE_OVERRIDES_SCLR bound to: 0 - type: integer 
+	Parameter C_CCM_IMP bound to: 0 - type: integer 
+	Parameter C_B_VALUE bound to: 10000001 - type: string 
+	Parameter C_HAS_ZERO_DETECT bound to: 0 - type: integer 
+	Parameter C_ROUND_OUTPUT bound to: 0 - type: integer 
+	Parameter C_ROUND_PT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'mult_gen_v12_0_14' declared at 'f:/FPGA/project/Vivado/PCIE_Rotate/PCIE_Imageproc.srcs/sources_1/bd/design_1/ip/design_1_Riffa_Axis_0_0/src/mult_gen_0/hdl/mult_gen_v12_0_vh_rfs.vhd:21013' bound to instance 'U0' of component 'mult_gen_v12_0_14' [f:/FPGA/project/Vivado/PCIE_Rotate/PCIE_Imageproc.srcs/sources_1/bd/design_1/ip/design_1_Riffa_Axis_0_0/src/mult_gen_0/synth/mult_gen_0.vhd:120]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-256] done synthesizing module 'mult_gen_0' (6#1) [f:/FPGA/project/Vivado/PCIE_Rotate/PCIE_Imageproc.srcs/sources_1/bd/design_1/ip/design_1_Riffa_Axis_0_0/src/mult_gen_0/synth/mult_gen_0.vhd:68]
+INFO: [Synth 8-155] case statement is not full and has no default [f:/FPGA/project/Vivado/PCIE_Rotate/PCIE_Imageproc.srcs/sources_1/bd/design_1/ipshared/71ac/Axis2Riffa.v:123]
+INFO: [Synth 8-6155] done synthesizing module 'Axis2Riffa' (7#1) [f:/FPGA/project/Vivado/PCIE_Rotate/PCIE_Imageproc.srcs/sources_1/bd/design_1/ipshared/71ac/Axis2Riffa.v:21]
+INFO: [Synth 8-6157] synthesizing module 'Riffa2Axis' [f:/FPGA/project/Vivado/PCIE_Rotate/PCIE_Imageproc.srcs/sources_1/bd/design_1/ipshared/71ac/Riffa2Axis.v:21]
+	Parameter PCIE_DATA_WIDTH bound to: 128 - type: integer 
+	Parameter AXIS_DATA_WIDTH bound to: 8 - type: integer 
+	Parameter PCIE_ADDR_WIDTH bound to: 12 - type: integer 
+	Parameter AXIS_ADDR_WIDTH bound to: 16 - type: integer 
+	Parameter PARAM_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter PARAM_DATA_COUNT bound to: 1 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [f:/FPGA/project/Vivado/PCIE_Rotate/PCIE_Imageproc.srcs/sources_1/bd/design_1/ipshared/71ac/Riffa2Axis.v:140]
+INFO: [Synth 8-6155] done synthesizing module 'Riffa2Axis' (8#1) [f:/FPGA/project/Vivado/PCIE_Rotate/PCIE_Imageproc.srcs/sources_1/bd/design_1/ipshared/71ac/Riffa2Axis.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'Riffa_Axis' (9#1) [f:/FPGA/project/Vivado/PCIE_Rotate/PCIE_Imageproc.srcs/sources_1/bd/design_1/ipshared/71ac/Riffa_Axis.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_Riffa_Axis_0_0' (10#1) [f:/FPGA/project/Vivado/PCIE_Rotate/PCIE_Imageproc.srcs/sources_1/bd/design_1/ip/design_1_Riffa_Axis_0_0/synth/design_1_Riffa_Axis_0_0.v:58]
+WARNING: [Synth 8-3331] design Riffa2Axis has unconnected port CHNL_RX_LAST
+WARNING: [Synth 8-3331] design Riffa2Axis has unconnected port CHNL_RX_OFF[30]
+WARNING: [Synth 8-3331] design Riffa2Axis has unconnected port CHNL_RX_OFF[29]
+WARNING: [Synth 8-3331] design Riffa2Axis has unconnected port CHNL_RX_OFF[28]
+WARNING: [Synth 8-3331] design Riffa2Axis has unconnected port CHNL_RX_OFF[27]
+WARNING: [Synth 8-3331] design Riffa2Axis has unconnected port CHNL_RX_OFF[26]
+WARNING: [Synth 8-3331] design Riffa2Axis has unconnected port CHNL_RX_OFF[25]
+WARNING: [Synth 8-3331] design Riffa2Axis has unconnected port CHNL_RX_OFF[24]
+WARNING: [Synth 8-3331] design Riffa2Axis has unconnected port CHNL_RX_OFF[23]
+WARNING: [Synth 8-3331] design Riffa2Axis has unconnected port CHNL_RX_OFF[22]
+WARNING: [Synth 8-3331] design Riffa2Axis has unconnected port CHNL_RX_OFF[21]
+WARNING: [Synth 8-3331] design Riffa2Axis has unconnected port CHNL_RX_OFF[20]
+WARNING: [Synth 8-3331] design Riffa2Axis has unconnected port CHNL_RX_OFF[19]
+WARNING: [Synth 8-3331] design Riffa2Axis has unconnected port CHNL_RX_OFF[18]
+WARNING: [Synth 8-3331] design Riffa2Axis has unconnected port CHNL_RX_OFF[17]
+WARNING: [Synth 8-3331] design Riffa2Axis has unconnected port CHNL_RX_OFF[16]
+WARNING: [Synth 8-3331] design Riffa2Axis has unconnected port CHNL_RX_OFF[15]
+WARNING: [Synth 8-3331] design Riffa2Axis has unconnected port CHNL_RX_OFF[14]
+WARNING: [Synth 8-3331] design Riffa2Axis has unconnected port CHNL_RX_OFF[13]
+WARNING: [Synth 8-3331] design Riffa2Axis has unconnected port CHNL_RX_OFF[12]
+WARNING: [Synth 8-3331] design Riffa2Axis has unconnected port CHNL_RX_OFF[11]
+WARNING: [Synth 8-3331] design Riffa2Axis has unconnected port CHNL_RX_OFF[10]
+WARNING: [Synth 8-3331] design Riffa2Axis has unconnected port CHNL_RX_OFF[9]
+WARNING: [Synth 8-3331] design Riffa2Axis has unconnected port CHNL_RX_OFF[8]
+WARNING: [Synth 8-3331] design Riffa2Axis has unconnected port CHNL_RX_OFF[7]
+WARNING: [Synth 8-3331] design Riffa2Axis has unconnected port CHNL_RX_OFF[6]
+WARNING: [Synth 8-3331] design Riffa2Axis has unconnected port CHNL_RX_OFF[5]
+WARNING: [Synth 8-3331] design Riffa2Axis has unconnected port CHNL_RX_OFF[4]
+WARNING: [Synth 8-3331] design Riffa2Axis has unconnected port CHNL_RX_OFF[3]
+WARNING: [Synth 8-3331] design Riffa2Axis has unconnected port CHNL_RX_OFF[2]
+WARNING: [Synth 8-3331] design Riffa2Axis has unconnected port CHNL_RX_OFF[1]
+WARNING: [Synth 8-3331] design Riffa2Axis has unconnected port CHNL_RX_OFF[0]
+WARNING: [Synth 8-3331] design delay_line has unconnected port CLK
+WARNING: [Synth 8-3331] design delay_line has unconnected port CE
+WARNING: [Synth 8-3331] design delay_line has unconnected port SCLR
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[47]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[46]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[45]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[44]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[43]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[42]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[41]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[40]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[39]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[38]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[37]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[36]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[35]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[34]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[33]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[32]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[31]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[30]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[29]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[28]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[27]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[26]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[25]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[24]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[23]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[22]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[21]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[20]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[19]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[18]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[17]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[16]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[15]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[14]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[13]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[12]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[11]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[10]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[9]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[8]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[7]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[6]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[5]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[4]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[3]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[2]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[1]
+WARNING: [Synth 8-3331] design dsp has unconnected port C_PORT[0]
+WARNING: [Synth 8-3331] design dsp has unconnected port D_PORT[24]
+WARNING: [Synth 8-3331] design dsp has unconnected port D_PORT[23]
+WARNING: [Synth 8-3331] design dsp has unconnected port D_PORT[22]
+WARNING: [Synth 8-3331] design dsp has unconnected port D_PORT[21]
+WARNING: [Synth 8-3331] design dsp has unconnected port D_PORT[20]
+WARNING: [Synth 8-3331] design dsp has unconnected port D_PORT[19]
+WARNING: [Synth 8-3331] design dsp has unconnected port D_PORT[18]
+WARNING: [Synth 8-3331] design dsp has unconnected port D_PORT[17]
+WARNING: [Synth 8-3331] design dsp has unconnected port D_PORT[16]
+WARNING: [Synth 8-3331] design dsp has unconnected port D_PORT[15]
+WARNING: [Synth 8-3331] design dsp has unconnected port D_PORT[14]
+WARNING: [Synth 8-3331] design dsp has unconnected port D_PORT[13]
+WARNING: [Synth 8-3331] design dsp has unconnected port D_PORT[12]
+WARNING: [Synth 8-3331] design dsp has unconnected port D_PORT[11]
+WARNING: [Synth 8-3331] design dsp has unconnected port D_PORT[10]
+WARNING: [Synth 8-3331] design dsp has unconnected port D_PORT[9]
+WARNING: [Synth 8-3331] design dsp has unconnected port D_PORT[8]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 523.137 ; gain = 174.172
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 523.137 ; gain = 174.172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 523.137 ; gain = 174.172
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7vx690tffg1761-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [F:/FPGA/project/Vivado/PCIE_Rotate/PCIE_Imageproc.runs/design_1_Riffa_Axis_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [F:/FPGA/project/Vivado/PCIE_Rotate/PCIE_Imageproc.runs/design_1_Riffa_Axis_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1053.516 ; gain = 0.566
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 1053.516 ; gain = 704.551
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx690tffg1761-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 1053.516 ; gain = 704.551
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst/Axis2Riffa_inst/mult_inst. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 1053.516 ; gain = 704.551
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Axis2Riffa'
+INFO: [Synth 8-5545] ROM "rows" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Riffa2Axis'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                            00010 |                              000
+                 iSTATE0 |                            10000 |                              001
+                 iSTATE1 |                            01000 |                              010
+                 iSTATE2 |                            00100 |                              011
+                 iSTATE3 |                            00001 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'Axis2Riffa'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                              000
+                 iSTATE0 |                              100 |                              001
+                 iSTATE1 |                              011 |                              010
+                 iSTATE2 |                              010 |                              011
+                 iSTATE3 |                              000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'Riffa2Axis'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 1053.516 ; gain = 704.551
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 3600 (col length:200)
+BRAMs: 2940 (col length: RAMB18 200 RAMB36 100)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5545] ROM "inst/Riffa2Axis_inst/rows" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port CHNL_TX_LAST driven by constant 1
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port CHNL_TX_LEN[1] driven by constant 0
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port CHNL_TX_LEN[0] driven by constant 0
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port CHNL_TX_OFF[30] driven by constant 0
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port CHNL_TX_OFF[29] driven by constant 0
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port CHNL_TX_OFF[28] driven by constant 0
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port CHNL_TX_OFF[27] driven by constant 0
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port CHNL_TX_OFF[26] driven by constant 0
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port CHNL_TX_OFF[25] driven by constant 0
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port CHNL_TX_OFF[24] driven by constant 0
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port CHNL_TX_OFF[23] driven by constant 0
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port CHNL_TX_OFF[22] driven by constant 0
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port CHNL_TX_OFF[21] driven by constant 0
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port CHNL_TX_OFF[20] driven by constant 0
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port CHNL_TX_OFF[19] driven by constant 0
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port CHNL_TX_OFF[18] driven by constant 0
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port CHNL_TX_OFF[17] driven by constant 0
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port CHNL_TX_OFF[16] driven by constant 0
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port CHNL_TX_OFF[15] driven by constant 0
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port CHNL_TX_OFF[14] driven by constant 0
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port CHNL_TX_OFF[13] driven by constant 0
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port CHNL_TX_OFF[12] driven by constant 0
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port CHNL_TX_OFF[11] driven by constant 0
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port CHNL_TX_OFF[10] driven by constant 0
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port CHNL_TX_OFF[9] driven by constant 0
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port CHNL_TX_OFF[8] driven by constant 0
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port CHNL_TX_OFF[7] driven by constant 0
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port CHNL_TX_OFF[6] driven by constant 0
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port CHNL_TX_OFF[5] driven by constant 0
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port CHNL_TX_OFF[4] driven by constant 0
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port CHNL_TX_OFF[3] driven by constant 0
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port CHNL_TX_OFF[2] driven by constant 0
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port CHNL_TX_OFF[1] driven by constant 0
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port CHNL_TX_OFF[0] driven by constant 0
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port M_AXIS_TKEEP[0] driven by constant 1
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port M_AXIS_TSTRB[0] driven by constant 1
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port M_AXIS_TID driven by constant 0
+INFO: [Synth 8-3917] design design_1_Riffa_Axis_0_0 has port M_AXIS_TDEST driven by constant 0
+INFO: [Synth 8-3886] merging instance 'inst/Axis2Riffa_inst/len_reg[30]' (FDCE) to 'inst/Axis2Riffa_inst/len_reg[25]'
+INFO: [Synth 8-3886] merging instance 'inst/Axis2Riffa_inst/len_reg[31]' (FDCE) to 'inst/Axis2Riffa_inst/len_reg[25]'
+INFO: [Synth 8-3886] merging instance 'inst/Riffa2Axis_inst/len_reg[25]' (FDCE) to 'inst/Riffa2Axis_inst/len_reg[26]'
+INFO: [Synth 8-3886] merging instance 'inst/Riffa2Axis_inst/len_reg[26]' (FDCE) to 'inst/Riffa2Axis_inst/len_reg[27]'
+INFO: [Synth 8-3886] merging instance 'inst/Riffa2Axis_inst/len_reg[27]' (FDCE) to 'inst/Riffa2Axis_inst/len_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/Riffa2Axis_inst/len_reg[28]' (FDCE) to 'inst/Riffa2Axis_inst/len_reg[29]'
+INFO: [Synth 8-3886] merging instance 'inst/Riffa2Axis_inst/len_reg[29]' (FDCE) to 'inst/Riffa2Axis_inst/len_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/Riffa2Axis_inst/len_reg[30]' (FDCE) to 'inst/Riffa2Axis_inst/len_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/Riffa2Axis_inst/len_reg[31] )
+INFO: [Synth 8-3886] merging instance 'inst/Axis2Riffa_inst/len_reg[25]' (FDCE) to 'inst/Axis2Riffa_inst/len_reg[26]'
+INFO: [Synth 8-3886] merging instance 'inst/Axis2Riffa_inst/len_reg[26]' (FDCE) to 'inst/Axis2Riffa_inst/len_reg[27]'
+INFO: [Synth 8-3886] merging instance 'inst/Axis2Riffa_inst/len_reg[27]' (FDCE) to 'inst/Axis2Riffa_inst/len_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/Axis2Riffa_inst/len_reg[28]' (FDCE) to 'inst/Axis2Riffa_inst/len_reg[29]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/Axis2Riffa_inst/len_reg[29] )
+INFO: [Synth 8-3332] Sequential element (inst/Axis2Riffa_inst/len_reg[29]) is unused and will be removed from module design_1_Riffa_Axis_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/Riffa2Axis_inst/len_reg[31]) is unused and will be removed from module design_1_Riffa_Axis_0_0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 1053.516 ; gain = 704.551
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:42 . Memory (MB): peak = 1078.707 ; gain = 729.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:42 . Memory (MB): peak = 1079.672 ; gain = 730.707
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:42 . Memory (MB): peak = 1092.109 ; gain = 743.145
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 1092.109 ; gain = 743.145
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 1092.109 ; gain = 743.145
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 1092.109 ; gain = 743.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 1092.109 ; gain = 743.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 1092.109 ; gain = 743.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 1092.109 ; gain = 743.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |   138|
+|2     |DSP48E1 |     1|
+|3     |LUT1    |   127|
+|4     |LUT2    |   200|
+|5     |LUT3    |    49|
+|6     |LUT4    |   206|
+|7     |LUT5    |    41|
+|8     |LUT6    |    24|
+|9     |FDCE    |   368|
+|10    |FDPE    |    66|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 1092.109 ; gain = 743.145
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 44 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:25 . Memory (MB): peak = 1092.109 ; gain = 212.766
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:43 . Memory (MB): peak = 1092.109 ; gain = 743.145
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 139 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+85 Infos, 103 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:47 . Memory (MB): peak = 1108.629 ; gain = 771.133
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'F:/FPGA/project/Vivado/PCIE_Rotate/PCIE_Imageproc.runs/design_1_Riffa_Axis_0_0_synth_1/design_1_Riffa_Axis_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP f:/FPGA/project/Vivado/PCIE_Rotate/PCIE_Imageproc.srcs/sources_1/bd/design_1/ip/design_1_Riffa_Axis_0_0/design_1_Riffa_Axis_0_0.xci
+INFO: [Coretcl 2-1174] Renamed 7 cell refs.
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'F:/FPGA/project/Vivado/PCIE_Rotate/PCIE_Imageproc.runs/design_1_Riffa_Axis_0_0_synth_1/design_1_Riffa_Axis_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_Riffa_Axis_0_0_utilization_synth.rpt -pb design_1_Riffa_Axis_0_0_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.458 . Memory (MB): peak = 1108.629 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 30 20:08:10 2018...
