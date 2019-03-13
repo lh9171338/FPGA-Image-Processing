@@ -1,5 +1,5 @@
 # FPGA-image-processing
-Image processing bases on FPGA
+Image processing based on FPGA
 
 # Environmnt
 OS: Ubuntu 16.04 or Windows 10  
