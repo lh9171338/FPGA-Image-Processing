@@ -1,5 +1,5 @@
 # 1. Introduction
->>Image processing based on FPGA
+>>Image processing based on FPGA.
 
 # 2. Usage
 ## 2.1 Environmnt
@@ -8,12 +8,10 @@
 >>FPGA board: NetFPGA-Sume  
 
 ## 2.2 Content
->>Here are two projects, respectively, corresponding to the PCIE and VDMA folder.  
-Under the PCIE folder is the image rotation algorithm.  
-Under the VDMA folder is the image filtering algorithm.
+>>Here are two projects, respectively, corresponding to the PCIE and VDMA folder. Under the PCIE folder is the image rotation algorithm. Under the VDMA folder is the image filtering algorithm.
 
 ## 2.3 Run
 >>Refer to the documents under the document folder.
 
 # 3. More resources
->>Baidu Cloud Link: https://pan.baidu.com/s/1DS6NZ4SP1PPVYoFgCgnvcw  o1g0
+>>Baidu Cloud Link: https://pan.baidu.com/s/1DS6NZ4SP1PPVYoFgCgnvcw
