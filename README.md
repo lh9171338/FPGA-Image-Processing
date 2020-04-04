@@ -14,4 +14,5 @@
 >>Refer to the documents under the document folder.
 
 # 3. More resources
->>Baidu Cloud Link: https://pan.baidu.com/s/1DS6NZ4SP1PPVYoFgCgnvcw
+- [Github link](https://github.com/lh9171338/Outline)
+- [Baidu Cloud Link](https://pan.baidu.com/s/1DS6NZ4SP1PPVYoFgCgnvcw)
