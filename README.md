@@ -13,6 +13,6 @@
 ## 2.3 Run
 >>Refer to the documents under the document folder.
 
-# 3. More resources
+# 3. More Resources
 - [Github Link](https://github.com/lh9171338/Outline)
 - [Baidu Cloud Link](https://pan.baidu.com/s/1DS6NZ4SP1PPVYoFgCgnvcw)
