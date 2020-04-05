@@ -1,3 +1,6 @@
+[<img height="23" src="https://github.com/lh9171338/Outline/blob/master/icon.jpg"/>](https://github.com/lh9171338/Outline) FPGA Image Processing
+===
+
 # 1. Introduction
 >>Image processing based on FPGA.
 
@@ -14,5 +17,4 @@
 >>Refer to the documents under the document folder.
 
 # 3. More Resources
-- [Github Link](https://github.com/lh9171338/Outline)
 - [Baidu Cloud Link](https://pan.baidu.com/s/1DS6NZ4SP1PPVYoFgCgnvcw)
